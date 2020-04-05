@@ -1,0 +1,81 @@
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from '@emotion/styled';
+import { CSSTransition } from 'react-transition-group';
+
+const Container = styled.ul`
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  top: 100px;
+  left: -20px;
+  background: white;
+  width: 200px;
+  opacity: 1;
+  transform: translateY(20px);
+  display: none;
+  cursor: default;
+`;
+
+const Item = styled.li`
+  text-align: left;
+  color: #000000;
+  position: relative;
+  z-index: 1;
+
+  a {
+    z-index: 1;
+    padding: 10px 15px;
+    display: block !important;
+    width: 100% !important;
+    text-decoration: none !important;
+    color: black;
+  }
+
+  a:hover {
+    color: white !important;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, white 50%, var(--blue) 50%);
+    transition: background-position 300ms;
+  }
+
+  &:hover::after {
+    background-position: 0 -100%;
+  }
+`;
+
+const Dropdown = ({ show, dropDownList = [], setShowDropDown }) => {
+  const close = e => e.stopPropagation();
+  return (
+    <CSSTransition
+      in={show}
+      classNames="nav-dropdown"
+      unmountOnExit
+      timeout={500}
+    >
+      <Container onMouseEnter={close}>
+        {dropDownList.map((i, idx) => (
+          <Item key={idx}>
+            <Link to="/">{i}</Link>
+          </Item>
+        ))}
+      </Container>
+    </CSSTransition>
+  );
+};
+
+export default Dropdown;

@@ -1,0 +1,69 @@
+.banner-fade-enter {
+  opacity: 0;
+}
+
+.banner-fade-enter-active {
+  opacity: 1;
+}
+
+.banner-fade-exit {
+  opacity: 1 !important;
+}
+
+.banner-fade-exit-active {
+  opacity: 0 !important;
+}
+
+.banner-fade-enter-active,
+.banner-fade-exit-active {
+  transition: opacity 1s;
+}
+
+.banner-text-small-move-enter {
+  opacity: 0 !important;
+  transform: translateY(-30px) !important;
+}
+
+.banner-text-small-move-enter-active {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+  transition: all 1s 2s !important;
+}
+
+.banner-text-big-move-enter {
+  opacity: 0 !important;
+  transform: translateY(-30px) !important;
+}
+
+.banner-text-big-move-enter-active {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+  transition: all 1s 1s !important;
+}
+
+.banner-button-enter {
+  opacity: 0 !important;
+}
+
+.banner-button-enter-active {
+  opacity: 1 !important;
+  transition: opacity 1s 3s !important;
+}
+
+.time-section-weather {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  align-items: center;
+  grid-template-columns: 50px 30px;
+}
+
+.time-section-local span {
+  letter-spacing: 2px;
+}
+
+.time-section-local,
+.time-section-weather {
+  font-weight: 400;
+}
+
