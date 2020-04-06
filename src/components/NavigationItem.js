@@ -7,7 +7,7 @@ import '../styles/dropdown.css';
 
 const Container = styled.li`
   position: relative;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   line-height: 20px;
   text-align: center;
   cursor: pointer;

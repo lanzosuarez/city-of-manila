@@ -5,8 +5,8 @@ const Button = styled.button`
   background: ${props => props.defaultBgColor};
   color: ${props => props.textColor};
   border-color: rgba(255, 255, 255, 0);
+  letter-spacing: ${props => props.letterSpacing};
   line-height: 24px;
-  letter-spacing: 0px;
   font-weight: 700;
   font-size: 14px;
   border-style: none;
@@ -14,6 +14,7 @@ const Button = styled.button`
   padding: 16px 32px;
   cursor: pointer;
   text-transform: uppercase;
+  width: ${props => props.width};
 
   &:hover {
     background: ${props => props.focusBgColor};
@@ -30,16 +31,21 @@ const LearnMore = ({
   defaultBgColor = '#ee9817',
   focusBgColor = '',
   textColor = 'white',
-  focusTextColor = 'black'
+  focusTextColor = 'black',
+  text = 'Learn More',
+  width = 'auto',
+  letterSpacing = '0px'
 }) => {
   return (
     <Button
+      width={width}
       defaultBgColor={defaultBgColor}
       focusBgColor={focusBgColor}
       textColor={textColor}
       focusTextColor={focusTextColor}
+      letterSpacing={letterSpacing}
     >
-      Learn More
+      {text}
     </Button>
   );
 };

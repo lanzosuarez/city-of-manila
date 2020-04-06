@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Link, withAssetPrefix } from 'gatsby';
 import bg1 from '../images/home-section3-1.png';
 import bg2 from '../images/home-section3-2.png';
 import bg3 from '../images/home-section3-3.png';
 
 const Container = styled.div`
-  padding: 0px 70px 100px;
+  padding: 0px 70px 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   position: relative;
@@ -36,7 +35,8 @@ const HomeSection3 = () => {
         <Text>Lorem Ipsum</Text>
         <ion-icon
           style={{
-            color: 'white'
+            color: 'white',
+            cursor: 'pointer'
           }}
           size="large"
           name="arrow-forward-circle-outline"
@@ -46,7 +46,8 @@ const HomeSection3 = () => {
         <Text>Lorem Ipsum</Text>
         <ion-icon
           style={{
-            color: 'white'
+            color: 'white',
+            cursor: 'pointer'
           }}
           size="large"
           name="arrow-forward-circle-outline"
@@ -56,7 +57,8 @@ const HomeSection3 = () => {
         <Text>Lorem Ipsum</Text>
         <ion-icon
           style={{
-            color: 'white'
+            color: 'white',
+            cursor: 'pointer'
           }}
           size="large"
           name="arrow-forward-circle-outline"

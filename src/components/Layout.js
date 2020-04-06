@@ -7,7 +7,6 @@ import Footer from './Footer';
 
 const Container = styled.div`
   width: 100%;
-  background: #f1f4f4;
 `;
 
 const Layout = ({ children }) => {
