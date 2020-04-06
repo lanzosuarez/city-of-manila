@@ -8,6 +8,7 @@ import HomeSection4 from '../components/HomeSection4';
 import HomeSection5 from '../components/HomeSection5';
 import HomeSection6 from '../components/HomeSection6';
 import HomeSection7 from '../components/HomeSection7';
+import HomeSection8 from '../components/HomeSection8';
 
 const IndexPage = ({ data }) => {
   return (
@@ -20,6 +21,7 @@ const IndexPage = ({ data }) => {
       <HomeSection5 />
       <HomeSection6 />
       <HomeSection7 />
+      <HomeSection8 />
     </Layout>
   );
 };
