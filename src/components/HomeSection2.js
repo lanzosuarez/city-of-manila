@@ -2,6 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
+import line from "../images/blue-line.png";
+
 const Container = styled.div`
   padding: 150px 70px 100px;
   display: grid;
@@ -21,7 +23,7 @@ const OverlayHeader = styled.div`
   font-size: 90px;
   font-weight: bolder;
   z-index: 0;
-  color: #e2e6ea;
+  color: #f5f5f5;
 `;
 
 const Header = styled.h2`
@@ -33,8 +35,9 @@ const Header = styled.h2`
 `;
 
 const Content = styled.div`
-  padding: 30px 20px 10px;
-  font-size: 0.9rem;
+  padding: 20px 20px 30px;
+  font-size: 16px;
+  line-height: 2;
 `;
 
 const Footer = styled.div`
@@ -51,15 +54,21 @@ const Footer = styled.div`
   }
 `;
 
+const LineImage = styled.img`
+  padding-top: 25px;
+  margin-left: 21px;
+`;
+
 const HomeSection2 = () => {
   return (
     <Container>
       <Item>
         <OverlayHeader>01</OverlayHeader>
         <Header>Executive Orders</Header>
+        <LineImage src={ line } alt="blue line"/>
         <Content>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore
+          eiusmod tempor incididunt ut labore.
         </Content>
         <Footer>
           <Link>READ MORE</Link>
@@ -69,6 +78,7 @@ const HomeSection2 = () => {
       <Item>
         <OverlayHeader>02</OverlayHeader>
         <Header>Legislation</Header>
+        <LineImage src={ line } alt="blue line"/>
         <Content>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore
@@ -81,6 +91,7 @@ const HomeSection2 = () => {
       <Item>
         <OverlayHeader>03</OverlayHeader>
         <Header>How To Help Manila</Header>
+        <LineImage src={ line } alt="blue line"/>
         <Content>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore

@@ -25,10 +25,13 @@ const Item = styled.div`
 const Text = styled.h3`
   color: var(--blue);
   padding-top: 40px;
+  font-size:36px;
+  line-height: 56px;
 `;
 
 const SubText = styled.p`
-  font-size: 0.8rem;
+  font-size: 16px;
+  line-height: 2;
 `;
 
 const Section = styled.div``;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import '../styles/index.css';
 
 import civilIcon from '../images/home-icon-civil-rights.png';
 import commIcon from '../images/home-icon-community.png';
@@ -29,12 +30,20 @@ const Item = styled.div`
   background: white;
   text-align: center;
   font-weight: 600;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 15px 14px 38px 0px rgba(0,0,0,0.1);
 `;
 
 const ItemImg = styled.img`
   margin-bottom: 20px;
 `;
+
+const TextStyle = {
+  marginBottom: '0px',
+  lineHeight: '1.5',
+  textTransform: 'uppercase',
+  fontWeight: '700',
+  fontSize: '13px'
+};
 
 const items = [
   {
@@ -69,7 +78,7 @@ const HomeSection1 = () => {
       {items.map(i => (
         <Item>
           <ItemImg alt={i.title} src={i.path}></ItemImg>
-          {i.title}
+          <p style={TextStyle}>{i.title}</p>
         </Item>
       ))}
     </Container>

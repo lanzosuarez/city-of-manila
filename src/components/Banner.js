@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import '../styles/banner.css';
 
-import banner1 from '../images/header-slide1.jpg';
+import banner1 from '../images/header-slide-1-1440px.jpg';
 import banner2 from '../images/header-slide2.jpg';
 import Notice from './Notice';
 import Navigation from './Navigation';
@@ -67,6 +67,7 @@ const BannerTextSmall = styled.h3`
 const BannerTextBig = styled.h1`
   font-size: 100px;
   margin-bottom: 40px;
+  color: #ffffff;
 `;
 
 const BannerTextsSection = styled.div`
@@ -125,19 +126,19 @@ const Banner = () => {
   const [activeBanner, setActiveBanner] = useState(banner1);
   const [activeText, setActiveText] = useState(0);
 
-  useEffect(() => {
-    window.setInterval(() => {
-      setActiveBanner(prev => {
-        if (prev !== banner1) {
-          setActiveBanner(banner1);
-          setActiveText(0);
-          return;
-        }
-        setActiveBanner(banner2);
-        setActiveText(1);
-      });
-    }, 10000);
-  }, []);
+  // useEffect(() => {
+  //   window.setInterval(() => {
+  //     setActiveBanner(prev => {
+  //       if (prev !== banner1) {
+  //         setActiveBanner(banner1);
+  //         setActiveText(0);
+  //         return;
+  //       }
+  //       setActiveBanner(banner2);
+  //       setActiveText(1);
+  //     });
+  //   }, 10000);
+  // }, []);
 
   return (
     <Container>
@@ -154,7 +155,7 @@ const Banner = () => {
             timeout={{ enter: 10000, exit: 10000 }}
           >
             <BannerImg src={b.banner} zIndex={b.zIndex} />
-          </CSSTransition>
+           </CSSTransition>
         ))}
         {texts.map((t, idx) => (
           <BannerTexts show={activeText === idx}>

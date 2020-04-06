@@ -5,7 +5,7 @@ const Container = styled.div`
   height: 50px;
   background: #f5f5f5;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1290px;
   margin: 0 auto;
   padding: 0px 50px;
   display: flex;
