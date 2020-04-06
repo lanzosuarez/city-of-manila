@@ -37,7 +37,7 @@ const NavList = styled.ul`
   padding: 0px 20px;
 `;
 
-const listItems = [
+export const listItems = [
   {
     title: 'About',
     sections: [

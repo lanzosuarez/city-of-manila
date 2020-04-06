@@ -623,3 +623,15 @@ li {
 .home-active-dot {
   border: 1px solid white;
 }
+
+.showNav {
+  transform: translateX(0px) !important;
+}
+
+.showOverlay {
+  display: block !important;
+}
+
+.side-nav-rotate {
+  transform: rotate(90deg);
+}
