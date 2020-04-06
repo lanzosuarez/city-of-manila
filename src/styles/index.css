@@ -59,7 +59,7 @@ abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 b,
 strong {
@@ -213,7 +213,7 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   -webkit-font-kerning: normal;
-          font-kerning: normal;
+  font-kerning: normal;
   -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
@@ -613,4 +613,8 @@ pre tt:after {
 li {
   margin: 0;
   padding: 0;
+}
+
+.home-active-dot {
+  border: 1px solid white;
 }

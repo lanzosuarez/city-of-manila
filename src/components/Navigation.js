@@ -9,6 +9,10 @@ const Container = styled.div`
   background: white;
   display: flex;
   margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const Logo = styled.div`
@@ -35,9 +39,6 @@ const NavList = styled.ul`
 
 const listItems = [
   {
-    title: 'Home'
-  },
-  {
     title: 'About',
     sections: [
       'Mayor Profile',
@@ -47,27 +48,24 @@ const listItems = [
     ]
   },
   {
-    title: 'Latest Updates',
-    sections: ['General Updates', 'Press Releases']
-  },
-  {
     title: 'Executive Orders & Legislation',
     sections: ['General Updates', 'Press Releases']
   },
   {
-    title: 'Enhanced Community Quarantine: What you need to know'
+    title: 'COVID - 19: Overview'
   },
   {
-    title: 'COVID - 19: What you need to know'
+    title: 'Programs'
   },
   {
-    title: 'Ongoing Programs'
+    title: 'Latest Updates',
+    sections: ['General Updates', 'Press Releases']
   },
   {
-    title: 'Multimedia'
+    title: 'Gallery'
   },
   {
-    title: 'How can you help Manila'
+    title: 'Get Involved'
   },
   {
     title: 'Contact'
