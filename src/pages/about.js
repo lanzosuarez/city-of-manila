@@ -197,10 +197,11 @@ const AboutPage = () => {
           <div className="section">
             <div className="section-container">
               <LeftContainer>
-                <h1> Meet The Man Who Care About Our City </h1>
+                <h1> Meet Mayor Isko </h1>
                 <img src={ line } alt="blue line" className="line"/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitationquat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Mayor Francisco “Isko Moreno” Domagoso (born October 24, 1974) – popularly known as "Isko Moreno" and colloquially as Yorme Isko – has served as the 27th Mayor of Manila since 1 July 2019.</p>
+                <p>His elevation to Manila’s Mayoralty occurred via a historic election: defeating an incumbent Mayor – a former Philippine President – on broad hopes of generational and transformative change for the 449 year old Philippines capital city. </p>
+                <p>Prior to becoming mayor, Mayor Domagoso was Manila’s Vice Mayor from 2007 – 2016 and served in Manila’s City Council representing the ancient, densely populated and economically challenged urban district of Tondo. He was first elected to Manila’s City Council in 1998.</p>
               </LeftContainer>
               <RightContainer>
                 <QuoteStyle src={ imgSection2 } alt="Meet The Man Who Care About Our City"/>
