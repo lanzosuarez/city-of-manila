@@ -9,8 +9,7 @@ const Container = styled.div`
 `;
 
 const SubContainer = styled.div`
-  max-width: 1200px;
-  margin: 50px 100px;
+  margin: 50px 0px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;

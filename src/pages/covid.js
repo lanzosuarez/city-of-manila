@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import NavigationProvider from '../context/NavigationProvider';
 import CovidSection1 from '../components/CovidSection1';
+import CovidSection3 from '../components/CovidSection3';
 import banner from '../images/covid-banner.jpg';
 import styled from '@emotion/styled';
 import PageContainer from '../components/PageContainer';
@@ -25,7 +26,7 @@ const BannerContainer = styled.div`
   justify-content: center;
   width: 60%;
   padding: 0px 20px;
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
 
@@ -33,7 +34,7 @@ const BannerContainer = styled.div`
     font-size: 4rem;
     color: white;
     font-weight: 600;
-    @media only screen and (max-width: 425px) {
+    @media only screen and (max-width: 768px) {
       font-size: 40px;
     }
   }
@@ -41,7 +42,7 @@ const BannerContainer = styled.div`
   p {
     font-size: 18px;
     line-height: 2;
-    @media only screen and (max-width: 425px) {
+    @media only screen and (max-width: 768px) {
       font-size: 18px;
       line-height: 1.5;
     }
@@ -60,10 +61,11 @@ const Button = styled.button`
   -moz-letter-spacing: 2px;
   -ms-letter-spacing: 2px;
   letter-spacing: 2px;
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 768px) {
     width: 145px;
     height: 36px;
     font-size: 12px;
+    margin-right:5px;
   }
 `;
 const ButtonTracker = styled.button`
@@ -82,8 +84,8 @@ const ButtonTracker = styled.button`
   -moz-letter-spacing: 2px;
   -ms-letter-spacing: 2px;
   letter-spacing: 2px;
-  @media only screen and (max-width: 425px) {
-    width: 176px;
+  @media only screen and (max-width: 768px) {
+    width: 240px;
     height: 36px;
     font-size: 12px;
   }
@@ -94,6 +96,14 @@ const ButtonContainer = styled.div`
   justify-content: space-between;
   width: 27rem;
   margin-top: 51px;
+  @media only screen and (max-width: 768px) {
+    width: 18rem;
+  }
+`;
+
+const Section = styled.div`
+  padding: 4rem 0;
+  background-color: #f8f8f8;
 `;
 
 const CovidPage = () => {
@@ -110,7 +120,7 @@ const CovidPage = () => {
               <h1>We will defeat Covid-19 together</h1>
               <p>
                 Covid-19 is the single biggest public health and livelihood
-                hurdle of our lifetimes.{' '}
+                hurdle of our lifetimes.
               </p>
               <ButtonContainer>
                 <Button>Contact</Button>
@@ -119,7 +129,14 @@ const CovidPage = () => {
             </BannerContainer>
           </PageContainer>
         </CovidBanner>
-        <CovidSection1 />
+        <PageContainer>
+          <CovidSection1/>
+        </PageContainer>
+        <Section>
+          <PageContainer>
+            <CovidSection3/>
+          </PageContainer>
+        </Section>
       </Layout>
     </NavigationProvider>
   );
