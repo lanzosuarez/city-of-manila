@@ -124,7 +124,7 @@ const NavItemComponent = ({ title, sections = [] }) => {
       {sections.length > 0 ? (
         <SubPages show={showSubPages}>
           {sections.map(s => (
-            <SubPagesItem>{s}</SubPagesItem>
+            <SubPagesItem>{s.title}</SubPagesItem>
           ))}
         </SubPages>
       ) : null}

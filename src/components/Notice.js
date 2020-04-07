@@ -5,7 +5,7 @@ const Container = styled.div`
   height: 50px;
   background: #f5f5f5;
   width: 100%;
-  max-width: 1290px;
+  max-width: ${props => (props.isHome ? '1200px' : '100%')};
   margin: 0 auto;
   padding: 0px 50px;
   display: flex;
@@ -36,9 +36,9 @@ const iconStyle = {
   color: 'grey'
 };
 
-const Notice = () => {
+const Notice = ({ isHome }) => {
   return (
-    <Container>
+    <Container isHome={isHome}>
       <IconsContainer>
         <ion-icon style={iconStyle} name="logo-twitter"></ion-icon>
         <ion-icon style={iconStyle} name="logo-facebook"></ion-icon>

@@ -42,8 +42,8 @@ const Layout = ({ children, path = '//' }) => {
       <SideNavigation />
       {!isHome && (
         <>
-          <Notice />
-          <Navigation />
+          <Notice isHome={isHome}/>
+          <Navigation isHome={isHome}/>
         </>
       )}
       {isHome && <Banner isHome={isHome} />}

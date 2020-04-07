@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import { CSSTransition } from 'react-transition-group';
 
@@ -228,11 +228,12 @@ const MobileLocalTime = ({ transitionFlag }) => {
   );
 };
 
-const Banner = ({ isHome }) => {
+const Banner = () => {
+  const interval = useRef(null);
   const [activeBanner, setActiveBanner] = useState(banner1);
   const [activeText, setActiveText] = useState(0);
   useEffect(() => {
-    window.setInterval(() => {
+    interval.current = window.setInterval(() => {
       setActiveBanner(prev => {
         if (prev !== banner1) {
           setActiveBanner(banner1);
@@ -243,6 +244,10 @@ const Banner = ({ isHome }) => {
         setActiveText(1);
       });
     }, 10000);
+
+    return () => {
+      window.clearInterval(interval.current);
+    };
   }, []);
 
   return (

@@ -16,7 +16,7 @@ const Container = styled.div`
   align-items: center;
 
   @media (max-width: 576px) {
-    margin: 0px 30px;
+    margin: 0px 15px;
     padding: 50px 60px;
     height: auto;
     grid-gap: 10px;
@@ -33,8 +33,8 @@ const Container = styled.div`
     margin-left: -70px;
 
     @media (max-width: 576px) {
-      margin-left: -30px;
-      width: 30px;
+      margin-left: -15px;
+      width: 15px;
     }
   }
 
@@ -49,8 +49,8 @@ const Container = styled.div`
     margin-right: -70px;
 
     @media (max-width: 576px) {
-      margin-right: -30px;
-      width: 30px;
+      margin-right: -15px;
+      width: 15px;
     }
   }
 `;
@@ -95,7 +95,7 @@ const Counter = ({ start, to, from = 0 }) => {
         });
       }, 20);
     }
-  }, [count, start]);
+  }, [count, start, to]);
 
   return <span>{count}</span>;
 };

@@ -14,7 +14,7 @@ const Container = styled.div`
   grid-gap: 40px;
 
   @media (max-width: 576px) {
-    padding: 80px 30px 80px;
+    padding: 80px 15px 80px;
   }
 `;
 

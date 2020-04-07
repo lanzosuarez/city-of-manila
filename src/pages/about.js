@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import '../styles/about.css';
 
@@ -186,13 +186,22 @@ const Section5Social = styled.div`
   }
 `;
 
-const AboutPage = () => {
+const AboutPage = ({ location }) => {
+  useEffect(() => {
+    const { hash } = location;
+    if (hash.length) {
+      const el = document.getElementById(hash.slice(1));
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
   return (
     <NavigationProvider>
       <Layout>
         <Wrapper>
           <PageHeader />
-          <PageContainer>
+          <PageContainer id="mayor-profile">
             <div className="section">
               <div className="section-container">
                 <LeftContainer>
@@ -220,7 +229,7 @@ const AboutPage = () => {
             </div>
           </PageContainer>
           <Section3Container>
-            <PageContainer>
+            <PageContainer id="background">
               <Section3>
                 <h1> Background </h1>
                 <img src={line} alt="blue line" className="line" />
@@ -247,7 +256,7 @@ const AboutPage = () => {
               </Section3>
             </PageContainer>
           </Section3Container>
-          <PageContainer>
+          <PageContainer id="leadership-team">
             <div className="section">
               <div className="center">
                 <h1 style={textWidth}> His Leadership Team </h1>
@@ -318,7 +327,7 @@ const AboutPage = () => {
             </div>
           </PageContainer>
           <Section5Container>
-            <PageContainer>
+            <PageContainer id="links-to-social-media">
               <div className="section">
                 <div className="section-container">
                   <LeftContainer>

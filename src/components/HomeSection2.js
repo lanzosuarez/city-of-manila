@@ -12,7 +12,7 @@ const Container = styled.div`
   position: relative;
 
   @media (max-width: 576px) {
-    padding: 100px 30px 50px;
+    padding: 100px 15px 50px;
     grid-gap: 50px;
   }
 `;

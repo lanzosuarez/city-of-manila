@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'gatsby';
+
 import styled from '@emotion/styled';
 import NavigationItem from './NavigationItem';
 
 const Container = styled.div`
   height: 100px;
   width: 100%;
-  max-width: 1290px;
+  max-width: ${props => (props.isHome ? '1200px' : '100%')};
   background: white;
   display: flex;
   margin: 0 auto;
@@ -22,9 +24,14 @@ const Logo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+
   font-size: 1.5rem;
   align-items: center;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 `;
 
 const NavList = styled.ul`
@@ -40,42 +47,62 @@ const NavList = styled.ul`
 export const listItems = [
   {
     title: 'About',
+    path: '/about',
     sections: [
-      'Mayor Profile',
-      'Background',
-      'His Leadership Team',
-      'Links to Social Media Pages'
+      {
+        title: 'Mayor Profile',
+        path: '/about#mayor-profile'
+      },
+      {
+        title: 'Background',
+        path: '/about#background'
+      },
+      {
+        title: 'His Leadership Team',
+        path: '/about#leadership-team'
+      },
+      {
+        title: 'Links to Social Media Pages',
+        path: '/about#links-to-social-media'
+      }
     ]
   },
   {
     title: 'Executive Orders & Legislation',
-    sections: ['General Updates', 'Press Releases']
+    path: '/executive-and-legislation'
   },
   {
-    title: 'COVID - 19: Overview'
+    title: 'COVID - 19: Overview',
+    path: '/covid'
   },
   {
-    title: 'Programs'
+    title: 'Programs',
+    path: '/programs'
   },
   {
     title: 'Latest Updates',
-    sections: ['General Updates', 'Press Releases']
+    path: '/latest-updates'
   },
   {
-    title: 'Gallery'
+    title: 'Gallery',
+    path: '/gallery'
   },
   {
-    title: 'Get Involved'
+    title: 'Get Involved',
+    path: '/get-involved'
   },
   {
-    title: 'Contact'
+    title: 'Contact',
+    path: '/contact'
   }
 ];
 
-const Navigation = () => {
+const Navigation = ({ isHome }) => {
   return (
-    <Container>
-      <Logo>logo .</Logo>
+    <Container isHome={isHome}>
+      <Logo>
+        <Link to="/">logo .</Link>
+      </Logo>
       <NavList>
         {listItems.map((i, idx) => (
           <NavigationItem key={idx} {...i} />
