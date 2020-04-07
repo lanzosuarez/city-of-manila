@@ -7,6 +7,8 @@ import Footer from './Footer';
 import MobileHeader from './MobileHeader';
 import SideNavigation from './SideNavigation';
 import { NavigationContext } from '../context/NavigationProvider';
+import Notice from './Notice';
+import Navigation from './Navigation';
 
 const Container = styled.div`
   width: 100%;
@@ -15,6 +17,8 @@ const Container = styled.div`
   height: ${props => (props.noscroll ? '100vh' : 'auto')};
   overflow: ${props => (props.noscroll ? 'hidden' : 'scroll')};
 `;
+
+// const MaxContainer = styled.div``
 
 const Overlay = styled.div`
   position: absolute;
@@ -28,15 +32,21 @@ const Overlay = styled.div`
   cursor: pointer;
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path = '//' }) => {
   const { showNav, toggleNav } = useContext(NavigationContext);
-
+  const isHome = path === '/';
   return (
-    <Container noscroll={showNav}>
+    <Container id="page-layout" noscroll={showNav}>
       <Overlay onClick={() => toggleNav(false)} show={showNav} />
       <MobileHeader />
       <SideNavigation />
-      <Banner />
+      {!isHome && (
+        <>
+          <Notice />
+          <Navigation />
+        </>
+      )}
+      {isHome && <Banner isHome={isHome} />}
       {children}
       <Footer />
     </Container>

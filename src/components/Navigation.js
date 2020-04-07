@@ -5,7 +5,7 @@ import NavigationItem from './NavigationItem';
 const Container = styled.div`
   height: 100px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1290px;
   background: white;
   display: flex;
   margin: 0 auto;

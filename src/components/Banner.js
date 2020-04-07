@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import '../styles/banner.css';
 
-import banner1 from '../images/header-slide1.jpg';
+import banner1 from '../images/header-slide-1-1440px.jpg';
 import banner2 from '../images/header-slide2.jpg';
 import Notice from './Notice';
 import Navigation from './Navigation';
@@ -13,7 +13,6 @@ import LearnMore from './LearnMore';
 const Container = styled.div`
   position: relative;
   display: flex;
-  height: 900px;
 `;
 
 const OverlayNoticeAndNav = styled.div`
@@ -26,7 +25,10 @@ const BannerCon = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
-  padding: 300px 70px 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  /* padding: 300px 70px 50px; */
 `;
 
 const BannerTexts = styled.div`
@@ -34,7 +36,27 @@ const BannerTexts = styled.div`
   display: ${props => (props.show ? 'flex' : 'none')};
   z-index: 4;
   color: white;
-  padding-bottom: 130px;
+  margin: 250px 88px 70px 88px;
+  height: 500px;
+  width: 100%;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    margin-top: 150px;
+    margin-top: 100px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-right: 30px;
+  }
+
+  @media (max-width: 576px) {
+    margin-top: 60px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 
   &::after {
     z-index: 3;
@@ -62,28 +84,71 @@ const BannerTexts = styled.div`
 const BannerTextSmall = styled.h3`
   margin-bottom: 30px;
   font-weight: 400;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0px;
+  }
 `;
 
 const BannerTextBig = styled.h1`
-  font-size: 100px;
+  max-width: 500px;
+  font-size: 80px;
   margin-bottom: 40px;
+  color: #ffffff;
+  line-height: 1.2;
+  word-break: break-word;
+  font-weight: 600;
+  margin-right: 30px;
+
+  @media (max-width: 576px) {
+    font-size: 70px;
+  }
 `;
 
 const BannerTextsSection = styled.div`
   flex: 2;
+
+  @media (max-width: 576px) {
+    padding-top: 30px;
+  }
 `;
 
 const BannerTimeSection = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   font-size: 1.2rem;
+  justify-content: center;
+  flex: 1;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
 
-const BannerImg = styled.img`
-  height: 100%;
+const MobileTimeSection = styled.div`
+  display: none;
+  @media (max-width: 576px) {
+    display: grid;
+    grid-gap: 10px;
+    justify-content: space-between;
+  }
+`;
+
+const ButtonCon = styled.div`
+  @media (max-width: 576px) {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1.5fr 1fr;
+  }
+`;
+
+const BannerImg = styled.div`
+  background-image: ${props => `url(${props.src})`};
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -121,10 +186,51 @@ const texts = [
   }
 ];
 
-const Banner = () => {
+const LocalTime = ({ transitionFlag }) => {
+  return (
+    <CSSTransition
+      mountOnEnter
+      in={transitionFlag}
+      classNames="banner-time"
+      timeout={{ enter: 10000 }}
+    >
+      <BannerTimeSection>
+        <h4 className="time-section-weather">
+          26 &#8451; <ion-icon name="sunny"></ion-icon>
+        </h4>
+        <h4 className="time-section-local">
+          <span>14:12</span>
+          &nbsp; LOCAL TIME
+        </h4>
+      </BannerTimeSection>
+    </CSSTransition>
+  );
+};
+
+const MobileLocalTime = ({ transitionFlag }) => {
+  return (
+    <CSSTransition
+      mountOnEnter
+      in={transitionFlag}
+      classNames="banner-time"
+      timeout={{ enter: 10000 }}
+    >
+      <MobileTimeSection>
+        <h4 className="" style={{ margin: 0, fontWeight: 500 }}>
+          26 &#8451; <ion-icon name="sunny"></ion-icon>
+        </h4>
+        <h4 className="" style={{ margin: 0, fontWeight: 500 }}>
+          <span>14:12</span>
+          &nbsp; LOCAL TIME
+        </h4>
+      </MobileTimeSection>
+    </CSSTransition>
+  );
+};
+
+const Banner = ({ isHome }) => {
   const [activeBanner, setActiveBanner] = useState(banner1);
   const [activeText, setActiveText] = useState(0);
-
   useEffect(() => {
     window.setInterval(() => {
       setActiveBanner(prev => {
@@ -179,26 +285,22 @@ const Banner = () => {
                   {t.big}
                 </BannerTextBig>
               </CSSTransition>
-              <LearnMore />
+              <ButtonCon>
+                <LearnMore transition transitionFlag={activeText === idx} />
+                <MobileLocalTime transitionFlag={activeText === idx} />
+              </ButtonCon>
             </BannerTextsSection>
-
-            <BannerTimeSection>
-              <h4 className="time-section-weather">
-                26 &#8451; <ion-icon name="sunny"></ion-icon>
-              </h4>
-              <h4 className="time-section-local">
-                <span>14:12</span>
-                &nbsp; LOCAL TIME
-              </h4>
-            </BannerTimeSection>
+            <LocalTime transitionFlag={activeText === idx} />
             <ArrowCon>
               <ion-icon
                 style={{ cursor: 'pointer' }}
                 name="arrow-back"
+                size="large"
               ></ion-icon>
               <ion-icon
                 style={{ cursor: 'pointer' }}
                 name="arrow-forward"
+                size="large"
               ></ion-icon>
             </ArrowCon>
           </BannerTexts>

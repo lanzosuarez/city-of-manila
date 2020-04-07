@@ -11,6 +11,11 @@ const Container = styled.div`
   background-size: contain;
   margin: 0px 70px 80px;
   padding: 40px;
+
+  @media (max-width: 576px) {
+    margin: 0px 30px 80px;
+    padding: 30px;
+  }
 `;
 
 const CarouselContainer = styled.div`
@@ -21,7 +26,11 @@ const CarouselContainer = styled.div`
   display: grid;
   grid-gap: 30px;
   overflow: scroll;
-  grid-template-columns: repeat(9, calc(100% / 3 - 20px));
+  grid-template-columns: repeat(4, calc(100% / 3 - 20px));
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+  }
 `;
 
 const Dots = styled.div`

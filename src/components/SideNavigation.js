@@ -73,7 +73,7 @@ const PageName = styled.span`
 
 const SubPages = styled.ul`
   list-style: none;
-  max-height: ${props => (props.show ? '200px' : '0px')};
+  max-height: ${props => (props.show ? '400px' : '0px')};
   overflow: hidden;
   margin: 0;
   transition: max-height 400ms;

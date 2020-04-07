@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { CSSTransition } from 'react-transition-group';
 
 const Button = styled.button`
+  height: 60px;
   background: ${props => props.defaultBgColor};
   color: ${props => props.textColor};
   border-color: rgba(255, 255, 255, 0);
@@ -34,9 +36,11 @@ const LearnMore = ({
   focusTextColor = 'black',
   text = 'Learn More',
   width = 'auto',
-  letterSpacing = '0px'
+  letterSpacing = '0px',
+  transition = false,
+  transitionFlag = true
 }) => {
-  return (
+  return !transition ? (
     <Button
       width={width}
       defaultBgColor={defaultBgColor}
@@ -47,6 +51,24 @@ const LearnMore = ({
     >
       {text}
     </Button>
+  ) : (
+    <CSSTransition
+      mountOnEnter
+      in={transitionFlag}
+      classNames="banner-button"
+      timeout={{ enter: 10000 }}
+    >
+      <Button
+        width={width}
+        defaultBgColor={defaultBgColor}
+        focusBgColor={focusBgColor}
+        textColor={textColor}
+        focusTextColor={focusTextColor}
+        letterSpacing={letterSpacing}
+      >
+        {text}
+      </Button>
+    </CSSTransition>
   );
 };
 

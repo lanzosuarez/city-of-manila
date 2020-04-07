@@ -50,6 +50,15 @@
   transition: opacity 1s 3s !important;
 }
 
+.banner-time-enter {
+  opacity: 0 !important;
+}
+
+.banner-time-enter-active {
+  opacity: 1 !important;
+  transition: opacity 1s 4s !important;
+}
+
 .time-section-weather {
   display: grid;
   grid-auto-flow: column;
@@ -66,4 +75,3 @@
 .time-section-weather {
   font-weight: 400;
 }
-
