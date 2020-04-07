@@ -16,13 +16,9 @@ const SubContainer = styled.div`
   grid-gap: 50px;
 
   @media (max-width: 768px) {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     margin: 50px 50px;
     grid-gap: 30px;
-  }
-
-  @media (max-width: 576px) {
-  
   }
 `;
 
