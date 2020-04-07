@@ -2,13 +2,15 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import bg from '../images/home-section6-bg.png';
-import av from '../images/lotty.png';
+import logo1 from '../images/testimonial-logo-bg-1.png';
+import logo2 from '../images/testimonial-logo-bg-2.png';
+import logo3 from '../images/testimonial-logo-bg-3.png';
 
 const Container = styled.div`
   display: grid;
   grid-gap: 30px;
   background-image: url(${bg});
-  background-size: contain;
+  background-size: cover;
   margin: 0px 70px 80px;
   padding: 40px;
 
@@ -119,32 +121,32 @@ const Item = ({ img, title, sub, content }) => {
 
 const items = [
   {
-    title: 'Lotty De La Ritta',
-    sub: 'Citizen',
-    img: av,
+    title: 'Esquire Philippines',
+    sub: 'Jul 8, 2019',
+    img: logo1,
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat'
+      'LThe new mayor clearly means business and he’s not wasting a single minute of his three-year term.'
+  },
+  {
+    title: 'Philippine Tatler ',
+    sub: 'Mar 10, 2020',
+    img: logo2,
+    content:
+      'I thank God and ask for forgiveness, guidance, strength.'
+  },
+  {
+    title: 'Daily Pedia',
+    sub: 'July 26, 2019',
+    img: logo3,
+    content:
+      'When people who watch Isko actually go to Manila and experience the changes, their minds will be blown, not because they understand the political implications of this change, but because nakakatuwa lang talaga na makita ang isang lugar na dating magulo na ngayon ay maayos na. Salamat kay Yorme.'
   },
   {
     title: 'Lotty De La Ritta',
     sub: 'Citizen',
-    img: av,
+    img: logo1,
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat'
-  },
-  {
-    title: 'Lotty De La Ritta',
-    sub: 'Citizen',
-    img: av,
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat'
-  },
-  {
-    title: 'Lotty De La Ritta',
-    sub: 'Citizen',
-    img: av,
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat'
+      'When people who watch Isko actually go to Manila and experience the changes, their minds will be blown, not because they understand the political implications of this change, but because nakakatuwa lang talaga na makita ang isang lugar na dating magulo na ngayon ay maayos na. Salamat kay Yorme.'
   }
 ];
 

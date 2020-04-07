@@ -57,27 +57,27 @@ const TextStyle = {
 
 const items = [
   {
-    title: 'Civil Rights',
+    title: 'Economic Alleviation',
     path: civilIcon
   },
   {
-    title: 'Community Revitalization',
+    title: 'Social Amelioration',
     path: commIcon
   },
   {
-    title: 'Criminal Justice',
+    title: 'Physical Redevelopment',
     path: criminalIcon
   },
   {
-    title: 'Economic Development',
+    title: 'Green Spaces',
     path: ecomIcon
   },
   {
-    title: 'Education',
+    title: 'Business and Investor Revitalization',
     path: educIcon
   },
   {
-    title: 'Environment',
+    title: 'Tourism',
     path: envIcon
   }
 ];

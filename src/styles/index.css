@@ -54,6 +54,7 @@ a {
 a:active,
 a:hover {
   outline-width: 0;
+  font-weight: 700;
 }
 abbr[title] {
   border-bottom: none;

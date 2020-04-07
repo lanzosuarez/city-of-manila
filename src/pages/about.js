@@ -83,6 +83,13 @@ const Section3Container = styled.div`
   background-position: top;
 `;
 
+const Section32Container = styled.div`
+  background-color: white;
+`;
+const Section33Container = styled.div`
+  background-color: #fcfcfc;
+`;
+
 const textWidth = {
   paddingRight: '15px',
   paddingLeft: '15px'
@@ -221,7 +228,7 @@ const AboutPage = ({ location }) => {
                     election: defeating an incumbent Mayor – a former Philippine
                     President – on broad hopes of generational and
                     transformative change for the 449 year old Philippines
-                    capital city.{' '}
+                    capital city.
                   </p>
                   <p>
                     Prior to becoming mayor, Mayor Domagoso was Manila’s Vice
@@ -247,28 +254,191 @@ const AboutPage = ({ location }) => {
                 <h1> Background </h1>
                 <img src={line} alt="blue line" className="line" />
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  Francisco Moreno Domagoso is the only child of Joaquin
+                  Domagoso, from Tondo, Manila and Rosario Moreno, from Allen,
+                  Northern Samar.
                 </p>
+
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  His father was a stevedore who worked at Manila’s North
+                  Harbour, also in Tondo; Moreno’s mother managed to keep a
+                  loving household for the precocious Domagoso.
+                </p>
+
+                <p>
+                  As a child, the young Domagoso learned the ways of Tondo’s
+                  hardscrabble streets and contributed to the family’s tight
+                  budget. He became a young entrepreneur, pushing a streetcart
+                  going house-to-house to collect newspapers, glass bottles and
+                  other recyclables, which he would resell to a junk dealer. He
+                  also salvaged in restaurant garbage bins for leftovers which
+                  were repurposed by his practical mother into the family
+                  dinner.
+                </p>
+
+                <p>
+                  In 1993, the fair-skinned Domagoso caught the attention of
+                  Filipino talent scout Wowie Roxas who was attending a funeral
+                  in Tondo. Persuaded to enter Philippine show business and
+                  under a new screen name, “Isko Moreno” soon emerged a popular
+                  host of then daily entertainment variety show, “That’s
+                  Entertainment”, produced by the late German Moreno, a pillar
+                  of the local entertainment industry.
+                </p>
+
+                <p>
+                  However, Domagoso’s newfound affluence and public popularity
+                  could never take him far from his roots in Tondo.
+                </p>
+
+                <p>
+                  He ran for and won a City Council seat in 1998, representing
+                  Manila’s first district. Was reelected in 2001 and 2004 and in
+                  2007 won his firm term as Manila’s Vice Mayor.
+                </p>
+
+                <p>
+                  To ensure he could craft and deliver the right policies to his
+                  constituents, Domagoso undertook courses in Municipal
+                  Legislation and Finance at University of the Philippines. He
+                  studied Public Administration in Pamantasan ng Lungsod ng
+                  Maynila (University of the City of Manila) and Law at Arellano
+                  University. Domagoso undertook further education modules at
+                  Harvard University’s Kennedy School of Government and at the
+                  Said Busines School at Oxford.
+                </p>
+
+                <p>
+                  In 2013, in a controversial election, former Philippine
+                  President Joseph Estrada was elected 26th Mayor of Manila. In
+                  2016, Domagoso ran for the Philippines’ Senate – all 24
+                  Philippine Senators are elected nationally, 12 every 3 year
+                  election cycle – and narrowly missed his opportunity to sit in
+                  the legislative upper house. In 2017 Domagoso was appointed
+                  Chairman of the Board of then North Luzon Railways
+                  Corporation. In 2018 he was appointed Undersecretary for Luzon
+                  Affairs of the Department of Social Welfare.
+                </p>
+
+                <p>
+                  However, Domagoso’s heart has never strayed from Manila’s
+                  dynamic, colourful streets and in 2019 he ran for City Mayor,
+                  achieving an outstanding electoral victory. For the people of
+                  Manila, one of their very own – a &ldquo; Batang Manila
+                  &rdquo; – had finally become their leader.
                 </p>
               </Section3>
             </PageContainer>
           </Section3Container>
+          <Section32Container>
+            <PageContainer>
+              <Section3>
+                <h1> Education </h1>
+                <img src={line} alt="blue line" className="line" />
+                <div>
+                  <ul className="timeline timeline-split">
+                    <li className="timeline-item">
+                      <div className="timeline-info">
+                        <span>College | Harvard University</span>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                        <h3 className="timeline-title">
+                        Executive Education Program
+                        </h3>
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-info">
+                        <span>College | Oxford University</span>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                        <h3 className="timeline-title">
+                          Strategic Leadership Program
+                        </h3>
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-info">
+                        <span>
+                          College | University of the Philippines DILIMAN
+                        </span>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                        <h3 className="timeline-title">
+                          Local Legislation and Local Finance
+                        </h3>
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-info">
+                        <span>College | Pamantasan ng Lungsod ng Maynila</span>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                        <h3 className="timeline-title">
+                          Public Administration
+                        </h3>
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-info">
+                        <span>College | Pamantasan ng Lungsod ng Maynila</span>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                        <h3 className="timeline-title">Bachelor of Laws</h3>
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-info">
+                        <span>College | Pamantasan ng Lungsod ng Maynila</span>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                        <h3 className="timeline-title">Bachelor of Laws</h3>
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-info">
+                        <span>High School</span>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                        <h3 className="timeline-title">
+                          Tondo High School, Tondo, Manila{' '}
+                        </h3>
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-info">
+                        <span>Elementary</span>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                        <h3 className="timeline-title">
+                          Rosauro Alamario Elementary School, Tondo, Manila{' '}
+                        </h3>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </Section3>
+            </PageContainer>
+          </Section32Container>
+          <Section33Container>
+            <PageContainer>
+              <Section3>
+                <h1> Personal </h1>
+                <img src={line} alt="blue line" className="line" />
+                <p>
+                He is married to Diana Lynn Ditan. They have five children, Vincent Patrick , Frances Diane, Joaquín André, Franco Dylan, and Drake Marcus.
+                </p>
+              </Section3>
+            </PageContainer>
+          </Section33Container>
           <PageContainer id="leadership-team">
             <div className="section">
               <div className="center">
@@ -341,7 +511,7 @@ const AboutPage = ({ location }) => {
           </PageContainer>
           <Section5Container>
             <PageContainer id="links-to-social-media">
-              <div className="section">
+              <div className="section-last">
                 <div className="section-container">
                   <LeftContainer>
                     <Section5ImgContent>
@@ -354,12 +524,7 @@ const AboutPage = ({ location }) => {
                   </LeftContainer>
                   <RightContainer>
                     <Section5Social>
-                      <h1 className="white"> His Links To Social Media </h1>
-                      <img src={whiteline} alt="white line" className="line" />
-                      <p className="white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor{' '}
-                      </p>
+                      <h1 className="white">Connect with Mayor Isko</h1>
                       <ion-icon
                         style={iconStyle}
                         name="logo-facebook"
@@ -367,6 +532,10 @@ const AboutPage = ({ location }) => {
                       <ion-icon
                         style={iconStyle}
                         name="logo-twitter"
+                      ></ion-icon>
+                      <ion-icon
+                        style={iconStyle}
+                        name="logo-youtube"
                       ></ion-icon>
                       <ion-icon
                         style={iconStyle}

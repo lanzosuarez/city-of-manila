@@ -4,6 +4,7 @@ import img1 from '../images/home-section5-1.png';
 import img2 from '../images/home-section5-2.png';
 import sign from '../images/sign.png';
 import LearnMore from './LearnMore';
+import line from '../images/blue-line.png';
 
 const Container = styled.div`
   padding: 80px 70px 80px;
@@ -24,6 +25,7 @@ const Item = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 0px 30px 40px;
+  justify-content: center;
   @media (max-width: 576px) {
     padding: 0;
     height: auto;
@@ -42,8 +44,8 @@ const Text = styled.h3`
 `;
 
 const SubText = styled.p`
-  font-size: 16px;
-  line-height: 2;
+  font-size: 26px;
+  line-height: 1.5;
 `;
 
 const Section = styled.div`
@@ -65,16 +67,18 @@ const Sign = styled.img`
   left: 0;
 `;
 
+const lineStyle = {
+  width:'77px'
+};
+
 const HomeSection5 = () => {
   return (
     <Container>
       <Item>
-        <Text>Meet The Man Who Care About Our City</Text>
+        <Text>Meet the Manila Mayor</Text>
+        <img src={line} style={lineStyle} alt="blue line" className="line" />
         <SubText>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat
+          The City of Manila will retake her place as a leading global city, with opporunities for all, prosperity for many, compassion for everyone.
         </SubText>
         <LearnMore
           text="About"

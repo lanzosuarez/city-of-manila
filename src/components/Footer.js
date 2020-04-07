@@ -62,7 +62,7 @@ const GovDetails = styled.div`
 const GovDetailsText = styled.div`
   font-size: 0.7rem;
   display: grid;
-  align-items: center;
+  align-items: baseline;
   grid-gap: 10px;
   grid-template-columns: 10px 1fr;
 `;
@@ -72,50 +72,58 @@ const Footer = () => {
     <Container>
       <SectionsContainer>
         <Section>
-          <h4>Lorem Ipsum</h4>
+          <h4>City Of Manila</h4>
           <SectionP>
-            Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown printer took.
+            I'm on social media, let me hear from you! Reach out to me. 
           </SectionP>
           <img width="60%" alt="mayor signature" src={sign}></img>
         </Section>
         <Section>
-          <h4>Service Links</h4>
+          <h4>Services</h4>
           <LinkList>
             <LinkItem>
-              <Link>Service Link</Link>
+              <Link to="https://manila.gov.ph/district-hospitals/  ">District Hospitals</Link>
             </LinkItem>
             <LinkItem>
-              <Link>Service Link</Link>
+              <Link to="https://manila.gov.ph/civil-registry/">Civil Registry</Link>
             </LinkItem>
             <LinkItem>
-              <Link>Service Link</Link>
+              <Link to="https://manila.gov.ph/social-welfare/">Social Welfare</Link>
             </LinkItem>
             <LinkItem>
-              <Link>Service Link</Link>
+              <Link to="https://manila.gov.ph/senior-citizens/">Senior Citizens</Link>
             </LinkItem>
             <LinkItem>
-              <Link>Service Link</Link>
+              <Link to="https://manila.gov.ph/traffic-management/ ">Traffic Management</Link>
+            </LinkItem>
+            <LinkItem>
+              <Link to="https://manila.gov.ph/disaster-and-risk-management/ ">Disaster And Risk Management</Link>
+            </LinkItem>
+            <LinkItem>
+              <Link to="https://manila.gov.ph/public-services/">Public Services</Link>
+            </LinkItem>
+            <LinkItem>
+              <Link to="https://manila.gov.ph/engineering-public-works/">Engineering Public Works</Link>
             </LinkItem>
           </LinkList>
         </Section>
         <Section>
-          <h4>Governments Links</h4>
+          <h4>National Government</h4>
           <LinkList>
             <LinkItem>
-              <Link>Government Link</Link>
+              <Link to="https://doh.gov.ph">Department Of Health</Link>
             </LinkItem>
             <LinkItem>
-              <Link>Government Link</Link>
+              <Link to="https://dilg.gov.ph">Department Of The Interior And Local Government</Link>
             </LinkItem>
             <LinkItem>
-              <Link>Government Link</Link>
+              <Link to="https://dotr.gov.ph">Department Of Transportation</Link>
             </LinkItem>
             <LinkItem>
-              <Link>Government Link</Link>
+              <Link to="https://da.gov.ph">Department Of Agriculture</Link>
             </LinkItem>
             <LinkItem>
-              <Link>Government Link</Link>
+              <Link to="https://op-proper.gov.ph">Office Of The President Of The Philippines</Link>
             </LinkItem>
           </LinkList>
         </Section>
@@ -124,15 +132,15 @@ const Footer = () => {
           <GovDetails>
             <GovDetailsText>
               <ion-icon name="location-outline"></ion-icon>
-              Padre Burgos Ave, Ermita, Manila, 1000 Metro Manil
+              Manila City Hall<br/>Padre Burgos Avenue, Ermita<br/>Manila City 1000 
             </GovDetailsText>
             <GovDetailsText>
               <ion-icon name="call"></ion-icon>
-              +63 000 000
+              8527-0972  
             </GovDetailsText>
             <GovDetailsText>
               <ion-icon name="alarm"></ion-icon>
-              Mon - Fri: 8:00 am - 6:00 pm
+              Monday - Friday: 8:00 am - 5:00 pm
             </GovDetailsText>
           </GovDetails>
         </Section>

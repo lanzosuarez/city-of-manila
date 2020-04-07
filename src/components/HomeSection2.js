@@ -93,8 +93,7 @@ const HomeSection2 = () => {
         <Header>Executive Orders</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore.
+          Directive issued by the President of the Philippines that manages operations of the national government.
         </Content>
         <Footer>
           <Link>READ MORE</Link>
@@ -112,8 +111,7 @@ const HomeSection2 = () => {
         <Header>Legislation</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore
+          A bill that was proposed and approved by Congress into law to be effective after publication. 
         </Content>
         <Footer>
           <Link>READ MORE</Link>

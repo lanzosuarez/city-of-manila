@@ -92,7 +92,7 @@ const BannerTextSmall = styled.h3`
 
 const BannerTextBig = styled.h1`
   max-width: 500px;
-  font-size: 80px;
+  font-size: 50px;
   margin-bottom: 40px;
   color: #ffffff;
   line-height: 1.2;
@@ -177,12 +177,12 @@ const banners = [
 
 const texts = [
   {
-    small: 'We Have Rich History And Culture',
-    big: 'Visit Our Art Gallery'
+    small: 'Welcome to the office of the Mayor of Manila',
+    big: 'Our minds and hearts united towards returning Manila to greatness. '
   },
   {
-    small: 'We Are Always Open To Thee World',
-    big: 'Smart City For Life'
+    small: 'We will defeat Covid-19 together',
+    big: 'The most challenging public health challenge of our lifetimes'
   }
 ];
 

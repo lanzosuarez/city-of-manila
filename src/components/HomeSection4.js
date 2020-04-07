@@ -81,6 +81,7 @@ const Desc = styled.h5`
   display: flex;
   align-items: center;
   line-height: 2;
+  text-transform: uppercase;
   /* font-size: 1rem; */
 `;
 
@@ -123,27 +124,27 @@ const HomeSection4 = () => {
     <Container ref={conRef}>
       <Items>
         <Figure>
-          <Counter start={started} to={99} />
+          <Counter start={started} to={22} />
         </Figure>
-        <Desc>YEARS OR FOUNDATION</Desc>
+        <Desc>Years in Public Service</Desc>
       </Items>
       <Items>
         <Figure>
-          <Counter start={started} to={5} />K
+          <Counter start={started} to={35} />
         </Figure>
-        <Desc>KEY ACHIEVEMENTS</Desc>
+        <Desc>Key Achievements</Desc>
       </Items>
       <Items>
         <Figure>
-          <Counter start={started} to={1} />K
+          <Counter start={started} to={12} />
         </Figure>
-        <Desc>SUCCESFUL PROGRAMS</Desc>
+        <Desc>Priority Projects </Desc>
       </Items>
       <Items>
         <Figure>
           <Counter start={started} to={1} />M
         </Figure>
-        <Desc>PEOPLE IN THE CITY</Desc>
+        <Desc>People in the City</Desc>
       </Items>
     </Container>
   );
