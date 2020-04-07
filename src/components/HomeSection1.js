@@ -10,13 +10,18 @@ import educIcon from '../images/home-icon-education.png';
 import envIcon from '../images/home-icon-environment.png';
 
 const Container = styled.div`
-  padding: 0px 70px 0px;
+  padding: 0px 88px 0px;
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(6, 1fr);
-  margin-top: -50px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-top: -30px;
   z-index: 4;
   position: relative;
+
+  @media (max-width: 576px) {
+    padding: 0px 20px 0px;
+  }
+
 `;
 
 const Item = styled.div`
@@ -30,7 +35,12 @@ const Item = styled.div`
   background: white;
   text-align: center;
   font-weight: 600;
-  box-shadow: 15px 14px 38px 0px rgba(0,0,0,0.1);
+  box-shadow: 15px 14px 38px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 500ms;
+
+  &:hover {
+    transform: translateY(-20px);
+  }
 `;
 
 const ItemImg = styled.img`

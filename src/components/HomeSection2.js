@@ -2,14 +2,19 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
-import line from "../images/blue-line.png";
+import line from '../images/blue-line.png';
 
 const Container = styled.div`
-  padding: 150px 70px 100px;
+  padding: 100px 70px 100px;
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   position: relative;
+
+  @media (max-width: 576px) {
+    padding: 100px 15px 50px;
+    grid-gap: 50px;
+  }
 `;
 
 const Item = styled.div`
@@ -44,6 +49,7 @@ const Footer = styled.div`
   padding: 0px 20px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   a {
     text-decoration: none;
@@ -51,7 +57,27 @@ const Footer = styled.div`
     font-weight: 600;
     font-size: 0.8rem;
     margin-right: 10px;
+    transition: color 300ms;
   }
+
+  &:hover {
+    a {
+      color: black;
+    }
+    [name='arrow-forward'] {
+      color: black !important;
+    }
+    span {
+      transform: translateX(10px);
+    }
+  }
+`;
+
+const IconCon = styled.span`
+  display: flex;
+  align-items: center;
+  transition: transform 300ms;
+  cursor: pointer;
 `;
 
 const LineImage = styled.img`
@@ -65,40 +91,58 @@ const HomeSection2 = () => {
       <Item>
         <OverlayHeader>01</OverlayHeader>
         <Header>Executive Orders</Header>
-        <LineImage src={ line } alt="blue line"/>
+        <LineImage src={line} alt="blue line" />
         <Content>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore.
         </Content>
         <Footer>
           <Link>READ MORE</Link>
-          <ion-icon style={{ color: 'red' }} name="arrow-forward"></ion-icon>
+          <IconCon>
+            <ion-icon
+              data-icon="icon"
+              style={{ color: 'red' }}
+              name="arrow-forward"
+            ></ion-icon>
+          </IconCon>
         </Footer>
       </Item>
       <Item>
         <OverlayHeader>02</OverlayHeader>
         <Header>Legislation</Header>
-        <LineImage src={ line } alt="blue line"/>
+        <LineImage src={line} alt="blue line" />
         <Content>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore
         </Content>
         <Footer>
           <Link>READ MORE</Link>
-          <ion-icon style={{ color: 'red' }} name="arrow-forward"></ion-icon>
+          <IconCon>
+            <ion-icon
+              data-icon="icon"
+              style={{ color: 'red' }}
+              name="arrow-forward"
+            ></ion-icon>
+          </IconCon>
         </Footer>
       </Item>
       <Item>
         <OverlayHeader>03</OverlayHeader>
         <Header>How To Help Manila</Header>
-        <LineImage src={ line } alt="blue line"/>
+        <LineImage src={line} alt="blue line" />
         <Content>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore
         </Content>
         <Footer>
           <Link>READ MORE</Link>
-          <ion-icon style={{ color: 'red' }} name="arrow-forward"></ion-icon>
+          <IconCon>
+            <ion-icon
+              data-icon="icon"
+              style={{ color: 'red' }}
+              name="arrow-forward"
+            ></ion-icon>
+          </IconCon>
         </Footer>
       </Item>
     </Container>

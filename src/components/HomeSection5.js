@@ -8,25 +8,37 @@ import LearnMore from './LearnMore';
 const Container = styled.div`
   padding: 80px 70px 80px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 300px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   position: relative;
   background: white;
   grid-gap: 40px;
+
+  @media (max-width: 576px) {
+    padding: 80px 15px 80px;
+  }
 `;
 
 const Item = styled.div`
   position: relative;
-  height: 300px;
+  /* height: 300px; */
   display: flex;
   flex-direction: column;
   padding: 0px 0px 30px 40px;
+  @media (max-width: 576px) {
+    padding: 0;
+    height: auto;
+  }
 `;
 
 const Text = styled.h3`
   color: var(--blue);
   padding-top: 40px;
-  font-size:36px;
+  font-size: 36px;
   line-height: 56px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 const SubText = styled.p`
@@ -34,10 +46,14 @@ const SubText = styled.p`
   line-height: 2;
 `;
 
-const Section = styled.div``;
+const Section = styled.div`
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+`;
 
 const Section3 = styled.div`
-  height: 70%;
   display: flex;
   align-self: center;
   position: relative;
@@ -46,6 +62,7 @@ const Section3 = styled.div`
 const Sign = styled.img`
   position: absolute;
   bottom: -50px;
+  left: 0;
 `;
 
 const HomeSection5 = () => {
@@ -67,12 +84,14 @@ const HomeSection5 = () => {
         />
       </Item>
       <Section>
-        <img alt="mayor-isko" src={img1}></img>
+        <div>
+          <img alt="mayor-isko" src={img1}></img>
+        </div>
+        <Section3>
+          <img alt="mayor-isko" src={img2}></img>
+          <Sign src={sign} />
+        </Section3>
       </Section>
-      <Section3>
-        <img alt="mayor-isko" src={img2}></img>
-        <Sign src={sign} />
-      </Section3>
     </Container>
   );
 };

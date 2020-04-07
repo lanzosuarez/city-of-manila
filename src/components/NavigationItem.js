@@ -23,7 +23,8 @@ const Container = styled.li`
     color: #000000;
   }
 
-  a:hover, &:hover {
+  a:hover,
+  &:hover {
     color: #04326a !important;
   }
 `;
@@ -34,7 +35,7 @@ const IconContainer = styled.span`
   justify-content: centerl;
 `;
 
-const NavigationItem = ({ title, sections = [] }) => {
+const NavigationItem = ({ title, path, sections = [] }) => {
   const [showDropDown, setShowDropDown] = useState(false);
 
   const toggleDropdown = () => setShowDropDown(l => !l);
@@ -43,7 +44,7 @@ const NavigationItem = ({ title, sections = [] }) => {
 
   return (
     <Container onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
-      <Link to="/">{title}</Link>
+      <Link to={path}>{title}</Link>
       {hasDropDown && (
         <IconContainer>
           <ion-icon name="chevron-down"></ion-icon>

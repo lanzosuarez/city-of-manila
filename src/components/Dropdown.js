@@ -70,7 +70,7 @@ const Dropdown = ({ show, dropDownList = [], setShowDropDown }) => {
       <Container onMouseEnter={close}>
         {dropDownList.map((i, idx) => (
           <Item key={idx}>
-            <Link to="/">{i}</Link>
+            <Link to={i.path}>{i.title}</Link>
           </Item>
         ))}
       </Container>

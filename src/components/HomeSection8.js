@@ -35,7 +35,6 @@ const SectionHeader = styled.h1`
 
 const iconStyle = {
     color: 'white',
-    marginTop: '9px',
     fontSize: '25px',
     marginTop: '25%'
 };

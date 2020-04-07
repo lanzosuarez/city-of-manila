@@ -8,23 +8,26 @@ import HomeSection4 from '../components/HomeSection4';
 import HomeSection5 from '../components/HomeSection5';
 import HomeSection6 from '../components/HomeSection6';
 import HomeSection7 from '../components/HomeSection7';
+import NavigationProvider from '../context/NavigationProvider';
 import HomeSection8 from '../components/HomeSection8';
 import HomeSection9 from '../components/HomeSection9';
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ path }) => {
   return (
-    <Layout>
-      <SEO title="Home" />
-      <HomeSection1 />
-      <HomeSection2 />
-      <HomeSection3 />
-      <HomeSection4 />
-      <HomeSection5 />
-      <HomeSection6 />
-      <HomeSection7 />
-      <HomeSection8 />
-      <HomeSection9 />
-    </Layout>
+    <NavigationProvider>
+      <Layout path={path}>
+        <SEO title="Home" />
+        <HomeSection1 />
+        <HomeSection2 />
+        <HomeSection3 />
+        <HomeSection4 />
+        <HomeSection5 />
+        <HomeSection6 />
+        <HomeSection7 />
+        <HomeSection8 />
+        <HomeSection9 />
+      </Layout>
+    </NavigationProvider>
   );
 };
 

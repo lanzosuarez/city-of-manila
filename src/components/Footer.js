@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
+import sign from '../images/sign-footer.png';
 
 const Container = styled.div`
   width: 100%;
@@ -11,16 +12,23 @@ const Container = styled.div`
 `;
 
 const SectionsContainer = styled.div`
-  padding: 100px 120px 90px;
+  margin: 60px 100px 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  @media (max-width: 768px) {
+    grid-gap: 20px;
+    margin: 60px 50px 40px;
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+  }
 `;
 
-const Section = styled.div`
-  flex: 1;
-`;
-
+const Section = styled.div``;
 const SectionP = styled.p`
   font-size: 0.8rem;
 `;
@@ -69,6 +77,7 @@ const Footer = () => {
             Lorem Ipsum has been the industry's standard dummy text ever since
             the 1500s, when an unknown printer took.
           </SectionP>
+          <img width="60%" alt="mayor signature" src={sign}></img>
         </Section>
         <Section>
           <h4>Service Links</h4>

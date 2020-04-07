@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 
 import bg from '../images/home-section-4-bg.png';
 
 const Container = styled.div`
-  height: 100px;
   background-image: url(${bg});
-  margin: 0px 70px 0px 70px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  margin: 0px 70px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
   position: relative;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 0px 100px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 40px 100px;
   align-items: center;
+
+  @media (max-width: 576px) {
+    margin: 0px 15px;
+    padding: 50px 60px;
+    height: auto;
+    grid-gap: 10px;
+  }
 
   &::after {
     content: '';
@@ -24,6 +31,11 @@ const Container = styled.div`
     left: 0;
     background: white;
     margin-left: -70px;
+
+    @media (max-width: 576px) {
+      margin-left: -15px;
+      width: 15px;
+    }
   }
 
   &::before {
@@ -35,6 +47,11 @@ const Container = styled.div`
     right: 0;
     background: white;
     margin-right: -70px;
+
+    @media (max-width: 576px) {
+      margin-right: -15px;
+      width: 15px;
+    }
   }
 `;
 
@@ -44,38 +61,88 @@ const Items = styled.div`
   grid-gap: 20px;
   color: white;
   padding: 0px 20px;
+
+  @media (max-width: 576px) {
+    padding: 0px;
+  }
 `;
 
 const Figure = styled.h3`
   margin: 0;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   letter-spacing: 5px;
+  font-size: 3rem;
 `;
 
 const Desc = styled.h5`
   margin: 0;
   display: flex;
   align-items: center;
+  line-height: 2;
+  /* font-size: 1rem; */
 `;
 
+const Counter = ({ start, to, from = 0 }) => {
+  const [count, setCount] = useState(from);
+
+  useEffect(() => {
+    if (count !== to && start) {
+      window.setTimeout(() => {
+        setCount(prev => {
+          return prev + 1;
+        });
+      }, 20);
+    }
+  }, [count, start, to]);
+
+  return <span>{count}</span>;
+};
+
 const HomeSection4 = () => {
+  const conRef = useRef(null);
+  const [started, setStarted] = useState(false);
+
+  const startCount = () => {
+    const slideInAt =
+      window.scrollY + window.innerHeight - conRef.current.offsetHeight / 2;
+    if (slideInAt > conRef.current.offsetTop && !started) {
+      setStarted(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', startCount);
+    return () => {
+      window.removeEventListener('scroll', startCount);
+    };
+  }, []);
+
   return (
-    <Container>
+    <Container ref={conRef}>
       <Items>
-        <Figure>99</Figure>
+        <Figure>
+          <Counter start={started} to={99} />
+        </Figure>
         <Desc>YEARS OR FOUNDATION</Desc>
       </Items>
       <Items>
-        <Figure>5K</Figure>
+        <Figure>
+          <Counter start={started} to={5} />K
+        </Figure>
         <Desc>KEY ACHIEVEMENTS</Desc>
       </Items>
       <Items>
-        <Figure>1K</Figure>
+        <Figure>
+          <Counter start={started} to={1} />K
+        </Figure>
         <Desc>SUCCESFUL PROGRAMS</Desc>
       </Items>
       <Items>
-        <Figure>1.8 M</Figure>
+        <Figure>
+          <Counter start={started} to={1} />M
+        </Figure>
         <Desc>PEOPLE IN THE CITY</Desc>
       </Items>
     </Container>

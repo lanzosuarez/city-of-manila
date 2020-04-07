@@ -1,20 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import '../styles/about.css';
 
-import line from "../images/blue-line.png";
-import imgSection2 from "../images/about-section-2.png";
-import imgSection2Quote from "../images/about-section-2-quote-box.png";
+import line from '../images/blue-line.png';
+import imgSection2 from '../images/about-section-2.png';
+import imgSection2Quote from '../images/about-section-2-quote-box.png';
 import section3Bg from '../images/about-section-3.png';
 import itemImg from '../images/team-placeholder.png';
 import section5Bg from '../images/about-section-5.png';
 import section5Img from '../images/about-section-5-img.png';
-import whiteline from "../images/white-line.png";
+import whiteline from '../images/white-line.png';
 
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
-
-
+import Layout from '../components/Layout';
+import NavigationProvider from '../context/NavigationProvider';
+import SEO from '../components/seo';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -43,7 +44,6 @@ const RightContainer = styled.div`
   }
 `;
 
-
 const QuoteStyle = styled.img`
   position: relative;
   width: 100%;
@@ -67,7 +67,7 @@ const QuoteStyleBox = styled.img`
     right: 0;
     display: block;
   }
-  @media only screen and (min-width: 426px) and (max-width: 768px){
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
     top: 32rem;
     bottom: 40rem;
     width: 100%;
@@ -84,15 +84,15 @@ const Section3Container = styled.div`
 `;
 
 const textWidth = {
- paddingRight: '15px',
- paddingLeft: '15px',
+  paddingRight: '15px',
+  paddingLeft: '15px'
 };
 
 const Section3 = styled.div`
- padding: 4rem 0;
- text-align: center;
- @media only screen and (max-width: 1024px) {
-  padding: 4rem 15px;
+  padding: 4rem 0;
+  text-align: center;
+  @media only screen and (max-width: 1024px) {
+    padding: 4rem 15px;
   }
 `;
 
@@ -105,14 +105,13 @@ const Section4Container = styled.div`
   @media only screen and (max-width: 425px) {
     justify-content: center;
   }
-  @media only screen and (min-width: 426px) and (max-width: 768px){
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
     justify-content: space-evenly;
   }
-  @media only screen and (min-width: 769px) and (max-width: 1024px){
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
     justify-content: space-evenly;
     margin: 0px 15px;
   }
-  
 `;
 
 const Section4Item = styled.div`
@@ -123,10 +122,10 @@ const Section4Item = styled.div`
   margin-bottom: 20px;
   margin-top: 20px;
 
-  @media only screen and (min-width: 426px) and (max-width: 1024px){
+  @media only screen and (min-width: 426px) and (max-width: 1024px) {
     width: 336px;
   }
-  @media only screen and (min-width: 1025px) and (max-width: 1439px){
+  @media only screen and (min-width: 1025px) and (max-width: 1439px) {
     width: 236px;
   }
 `;
@@ -162,13 +161,12 @@ const iconStyle = {
   marginRight: '30px'
 };
 
-
 const Section5ImgContent = styled.div`
   padding: 4rem 0px;
   @media only screen and (max-width: 425px) {
     padding: 4rem 0px 0 0;
   }
-  @media only screen and (min-width: 426px) and (max-width: 768px){
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
     padding: 50px 10px 0px;
     display: flex;
     align-content: center;
@@ -181,104 +179,158 @@ const Section5Social = styled.div`
   @media only screen and (max-width: 425px) {
     padding: 1rem 15px 4rem;
   }
-  @media only screen and (min-width: 426px) and (max-width: 768px){
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
     padding: 20px 50px 50px;
   }
-  @media only screen and (min-width: 769px) and (max-width: 1024px){
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
     padding: 20px 20px 50px 0px;
   }
 `;
 
-const AboutPage = () => {
+const AboutPage = ({ location }) => {
+  useEffect(() => {
+    const { hash } = location;
+    if (hash.length) {
+      const el = document.getElementById(hash.slice(1));
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
-    <Wrapper>
-      <PageHeader name="About" />
-        <PageContainer>
-          <div className="section">
-            <div className="section-container">
-              <LeftContainer>
-                <h1> Meet Mayor Isko </h1>
-                <img src={ line } alt="blue line" className="line"/>
-                <p>Mayor Francisco “Isko Moreno” Domagoso (born October 24, 1974) – popularly known as "Isko Moreno" and colloquially as Yorme Isko – has served as the 27th Mayor of Manila since 1 July 2019.</p>
-                <p>His elevation to Manila’s Mayoralty occurred via a historic election: defeating an incumbent Mayor – a former Philippine President – on broad hopes of generational and transformative change for the 449 year old Philippines capital city. </p>
-                <p>Prior to becoming mayor, Mayor Domagoso was Manila’s Vice Mayor from 2007 – 2016 and served in Manila’s City Council representing the ancient, densely populated and economically challenged urban district of Tondo. He was first elected to Manila’s City Council in 1998.</p>
-              </LeftContainer>
-              <RightContainer>
-                <QuoteStyle src={ imgSection2 } alt="Meet The Man Who Care About Our City"/>
-                <QuoteStyleBox src={ imgSection2Quote } alt="From Mayor Isko"/>
-              </RightContainer>
-            </div>
-          </div>
-          </PageContainer>
-          <Section3Container>
-              <PageContainer>
-                  <Section3>
-                    <h1> Background </h1>
-                    <img src={ line } alt="blue line" className="line"/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </Section3>
-                </PageContainer>
-          </Section3Container>
+    <NavigationProvider>
+      <Layout>
+        <SEO title="About" />
+        <Wrapper>
+          <PageHeader name="About" />
           <PageContainer>
             <div className="section">
+              <div className="section-container">
+                <LeftContainer>
+                  <h1> Meet Mayor Isko </h1>
+                  <img src={line} alt="blue line" className="line" />
+                  <p>
+                    Mayor Francisco “Isko Moreno” Domagoso (born October 24,
+                    1974) – popularly known as "Isko Moreno" and colloquially as
+                    Yorme Isko – has served as the 27th Mayor of Manila since 1
+                    July 2019.
+                  </p>
+                  <p>
+                    His elevation to Manila’s Mayoralty occurred via a historic
+                    election: defeating an incumbent Mayor – a former Philippine
+                    President – on broad hopes of generational and
+                    transformative change for the 449 year old Philippines
+                    capital city.{' '}
+                  </p>
+                  <p>
+                    Prior to becoming mayor, Mayor Domagoso was Manila’s Vice
+                    Mayor from 2007 – 2016 and served in Manila’s City Council
+                    representing the ancient, densely populated and economically
+                    challenged urban district of Tondo. He was first elected to
+                    Manila’s City Council in 1998.
+                  </p>
+                </LeftContainer>
+                <RightContainer>
+                  <QuoteStyle
+                    src={imgSection2}
+                    alt="Meet The Man Who Care About Our City"
+                  />
+                  <QuoteStyleBox src={imgSection2Quote} alt="From Mayor Isko" />
+                </RightContainer>
+              </div>
+            </div>
+          </PageContainer>
+          <Section3Container>
+            <PageContainer id="background">
+              <Section3>
+                <h1> Background </h1>
+                <img src={line} alt="blue line" className="line" />
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </Section3>
+            </PageContainer>
+          </Section3Container>
+          <PageContainer id="leadership-team">
+            <div className="section">
               <div className="center">
-                <h1 style={textWidth }> His Leadership Team </h1>
-                <img src={ line } alt="blue line" className="line"/>
-                <p style={textWidth }>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                <h1 style={textWidth}> His Leadership Team </h1>
+                <img src={line} alt="blue line" className="line" />
+                <p style={textWidth}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor{' '}
+                </p>
               </div>
               <Section4Container>
                 <Section4Item>
-                  <img src={ itemImg } alt="Team"/>
+                  <img src={itemImg} alt="Team" />
                   <ItemWrap>
                     <ItemTextHeader>First Last Name</ItemTextHeader>
                     <ItemText>City Councilor, District 1</ItemText>
                   </ItemWrap>
                 </Section4Item>
                 <Section4Item>
-                  <img src={ itemImg } alt="Team"/>
+                  <img src={itemImg} alt="Team" />
                   <ItemWrap>
                     <ItemTextHeader>First Last Name</ItemTextHeader>
                     <ItemText>City Councilor, District 1</ItemText>
                   </ItemWrap>
                 </Section4Item>
                 <Section4Item>
-                  <img src={ itemImg } alt="Team"/>
+                  <img src={itemImg} alt="Team" />
                   <ItemWrap>
                     <ItemTextHeader>First Last Name</ItemTextHeader>
                     <ItemText>City Councilor, District 1</ItemText>
                   </ItemWrap>
                 </Section4Item>
                 <Section4Item>
-                  <img src={ itemImg } alt="Team"/>
+                  <img src={itemImg} alt="Team" />
                   <ItemWrap>
                     <ItemTextHeader>First Last Name</ItemTextHeader>
                     <ItemText>City Councilor, District 1</ItemText>
                   </ItemWrap>
                 </Section4Item>
                 <Section4Item>
-                  <img src={ itemImg } alt="Team"/>
+                  <img src={itemImg} alt="Team" />
                   <ItemWrap>
                     <ItemTextHeader>First Last Name</ItemTextHeader>
                     <ItemText>City Councilor, District 1</ItemText>
                   </ItemWrap>
                 </Section4Item>
                 <Section4Item>
-                  <img src={ itemImg } alt="Team"/>
+                  <img src={itemImg} alt="Team" />
                   <ItemWrap>
                     <ItemTextHeader>First Last Name</ItemTextHeader>
                     <ItemText>City Councilor, District 1</ItemText>
                   </ItemWrap>
                 </Section4Item>
                 <Section4Item>
-                  <img src={ itemImg } alt="Team"/>
+                  <img src={itemImg} alt="Team" />
                   <ItemWrap>
                     <ItemTextHeader>First Last Name</ItemTextHeader>
                     <ItemText>City Councilor, District 1</ItemText>
                   </ItemWrap>
                 </Section4Item>
                 <Section4Item>
-                  <img src={ itemImg } alt="Team"/>
+                  <img src={itemImg} alt="Team" />
                   <ItemWrap>
                     <ItemTextHeader>First Last Name</ItemTextHeader>
                     <ItemText>City Councilor, District 1</ItemText>
@@ -288,30 +340,47 @@ const AboutPage = () => {
             </div>
           </PageContainer>
           <Section5Container>
-              <PageContainer>
+            <PageContainer id="links-to-social-media">
               <div className="section">
                 <div className="section-container">
                   <LeftContainer>
                     <Section5ImgContent>
-                      <img src={ section5Img } alt="blue line" className="Mayor Isko Moreno"/>
+                      <img
+                        src={section5Img}
+                        alt="blue line"
+                        className="Mayor Isko Moreno"
+                      />
                     </Section5ImgContent>
                   </LeftContainer>
                   <RightContainer>
                     <Section5Social>
                       <h1 className="white"> His Links To Social Media </h1>
-                      <img src={ whiteline } alt="white line" className="line"/>
-                      <p className="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-                      <ion-icon style={iconStyle} name="logo-facebook"></ion-icon>
-                      <ion-icon style={iconStyle} name="logo-twitter"></ion-icon>
-                      <ion-icon style={iconStyle} name="logo-instagram"></ion-icon>
+                      <img src={whiteline} alt="white line" className="line" />
+                      <p className="white">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor{' '}
+                      </p>
+                      <ion-icon
+                        style={iconStyle}
+                        name="logo-facebook"
+                      ></ion-icon>
+                      <ion-icon
+                        style={iconStyle}
+                        name="logo-twitter"
+                      ></ion-icon>
+                      <ion-icon
+                        style={iconStyle}
+                        name="logo-instagram"
+                      ></ion-icon>
                     </Section5Social>
                   </RightContainer>
                 </div>
               </div>
-                </PageContainer>
+            </PageContainer>
           </Section5Container>
-        
-    </Wrapper>
+        </Wrapper>
+      </Layout>
+    </NavigationProvider>
   );
 };
 
