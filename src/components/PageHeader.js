@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import pageBg from '../images/about-header.png';
 
 const Container = styled.div`
-    background-image: url(${pageBg});
+    background-image: ${props => `url(${props.bg})`};
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -36,12 +36,12 @@ const PageBreadcrumbs = styled.p`
     line-height: 24px;
 `;
 
-const PageHeader = () => {
+const PageHeader = (props) => {
     return (
-     <Container>
+     <Container bg={pageBg}>
          <PageContent>
-             <HeaderText>About</HeaderText>
-             <PageBreadcrumbs>Home / About</PageBreadcrumbs>
+             <HeaderText>{props.name}</HeaderText>
+             <PageBreadcrumbs>Home / {props.name}</PageBreadcrumbs>
          </PageContent>
      </Container>
     );

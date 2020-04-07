@@ -192,7 +192,7 @@ const Section5Social = styled.div`
 const AboutPage = () => {
   return (
     <Wrapper>
-      <PageHeader/>
+      <PageHeader name="About" />
         <PageContainer>
           <div className="section">
             <div className="section-container">
