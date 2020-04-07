@@ -15,6 +15,7 @@ import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
 import Layout from '../components/Layout';
 import NavigationProvider from '../context/NavigationProvider';
+import SEO from '../components/seo';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -187,6 +188,7 @@ const Section5Social = styled.div`
 `;
 
 const AboutPage = ({ location }) => {
+
   useEffect(() => {
     const { hash } = location;
     if (hash.length) {
@@ -195,10 +197,12 @@ const AboutPage = ({ location }) => {
         el.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  }, []);
+  }, [location]);
+
   return (
     <NavigationProvider>
       <Layout>
+        <SEO title="About" />
         <Wrapper>
           <PageHeader />
           <PageContainer id="mayor-profile">
