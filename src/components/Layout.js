@@ -15,7 +15,7 @@ const Container = styled.div`
   position: relative;
 
   height: ${props => (props.noscroll ? '100vh' : 'auto')};
-  overflow: ${props => (props.noscroll ? 'hidden' : 'scroll')};
+  overflow: ${props => (props.noscroll ? 'hidden' : 'normal')};
 `;
 
 // const MaxContainer = styled.div``
