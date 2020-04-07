@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import line from "../images/blue-line.png";
 import section8Bg from '../images/section-8-bg.png';
 
 import PageContainer from '../components/PageContainer';
@@ -36,8 +35,9 @@ const SectionHeader = styled.h1`
 
 const iconStyle = {
     color: 'white',
-    fontSize: '30px',
-    marginTop: '9px'
+    marginTop: '9px',
+    fontSize: '25px',
+    marginTop: '25%'
 };
 
 const IconBox = styled.div`
@@ -47,6 +47,11 @@ const IconBox = styled.div`
     border-radius: 50px;
     margin-top: 10px;
     margin: auto;
+    transition: all 1s ease 0s;
+    :hover {
+        border: 2px solid #ffffff;
+        background-color: transparent;
+    }
 `;
 
 const HomeSection8 = () => {
