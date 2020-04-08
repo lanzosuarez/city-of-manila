@@ -15,7 +15,7 @@ import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
 import Layout from '../components/Layout';
 import NavigationProvider from '../context/NavigationProvider';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 
 const Wrapper = styled.div`
   width: 100%;
