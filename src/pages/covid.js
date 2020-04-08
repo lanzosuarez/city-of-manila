@@ -33,21 +33,25 @@ const BannerContainer = styled.div`
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.8rem;
     color: white;
+    line-height: 70px;
     font-weight: 600;
     @media only screen and (max-width: 768px) {
       font-size: 40px;
     }
   }
 
-  p {
-    font-size: 18px;
+  p:nth-child(1) {
+    font-size: 14px;
     line-height: 2;
+    margin-bottom: 2px;
     @media only screen and (max-width: 768px) {
       font-size: 18px;
       line-height: 1.5;
     }
+  }
+  
   }
 `;
 const Button = styled.div`
@@ -123,7 +127,7 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 27rem;
-  margin-top: 51px;
+  margin-top: 5px;
   @media only screen and (max-width: 768px) {
     width: 18rem;
   }
@@ -148,19 +152,28 @@ const CovidPage = () => {
           <PageContainer>
             <BannerContainer>
               <p>
-                The most challenging public health challenge of our lifetimes
+                On March 20th, the City of Manila launched the Code Covid-19 Digital Health Survey.
               </p>
               <h1>We will defeat Covid-19 together</h1>
               <p>
-                Covid-19 is the single biggest public health and livelihood
-                hurdle of our lifetimes.
+              Covid-19 is the single biggest public health and livelihood hurdle of our lifetimes. 
+              </p>
+              <p>
+              While much of the day and night life of our city has come to a temporary stop, we do not stop. The City Government of Manila continues, 24x7. We will not stop, until we win the war against Covid -19.
+              </p>
+              <p>
+              Let's beat Covid-19 together. 
+Bangon, Manila!
+              </p>
+              <p>
+              Bangon, Manila!
               </p>
               <ButtonContainer>
                 <Button>
                   <Link to="/contact">Contact</Link>
                 </Button>
                 <ButtonTracker>      
-                  <a  href="https://www.google.com/url?q=https://www.doh.gov.ph/2019-nCoV&sa=D&ust=1586319141649000&usg=AFQjCNHH97WJSAPeduXH9jUtbRw9EB3ccQ">COVID-19 Tracker</a>
+                  <a  href="https://ncovtracker.doh.gov.ph/">COVID-19 Tracker</a>
                 </ButtonTracker>
               </ButtonContainer>
             </BannerContainer>

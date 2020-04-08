@@ -73,7 +73,7 @@ const Footer = () => {
         <Section>
           <h4>City Of Manila</h4>
           <SectionP>
-            I'm on social media, let me hear from you! Reach out to me. 
+            Connect with us and know about what's the latest happenings in our city.
           </SectionP>
           <img width="60%" alt="mayor signature" src={sign}></img>
         </Section>

@@ -40,10 +40,10 @@ const Notice = ({ isHome }) => {
   return (
     <Container isHome={isHome}>
       <IconsContainer>
-        <ion-icon style={iconStyle} name="logo-twitter"></ion-icon>
-        <ion-icon style={iconStyle} name="logo-facebook"></ion-icon>
-        <ion-icon style={iconStyle} name="logo-linkedin"></ion-icon>
-        <ion-icon style={iconStyle} name="logo-instagram"></ion-icon>
+        <a href="https://www.facebook.com/iskomorenodomagoso/ "><ion-icon style={iconStyle} name="logo-facebook"></ion-icon></a>
+        <a href="https://twitter.com/IskoMoreno "><ion-icon style={iconStyle} name="logo-twitter"></ion-icon></a>
+        <a href="https://www.youtube.com/iskoverychannel"><ion-icon style={iconStyle} name="logo-youtube"></ion-icon></a>
+        <a href="https://www.instagram.com/iskomorenodomagoso"><ion-icon style={iconStyle} name="logo-instagram"></ion-icon></a>
       </IconsContainer>
       <NoticeText>
         Open Hours Of City Government Mon - Fri 8:00 am - 6:00 pm.

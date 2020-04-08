@@ -44,7 +44,7 @@ const Text = styled.h3`
 `;
 
 const SubText = styled.p`
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.5;
 `;
 

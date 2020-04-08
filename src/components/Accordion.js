@@ -50,10 +50,6 @@ const items = [
     content: 'Flattening the curve. ',
     content2: 'By staying at home and practicing social distancing (maintaining at least 1 meter distancce between yourself and another person, according to advice by the World Health Organization) you can limit the spread of the virus by avoiding contact with a potentially infected individual. ',
     content3: 'Covid-19 is spread through small droplets in the air when an infected person coughs or sneezes, which you can breathe in if you&rsquo;re standing too close. By staying home, you&rsquo;re doing your part in cotaining the spread of the virus. ',
-  },
-  {
-    title: 'What happens after ECQ?',
-    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
   }
 ];
 
