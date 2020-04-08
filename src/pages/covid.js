@@ -33,8 +33,9 @@ const BannerContainer = styled.div`
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.8rem;
     color: white;
+    line-height: 70px;
     font-weight: 600;
     @media only screen and (max-width: 768px) {
       font-size: 40px;
@@ -42,20 +43,15 @@ const BannerContainer = styled.div`
   }
 
   p:nth-child(1) {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 2;
+    margin-bottom: 2px;
     @media only screen and (max-width: 768px) {
       font-size: 18px;
       line-height: 1.5;
     }
   }
-  p:nth-child(1) {
-    font-size: 16px;
-    line-height: 1.2;
-    @media only screen and (max-width: 768px) {
-      font-size: 18px;
-      line-height: 1.5;
-    }
+  
   }
 `;
 const Button = styled.div`
