@@ -12,11 +12,13 @@ import HomeSection8 from '../components/HomeSection8';
 import HomeSection9 from '../components/HomeSection9';
 
 import NavigationProvider from '../context/NavigationProvider';
-const IndexPage = ({ path }) => {
+import Banner from '../components/Banner';
+const IndexPage = () => {
   return (
     <NavigationProvider>
-      <Layout path={path}>
+      <Layout>
         <SEO title="Home" />
+        <Banner />
         <HomeSection1 />
         <HomeSection2 />
         <HomeSection3 />

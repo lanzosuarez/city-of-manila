@@ -7,10 +7,12 @@ import NavigationItem from './NavigationItem';
 const Container = styled.div`
   height: 100px;
   width: 100%;
-  max-width: ${props => (props.isHome ? '1200px' : '100%')};
-  background: white;
+  max-width: ${props => props.maxWidth};
   display: flex;
+  background: white;
   margin: 0 auto;
+  position: relative;
+  z-index: 10;
 
   @media (max-width: 1024px) {
     display: none;
@@ -73,15 +75,15 @@ export const listItems = [
     sections: [
       {
         title: 'Digital Help Survey',
-        path: '/covid'
+        path: '/covid#digital-survey'
       },
       {
         title: 'Enhanced Community Quarantine',
-        path: '/covid'
+        path: '/covid#ecq'
       },
       {
         title: 'What You Need To Know',
-        path: '/covid'
+        path: '/covid#what-you-need-to-know'
       }
     ]
   },
@@ -107,9 +109,9 @@ export const listItems = [
   }
 ];
 
-const Navigation = ({ isHome }) => {
+const Navigation = ({ maxWidth = '100%' }) => {
   return (
-    <Container isHome={isHome}>
+    <Container maxWidth={maxWidth}>
       <Logo>
         <Link to="/">logo .</Link>
       </Logo>

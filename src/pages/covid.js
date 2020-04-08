@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -9,6 +9,9 @@ import CovidSection3 from '../components/CovidSection3';
 import banner from '../images/covid-banner.jpg';
 import styled from '@emotion/styled';
 import PageContainer from '../components/PageContainer';
+import Notice from '../components/Notice';
+import Navigation from '../components/Navigation';
+import scrollToSection from '../hooks/scrollToSection';
 
 const CovidBanner = styled.div`
   width: 100%;
@@ -51,9 +54,8 @@ const BannerContainer = styled.div`
       line-height: 1.5;
     }
   }
-  
-  }
 `;
+
 const Button = styled.div`
   background-color: #f3a81b;
   color: #051422;
@@ -75,16 +77,16 @@ const Button = styled.div`
     align-items: center;
     justify-content: center;
   }
-  :hover a{
-    background-color:  #05326b;
-    color:white;
+  :hover a {
+    background-color: #05326b;
+    color: white;
     border-radius: 40px;
   }
   @media only screen and (max-width: 768px) {
     width: 145px;
     height: 36px;
     font-size: 12px;
-    margin-right:5px;
+    margin-right: 5px;
   }
 `;
 const ButtonTracker = styled.div`
@@ -111,9 +113,9 @@ const ButtonTracker = styled.div`
     align-items: center;
     justify-content: center;
   }
-  :hover a{
-    background-color:  #05326b;
-    color:white;
+  :hover a {
+    background-color: #05326b;
+    color: white;
     border-radius: 40px;
   }
   @media only screen and (max-width: 768px) {
@@ -147,55 +149,55 @@ const Section1 = styled.div`
   background-color: #f8f8f8;
 `;
 
-const CovidPage = () => {
+const CovidPage = ({ location }) => {
+  useEffect(() => scrollToSection(location), []);
   return (
     <NavigationProvider>
       <Layout>
         <SEO title="COVID-19" />
+        <Notice />
+        <Navigation />
         <CovidBanner>
           <PageContainer>
             <BannerContainer>
-              <p>
-                The most difficult public health challenge of our lifetime
-              </p>
+              <p>The most difficult public health challenge of our lifetime</p>
               <h1>We will defeat Covid-19 together</h1>
               <p>
-              Covid-19 is the single biggest public health and livelihood hurdle of our lifetimes. 
+                Covid-19 is the single biggest public health and livelihood
+                hurdle of our lifetimes.
               </p>
               <p>
-              While much of the day and night life of our city has come to a temporary stop, we do not stop. The City Government of Manila continues, 24x7. We will not stop, until we win the war against Covid -19.
+                While much of the day and night life of our city has come to a
+                temporary stop, we do not stop. The City Government of Manila
+                continues, 24x7. We will not stop, until we win the war against
+                Covid -19.
               </p>
-              <p>
-              Let's beat Covid-19 together. 
-Bangon, Manila!
-              </p>
-              <p>
-              Bangon, Manila!
-              </p>
+              <p>Let's beat Covid-19 together. Bangon, Manila!</p>
+              <p>Bangon, Manila!</p>
               <ButtonContainer>
                 <Button>
                   <Link to="/contact">Contact</Link>
                 </Button>
-                <ButtonTracker>      
-                  <a  href="https://ncovtracker.doh.gov.ph/">COVID-19 Tracker</a>
+                <ButtonTracker>
+                  <a href="https://ncovtracker.doh.gov.ph/">COVID-19 Tracker</a>
                 </ButtonTracker>
               </ButtonContainer>
             </BannerContainer>
           </PageContainer>
         </CovidBanner>
         <Section1>
-        <PageContainer>
-            <CovidSection2/>
-        </PageContainer>
+          <PageContainer id="digital-survey">
+            <CovidSection2 />
+          </PageContainer>
         </Section1>
         <Section2>
-          <PageContainer>
-            <CovidSection1/>
+          <PageContainer id="ecq">
+            <CovidSection1 />
           </PageContainer>
         </Section2>
         <Section>
-          <PageContainer>
-            <CovidSection3/>
+          <PageContainer id="what-you-need-to-know">
+            <CovidSection3 />
           </PageContainer>
         </Section>
       </Layout>

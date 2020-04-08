@@ -18,7 +18,7 @@ const Container = styled.div`
 const OverlayNoticeAndNav = styled.div`
   width: 100%;
   position: absolute;
-  z-index: 3;
+  z-index: 5;
 `;
 
 const BannerCon = styled.div`
@@ -178,11 +178,19 @@ const banners = [
 const texts = [
   {
     small: 'Welcome to the office of the Mayor of Manila',
-    big: 'Our minds and hearts united towards returning Manila to greatness. '
+    big: 'Our minds and hearts united towards returning Manila to greatness. ',
+    btn: {
+      text: 'ABOUT',
+      path: '/about#mayor-profile'
+    }
   },
   {
     small: 'We will defeat Covid-19 together',
-    big: 'The most challenging public health challenge of our lifetimes'
+    big: 'The most challenging public health challenge of our lifetimes',
+    btn: {
+      text: 'LEARN MORE',
+      path: '/covid'
+    }
   }
 ];
 
@@ -228,7 +236,7 @@ const MobileLocalTime = ({ transitionFlag }) => {
   );
 };
 
-const Banner = ({ isHome }) => {
+const Banner = () => {
   const interval = useRef(null);
   const [activeBanner, setActiveBanner] = useState(banner1);
   const [activeText, setActiveText] = useState(0);
@@ -253,8 +261,8 @@ const Banner = ({ isHome }) => {
   return (
     <Container>
       <OverlayNoticeAndNav>
-        <Notice isHome={isHome} />
-        <Navigation isHome={isHome} />
+        <Notice maxWidth="1200px" />
+        <Navigation maxWidth="1200px" />
       </OverlayNoticeAndNav>
       <BannerCon>
         {banners.map(b => (
@@ -291,7 +299,12 @@ const Banner = ({ isHome }) => {
                 </BannerTextBig>
               </CSSTransition>
               <ButtonCon>
-                <LearnMore transition transitionFlag={activeText === idx} />
+                <LearnMore
+                  to={t.btn.path}
+                  text={t.btn.text}
+                  transition
+                  transitionFlag={activeText === idx}
+                />
                 <MobileLocalTime transitionFlag={activeText === idx} />
               </ButtonCon>
             </BannerTextsSection>

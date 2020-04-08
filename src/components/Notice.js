@@ -5,10 +5,10 @@ const Container = styled.div`
   height: 50px;
   background: #f5f5f5;
   width: 100%;
-  max-width: ${props => (props.isHome ? '1200px' : '100%')};
+  max-width: ${props => props.maxWidth};
+  display: flex;
   margin: 0 auto;
   padding: 0px 50px;
-  display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -36,14 +36,22 @@ const iconStyle = {
   color: 'grey'
 };
 
-const Notice = ({ isHome }) => {
+const Notice = ({ maxWidth = '100%' }) => {
   return (
-    <Container isHome={isHome}>
+    <Container maxWidth={maxWidth}>
       <IconsContainer>
-        <a href="https://www.facebook.com/iskomorenodomagoso/ "><ion-icon style={iconStyle} name="logo-facebook"></ion-icon></a>
-        <a href="https://twitter.com/IskoMoreno "><ion-icon style={iconStyle} name="logo-twitter"></ion-icon></a>
-        <a href="https://www.youtube.com/iskoverychannel"><ion-icon style={iconStyle} name="logo-youtube"></ion-icon></a>
-        <a href="https://www.instagram.com/iskomorenodomagoso"><ion-icon style={iconStyle} name="logo-instagram"></ion-icon></a>
+        <a href="https://www.facebook.com/iskomorenodomagoso/ ">
+          <ion-icon style={iconStyle} name="logo-facebook"></ion-icon>
+        </a>
+        <a href="https://twitter.com/IskoMoreno ">
+          <ion-icon style={iconStyle} name="logo-twitter"></ion-icon>
+        </a>
+        <a href="https://www.youtube.com/iskoverychannel">
+          <ion-icon style={iconStyle} name="logo-youtube"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/iskomorenodomagoso">
+          <ion-icon style={iconStyle} name="logo-instagram"></ion-icon>
+        </a>
       </IconsContainer>
       <NoticeText>
         Open Hours Of City Government Mon - Fri 8:00 am - 6:00 pm.

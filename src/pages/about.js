@@ -15,6 +15,9 @@ import PageContainer from '../components/PageContainer';
 import Layout from '../components/Layout';
 import NavigationProvider from '../context/NavigationProvider';
 import SEO from '../components/SEO';
+import Notice from '../components/Notice';
+import Navigation from '../components/Navigation';
+import scrollToSection from '../hooks/scrollToSection';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -105,7 +108,6 @@ const Section3 = styled.div`
   }
 `;
 
-
 const Section5Container = styled.div`
   background-image: url(${section5Bg});
   background-size: cover;
@@ -143,8 +145,8 @@ const Section5Social = styled.div`
   h1 {
     margin-bottom: 1.5rem;
   }
-  p{
-    color:white;
+  p {
+    color: white;
   }
   @media only screen and (max-width: 425px) {
     padding: 1rem 15px 4rem;
@@ -159,19 +161,15 @@ const Section5Social = styled.div`
 
 const AboutPage = ({ location }) => {
   useEffect(() => {
-    const { hash } = location;
-    if (hash.length) {
-      const el = document.getElementById(hash.slice(1));
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+    scrollToSection(location);
   }, [location]);
 
   return (
     <NavigationProvider>
       <Layout>
         <SEO title="About" />
+        <Notice />
+        <Navigation />
         <Wrapper>
           <PageHeader name="About" />
           <PageContainer id="mayor-profile">
@@ -181,10 +179,10 @@ const AboutPage = ({ location }) => {
                   <h1> Meet Mayor Isko </h1>
                   <img src={line} alt="blue line" className="line" />
                   <p>
-                    Mayor Francisco “Isko Moreno” Domagoso <br/>(born October 24,
-                    1974) – popularly known as "Isko Moreno" and colloquially as
-                    Yorme Isko – has served as the 27th Mayor of Manila since 1
-                    July 2019.
+                    Mayor Francisco “Isko Moreno” Domagoso <br />
+                    (born October 24, 1974) – popularly known as "Isko Moreno"
+                    and colloquially as Yorme Isko – has served as the 27th
+                    Mayor of Manila since 1 July 2019.
                   </p>
                   <p>
                     His elevation to Manila’s Mayoralty occurred via a historic
@@ -301,24 +299,20 @@ const AboutPage = ({ location }) => {
                 <div>
                   <ul className="timeline timeline-split">
                     <li className="timeline-item">
-                      <div className="timeline-content tlTitles">
-                      
-                      </div>
+                      <div className="timeline-content tlTitles"></div>
                       <div className="timeline-marker"></div>
                       <div className="timeline-content tlTitles">
                         <span>College | Harvard University</span>
-                          <h3 className="timeline-title">
-                            Executive Education Program
-                          </h3>
+                        <h3 className="timeline-title">
+                          Executive Education Program
+                        </h3>
                       </div>
                     </li>
                     <li className="timeline-item">
-                      <div className="timeline-content tlTitles">
-                        
-                      </div>
+                      <div className="timeline-content tlTitles"></div>
                       <div className="timeline-marker"></div>
                       <div className="timeline-content tlTitles">
-                      <span>College | Oxford University</span>
+                        <span>College | Oxford University</span>
                         <h3 className="timeline-title">
                           Strategic Leadership Program
                         </h3>
@@ -326,7 +320,7 @@ const AboutPage = ({ location }) => {
                     </li>
                     <li className="timeline-item">
                       <div className="timeline-content tlTitles">
-                      <span>
+                        <span>
                           College | University of the Philippines, Diliman
                         </span>
                         <h3 className="timeline-title">
@@ -334,57 +328,45 @@ const AboutPage = ({ location }) => {
                         </h3>
                       </div>
                       <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                       
-                      </div>
+                      <div className="timeline-content tlTitles"></div>
                     </li>
                     <li className="timeline-item">
                       <div className="timeline-content tlTitles">
-                      <span >College | Pamantasan ng Lungsod ng Maynila</span>
+                        <span>College | Pamantasan ng Lungsod ng Maynila</span>
                         <h3 className="timeline-title">
                           Public Administration
                         </h3>
                       </div>
                       <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                      
-                      </div>
+                      <div className="timeline-content tlTitles"></div>
                     </li>
                     <li className="timeline-item">
                       <div className="timeline-content tlTitles">
-                      <span >College | Arellano University</span>
-                        <h3 className="timeline-title">
-                          Bachelor of Laws
-                        </h3>
+                        <span>College | Arellano University</span>
+                        <h3 className="timeline-title">Bachelor of Laws</h3>
                       </div>
                       <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                      
-                      </div>
+                      <div className="timeline-content tlTitles"></div>
                     </li>
                     <li className="timeline-item">
                       <div className="timeline-content tlTitles">
-                      <span>High School</span>
+                        <span>High School</span>
                         <h3 className="timeline-title">
                           Tondo High School, Tondo, Manila
                         </h3>
                       </div>
                       <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                        
-                      </div>
+                      <div className="timeline-content tlTitles"></div>
                     </li>
                     <li className="timeline-item">
                       <div className="timeline-content tlTitles">
-                      <span>Elementary</span>
+                        <span>Elementary</span>
                         <h3 className="timeline-title">
                           Rosauro Alamario Elementary School, Tondo, Manila
                         </h3>
                       </div>
                       <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                        
-                      </div>
+                      <div className="timeline-content tlTitles"></div>
                     </li>
                   </ul>
                 </div>

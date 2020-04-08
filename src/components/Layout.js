@@ -1,12 +1,9 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import Banner from './Banner';
 import Footer from './Footer';
 import MobileHeader from './MobileHeader';
 import SideNavigation from './SideNavigation';
 import { NavigationContext } from '../context/NavigationProvider';
-import Notice from './Notice';
-import Navigation from './Navigation';
 
 import '../styles/index.css';
 
@@ -30,21 +27,13 @@ const Overlay = styled.div`
   cursor: pointer;
 `;
 
-const Layout = ({ children, path = '//' }) => {
+const Layout = ({ children }) => {
   const { showNav, toggleNav } = useContext(NavigationContext);
-  const isHome = path === '/';
   return (
     <Container id="page-layout" noscroll={showNav}>
       <Overlay onClick={() => toggleNav(false)} show={showNav} />
       <MobileHeader />
       <SideNavigation />
-      {!isHome && (
-        <>
-          <Notice isHome={isHome} />
-          <Navigation isHome={isHome} />
-        </>
-      )}
-      {isHome && <Banner isHome={isHome} />}
       {children}
       <Footer />
     </Container>

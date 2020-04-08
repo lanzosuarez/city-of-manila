@@ -8,6 +8,8 @@ import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
 import whiteline from '../images/white-line.png';
 import contactbg1 from '../images/contact-bg.png';
+import Notice from '../components/Notice';
+import Navigation from '../components/Navigation';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -124,6 +126,8 @@ const ContactPage = () => {
     <NavigationProvider>
       <Layout>
         <SEO title="Contact" />
+        <Notice />
+        <Navigation />
         <Wrapper>
           <PageHeader name="Contact" />
           <PageContainer>
