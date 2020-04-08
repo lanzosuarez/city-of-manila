@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-
-import '../styles/index.css';
 import Banner from './Banner';
 import Footer from './Footer';
 import MobileHeader from './MobileHeader';
@@ -10,6 +8,8 @@ import { NavigationContext } from '../context/NavigationProvider';
 import Notice from './Notice';
 import Navigation from './Navigation';
 
+import '../styles/index.css';
+
 const Container = styled.div`
   width: 100%;
   position: relative;
@@ -17,8 +17,6 @@ const Container = styled.div`
   height: ${props => (props.noscroll ? '100vh' : 'auto')};
   overflow: ${props => (props.noscroll ? 'hidden' : 'auto')};
 `;
-
-// const MaxContainer = styled.div``
 
 const Overlay = styled.div`
   position: absolute;
