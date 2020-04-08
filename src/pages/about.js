@@ -29,7 +29,10 @@ const LeftContainer = styled.div`
   margin: 0px 30px 0px 0px;
   text-align: left;
   align-self: center;
-
+  p{
+    font-size: 20px;
+    line-height: 1.5;
+  }
   @media only screen and (max-width: 768px) {
     width: 100%;
     margin: 0 auto;
@@ -95,6 +98,11 @@ const Section33Container = styled.div`
 const Section3 = styled.div`
   padding: 4rem 0;
   text-align: center;
+
+  p{
+    font-size: 20px;
+    line-height: 1.5;
+  }
   @media only screen and (max-width: 1024px) {
     padding: 4rem 15px;
   }
@@ -106,6 +114,10 @@ const Section5Container = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
+  p{
+    font-size: 20px;
+    line-height: 1.5;
+  }
 `;
 
 const iconStyle = {
