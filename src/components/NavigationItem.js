@@ -18,14 +18,19 @@ const Container = styled.li`
   height: 100%;
   align-items: center;
 
-  a {
+  a.page-link {
     text-decoration: none !important;
     color: #000000;
   }
 
-  a:hover,
+  a.page-link.active-page {
+    color: var(--blue) !important;
+    font-weight: bold;
+  }
+
+  a.page-link:hover,
   &:hover {
-    color: #04326a !important;
+    color: var(--blue) !important;
   }
 `;
 
@@ -44,7 +49,14 @@ const NavigationItem = ({ title, path, sections = [] }) => {
 
   return (
     <Container onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
-      <Link to={path}>{title}</Link>
+      <Link
+        partiallyActive
+        activeClassName="active-page"
+        className="page-link"
+        to={path}
+      >
+        {title}
+      </Link>
       {hasDropDown && (
         <IconContainer>
           <ion-icon name="chevron-down"></ion-icon>

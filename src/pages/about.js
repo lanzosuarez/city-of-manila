@@ -9,7 +9,7 @@ import section3Bg from '../images/about-section-3.png';
 import itemImg from '../images/team-placeholder.png';
 import section5Bg from '../images/about-section-5.png';
 import section5Img from '../images/about-section-5-img.png';
-import whiteline from '../images/white-line.png';
+// import whiteline from '../images/white-line.png';
 
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';

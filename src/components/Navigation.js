@@ -73,7 +73,25 @@ export const listItems = [
   },
   {
     title: 'COVID - 19: Overview',
-    path: '/covid'
+    path: '/covid',
+    sections: [
+      {
+        title: 'What is ECQ?',
+        path: '/covid'
+      },
+      {
+        title: 'How will ECQ get rid of COVID-19?',
+        path: '/covid'
+      },
+      {
+        title: 'Until when we will be in ECQ?',
+        path: '/covid'
+      },
+      {
+        title: 'What happens after ECQ?',
+        path: '/covid'
+      }
+    ]
   },
   {
     title: 'Programs',

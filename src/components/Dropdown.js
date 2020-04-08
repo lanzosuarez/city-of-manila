@@ -3,6 +3,8 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { CSSTransition } from 'react-transition-group';
 
+import { getHash } from '../helpers';
+
 const Container = styled.ul`
   list-style: none;
   margin: 0;
@@ -32,6 +34,12 @@ const Item = styled.li`
     color: black;
   }
 
+  a.active-dropdown-item {
+    color: white;
+    background: var(--blue);
+    font-weight: bold;
+  }
+
   a:hover {
     color: white !important;
   }
@@ -58,8 +66,18 @@ const Item = styled.li`
   }
 `;
 
-const Dropdown = ({ show, dropDownList = [], setShowDropDown }) => {
+const Dropdown = ({ show, dropDownList = [] }) => {
   const close = e => e.stopPropagation();
+
+  const isPartiallyActive = path => ({ location: { hash } }) => {
+    if (hash === getHash(path)) {
+      return {
+        className: 'active-dropdown-item'
+      };
+    }
+    return {};
+  };
+
   return (
     <CSSTransition
       in={show}
@@ -70,7 +88,9 @@ const Dropdown = ({ show, dropDownList = [], setShowDropDown }) => {
       <Container onMouseEnter={close}>
         {dropDownList.map((i, idx) => (
           <Item key={idx}>
-            <Link to={i.path}>{i.title}</Link>
+            <Link getProps={isPartiallyActive(i.path)} to={i.path}>
+              {i.title}
+            </Link>
           </Item>
         ))}
       </Container>

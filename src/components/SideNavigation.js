@@ -83,7 +83,7 @@ const SubPagesItem = styled.li`
   padding: 10px 20px;
   color: black;
   font-weight: bold;
-  &:first-child {
+  &:first-of-type {
     padding-top: 20px;
   }
   &:hover {
@@ -123,8 +123,8 @@ const NavItemComponent = ({ title, sections = [] }) => {
       </Head>
       {sections.length > 0 ? (
         <SubPages show={showSubPages}>
-          {sections.map(s => (
-            <SubPagesItem>{s.title}</SubPagesItem>
+          {sections.map((s, idx) => (
+            <SubPagesItem key={idx}>{s.title}</SubPagesItem>
           ))}
         </SubPages>
       ) : null}
@@ -141,8 +141,8 @@ const SideNavigation = () => {
       </CloseIcon>
       <Logo>logo .</Logo>
       <NavList>
-        {listItems.map(i => (
-          <NavItemComponent {...i} />
+        {listItems.map((i, idx) => (
+          <NavItemComponent key={idx} {...i} />
         ))}
       </NavList>
     </Container>

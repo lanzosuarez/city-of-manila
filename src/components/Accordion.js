@@ -37,8 +37,6 @@ const AccordionContent = styled.div`
   div {
     margin: 20px 40px
   }
-
-
 `;
 
 const items = [

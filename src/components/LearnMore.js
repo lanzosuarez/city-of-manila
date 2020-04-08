@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { CSSTransition } from 'react-transition-group';
+import { Link } from 'gatsby';
 
 const Button = styled.button`
   height: 60px;
@@ -27,6 +28,11 @@ const Button = styled.button`
     background: ${props => props.focusBgColor};
     color: ${props => props.focusTextColor};
   }
+
+  a {
+    color: ${props => props.textColor};
+    text-decoration: none;
+  }
 `;
 
 const LearnMore = ({
@@ -38,7 +44,8 @@ const LearnMore = ({
   width = 'auto',
   letterSpacing = '0px',
   transition = false,
-  transitionFlag = true
+  transitionFlag = true,
+  to = '/'
 }) => {
   return !transition ? (
     <Button
@@ -49,7 +56,7 @@ const LearnMore = ({
       focusTextColor={focusTextColor}
       letterSpacing={letterSpacing}
     >
-      {text}
+      <Link to={to}>{text}</Link>
     </Button>
   ) : (
     <CSSTransition
@@ -66,7 +73,7 @@ const LearnMore = ({
         focusTextColor={focusTextColor}
         letterSpacing={letterSpacing}
       >
-        {text}
+        <Link to={to}>{text}</Link>
       </Button>
     </CSSTransition>
   );
