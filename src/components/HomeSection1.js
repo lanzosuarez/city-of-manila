@@ -2,12 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 import '../styles/index.css';
 
-import civilIcon from '../images/home-icon-civil-rights.png';
-import commIcon from '../images/home-icon-community.png';
-import criminalIcon from '../images/home-icon-justice.png';
-import ecomIcon from '../images/home-icon-economic.png';
-import educIcon from '../images/home-icon-education.png';
-import envIcon from '../images/home-icon-environment.png';
+import civilIcon from '../images/home-economic.svg';
+import commIcon from '../images/home-social.svg';
+import criminalIcon from '../images/home-development.svg';
+import ecomIcon from '../images/home-green.svg';
+import educIcon from '../images/home-Investor.svg';
+import envIcon from '../images/home-tourism.svg';
 
 const Container = styled.div`
   padding: 0px 88px 0px;
@@ -45,6 +45,9 @@ const Item = styled.div`
 
 const ItemImg = styled.img`
   margin-bottom: 20px;
+  width:50px;
+  height:50px;
+  fill: #05326b;
 `;
 
 const TextStyle = {

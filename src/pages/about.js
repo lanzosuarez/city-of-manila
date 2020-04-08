@@ -170,6 +170,7 @@ const iconStyle = {
 
 const Section5ImgContent = styled.div`
   padding: 4rem 0px;
+
   @media only screen and (max-width: 425px) {
     padding: 4rem 0px 0 0;
   }
@@ -183,6 +184,14 @@ const Section5ImgContent = styled.div`
 
 const Section5Social = styled.div`
   padding: 100px;
+  p{
+    color:white;
+    margin-top: 0.5rem;
+    margin-bottom:2rem;
+  }
+  h1{
+    margin-bottom: 0.5rem;
+  }
   @media only screen and (max-width: 425px) {
     padding: 1rem 15px 4rem;
   }
@@ -525,6 +534,10 @@ const AboutPage = ({ location }) => {
                   <RightContainer>
                     <Section5Social>
                       <h1 className="white">Connect with Mayor Isko</h1>
+                      <img
+                        src={whiteline}
+                      />
+                      <p>Connect with us and know about what's the latest happenings in our city.</p>
                       <a href="https://www.facebook.com/iskomorenodomagoso/ "><ion-icon
                         style={iconStyle}
                         name="logo-facebook"
