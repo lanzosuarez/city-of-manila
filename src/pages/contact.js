@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 
 const ContactItem = styled.div`
   width: 370px;
-  height: 212px;
+  height: 320px;
   background-image: url(${contactbg1});
   background-size: cover;
   background-repeat: no-repeat;
@@ -109,11 +109,10 @@ const Section = styled.div`
 
 const Section2 = styled.div`
   padding: 4rem 15px 0rem;
-  max-width: 600px;
   margin: 0 auto;
   text-align:center;
   p{
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.5;
   }
   @media only screen and (max-width: 1024px) {
@@ -131,7 +130,7 @@ const ContactPage = () => {
           <PageContainer>
             <Section2>
               <p>
-              Your City Government works 24x7 for you. During this time of enhanced community quarantine, it is best to reach us through our official social media pages or, for further health assistance, please call the Manila Emergency Operation Center <br/><b>8926-2385, 8926-2386, 8527-5174, 
+              Your City Government works 24x7 for you. During this time of enhanced community quarantine, it is best to reach us through our official social media pages or, for further health assistance, please call the Manila Emergency Operation Center <b>8926-2385, 8926-2386, 8527-5174, 
 or 0961-062-7013.</b> 
               </p>
               </Section2>

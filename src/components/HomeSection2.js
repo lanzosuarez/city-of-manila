@@ -41,8 +41,8 @@ const Header = styled.h2`
 
 const Content = styled.div`
   padding: 20px 20px 30px;
-  font-size: 15px;
-  line-height: 2;
+  font-size: 18px;
+  line-height: 1.8;
 `;
 
 const Footer = styled.div`
