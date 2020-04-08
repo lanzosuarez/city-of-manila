@@ -37,7 +37,7 @@ const Button = styled.button`
 
 const LearnMore = ({
   defaultBgColor = '#ee9817',
-  focusBgColor = '',
+  focusBgColor = '#01bcb1',
   textColor = 'white',
   focusTextColor = 'black',
   text = 'Learn More',

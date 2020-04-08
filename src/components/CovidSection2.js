@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import blueline from '../images/blue-line.png';
 import FbVideo from '../components/FbVideo';
 import PageContainer from '../components/PageContainer';
+import LearnMore from './LearnMore';
 
 const Header = styled.div`
     max-width: 35rem;
@@ -55,6 +56,42 @@ const DisplayFlex = styled.div`
         flex-direction:column;
       }
 `;
+const ButtonTracker = styled.div`
+    background-color:  #05326b;
+    color:white;
+  width: 282px;
+  height: 54px;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  a {
+    display: flex;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+  }
+  :hover a{
+    background-color: #e21130;
+    color: #ffffff;
+   
+    border-radius: 40px;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 240px;
+    height: 36px;
+    font-size: 12px;
+  }
+`;
 
 
 const CovidSection2 = () => {
@@ -71,7 +108,11 @@ const CovidSection2 = () => {
                     <img src={blueline} alt="blue line" className="line" />
                     <p>On March 20th, the City of Manila launched the Code Covid-19 Digital Health Survey.</p>
                     <p>This helpful tool provides Manilenos and Filipinos with an easy and accessible means to think objectively about their health within the Covid-19 context.</p>
-                    <p>You can access the survey 24x7 by hitting the “Send Message” button on his official FB Page: <a href="https://www.facebook.com/235030693233048/videos/220490752632700/">here</a></p>
+                    <p>You can access the survey 24x7 by hitting the “Send Message” button on his official FB Page.</p>
+                    <ButtonTracker>      
+                    <a  href="http://m.me/iskomorenodomagoso/">Take The Survey</a>
+                    </ButtonTracker>
+                    
                 </Header>
             </RightContainer>
         </DisplayFlex>

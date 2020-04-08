@@ -58,10 +58,6 @@ export const listItems = [
         path: '/about#background'
       },
       {
-        title: 'His Leadership Team',
-        path: '/about#leadership-team'
-      },
-      {
         title: 'Links to Social Media Pages',
         path: '/about#links-to-social-media'
       }
@@ -81,14 +77,6 @@ export const listItems = [
       },
       {
         title: 'How will ECQ get rid of COVID-19?',
-        path: '/covid'
-      },
-      {
-        title: 'Until when we will be in ECQ?',
-        path: '/covid'
-      },
-      {
-        title: 'What happens after ECQ?',
         path: '/covid'
       }
     ]

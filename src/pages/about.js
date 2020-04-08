@@ -6,10 +6,8 @@ import line from '../images/blue-line.png';
 import imgSection2 from '../images/about-section-2.png';
 import imgSection2Quote from '../images/about-section-2-quote-box.png';
 import section3Bg from '../images/about-section-3.png';
-import itemImg from '../images/team-placeholder.png';
 import section5Bg from '../images/about-section-5.png';
 import section5Img from '../images/about-section-5-img.png';
-import whiteline from '../images/white-line.png';
 
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
@@ -90,11 +88,6 @@ const Section33Container = styled.div`
   background-color: #fcfcfc;
 `;
 
-const textWidth = {
-  paddingRight: '15px',
-  paddingLeft: '15px'
-};
-
 const Section3 = styled.div`
   padding: 4rem 0;
   text-align: center;
@@ -103,56 +96,6 @@ const Section3 = styled.div`
   }
 `;
 
-const Section4Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 2rem 0px;
-  @media only screen and (max-width: 425px) {
-    justify-content: center;
-  }
-  @media only screen and (min-width: 426px) and (max-width: 768px) {
-    justify-content: space-evenly;
-  }
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    justify-content: space-evenly;
-    margin: 0px 15px;
-  }
-`;
-
-const Section4Item = styled.div`
-  display: block;
-  width: 260px;
-  background-color: white;
-  box-shadow: 6px 5px 14px rgba(0, 0, 0, 0.08);
-  margin-bottom: 20px;
-  margin-top: 20px;
-
-  @media only screen and (min-width: 426px) and (max-width: 1024px) {
-    width: 336px;
-  }
-  @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-    width: 236px;
-  }
-`;
-
-const ItemWrap = styled.div`
-  padding: 30px 30px 10px 30px;
-`;
-
-const ItemText = styled.p`
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 700;
-  color: #e21130;
-  text-transform: uppercase;
-`;
-
-const ItemTextHeader = styled.h2`
-  margin-bottom: 1rem;
-  font-size: 20px;
-`;
 
 const Section5Container = styled.div`
   background-image: url(${section5Bg});
@@ -184,13 +127,8 @@ const Section5ImgContent = styled.div`
 
 const Section5Social = styled.div`
   padding: 100px;
-  p {
-    color: white;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
   h1 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
   }
   @media only screen and (max-width: 425px) {
     padding: 1rem 15px 4rem;
@@ -227,7 +165,7 @@ const AboutPage = ({ location }) => {
                   <h1> Meet Mayor Isko </h1>
                   <img src={line} alt="blue line" className="line" />
                   <p>
-                    Mayor Francisco “Isko Moreno” Domagoso (born October 24,
+                    Mayor Francisco “Isko Moreno” Domagoso <br/>(born October 24,
                     1974) – popularly known as "Isko Moreno" and colloquially as
                     Yorme Isko – has served as the 27th Mayor of Manila since 1
                     July 2019.
@@ -450,76 +388,6 @@ const AboutPage = ({ location }) => {
               </Section3>
             </PageContainer>
           </Section33Container>
-          <PageContainer id="leadership-team">
-            <div className="section">
-              <div className="center">
-                <h1 style={textWidth}> His Leadership Team </h1>
-                <img src={line} alt="blue line" className="line" />
-                <p style={textWidth}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor{' '}
-                </p>
-              </div>
-              <Section4Container>
-                <Section4Item>
-                  <img src={itemImg} alt="Team" />
-                  <ItemWrap>
-                    <ItemTextHeader>First Last Name</ItemTextHeader>
-                    <ItemText>City Councilor, District 1</ItemText>
-                  </ItemWrap>
-                </Section4Item>
-                <Section4Item>
-                  <img src={itemImg} alt="Team" />
-                  <ItemWrap>
-                    <ItemTextHeader>First Last Name</ItemTextHeader>
-                    <ItemText>City Councilor, District 1</ItemText>
-                  </ItemWrap>
-                </Section4Item>
-                <Section4Item>
-                  <img src={itemImg} alt="Team" />
-                  <ItemWrap>
-                    <ItemTextHeader>First Last Name</ItemTextHeader>
-                    <ItemText>City Councilor, District 1</ItemText>
-                  </ItemWrap>
-                </Section4Item>
-                <Section4Item>
-                  <img src={itemImg} alt="Team" />
-                  <ItemWrap>
-                    <ItemTextHeader>First Last Name</ItemTextHeader>
-                    <ItemText>City Councilor, District 1</ItemText>
-                  </ItemWrap>
-                </Section4Item>
-                <Section4Item>
-                  <img src={itemImg} alt="Team" />
-                  <ItemWrap>
-                    <ItemTextHeader>First Last Name</ItemTextHeader>
-                    <ItemText>City Councilor, District 1</ItemText>
-                  </ItemWrap>
-                </Section4Item>
-                <Section4Item>
-                  <img src={itemImg} alt="Team" />
-                  <ItemWrap>
-                    <ItemTextHeader>First Last Name</ItemTextHeader>
-                    <ItemText>City Councilor, District 1</ItemText>
-                  </ItemWrap>
-                </Section4Item>
-                <Section4Item>
-                  <img src={itemImg} alt="Team" />
-                  <ItemWrap>
-                    <ItemTextHeader>First Last Name</ItemTextHeader>
-                    <ItemText>City Councilor, District 1</ItemText>
-                  </ItemWrap>
-                </Section4Item>
-                <Section4Item>
-                  <img src={itemImg} alt="Team" />
-                  <ItemWrap>
-                    <ItemTextHeader>First Last Name</ItemTextHeader>
-                    <ItemText>City Councilor, District 1</ItemText>
-                  </ItemWrap>
-                </Section4Item>
-              </Section4Container>
-            </div>
-          </PageContainer>
           <Section5Container>
             <PageContainer id="links-to-social-media">
               <div className="section-last">
@@ -536,11 +404,6 @@ const AboutPage = ({ location }) => {
                   <RightContainer>
                     <Section5Social>
                       <h1 className="white">Connect with Mayor Isko</h1>
-                      <img src={whiteline} />
-                      <p>
-                        Connect with us and know about what's the latest
-                        happenings in our city.
-                      </p>
                       <a href="https://www.facebook.com/iskomorenodomagoso/ ">
                         <ion-icon
                           style={iconStyle}

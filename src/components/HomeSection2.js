@@ -41,7 +41,7 @@ const Header = styled.h2`
 
 const Content = styled.div`
   padding: 20px 20px 30px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 2;
 `;
 
