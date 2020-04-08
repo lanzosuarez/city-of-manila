@@ -15,7 +15,7 @@ const Container = styled.div`
   position: relative;
 
   height: ${props => (props.noscroll ? '100vh' : 'auto')};
-  overflow: ${props => (props.noscroll ? 'hidden' : 'normal')};
+  overflow: ${props => (props.noscroll ? 'hidden' : 'auto')};
 `;
 
 // const MaxContainer = styled.div``
@@ -42,8 +42,8 @@ const Layout = ({ children, path = '//' }) => {
       <SideNavigation />
       {!isHome && (
         <>
-          <Notice isHome={isHome}/>
-          <Navigation isHome={isHome}/>
+          <Notice isHome={isHome} />
+          <Navigation isHome={isHome} />
         </>
       )}
       {isHome && <Banner isHome={isHome} />}

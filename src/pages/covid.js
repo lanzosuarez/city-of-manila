@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 import NavigationProvider from '../context/NavigationProvider';
 import CovidSection1 from '../components/CovidSection1';
 import CovidSection2 from '../components/CovidSection2';

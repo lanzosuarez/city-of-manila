@@ -228,7 +228,7 @@ const MobileLocalTime = ({ transitionFlag }) => {
   );
 };
 
-const Banner = () => {
+const Banner = ({ isHome }) => {
   const interval = useRef(null);
   const [activeBanner, setActiveBanner] = useState(banner1);
   const [activeText, setActiveText] = useState(0);
@@ -253,8 +253,8 @@ const Banner = () => {
   return (
     <Container>
       <OverlayNoticeAndNav>
-        <Notice />
-        <Navigation />
+        <Notice isHome={isHome} />
+        <Navigation isHome={isHome} />
       </OverlayNoticeAndNav>
       <BannerCon>
         {banners.map(b => (

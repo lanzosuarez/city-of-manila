@@ -81,6 +81,7 @@ const HomeSection5 = () => {
           The City of Manila will retake her place as a leading global city, with opporunities for all, prosperity for many, compassion for everyone.
         </SubText>
         <LearnMore
+          to="/about"
           text="About"
           textColor="black"
           width="140px"

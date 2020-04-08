@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 import HomeSection1 from '../components/HomeSection1';
 import HomeSection2 from '../components/HomeSection2';
 import HomeSection3 from '../components/HomeSection3';

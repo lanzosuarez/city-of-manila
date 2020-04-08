@@ -37,8 +37,6 @@ const AccordionContent = styled.div`
   div {
     margin: 20px 40px
   }
-
-
 `;
 
 const items = [
@@ -75,7 +73,6 @@ const Accordion = ({ defaultActive = 0 }) => {
       <AccordionList>
         {items.map((i, idx) => {
           const show = activeItem === idx;
-          console.log(show);
           return (
             <AccordionItem key={idx}>
               <AccordionTitle onClick={setActive(idx)} show={show}>

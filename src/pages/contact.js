@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 import NavigationProvider from '../context/NavigationProvider';
 import styled from '@emotion/styled';
 
