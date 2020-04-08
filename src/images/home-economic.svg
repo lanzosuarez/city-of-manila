@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 272 384" style="enable-background:new 0 0 272 384;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#04326A;stroke-width:16;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#04326A;stroke-width:16;stroke-linejoin:round;}
+</style>
+<title>Asset 3</title>
+<g id="Layer_2">
+	<g id="Large_Preview">
+		<path class="st0" d="M40,232c-15.6,0-32-16.4-32-32v-56c0-26.4,8-48,40-48h136c0,0,1.8,27.2-24,32c-15.6,2.9-56,8-56,8v48l40,48
+			v56"/>
+		<path class="st0" d="M76,72c16.3,0,28-10.5,28-25.6V33.6C104,18.5,92.3,8,76,8S48,18.5,48,33.6v12.8C48,61.5,59.7,72,76,72z"/>
+		<line class="st0" x1="40" y1="136" x2="40" y2="336"/>
+		<polyline class="st1" points="72,336 80,224 112,248 112,288 		"/>
+		<rect x="104" y="288" class="st0" width="80" height="88"/>
+		<rect x="184" y="152" class="st0" width="80" height="224"/>
+		<rect x="16" y="336" class="st0" width="88" height="40"/>
+	</g>
+</g>
+</svg>

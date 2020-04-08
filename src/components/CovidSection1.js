@@ -11,7 +11,7 @@ const Container = styled.div`
 const SubContainer = styled.div`
   margin: 4rem 0px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   grid-gap: 50px;
 
   @media (max-width: 768px) {
@@ -61,10 +61,26 @@ const CovidSection1 = () => {
             <img alt="blue-line" src={blueline}></img>
           </InfoHeader>
           <InfoContent>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book
+            COVID-19 is a new coronavirus that was first reported in Wuhan,
+            China in December 2019. It is known to cause pneumonia-like symptoms
+            in infected patients.
+          </InfoContent>
+          <InfoContent>
+            The Philippine Department of Health (DOH) reported the first case in
+            the Philippines on 30 January 2020. On 07 March 2020, the DOH raised
+            COVID-19 Alert System to Code Red Sub-level 1 to initiate efforts to
+            prevent widespread community transmission.
+          </InfoContent>
+          <InfoContent>
+            On 08 March 2020, the Office of the President issued Proclamation
+            No. 922 s. 2020 declaring a State of Public Health Emergency. The
+            proclamation directs the mobilization of necessary resources;
+            undertaking of critical, urgent, and appropriate response and
+            measures in a timely manner; assistance and cooperation of all
+            government agencies and LGUs; and, for all the citizens, residents,
+            tourists and establishments to comply with lawful directives and
+            advisories, to eliminate and curtail the COVID-19 threat and ensure
+            the safety and well-being of everyone.
           </InfoContent>
         </InfoSection>
         <AccordionSection>
