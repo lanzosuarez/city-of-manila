@@ -13,7 +13,7 @@ const Container = styled.div`
 const SectionsContainer = styled.div`
   margin: 60px 100px 40px;
   display: grid;
-  grid-gap: 50px;
+  grid-gap: 65px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
   @media (max-width: 768px) {
@@ -76,7 +76,7 @@ const Footer = () => {
     <Container>
       <SectionsContainer>
         <Section>
-          <h4 style={LineHeight}> Welcome to my page. Together, we can make Manila vibrant again. Bangon, Maynila!</h4>
+          <h4 style={LineHeight}> Welcome to my page.<br/>Together, we can make Manila vibrant again.<br/>Bangon, Maynila!</h4>
           <img width="60%" alt="mayor signature" src={sign}></img>
         </Section>
         <Section>

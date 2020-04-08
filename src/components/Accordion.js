@@ -56,7 +56,7 @@ const items = [
     content: 'The IATF, in its Joint Resolution No. 20 dated 6 April 2020, declared the extension of the Enhanced Community Quarantine over the entire island of Luzon, until 11:59PM of 30 April 2020. Said Resolution was approved by President Rodrigo Duterte on 7 April 2020. As such, all implementing rules and guidelines of the Enhanced Community Quarantine will remain in place. ',
   },
   {
-    title: 'What happes after ECQ? ',
+    title: 'What happens after ECQ? ',
     content: 'The University of the Philippines has released a study with analysis and recommendations for a post-ECQ scenario',
     content2: 'The report may be accessed at https://www.up.edu.ph/preparing-for-a-post-ecq-scenario-analysis-and-recommendations/',
   }

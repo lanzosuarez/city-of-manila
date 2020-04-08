@@ -109,9 +109,13 @@ const Section = styled.div`
 
 const Section2 = styled.div`
   padding: 4rem 15px 0rem;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
   text-align:center;
+  p{
+    font-size: 20px;
+    line-height: 1.5;
+  }
   @media only screen and (max-width: 1024px) {
     padding: 4rem 15px 0px;
   }

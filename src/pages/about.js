@@ -127,7 +127,7 @@ const Section5ImgContent = styled.div`
 `;
 
 const Section5Social = styled.div`
-  padding: 100px;
+  padding: 100px 50px;
   h1 {
     margin-bottom: 1.5rem;
   }
@@ -290,9 +290,35 @@ const AboutPage = ({ location }) => {
                   <ul className="timeline timeline-split">
                     <li className="timeline-item">
                       <div className="timeline-content tlTitles">
+                      
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
                         <span>College | Harvard University</span>
+                          <h3 className="timeline-title">
+                            Executive Education Program
+                          </h3>
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-content tlTitles">
+                        
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                      <span>College | Oxford University</span>
                         <h3 className="timeline-title">
-                          Executive Education Program
+                          Strategic Leadership Program
+                        </h3>
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-content tlTitles">
+                      <span>
+                          College | University of the Philippines, Diliman
+                        </span>
+                        <h3 className="timeline-title">
+                          Local Legislation and Local Finance
                         </h3>
                       </div>
                       <div className="timeline-marker"></div>
@@ -302,9 +328,33 @@ const AboutPage = ({ location }) => {
                     </li>
                     <li className="timeline-item">
                       <div className="timeline-content tlTitles">
-                        <span>College | Oxford University</span>
+                      <span >College | Pamantasan ng Lungsod ng Maynila</span>
                         <h3 className="timeline-title">
-                          Strategic Leadership Program
+                          Public Administration
+                        </h3>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                      
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-content tlTitles">
+                      <span >College | Arellano University</span>
+                        <h3 className="timeline-title">
+                          Bachelor of Laws
+                        </h3>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                      
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-content tlTitles">
+                      <span>High School</span>
+                        <h3 className="timeline-title">
+                          Tondo High School, Tondo, Manila
                         </h3>
                       </div>
                       <div className="timeline-marker"></div>
@@ -313,50 +363,15 @@ const AboutPage = ({ location }) => {
                       </div>
                     </li>
                     <li className="timeline-item">
-                      <div className="timeline-info">
-                      </div>
-                      <div className="timeline-marker"></div>
                       <div className="timeline-content tlTitles">
-                        <span>
-                          College | University of the Philippines, Diliman
-                        </span>
-                        <h3 className="timeline-title">
-                          Local Legislation and Local Finance
-                        </h3>
-                      </div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-info">
-                      </div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                        <span >College | Pamantasan ng Lungsod ng Maynila</span>
-                        <h3 className="timeline-title">
-                          Public Administration
-                        </h3>
-                      </div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-info">
-                      </div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                        <span>High School</span>
-                        <h3 className="timeline-title">
-                          Tondo High School, Tondo, Manila
-                        </h3>
-                      </div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-info">
-                      
-                      </div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                        <span>Elementary</span>
+                      <span>Elementary</span>
                         <h3 className="timeline-title">
                           Rosauro Alamario Elementary School, Tondo, Manila
                         </h3>
+                      </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                        
                       </div>
                     </li>
                   </ul>
