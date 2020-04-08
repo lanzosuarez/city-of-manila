@@ -11,6 +11,8 @@ const Container = styled.div`
   display: flex;
   background: white;
   margin: 0 auto;
+  position: relative; 
+  z-index: 10;
 
   @media (max-width: 1024px) {
     display: none;
