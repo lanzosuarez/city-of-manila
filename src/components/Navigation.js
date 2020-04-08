@@ -11,7 +11,7 @@ const Container = styled.div`
   display: flex;
   background: white;
   margin: 0 auto;
-  position: relative; 
+  position: relative;
   z-index: 10;
 
   @media (max-width: 1024px) {
@@ -60,7 +60,7 @@ export const listItems = [
         path: '/about#background'
       },
       {
-        title: 'Links to Social Media Pages',
+        title: 'Links To Social Media Pages',
         path: '/about#links-to-social-media'
       }
     ]
@@ -74,12 +74,16 @@ export const listItems = [
     path: '/covid',
     sections: [
       {
-        title: 'What is ECQ?',
-        path: '/covid'
+        title: 'Digital Help Survey',
+        path: '/covid#digital-survey'
       },
       {
-        title: 'How will ECQ get rid of COVID-19?',
-        path: '/covid'
+        title: 'Enhanced Community Quarantine',
+        path: '/covid#ecq'
+      },
+      {
+        title: 'What You Need To Know',
+        path: '/covid#what-you-need-to-know'
       }
     ]
   },

@@ -129,8 +129,7 @@ const HomeSection2 = () => {
         <Header>How To Help Manila</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore
+            The city is in need of medical and food supplies, as well as volunteers. Learn more on how to help or volunteer, please call (63)921-966-0384 For online donations, you may deposit through Landbank,  account name Landbank of the Philppines Trust Fund with account number 1982-1003-36, any currency will be accepted or through the Development Bank of the Philippines, account name LGU-MANILA-COVID19 with account number 0-05113-410-5. 
         </Content>
         <Footer>
           <Link>READ MORE</Link>

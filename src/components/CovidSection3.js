@@ -70,8 +70,7 @@ const CovidSection3 = () => {
     <PageContainer>
       <Header>
         <h1>
-          {' '}
-          COVID-19 : What you need to know to protect you and your family{' '}
+          COVID-19 : What you need to know to protect you and your family
         </h1>
         <img src={blueline} alt="blue line" className="line" />
       </Header>
@@ -90,7 +89,7 @@ const CovidSection3 = () => {
       </DisplayFlex>
       <DisplayFlex>
         <LeftContainer>
-          <TextHeader>When else you need to call a doctor</TextHeader>
+          <TextHeader>When to call a doctor</TextHeader>
           <p>
             If you think you are experiencing symptoms related to Covid-19, call
             the MEOC hotline so you can be guided by a medical professional on
@@ -118,12 +117,13 @@ const CovidSection3 = () => {
       <DisplayFlex>
         <LeftContainer>
           <TextHeader>Do not break ECQ rules</TextHeader>
-          <p>1. Stay home</p>
+          <p>1. Stay home. Only those classified as essential workers such as doctors, nurses, health and emergency service providers, supermarket and pharmacy staff, and the like, are allowed to leave their homes to go to work.</p>
           <p>
-            2. Only one person per household is allowed to leave to purchase
-            basic necessities such as food and medicine.
+            2. Only one person per household is allowed to leave to purchase basic necessities such as food and medicine.
           </p>
-          <p>3. Practice social distancing at all times.</p>
+          <p>3. If your Local Government Unit has issued a Quarantine Pass for your household, be sure to bring this with you whenever leaving the home to purchase essential items. </p>
+          <p>4. Practice social distancing at all times, by standing at least one meter away from another individual when outside of the home. </p>
+          <p>5. Wear a mask when outside of the home. This could be in the form of a surgical mask, face shield, or handkerchief. The objective is to ensure your nose and mouse are covered. </p>
         </LeftContainer>
         <RightContainer>
           <ImgContainer src={CovidPlaceholder} alt="Do not break ECQ rules " />
