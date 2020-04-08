@@ -344,7 +344,7 @@ const AboutPage = ({ location }) => {
                       <div className="timeline-marker"></div>
                       <div className="timeline-content tlTitles">
                         <h3 className="timeline-title">
-                        Executive Education Program
+                          Executive Education Program
                         </h3>
                       </div>
                     </li>
@@ -434,7 +434,9 @@ const AboutPage = ({ location }) => {
                 <h1> Personal </h1>
                 <img src={line} alt="blue line" className="line" />
                 <p>
-                He is married to Diana Lynn Ditan. They have five children, Vincent Patrick , Frances Diane, Joaquín André, Franco Dylan, and Drake Marcus.
+                  He is married to Diana Lynn Ditan. They have five children,
+                  Vincent Patrick , Frances Diane, Joaquín André, Franco Dylan,
+                  and Drake Marcus.
                 </p>
               </Section3>
             </PageContainer>
@@ -525,22 +527,30 @@ const AboutPage = ({ location }) => {
                   <RightContainer>
                     <Section5Social>
                       <h1 className="white">Connect with Mayor Isko</h1>
-                      <a href="https://www.facebook.com/iskomorenodomagoso/ "><ion-icon
-                        style={iconStyle}
-                        name="logo-facebook"
-                      ></ion-icon></a>
-                      <a href="https://twitter.com/IskoMoreno"><ion-icon
-                        style={iconStyle}
-                        name="logo-twitter"
-                      ></ion-icon></a>
-                      <a href="https://www.youtube.com/iskoverychannel"><ion-icon
-                        style={iconStyle}
-                        name="logo-youtube"
-                      ></ion-icon></a>
-                      <a href="https://www.instagram.com/iskomorenodomagoso"><ion-icon
-                        style={iconStyle}
-                        name="logo-instagram"
-                      ></ion-icon></a>
+                      <a href="https://www.facebook.com/iskomorenodomagoso/ ">
+                        <ion-icon
+                          style={iconStyle}
+                          name="logo-facebook"
+                        ></ion-icon>
+                      </a>
+                      <a href="https://twitter.com/IskoMoreno">
+                        <ion-icon
+                          style={iconStyle}
+                          name="logo-twitter"
+                        ></ion-icon>
+                      </a>
+                      <a href="https://www.youtube.com/iskoverychannel">
+                        <ion-icon
+                          style={iconStyle}
+                          name="logo-youtube"
+                        ></ion-icon>
+                      </a>
+                      <a href="https://www.instagram.com/iskomorenodomagoso">
+                        <ion-icon
+                          style={iconStyle}
+                          name="logo-instagram"
+                        ></ion-icon>
+                      </a>
                     </Section5Social>
                   </RightContainer>
                 </div>
