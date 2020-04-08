@@ -178,11 +178,19 @@ const banners = [
 const texts = [
   {
     small: 'Welcome to the office of the Mayor of Manila',
-    big: 'Our minds and hearts united towards returning Manila to greatness. '
+    big: 'Our minds and hearts united towards returning Manila to greatness. ',
+    btn: {
+      text: 'ABOUT',
+      path: '/about#mayor-profile'
+    }
   },
   {
     small: 'We will defeat Covid-19 together',
-    big: 'The most challenging public health challenge of our lifetimes'
+    big: 'The most challenging public health challenge of our lifetimes',
+    btn: {
+      text: 'LEARN MORE',
+      path: '/covid'
+    }
   }
 ];
 
@@ -291,7 +299,12 @@ const Banner = () => {
                 </BannerTextBig>
               </CSSTransition>
               <ButtonCon>
-                <LearnMore transition transitionFlag={activeText === idx} />
+                <LearnMore
+                  to={t.btn.path}
+                  text={t.btn.text}
+                  transition
+                  transitionFlag={activeText === idx}
+                />
                 <MobileLocalTime transitionFlag={activeText === idx} />
               </ButtonCon>
             </BannerTextsSection>
