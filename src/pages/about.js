@@ -14,6 +14,8 @@ import PageContainer from '../components/PageContainer';
 import Layout from '../components/Layout';
 import NavigationProvider from '../context/NavigationProvider';
 import SEO from '../components/SEO';
+import Notice from '../components/Notice';
+import Navigation from '../components/Navigation';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -96,7 +98,6 @@ const Section3 = styled.div`
   }
 `;
 
-
 const Section5Container = styled.div`
   background-image: url(${section5Bg});
   background-size: cover;
@@ -156,6 +157,8 @@ const AboutPage = ({ location }) => {
     <NavigationProvider>
       <Layout>
         <SEO title="About" />
+        <Notice />
+        <Navigation />
         <Wrapper>
           <PageHeader name="About" />
           <PageContainer id="mayor-profile">
@@ -165,10 +168,10 @@ const AboutPage = ({ location }) => {
                   <h1> Meet Mayor Isko </h1>
                   <img src={line} alt="blue line" className="line" />
                   <p>
-                    Mayor Francisco “Isko Moreno” Domagoso <br/>(born October 24,
-                    1974) – popularly known as "Isko Moreno" and colloquially as
-                    Yorme Isko – has served as the 27th Mayor of Manila since 1
-                    July 2019.
+                    Mayor Francisco “Isko Moreno” Domagoso <br />
+                    (born October 24, 1974) – popularly known as "Isko Moreno"
+                    and colloquially as Yorme Isko – has served as the 27th
+                    Mayor of Manila since 1 July 2019.
                   </p>
                   <p>
                     His elevation to Manila’s Mayoralty occurred via a historic

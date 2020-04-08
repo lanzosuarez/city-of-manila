@@ -7,9 +7,9 @@ import NavigationItem from './NavigationItem';
 const Container = styled.div`
   height: 100px;
   width: 100%;
-  max-width: ${props => (props.isHome ? '1200px' : '100%')};
-  background: white;
+  max-width: ${props => props.maxWidth};
   display: flex;
+  background: white;
   margin: 0 auto;
 
   @media (max-width: 1024px) {
@@ -103,9 +103,9 @@ export const listItems = [
   }
 ];
 
-const Navigation = ({ isHome }) => {
+const Navigation = ({ maxWidth = '100%' }) => {
   return (
-    <Container isHome={isHome}>
+    <Container maxWidth={maxWidth}>
       <Logo>
         <Link to="/">logo .</Link>
       </Logo>

@@ -18,7 +18,7 @@ const Container = styled.div`
 const OverlayNoticeAndNav = styled.div`
   width: 100%;
   position: absolute;
-  z-index: 3;
+  z-index: 5;
 `;
 
 const BannerCon = styled.div`
@@ -228,7 +228,7 @@ const MobileLocalTime = ({ transitionFlag }) => {
   );
 };
 
-const Banner = ({ isHome }) => {
+const Banner = () => {
   const interval = useRef(null);
   const [activeBanner, setActiveBanner] = useState(banner1);
   const [activeText, setActiveText] = useState(0);
@@ -253,8 +253,8 @@ const Banner = ({ isHome }) => {
   return (
     <Container>
       <OverlayNoticeAndNav>
-        <Notice isHome={isHome} />
-        <Navigation isHome={isHome} />
+        <Notice maxWidth="1200px" />
+        <Navigation maxWidth="1200px" />
       </OverlayNoticeAndNav>
       <BannerCon>
         {banners.map(b => (
