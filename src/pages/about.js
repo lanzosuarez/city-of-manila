@@ -525,22 +525,22 @@ const AboutPage = ({ location }) => {
                   <RightContainer>
                     <Section5Social>
                       <h1 className="white">Connect with Mayor Isko</h1>
-                      <ion-icon
+                      <a href="https://www.facebook.com/iskomorenodomagoso/ "><ion-icon
                         style={iconStyle}
                         name="logo-facebook"
-                      ></ion-icon>
-                      <ion-icon
+                      ></ion-icon></a>
+                      <a href="https://twitter.com/IskoMoreno"><ion-icon
                         style={iconStyle}
                         name="logo-twitter"
-                      ></ion-icon>
-                      <ion-icon
+                      ></ion-icon></a>
+                      <a href="https://www.youtube.com/iskoverychannel"><ion-icon
                         style={iconStyle}
                         name="logo-youtube"
-                      ></ion-icon>
-                      <ion-icon
+                      ></ion-icon></a>
+                      <a href="https://www.instagram.com/iskomorenodomagoso"><ion-icon
                         style={iconStyle}
                         name="logo-instagram"
-                      ></ion-icon>
+                      ></ion-icon></a>
                     </Section5Social>
                   </RightContainer>
                 </div>

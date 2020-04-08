@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import NavigationProvider from '../context/NavigationProvider';
 import CovidSection1 from '../components/CovidSection1';
+import CovidSection2 from '../components/CovidSection2';
 import CovidSection3 from '../components/CovidSection3';
 import banner from '../images/covid-banner.jpg';
 import styled from '@emotion/styled';
@@ -48,7 +50,7 @@ const BannerContainer = styled.div`
     }
   }
 `;
-const Button = styled.button`
+const Button = styled.div`
   background-color: #f3a81b;
   color: #051422;
   width: 179px;
@@ -61,6 +63,19 @@ const Button = styled.button`
   -moz-letter-spacing: 2px;
   -ms-letter-spacing: 2px;
   letter-spacing: 2px;
+  a {
+    display: flex;
+    height: 100%;
+    text-decoration: none;
+    color: #051422;
+    align-items: center;
+    justify-content: center;
+  }
+  :hover a{
+    background-color:  #05326b;
+    color:white;
+    border-radius: 40px;
+  }
   @media only screen and (max-width: 768px) {
     width: 145px;
     height: 36px;
@@ -68,7 +83,7 @@ const Button = styled.button`
     margin-right:5px;
   }
 `;
-const ButtonTracker = styled.button`
+const ButtonTracker = styled.div`
   background-color: #e21130;
   color: #ffffff;
   width: 282px;
@@ -84,6 +99,19 @@ const ButtonTracker = styled.button`
   -moz-letter-spacing: 2px;
   -ms-letter-spacing: 2px;
   letter-spacing: 2px;
+  a {
+    display: flex;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+  }
+  :hover a{
+    background-color:  #05326b;
+    color:white;
+    border-radius: 40px;
+  }
   @media only screen and (max-width: 768px) {
     width: 240px;
     height: 36px;
@@ -103,7 +131,12 @@ const ButtonContainer = styled.div`
 
 const Section = styled.div`
   padding: 4rem 0;
-  background-color: #f8f8f8;
+  background-color: white;
+`;
+
+const Section2 = styled.div`
+  padding: 4rem 0;
+  background-color: #fafafa;
 `;
 
 const CovidPage = () => {
@@ -123,8 +156,12 @@ const CovidPage = () => {
                 hurdle of our lifetimes.
               </p>
               <ButtonContainer>
-                <Button>Contact</Button>
-                <ButtonTracker>COVID-19 Tracker</ButtonTracker>
+                <Button>
+                  <Link to="/contact">Contact</Link>
+                </Button>
+                <ButtonTracker>      
+                  <a  href="https://www.google.com/url?q=https://www.doh.gov.ph/2019-nCoV&sa=D&ust=1586319141649000&usg=AFQjCNHH97WJSAPeduXH9jUtbRw9EB3ccQ">COVID-19 Tracker</a>
+                </ButtonTracker>
               </ButtonContainer>
             </BannerContainer>
           </PageContainer>
@@ -132,6 +169,11 @@ const CovidPage = () => {
         <PageContainer>
           <CovidSection1/>
         </PageContainer>
+        <Section2>
+          <PageContainer>
+            <CovidSection2/>
+          </PageContainer>
+        </Section2>
         <Section>
           <PageContainer>
             <CovidSection3/>

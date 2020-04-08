@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 const SubContainer = styled.div`
-  margin: 50px 0px;
+  margin: 4rem 0px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;
@@ -22,6 +22,7 @@ const SubContainer = styled.div`
 `;
 
 const InfoSection = styled.div`
+  align-self: center;
   @media (max-width: 768px) {
     grid-column: span 3;
   }
