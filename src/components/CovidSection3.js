@@ -2,6 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import blueline from '../images/blue-line.png';
+import Covid1 from '../images/covid-img-1.png';
+import Covid2 from '../images/covid-img-2.png';
+import Covid3 from '../images/covid-img-3.png';
+import Covid4 from '../images/covid-img-4.png';
+import Covid5 from '../images/covid-img-5.png';
+
 import PageContainer from '../components/PageContainer';
 
 
@@ -10,20 +16,46 @@ const Header = styled.div`
     margin: 0 auto;
     text-align: center;
     padding-bottom: 20px;
+
+    @media (max-width: 768px) {
+       h1 {
+        font-size: 26px;
+       }
+      }
+    
 `;
 const LeftContainer = styled.div`
     width:50%;
+    @media (max-width: 768px) {
+        width:100%;
+      }
 `;
 const RightContainer = styled.div`
     width:50%;
+     @media (max-width: 768px) {
+        width:100%;
+      }
 `;
 const DisplayFlex = styled.div`
     display: flex;
     padding: 20px 15px;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    @media (max-width: 768px) {
+        flex-direction:column;
+      }
 `;
 
 const TextHeader = styled.h1`
     font-size: 24px;
+`;
+
+const ImgContainer = styled.img`
+    padding:20px 4rem;
+    @media (max-width: 768px) {
+        padding:20px 0;
+      }
 `;
 const CovidSection3 = () => {
   return (
@@ -54,7 +86,7 @@ const CovidSection3 = () => {
                 </p>
             </LeftContainer>
             <RightContainer>
-                Img
+                <ImgContainer src={Covid1} alt="How to prevent COVID-19"/>
             </RightContainer>
         </DisplayFlex>
         <DisplayFlex>
@@ -73,7 +105,7 @@ const CovidSection3 = () => {
                 </p>
             </LeftContainer>
             <RightContainer>
-                Img
+                <ImgContainer src={Covid2} alt="When else you need to call a doctor"/>
             </RightContainer>
         </DisplayFlex>
         <DisplayFlex>
@@ -92,7 +124,7 @@ const CovidSection3 = () => {
                 </p>
             </LeftContainer>
             <RightContainer>
-                Img
+                <ImgContainer src={Covid3} alt="Do not break ECQ rules "/>
             </RightContainer>
         </DisplayFlex>
         <DisplayFlex>
@@ -117,7 +149,7 @@ const CovidSection3 = () => {
                 </p>
             </LeftContainer>
             <RightContainer>
-                Img
+                <ImgContainer src={Covid4} alt="Don't forget about mental health"/>
             </RightContainer>
         </DisplayFlex>
         <DisplayFlex>
@@ -142,7 +174,7 @@ const CovidSection3 = () => {
                 </p>
             </LeftContainer>
             <RightContainer>
-                Img
+                <ImgContainer src={Covid5} alt="Stay informed"/>
             </RightContainer>
         </DisplayFlex>
     </PageContainer>

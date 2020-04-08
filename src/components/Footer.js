@@ -82,28 +82,28 @@ const Footer = () => {
           <h4>Services</h4>
           <LinkList>
             <LinkItem>
-              <Link to="https://manila.gov.ph/district-hospitals/  ">District Hospitals</Link>
+              <a href="https://manila.gov.ph/district-hospitals/  ">District Hospitals</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://manila.gov.ph/civil-registry/">Civil Registry</Link>
+              <a href="https://manila.gov.ph/civil-registry/">Civil Registry</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://manila.gov.ph/social-welfare/">Social Welfare</Link>
+              <a href="https://manila.gov.ph/social-welfare/">Social Welfare</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://manila.gov.ph/senior-citizens/">Senior Citizens</Link>
+              <a href="https://manila.gov.ph/senior-citizens/">Senior Citizens</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://manila.gov.ph/traffic-management/ ">Traffic Management</Link>
+              <a href="https://manila.gov.ph/traffic-management/ ">Traffic Management</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://manila.gov.ph/disaster-and-risk-management/ ">Disaster And Risk Management</Link>
+              <a href="https://manila.gov.ph/disaster-and-risk-management/ ">Disaster And Risk Management</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://manila.gov.ph/public-services/">Public Services</Link>
+              <a href="https://manila.gov.ph/public-services/">Public Services</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://manila.gov.ph/engineering-public-works/">Engineering Public Works</Link>
+              <a href="https://manila.gov.ph/engineering-public-works/">Engineering Public Works</a>
             </LinkItem>
           </LinkList>
         </Section>
@@ -111,19 +111,19 @@ const Footer = () => {
           <h4>National Government</h4>
           <LinkList>
             <LinkItem>
-              <Link to="https://doh.gov.ph">Department Of Health</Link>
+              <a href="https://doh.gov.ph">Department Of Health</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://dilg.gov.ph">Department Of The Interior And Local Government</Link>
+              <a href="https://dilg.gov.ph">Department Of The Interior And Local Government</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://dotr.gov.ph">Department Of Transportation</Link>
+              <a href="https://dotr.gov.ph">Department Of Transportation</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://da.gov.ph">Department Of Agriculture</Link>
+              <a href="https://da.gov.ph">Department Of Agriculture</a>
             </LinkItem>
             <LinkItem>
-              <Link to="https://op-proper.gov.ph">Office Of The President Of The Philippines</Link>
+              <a href="https://op-proper.gov.ph">Office Of The President Of The Philippines</a>
             </LinkItem>
           </LinkList>
         </Section>
