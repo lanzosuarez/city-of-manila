@@ -35,8 +35,6 @@ const Overlay = styled.div`
 const Layout = ({ children, path = '//' }) => {
   const { showNav, toggleNav } = useContext(NavigationContext);
   const isHome = path === '/';
-  console.log(isHome);
-  console.log(path);
   return (
     <Container id="page-layout" noscroll={showNav}>
       <Overlay onClick={() => toggleNav(false)} show={showNav} />
