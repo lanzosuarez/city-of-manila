@@ -36,9 +36,11 @@ const ContactItem = styled.div`
   h1 {
     color: white;
     margin-bottom: 0.5rem;
+    font-size: 30px;
   }
   p {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.4;
     color: white;
     margin-bottom: 0.5rem;
     @media only screen and (max-width: 425px) {
