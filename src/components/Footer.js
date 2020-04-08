@@ -32,6 +32,11 @@ const SectionP = styled.p`
   font-size: 0.8rem;
 `;
 
+const LineHeight = {
+  lineHeight: '1.5'
+};
+
+
 const CopyRight = styled.div`
   padding: 10px 0px;
   display: flex;
@@ -71,10 +76,7 @@ const Footer = () => {
     <Container>
       <SectionsContainer>
         <Section>
-          <h4>City Of Manila</h4>
-          <SectionP>
-            Connect with us and know about what's the latest happenings in our city.
-          </SectionP>
+          <h4 style={LineHeight}> Welcome to my page. Together, we can make Manila vibrant again. Bangon, Maynila!</h4>
           <img width="60%" alt="mayor signature" src={sign}></img>
         </Section>
         <Section>

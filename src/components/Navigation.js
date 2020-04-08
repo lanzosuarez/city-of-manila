@@ -58,7 +58,7 @@ export const listItems = [
         path: '/about#background'
       },
       {
-        title: 'Links to Social Media Pages',
+        title: 'Links To Social Media Pages',
         path: '/about#links-to-social-media'
       }
     ]
@@ -72,11 +72,15 @@ export const listItems = [
     path: '/covid',
     sections: [
       {
-        title: 'What is ECQ?',
+        title: 'Digital Help Survey',
         path: '/covid'
       },
       {
-        title: 'How will ECQ get rid of COVID-19?',
+        title: 'Enhanced Community Quarantine',
+        path: '/covid'
+      },
+      {
+        title: 'What You Need To Know',
         path: '/covid'
       }
     ]

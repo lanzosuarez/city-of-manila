@@ -26,7 +26,7 @@ const BannerContainer = styled.div`
   color: white;
   flex-direction: column;
   justify-content: center;
-  width: 60%;
+  width: 70%;
   padding: 0px 20px;
   @media only screen and (max-width: 768px) {
     width: 100%;
@@ -42,10 +42,10 @@ const BannerContainer = styled.div`
     }
   }
 
-  p:nth-child(1) {
-    font-size: 14px;
-    line-height: 2;
-    margin-bottom: 2px;
+  p {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 12px;
     @media only screen and (max-width: 768px) {
       font-size: 18px;
       line-height: 1.5;
@@ -127,7 +127,7 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 27rem;
-  margin-top: 5px;
+  margin-top: 20px;
   @media only screen and (max-width: 768px) {
     width: 18rem;
   }
@@ -135,12 +135,16 @@ const ButtonContainer = styled.div`
 
 const Section = styled.div`
   padding: 4rem 0;
-  background-color: white;
+  background-color: #f8f8f8;
 `;
 
 const Section2 = styled.div`
   padding: 4rem 0;
-  background-color: #fafafa;
+  background-color: white;
+`;
+const Section1 = styled.div`
+  padding: 4rem 0;
+  background-color: #f8f8f8;
 `;
 
 const CovidPage = () => {
@@ -152,7 +156,7 @@ const CovidPage = () => {
           <PageContainer>
             <BannerContainer>
               <p>
-                On March 20th, the City of Manila launched the Code Covid-19 Digital Health Survey.
+                The most difficult public health challenge of our lifetime
               </p>
               <h1>We will defeat Covid-19 together</h1>
               <p>
@@ -179,12 +183,14 @@ Bangon, Manila!
             </BannerContainer>
           </PageContainer>
         </CovidBanner>
+        <Section1>
         <PageContainer>
-          <CovidSection1/>
+            <CovidSection2/>
         </PageContainer>
+        </Section1>
         <Section2>
           <PageContainer>
-            <CovidSection2/>
+            <CovidSection1/>
           </PageContainer>
         </Section2>
         <Section>

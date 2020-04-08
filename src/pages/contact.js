@@ -96,12 +96,24 @@ const Section = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 4rem;
+
   @media only screen and (max-width: 728px) {
     flex-direction: column;
     padding: 50px 15px;
   }
   @media only screen and (min-width: 729px) and (max-width: 1024px) {
     padding: 50px 15px;
+  }
+`;
+
+const Section2 = styled.div`
+  padding: 4rem 15px 0rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align:center;
+  @media only screen and (max-width: 1024px) {
+    padding: 4rem 15px 0px;
   }
 `;
 const ContactPage = () => {
@@ -112,6 +124,14 @@ const ContactPage = () => {
         <Wrapper>
           <PageHeader name="Contact" />
           <PageContainer>
+          <PageContainer>
+            <Section2>
+              <p>
+              Manila City Hall is always open to serve you. During this time of enhanced community quarantine, it is best to reach us through our official social media pages. For further health assistance, please call the Manila Emergency Operation Center Hotline (MEOC) at <br/><b>8926-2385, 8926-2386, 8527-5174, 
+or 0961-062-7013.</b> 
+              </p>
+              </Section2>
+            </PageContainer>
             <Section>
               <ContactItem>
                 <IconBox className="IconBox" />

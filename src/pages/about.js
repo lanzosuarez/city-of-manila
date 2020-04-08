@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import '../styles/about.css';
 
 import line from '../images/blue-line.png';
+import whiteline from '../images/white-line.png';
 import imgSection2 from '../images/about-section-2.png';
 import imgSection2Quote from '../images/about-section-2-quote-box.png';
 import section3Bg from '../images/about-section-3.png';
@@ -129,6 +130,9 @@ const Section5Social = styled.div`
   padding: 100px;
   h1 {
     margin-bottom: 1.5rem;
+  }
+  p{
+    color:white;
   }
   @media only screen and (max-width: 425px) {
     padding: 1rem 15px 4rem;
@@ -285,35 +289,37 @@ const AboutPage = ({ location }) => {
                 <div>
                   <ul className="timeline timeline-split">
                     <li className="timeline-item">
-                      <div className="timeline-info">
-                        <span>College | Harvard University</span>
-                      </div>
-                      <div className="timeline-marker"></div>
                       <div className="timeline-content tlTitles">
+                        <span>College | Harvard University</span>
                         <h3 className="timeline-title">
                           Executive Education Program
                         </h3>
                       </div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-info">
-                        <span>College | Oxford University</span>
-                      </div>
                       <div className="timeline-marker"></div>
                       <div className="timeline-content tlTitles">
+                       
+                      </div>
+                    </li>
+                    <li className="timeline-item">
+                      <div className="timeline-content tlTitles">
+                        <span>College | Oxford University</span>
                         <h3 className="timeline-title">
                           Strategic Leadership Program
                         </h3>
                       </div>
+                      <div className="timeline-marker"></div>
+                      <div className="timeline-content tlTitles">
+                        
+                      </div>
                     </li>
                     <li className="timeline-item">
                       <div className="timeline-info">
-                        <span>
-                          College | University of the Philippines DILIMAN
-                        </span>
                       </div>
                       <div className="timeline-marker"></div>
                       <div className="timeline-content tlTitles">
+                        <span>
+                          College | University of the Philippines, Diliman
+                        </span>
                         <h3 className="timeline-title">
                           Local Legislation and Local Finance
                         </h3>
@@ -321,10 +327,10 @@ const AboutPage = ({ location }) => {
                     </li>
                     <li className="timeline-item">
                       <div className="timeline-info">
-                        <span>College | Pamantasan ng Lungsod ng Maynila</span>
                       </div>
                       <div className="timeline-marker"></div>
                       <div className="timeline-content tlTitles">
+                        <span >College | Pamantasan ng Lungsod ng Maynila</span>
                         <h3 className="timeline-title">
                           Public Administration
                         </h3>
@@ -332,41 +338,24 @@ const AboutPage = ({ location }) => {
                     </li>
                     <li className="timeline-item">
                       <div className="timeline-info">
-                        <span>College | Pamantasan ng Lungsod ng Maynila</span>
                       </div>
                       <div className="timeline-marker"></div>
                       <div className="timeline-content tlTitles">
-                        <h3 className="timeline-title">Bachelor of Laws</h3>
-                      </div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-info">
-                        <span>College | Pamantasan ng Lungsod ng Maynila</span>
-                      </div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                        <h3 className="timeline-title">Bachelor of Laws</h3>
-                      </div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-info">
                         <span>High School</span>
-                      </div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
                         <h3 className="timeline-title">
-                          Tondo High School, Tondo, Manila{' '}
+                          Tondo High School, Tondo, Manila
                         </h3>
                       </div>
                     </li>
                     <li className="timeline-item">
                       <div className="timeline-info">
-                        <span>Elementary</span>
+                      
                       </div>
                       <div className="timeline-marker"></div>
                       <div className="timeline-content tlTitles">
+                        <span>Elementary</span>
                         <h3 className="timeline-title">
-                          Rosauro Alamario Elementary School, Tondo, Manila{' '}
+                          Rosauro Alamario Elementary School, Tondo, Manila
                         </h3>
                       </div>
                     </li>
@@ -404,6 +393,8 @@ const AboutPage = ({ location }) => {
                   <RightContainer>
                     <Section5Social>
                       <h1 className="white">Connect with Mayor Isko</h1>
+                      <img src={whiteline} alt="blue line" className="line" />
+                      <p>I'm on social media and I want to hear from you!</p>
                       <a href="https://www.facebook.com/iskomorenodomagoso/ ">
                         <ion-icon
                           style={iconStyle}

@@ -75,7 +75,7 @@ const HomeSection5 = () => {
   return (
     <Container>
       <Item>
-        <Text>Meet the Manila Mayor</Text>
+        <Text>Meet Mayor Isko</Text>
         <img src={line} style={lineStyle} alt="blue line" className="line" />
         <SubText>
           The City of Manila will retake her place as a leading global city, with opporunities for all, prosperity for many, compassion for everyone.

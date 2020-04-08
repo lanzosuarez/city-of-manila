@@ -97,7 +97,8 @@ const SubTitle = styled.h5`
 `;
 
 const Content = styled.div`
-  font-size: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
 `;
 
 const Item = ({ img, title, sub, content }) => {
@@ -125,14 +126,14 @@ const items = [
     sub: 'Jul 8, 2019',
     img: logo1,
     content:
-      'LThe new mayor clearly means business and he’s not wasting a single minute of his three-year term.'
+      'Within the next few days, he turns up again almost incessantly on social media news feeds and TV newscasts—there he is brandishing a sledgehammer and whacking gambling machines operating within Manila City Hall grounds.... The new mayor clearly means business and he’s not wasting a single minute of his three-year term.'
   },
   {
     title: 'Philippine Tatler ',
     sub: 'Mar 10, 2020',
     img: logo2,
     content:
-      'I thank God and ask for forgiveness, guidance, strength.'
+      'This is my pat on the back. Every cup [of Starbucks] reminds me to be grateful that now I can afford 120 pesos for coffee when, once upon a time I could not. I thank God and ask for forgiveness, guidance, strength'
   },
   {
     title: 'Daily Pedia',

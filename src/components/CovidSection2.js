@@ -103,8 +103,8 @@ const CovidSection2 = () => {
             </LeftContainer>
             <RightContainer>
                 <Header>
-                    <p>How to Help Manila</p>
-                    <h1> Flatten the Curve by Participating in the Digital Health Survey </h1>
+                    <p>Do your part</p>
+                    <h1> Take the digital health survey. Save a life.  </h1>
                     <img src={blueline} alt="blue line" className="line" />
                     <p>On March 20th, the City of Manila launched the Code Covid-19 Digital Health Survey.</p>
                     <p>This helpful tool provides Manilenos and Filipinos with an easy and accessible means to think objectively about their health within the Covid-19 context.</p>
