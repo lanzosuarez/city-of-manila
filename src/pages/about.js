@@ -29,13 +29,14 @@ const LeftContainer = styled.div`
   margin: 0px 30px 0px 0px;
   text-align: left;
   align-self: center;
-  p{
-    font-size: 20px;
-    line-height: 1.5;
-  }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
     margin: 0 auto;
+  }
+  @media only screen and (min-width: 1082px) {
+    p.text-break{
+      margin-bottom:0px;
+    }
   }
 `;
 const RightContainer = styled.div`
@@ -43,7 +44,7 @@ const RightContainer = styled.div`
   min-height: 1px;
   padding: 15px;
   align-self: center;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
     margin: 0 auto;
   }
@@ -60,11 +61,11 @@ const QuoteStyle = styled.img`
 
 const QuoteStyleBox = styled.img`
   position: absolute;
-  top: 184px;
+  top: 206px;
   right: 0px;
   max-width: 300px;
   width: 100%;
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 480px) {
     position: relative;
     max-width: 100%;
     margin: 0 auto;
@@ -72,11 +73,23 @@ const QuoteStyleBox = styled.img`
     right: 0;
     display: block;
   }
-  @media only screen and (min-width: 426px) and (max-width: 768px) {
-    top: 32rem;
-    bottom: 40rem;
-    width: 100%;
+  @media only screen and (min-width: 481px) and (max-width: 650px) {
+    top: 136vh;
+    bottom: 49rem;
+    width: 250px;
     right: 15px;
+  }
+  @media only screen and (min-width: 651px) and (max-width: 768px) {
+    top: 136vh;
+    bottom: 49rem;
+    width: 250px;
+    right: 5rem;
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    top: 22rem;
+    bottom: 49rem;
+    width: 12rem;
+    right: 0px;
   }
 `;
 
@@ -98,11 +111,6 @@ const Section33Container = styled.div`
 const Section3 = styled.div`
   padding: 4rem 0;
   text-align: center;
-
-  p{
-    font-size: 20px;
-    line-height: 1.5;
-  }
   @media only screen and (max-width: 1024px) {
     padding: 4rem 15px;
   }
@@ -114,15 +122,11 @@ const Section5Container = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
-  p{
-    font-size: 20px;
-    line-height: 1.5;
-  }
 `;
 
 const iconStyle = {
   color: 'white',
-  fontSize: '40px',
+  fontSize: '2rem',
   marginRight: '30px'
 };
 
@@ -178,11 +182,11 @@ const AboutPage = ({ location }) => {
                 <LeftContainer>
                   <h1> Meet Mayor Isko </h1>
                   <img src={line} alt="blue line" className="line" />
+                  <p className="text-break">Mayor Francisco “Isko Moreno” Domagoso </p>
                   <p>
-                    Mayor Francisco “Isko Moreno” Domagoso <br />
-                    (born October 24, 1974) – popularly known as "Isko Moreno"
-                    and colloquially as Yorme Isko – has served as the 27th
-                    Mayor of Manila since 1 July 2019.
+                    (born October 24, 1974) – popularly known as "Isko Moreno" and
+                    colloquially as Yorme Isko – has served as the 27th Mayor of
+                    Manila since 1 July 2019.
                   </p>
                   <p>
                     His elevation to Manila’s Mayoralty occurred via a historic
