@@ -31,7 +31,7 @@ const NavList = styled.ul`
   list-style: none;
   width: 100%;
   display: grid;
-    grid-gap: 10px;
+  grid-gap: 10px;
 `;
 
 const Logo = styled.div`
