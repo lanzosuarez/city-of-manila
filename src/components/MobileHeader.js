@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
+import { Link } from 'gatsby';
 import { NavigationContext } from '../context/NavigationProvider';
 
 const Container = styled.div`
   display: none;
-  height: 100px;
+  height: 80px;
   align-items: center;
   padding: 0px 50px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
@@ -44,7 +45,9 @@ const MobileHeader = () => {
         name="menu-outline"
         size="large"
       ></ion-icon>
-      <Logo>logo .</Logo>
+      <Logo>
+        <Link to="/">logo .</Link>
+      </Logo>
       <div />
     </Container>
   );

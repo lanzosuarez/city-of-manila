@@ -1,8 +1,9 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
-@import "./typography.css";
+@import './typography.css';
 
 :root {
   --blue: #04326a;
+  --link: black;
 }
 
 html {
@@ -48,6 +49,8 @@ template {
   display: none;
 }
 a {
+  text-decoration: none;
+  color: var(--link);
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -632,4 +635,8 @@ li {
 
 .side-nav-rotate {
   transform: rotate(90deg);
+}
+
+.side-nav-active-route {
+  color: var(--blue) !important;
 }

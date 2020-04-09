@@ -1,7 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { listItems } from './Navigation';
 import { NavigationContext } from '../context/NavigationProvider';
+import { getHash } from '../helpers';
 
 const Container = styled.div`
   height: 100vh;
@@ -47,7 +49,9 @@ const NavItem = styled.li`
   cursor: pointer;
   color: ${props => (props.show ? 'var(--blue)' : 'black')};
   &:hover {
-    color: var(--blue);
+    a.main-page {
+      color: var(--blue) !important;
+    }
   }
 `;
 
@@ -86,12 +90,15 @@ const SubPagesItem = styled.li`
   &:first-of-type {
     padding-top: 20px;
   }
+
   &:hover {
-    color: var(--blue);
+    a {
+      color: var(--blue) !important;
+    }
   }
 `;
 
-const NavItemComponent = ({ title, sections = [] }) => {
+const NavItemComponent = ({ title, path, sections = [] }) => {
   const [showSubPages, toggleSubPages] = useState(false);
   const { showNav } = useContext(NavigationContext);
   const rotate = showSubPages ? { transform: 'rotate(90deg)' } : {};
@@ -106,10 +113,30 @@ const NavItemComponent = ({ title, sections = [] }) => {
     }
   };
 
+  const isPartiallyActive = path => ({ location: { hash } }) => {
+    console.log(path);
+    console.log(hash, getHash(path));
+    if (hash === getHash(path)) {
+      return {
+        className: 'side-nav-active-route'
+      };
+    }
+    return {};
+  };
+
   return (
     <NavItem show={showSubPages} onClick={highlight}>
       <Head>
-        <PageName>{title}</PageName>
+        <PageName>
+          <Link
+            className="main-page"
+            activeClassName="side-nav-active-route"
+            partiallyActive
+            to={path}
+          >
+            {title}
+          </Link>
+        </PageName>
         {sections.length > 0 && (
           <ion-icon
             style={{
@@ -124,7 +151,11 @@ const NavItemComponent = ({ title, sections = [] }) => {
       {sections.length > 0 ? (
         <SubPages show={showSubPages}>
           {sections.map((s, idx) => (
-            <SubPagesItem key={idx}>{s.title}</SubPagesItem>
+            <SubPagesItem key={idx}>
+              <Link getProps={isPartiallyActive(s.path)} to={s.path}>
+                {s.title}
+              </Link>
+            </SubPagesItem>
           ))}
         </SubPages>
       ) : null}
@@ -139,7 +170,9 @@ const SideNavigation = () => {
       <CloseIcon onClick={() => toggleNav(false)}>
         <ion-icon name="close-outline" size="large"></ion-icon>
       </CloseIcon>
-      <Logo>logo .</Logo>
+      <Logo>
+        <Link to="/">logo .</Link>
+      </Logo>
       <NavList>
         {listItems.map((i, idx) => (
           <NavItemComponent key={idx} {...i} />
