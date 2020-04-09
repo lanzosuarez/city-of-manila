@@ -49,8 +49,8 @@ const ContactItem = styled.div`
       font-size: 18px;
     }
     @media only screen and (min-width: 729px) and (max-width: 1024px) {
-      font-size: 14px;
-      line-height: 1.3;
+      font-size: 18px;
+      line-height: 1.5;
     }
   }
   @media only screen and (max-width: 425px) {
@@ -63,7 +63,7 @@ const ContactItem = styled.div`
     margin-bottom: 15px;
     height: 215px;
   }
-  @media only screen and (min-width: 729px) and (max-width: 1024px) {
+  @media only screen and (min-width: 729px) and (max-width: 1150px) {
     flex-wrap: wrap;
     width: 31%;
   }
