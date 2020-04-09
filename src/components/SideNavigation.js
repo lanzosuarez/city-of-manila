@@ -30,6 +30,8 @@ const Container = styled.div`
 const NavList = styled.ul`
   list-style: none;
   width: 100%;
+  display: grid;
+    grid-gap: 10px;
 `;
 
 const Logo = styled.div`
@@ -114,8 +116,6 @@ const NavItemComponent = ({ title, path, sections = [] }) => {
   };
 
   const isPartiallyActive = path => ({ location: { hash } }) => {
-    console.log(path);
-    console.log(hash, getHash(path));
     if (hash === getHash(path)) {
       return {
         className: 'side-nav-active-route'
