@@ -28,6 +28,7 @@ const BannerCon = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
+
   /* padding: 300px 70px 50px; */
 `;
 
@@ -40,6 +41,10 @@ const BannerTexts = styled.div`
   height: 500px;
   width: 100%;
   justify-content: space-between;
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
 
   @media (max-width: 1024px) {
     margin-top: 150px;
@@ -54,11 +59,12 @@ const BannerTexts = styled.div`
 
   @media (max-width: 576px) {
     margin-top: 60px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 450px;
   }
 
-  &::after {
+  /* &::after {
     z-index: 3;
     content: '';
     height: 2px;
@@ -69,7 +75,20 @@ const BannerTexts = styled.div`
     animation: progress 10s;
     animation-iteration-count: infinite;
     animation-delay: 2000ms;
-  }
+  } */
+`;
+
+const Progress = styled.div`
+  z-index: 3;
+  content: '';
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  animation: progress 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 2000ms;
 
   @keyframes progress {
     0% {
@@ -87,6 +106,13 @@ const BannerTextSmall = styled.h3`
 
   @media (max-width: 768px) {
     margin-bottom: 0px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 576px) {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
   }
 `;
 
@@ -100,8 +126,15 @@ const BannerTextBig = styled.h1`
   font-weight: 600;
   margin-right: 30px;
 
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
   @media (max-width: 576px) {
-    font-size: 70px;
+    font-size: 40px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 30px;
   }
 `;
 
@@ -131,6 +164,7 @@ const MobileTimeSection = styled.div`
     display: grid;
     grid-gap: 10px;
     justify-content: space-between;
+    font-size: 0.8rem !important;
   }
 `;
 
@@ -177,6 +211,7 @@ const banners = [
 
 const texts = [
   {
+    banner: banner1,
     small: 'Welcome to the office of the Mayor of Manila',
     big: 'Our minds and hearts united towards returning Manila to greatness. ',
     btn: {
@@ -185,6 +220,7 @@ const texts = [
     }
   },
   {
+    banner: banner2,
     small: 'We will defeat Covid-19 together',
     big: 'The most challenging public health challenge of our lifetimes',
     btn: {
@@ -239,24 +275,31 @@ const MobileLocalTime = ({ transitionFlag }) => {
 const Banner = () => {
   const interval = useRef(null);
   const [activeBanner, setActiveBanner] = useState(banner1);
-  const [activeText, setActiveText] = useState(0);
-  useEffect(() => {
-    interval.current = window.setInterval(() => {
-      setActiveBanner(prev => {
-        if (prev !== banner1) {
-          setActiveBanner(banner1);
-          setActiveText(0);
-          return;
-        }
-        setActiveBanner(banner2);
-        setActiveText(1);
-      });
-    }, 10000);
+  const [activeText, setActiveText] = useState(1);
 
+  const setActiveInterval = () => {
+    setActiveBanner(prev => {
+      if (prev !== banner1) {
+        setActiveBanner(banner1);
+        setActiveText(0);
+        return;
+      }
+      setActiveBanner(banner2);
+      setActiveText(1);
+    });
+  };
+  useEffect(() => {
+    interval.current = window.setInterval(setActiveInterval, 10000);
     return () => {
       window.clearInterval(interval.current);
     };
   }, []);
+
+  const setActive = () => {
+    setActiveInterval();
+    window.clearInterval(interval.current);
+    interval.current = window.setInterval(setActiveInterval, 10000);
+  };
 
   return (
     <Container>
@@ -264,6 +307,7 @@ const Banner = () => {
         <Notice maxWidth="1200px" />
         <Navigation maxWidth="1200px" />
       </OverlayNoticeAndNav>
+
       <BannerCon>
         {banners.map(b => (
           <CSSTransition
@@ -311,16 +355,19 @@ const Banner = () => {
             <LocalTime transitionFlag={activeText === idx} />
             <ArrowCon>
               <ion-icon
+                onClick={setActive}
                 style={{ cursor: 'pointer' }}
                 name="arrow-back"
                 size="large"
               ></ion-icon>
               <ion-icon
+                onClick={setActive}
                 style={{ cursor: 'pointer' }}
                 name="arrow-forward"
                 size="large"
               ></ion-icon>
             </ArrowCon>
+            <Progress />
           </BannerTexts>
         ))}
       </BannerCon>

@@ -31,7 +31,7 @@ const CarouselContainer = styled.div`
   grid-template-columns: repeat(4, calc(100% / 3 - 20px));
 
   @media (max-width: 1024px) {
-    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, minmax(calc(100% - 20px), 1fr));
   }
 `;
 
@@ -155,8 +155,8 @@ const HomeSection6 = () => {
   return (
     <Container>
       <CarouselContainer>
-        {items.map(i => (
-          <Item {...i} />
+        {items.map((i, idx) => (
+          <Item key={idx} {...i} />
         ))}
       </CarouselContainer>
       <Dots>

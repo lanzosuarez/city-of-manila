@@ -19,10 +19,14 @@ const SubContainer = styled.div`
     margin: 50px 50px;
     grid-gap: 30px;
   }
+
+  @media (max-width: 576px) {
+    margin: 15px 15px;
+  }
 `;
 
 const InfoSection = styled.div`
-  align-self: center;
+  /* align-self: center; */
   @media (max-width: 768px) {
     grid-column: span 3;
   }

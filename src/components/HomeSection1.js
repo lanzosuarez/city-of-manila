@@ -9,19 +9,25 @@ import ecomIcon from '../images/home-green.svg';
 import educIcon from '../images/home-Investor.svg';
 import envIcon from '../images/home-tourism.svg';
 
+const MainCon = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const Container = styled.div`
   padding: 0px 88px 0px;
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
   margin-top: -30px;
   z-index: 4;
   position: relative;
+  max-width: 1200px;
 
   @media (max-width: 576px) {
     padding: 0px 20px 0px;
   }
-
 `;
 
 const Item = styled.div`
@@ -45,8 +51,8 @@ const Item = styled.div`
 
 const ItemImg = styled.img`
   margin-bottom: 20px;
-  width:50px;
-  height:50px;
+  width: 50px;
+  height: 50px;
   fill: #05326b;
 `;
 
@@ -87,14 +93,16 @@ const items = [
 
 const HomeSection1 = () => {
   return (
-    <Container>
-      {items.map(i => (
-        <Item>
-          <ItemImg alt={i.title} src={i.path}></ItemImg>
-          <p style={TextStyle}>{i.title}</p>
-        </Item>
-      ))}
-    </Container>
+    // <MainCon>
+      <Container>
+        {items.map(i => (
+          <Item>
+            <ItemImg alt={i.title} src={i.path}></ItemImg>
+            <p style={TextStyle}>{i.title}</p>
+          </Item>
+        ))}
+      </Container>
+    // </MainCon>
   );
 };
 

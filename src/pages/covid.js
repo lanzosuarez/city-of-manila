@@ -15,17 +15,30 @@ import scrollToSection from '../hooks/scrollToSection';
 
 const CovidBanner = styled.div`
   width: 100%;
-  height: 700px;
+  /* height: 700px; */
+  padding: 100px 80px;
   background-image: url(${banner});
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
+
+  @media (max-width: 1024px) {
+    padding: 80px 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 40px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 40px 20px;
+  }
 `;
 
 const BannerContainer = styled.div`
   display: flex;
-  height: 700px;
+  /* height: 700px; */
   color: white;
   flex-direction: column;
   justify-content: center;

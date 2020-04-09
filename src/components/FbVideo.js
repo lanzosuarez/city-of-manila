@@ -13,8 +13,7 @@ const FbVideo = () => {
       <iframe
         title="mayor-isko-fb-video"
         src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fiskomorenodomagoso%2Fvideos%2F220490752632700%2F&width=500&show_text=false&height=500&appId"
-        width="500"
-        height="500"
+        width="100%"
         style={Style}
         scrolling="no"
         frameborder="0"
