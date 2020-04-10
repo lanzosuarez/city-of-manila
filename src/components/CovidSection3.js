@@ -105,7 +105,8 @@ const CovidSection3 = () => {
           <ManilaContactDiv>
             <ion-icon name="call" style={iconStyle}></ion-icon>
             <p>
-              Manila Emergency Operation Center Hotline (MEOC) 8926-2385 and
+              Manila Emergency Operation Center Hotline (MEOC) <br />
+              8926-2385 and
               <br />
               8926-2386 <br />
               8527-5174 <br />
