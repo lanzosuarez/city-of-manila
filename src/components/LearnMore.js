@@ -60,7 +60,7 @@ const LearnMore = ({
     </Button>
   ) : (
     <CSSTransition
-      mountOnEnter
+      appear
       in={transitionFlag}
       classNames="banner-button"
       timeout={{ enter: 10000 }}

@@ -20,7 +20,7 @@ const Container = styled.div`
   grid-gap: 30px;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-  margin-top: -30px;
+  margin: -30px auto 0px;
   z-index: 4;
   position: relative;
   max-width: 1200px;
@@ -94,14 +94,14 @@ const items = [
 const HomeSection1 = () => {
   return (
     // <MainCon>
-      <Container>
-        {items.map(i => (
-          <Item>
-            <ItemImg alt={i.title} src={i.path}></ItemImg>
-            <p style={TextStyle}>{i.title}</p>
-          </Item>
-        ))}
-      </Container>
+    <Container>
+      {items.map((i, idx) => (
+        <Item key={idx}>
+          <ItemImg alt={i.title} src={i.path}></ItemImg>
+          <p style={TextStyle}>{i.title}</p>
+        </Item>
+      ))}
+    </Container>
     // </MainCon>
   );
 };

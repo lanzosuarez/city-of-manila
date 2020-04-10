@@ -187,6 +187,7 @@ const BannerImg = styled.div`
   left: 0;
   top: 0;
   z-index: ${props => props.zIndex};
+  transition: opacity 1s 1s;
 `;
 
 const ArrowCon = styled.div`
@@ -233,7 +234,7 @@ const texts = [
 const LocalTime = ({ transitionFlag }) => {
   return (
     <CSSTransition
-      mountOnEnter
+      appear
       in={transitionFlag}
       classNames="banner-time"
       timeout={{ enter: 10000 }}
@@ -254,7 +255,7 @@ const LocalTime = ({ transitionFlag }) => {
 const MobileLocalTime = ({ transitionFlag }) => {
   return (
     <CSSTransition
-      mountOnEnter
+      appear
       in={transitionFlag}
       classNames="banner-time"
       timeout={{ enter: 10000 }}
@@ -309,8 +310,10 @@ const Banner = () => {
       </OverlayNoticeAndNav>
 
       <BannerCon>
-        {banners.map(b => (
+        {banners.map((b, idx) => (
           <CSSTransition
+            appear
+            key={idx}
             unmountOnExit
             in={activeBanner === b.banner}
             classNames="banner-fade"
@@ -320,9 +323,10 @@ const Banner = () => {
           </CSSTransition>
         ))}
         {texts.map((t, idx) => (
-          <BannerTexts show={activeText === idx}>
+          <BannerTexts key={idx} show={activeText === idx}>
             <BannerTextsSection>
               <CSSTransition
+                appear
                 unmountOnExit
                 in={activeText === idx}
                 classNames="banner-text-small-move"
@@ -333,7 +337,7 @@ const Banner = () => {
                 </BannerTextSmall>
               </CSSTransition>
               <CSSTransition
-                mountOnEnter
+                appear
                 in={activeText === idx}
                 classNames="banner-text-big-move"
                 timeout={{ enter: 10000 }}
@@ -353,20 +357,27 @@ const Banner = () => {
               </ButtonCon>
             </BannerTextsSection>
             <LocalTime transitionFlag={activeText === idx} />
-            <ArrowCon>
-              <ion-icon
-                onClick={setActive}
-                style={{ cursor: 'pointer' }}
-                name="arrow-back"
-                size="large"
-              ></ion-icon>
-              <ion-icon
-                onClick={setActive}
-                style={{ cursor: 'pointer' }}
-                name="arrow-forward"
-                size="large"
-              ></ion-icon>
-            </ArrowCon>
+            <CSSTransition
+              appear
+              in={activeText === idx}
+              classNames="banner-fade"
+              timeout={{ enter: 10000 }}
+            >
+              <ArrowCon>
+                <ion-icon
+                  onClick={setActive}
+                  style={{ cursor: 'pointer' }}
+                  name="arrow-back"
+                  size="large"
+                ></ion-icon>
+                <ion-icon
+                  onClick={setActive}
+                  style={{ cursor: 'pointer' }}
+                  name="arrow-forward"
+                  size="large"
+                ></ion-icon>
+              </ArrowCon>
+            </CSSTransition>
             <Progress />
           </BannerTexts>
         ))}

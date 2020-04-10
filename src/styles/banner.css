@@ -1,3 +1,11 @@
+.banner-fade-appear {
+  opacity: 0 !important;
+}
+
+.banner-fade-appear-active {
+  opacity: 1 !important;
+}
+
 .banner-fade-enter {
   opacity: 0;
 }
@@ -15,8 +23,20 @@
 }
 
 .banner-fade-enter-active,
-.banner-fade-exit-active {
-  transition: opacity 1s;
+.banner-fade-appear-active .banner-fade-exit-active {
+  transition: opacity 3s;
+}
+
+
+.banner-text-small-move-appear {
+  opacity: 0 !important;
+  transform: translateY(-30px) !important;
+}
+
+.banner-text-small-move-appear-active {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+  transition: all 1s 2s !important;
 }
 
 .banner-text-small-move-enter {
@@ -30,6 +50,17 @@
   transition: all 1s 2s !important;
 }
 
+.banner-text-big-move-appear {
+  opacity: 0 !important;
+  transform: translateY(-30px) !important;
+}
+
+.banner-text-big-move-appear-active {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+  transition: all 1s 1s !important;
+}
+
 .banner-text-big-move-enter {
   opacity: 0 !important;
   transform: translateY(-30px) !important;
@@ -41,6 +72,16 @@
   transition: all 1s 1s !important;
 }
 
+
+.banner-button-appear {
+  opacity: 0 !important;
+}
+
+.banner-button-appear-active {
+  opacity: 1 !important;
+  transition: opacity 1s 3s !important;
+}
+
 .banner-button-enter {
   opacity: 0 !important;
 }
@@ -48,6 +89,15 @@
 .banner-button-enter-active {
   opacity: 1 !important;
   transition: opacity 1s 3s !important;
+}
+
+.banner-time-appear {
+  opacity: 0 !important;
+}
+
+.banner-time-appear-active {
+  opacity: 1 !important;
+  transition: opacity 1s 4s !important;
 }
 
 .banner-time-enter {
