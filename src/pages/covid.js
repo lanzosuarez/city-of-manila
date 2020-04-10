@@ -145,7 +145,7 @@ const ButtonContainer = styled.div`
   width: 27rem;
   margin-top: 20px;
   @media only screen and (max-width: 768px) {
-    width: 18rem;
+    width: 17rem;
   }
 `;
 
