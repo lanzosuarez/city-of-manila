@@ -11,8 +11,8 @@ const Header = styled.div`
   margin: 0 auto;
   text-align: center;
   padding-bottom: 20px;
-  padding-right:15px;
-  padding-left:15px;
+  padding-right: 15px;
+  padding-left: 15px;
 
   @media (max-width: 768px) {
     h1 {
@@ -22,10 +22,10 @@ const Header = styled.div`
 `;
 const LeftContainer = styled.div`
   width: 50%;
-  a{
+  a {
     text-decoration: none;
     color: #365899;
-    }
+  }
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -58,26 +58,27 @@ const ImgContainer = styled.img`
   }
 `;
 const LinkStyle = styled.div`
-    a{
-        text-decoration: none;
-        color: #365899;
-    }
+  a {
+    text-decoration: none;
+    color: #365899;
+  }
 `;
-const IndentText = {
-  marginLeft:'25px'
-};
- 
+
+const ManilaContactDiv = styled.p`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 5px;
+`;
 
 const iconStyle = {
-    marginRight: '5px'
-  };
+  marginTop: 5
+};
+
 const CovidSection3 = () => {
   return (
     <PageContainer>
       <Header>
-        <h1>
-          COVID-19 : What you need to know to protect you and your family
-        </h1>
+        <h1>COVID-19 : What you need to know to protect you and your family</h1>
         <img src={blueline} alt="blue line" className="line" />
       </Header>
       <DisplayFlex>
@@ -101,16 +102,16 @@ const CovidSection3 = () => {
             the MEOC hotline so you can be guided by a medical professional on
             what to do next.
           </p>
-          <p>
-                <span>
-                  <ion-icon name="call" style={iconStyle}></ion-icon>
-                </span>Manila Emergency Operation Center Hotline (MEOC)
-                <div style={IndentText}>
-                8926-2385 and 8926-2386 <br/>
-                8527-5174 <br/>
-                0961-062-7013
-                </div>
-          </p>
+          <ManilaContactDiv>
+            <ion-icon name="call" style={iconStyle}></ion-icon>
+            <p>
+              Manila Emergency Operation Center Hotline (MEOC) 8926-2385 and
+              <br />
+              8926-2386 <br />
+              8527-5174 <br />
+              0961-062-7013
+            </p>
+          </ManilaContactDiv>
         </LeftContainer>
         <RightContainer>
           <ImgContainer
@@ -122,13 +123,30 @@ const CovidSection3 = () => {
       <DisplayFlex>
         <LeftContainer>
           <TextHeader>Do not break ECQ rules</TextHeader>
-          <p>1. Stay home. Only those classified as essential workers such as doctors, nurses, health and emergency service providers, supermarket and pharmacy staff, and the like, are allowed to leave their homes to go to work.</p>
           <p>
-            2. Only one person per household is allowed to leave to purchase basic necessities such as food and medicine.
+            1. Stay home. Only those classified as essential workers such as
+            doctors, nurses, health and emergency service providers, supermarket
+            and pharmacy staff, and the like, are allowed to leave their homes
+            to go to work.
           </p>
-          <p>3. If your Local Government Unit has issued a Quarantine Pass for your household, be sure to bring this with you whenever leaving the home to purchase essential items. </p>
-          <p>4. Practice social distancing at all times, by standing at least one meter away from another individual when outside of the home. </p>
-          <p>5. Wear a mask when outside of the home. This could be in the form of a surgical mask, face shield, or handkerchief. The objective is to ensure your nose and mouse are covered. </p>
+          <p>
+            2. Only one person per household is allowed to leave to purchase
+            basic necessities such as food and medicine.
+          </p>
+          <p>
+            3. If your Local Government Unit has issued a Quarantine Pass for
+            your household, be sure to bring this with you whenever leaving the
+            home to purchase essential items.{' '}
+          </p>
+          <p>
+            4. Practice social distancing at all times, by standing at least one
+            meter away from another individual when outside of the home.{' '}
+          </p>
+          <p>
+            5. Wear a mask when outside of the home. This could be in the form
+            of a surgical mask, face shield, or handkerchief. The objective is
+            to ensure your nose and mouse are covered.{' '}
+          </p>
         </LeftContainer>
         <RightContainer>
           <ImgContainer src={CovidPlaceholder} alt="Do not break ECQ rules " />
@@ -151,7 +169,10 @@ const CovidSection3 = () => {
             emotions. Seek the assistance of a health worker or counsellor.
           </p>
           <p>4. Use this time to learn a new skill or take up a hobby.</p>
-          <p>Source: <a href="https://www.who.int/health-topics/mental-health">WHO</a></p>
+          <p>
+            Source:{' '}
+            <a href="https://www.who.int/health-topics/mental-health">WHO</a>
+          </p>
         </LeftContainer>
         <RightContainer>
           <ImgContainer
@@ -171,31 +192,25 @@ const CovidSection3 = () => {
           </p>
           <LinkStyle>
             <a href="www.doh.gov.ph">
-              <p>
-                <span>
-                  <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
-                </span>
+              <ManilaContactDiv>
+                <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
                 DOH Official Website
-              </p>
+              </ManilaContactDiv>
             </a>
 
             <a href="www.covid19.gov.ph">
-              <p>
-                <span>
-                  <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
-                </span>
+              <ManilaContactDiv>
+                <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
                 Official website of the IAFT
                 <br />
-              </p>
+              </ManilaContactDiv>
             </a>
             <a href="www.manila.gov.ph">
-              <p>
-                <span>
-                  <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
-                </span>
+              <ManilaContactDiv>
+                <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
                 Official website of the City of Manila
                 <br />
-              </p>
+              </ManilaContactDiv>
             </a>
           </LinkStyle>
         </LeftContainer>
