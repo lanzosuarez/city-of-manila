@@ -55,6 +55,7 @@ const BannerContainer = styled.div`
     font-weight: 600;
     @media only screen and (max-width: 768px) {
       font-size: 40px;
+      line-height: 1.3;
     }
   }
 
@@ -144,7 +145,7 @@ const ButtonContainer = styled.div`
   width: 27rem;
   margin-top: 20px;
   @media only screen and (max-width: 768px) {
-    width: 18rem;
+    width: 17rem;
   }
 `;
 

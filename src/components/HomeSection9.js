@@ -170,7 +170,7 @@ const HomeSection9 = () => {
             <LeftContainer>
               <h1 style={H1Style}>Latest Updates</h1>
               <img src={line} alt="blue line" className="line" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Lorem ipsum dolor sit amet</p>
             </LeftContainer>
             <RightContainer>
               <span>
@@ -184,8 +184,7 @@ const HomeSection9 = () => {
               <img src={section9Img1} alt="Latest Update" className="line" />
               <CardContent>
                 <CardHeader>
-                  Lorem ipsum dolor sit amet, conser adipiscing elit, sed do
-                  eiusmod
+                  Lorem ipsum dolor sit amet
                 </CardHeader>
               </CardContent>
               <DateContent>
@@ -196,8 +195,7 @@ const HomeSection9 = () => {
               <img src={section9Img2} alt="Latest Update" className="line" />
               <CardContent>
                 <CardHeader>
-                  Lorem ipsum dolor sit amet, conser adipiscing elit, sed do
-                  eiusmod
+                  Lorem ipsum dolor sit amet
                 </CardHeader>
               </CardContent>
               <DateContent>
@@ -208,8 +206,7 @@ const HomeSection9 = () => {
               <img src={section9Img3} alt="Latest Update" className="line" />
               <CardContent>
                 <CardHeader>
-                  Lorem ipsum dolor sit amet, conser adipiscing elit, sed do
-                  eiusmod
+                  Lorem ipsum dolor sit amet
                 </CardHeader>
               </CardContent>
               <DateContent>
@@ -220,8 +217,7 @@ const HomeSection9 = () => {
               <img src={section9Img4} alt="Latest Update" className="line" />
               <CardContent>
                 <CardHeader>
-                  Lorem ipsum dolor sit amet, conser adipiscing elit, sed do
-                  eiusmod
+                  Lorem ipsum dolor sit amet
                 </CardHeader>
               </CardContent>
               <DateContent>
