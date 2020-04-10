@@ -142,7 +142,8 @@ const HomeSection4 = () => {
       </Items>
       <Items>
         <Figure>
-          <Counter start={started} to={1} />M
+          <Counter start={started} to={1} />.
+          <Counter start={started} to={8} />M
         </Figure>
         <Desc>People in the City</Desc>
       </Items>

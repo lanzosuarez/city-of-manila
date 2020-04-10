@@ -36,7 +36,6 @@ const LineHeight = {
   lineHeight: '1.5'
 };
 
-
 const CopyRight = styled.div`
   padding: 10px 0px;
   display: flex;
@@ -76,14 +75,23 @@ const Footer = () => {
     <Container>
       <SectionsContainer>
         <Section>
-          <h4 style={LineHeight}> Welcome to my page.<br/>Together, we can make Manila vibrant again.<br/>Bangon, Maynila!</h4>
+          <h4 style={LineHeight}>
+            {' '}
+            Welcome to my page.
+            <br />
+            Together, we can make Manila vibrant again.
+            <br />
+            Bangon, Maynila!
+          </h4>
           <img width="60%" alt="mayor signature" src={sign}></img>
         </Section>
         <Section>
           <h4>Services</h4>
           <LinkList>
             <LinkItem>
-              <a href="https://manila.gov.ph/district-hospitals/  ">District Hospitals</a>
+              <a href="https://manila.gov.ph/district-hospitals/  ">
+                District Hospitals
+              </a>
             </LinkItem>
             <LinkItem>
               <a href="https://manila.gov.ph/civil-registry/">Civil Registry</a>
@@ -92,19 +100,29 @@ const Footer = () => {
               <a href="https://manila.gov.ph/social-welfare/">Social Welfare</a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/senior-citizens/">Senior Citizens</a>
+              <a href="https://manila.gov.ph/senior-citizens/">
+                Senior Citizens
+              </a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/traffic-management/ ">Traffic Management</a>
+              <a href="https://manila.gov.ph/traffic-management/ ">
+                Traffic Management
+              </a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/disaster-and-risk-management/ ">Disaster And Risk Management</a>
+              <a href="https://manila.gov.ph/disaster-and-risk-management/ ">
+                Disaster And Risk Management
+              </a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/public-services/">Public Services</a>
+              <a href="https://manila.gov.ph/public-services/">
+                Public Services
+              </a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/engineering-public-works/">Engineering Public Works</a>
+              <a href="https://manila.gov.ph/engineering-public-works/">
+                Engineering Public Works
+              </a>
             </LinkItem>
           </LinkList>
         </Section>
@@ -115,7 +133,9 @@ const Footer = () => {
               <a href="https://doh.gov.ph">Department Of Health</a>
             </LinkItem>
             <LinkItem>
-              <a href="https://dilg.gov.ph">Department Of The Interior And Local Government</a>
+              <a href="https://dilg.gov.ph">
+                Department Of The Interior And Local Government
+              </a>
             </LinkItem>
             <LinkItem>
               <a href="https://dotr.gov.ph">Department Of Transportation</a>
@@ -124,7 +144,9 @@ const Footer = () => {
               <a href="https://da.gov.ph">Department Of Agriculture</a>
             </LinkItem>
             <LinkItem>
-              <a href="https://op-proper.gov.ph">Office Of The President Of The Philippines</a>
+              <a href="https://op-proper.gov.ph">
+                Office Of The President Of The Philippines
+              </a>
             </LinkItem>
           </LinkList>
         </Section>
@@ -132,15 +154,22 @@ const Footer = () => {
           <h4>City Government</h4>
           <GovDetails>
             <GovDetailsText>
-              <ion-icon name="location-outline"></ion-icon>
-              Manila City Hall<br/>Padre Burgos Avenue, Ermita<br/>Manila City 1000 
+              <ion-icon
+                style={{ marginTop: 7 }}
+                name="location-outline"
+              ></ion-icon>
+              Manila City Hall
+              <br />
+              Padre Burgos Avenue, Ermita
+              <br />
+              Manila City 1000
             </GovDetailsText>
             <GovDetailsText>
-              <ion-icon name="call"></ion-icon>
-              8527-0972  
+              <ion-icon style={{ marginTop: 7 }} name="call"></ion-icon>
+              8527-0972
             </GovDetailsText>
             <GovDetailsText>
-              <ion-icon name="alarm"></ion-icon>
+              <ion-icon style={{ marginTop: 7 }} name="alarm"></ion-icon>
               Monday - Friday: 8:00 am - 5:00 pm
             </GovDetailsText>
           </GovDetails>

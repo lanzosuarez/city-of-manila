@@ -34,8 +34,8 @@ const LeftContainer = styled.div`
     margin: 0 auto;
   }
   @media only screen and (min-width: 1082px) {
-    p.text-break{
-      margin-bottom:0px;
+    p.text-break {
+      margin-bottom: 0px;
     }
   }
 `;
@@ -182,11 +182,13 @@ const AboutPage = ({ location }) => {
                 <LeftContainer>
                   <h1> Meet Mayor Isko </h1>
                   <img src={line} alt="blue line" className="line" />
-                  <p className="text-break">Mayor Francisco “Isko Moreno” Domagoso </p>
+                  <p className="text-break">
+                    Mayor Francisco “Isko Moreno” Domagoso{' '}
+                  </p>
                   <p>
-                    (born October 24, 1974) – popularly known as "Isko Moreno" and
-                    colloquially as Yorme Isko – has served as the 27th Mayor of
-                    Manila since 1 July 2019.
+                    (born October 24, 1974) – popularly known as "Isko Moreno"
+                    and colloquially as Yorme Isko – has served as the 27th
+                    Mayor of Manila since 1 July 2019.
                   </p>
                   <p>
                     His elevation to Manila’s Mayoralty occurred via a historic
