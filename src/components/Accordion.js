@@ -91,9 +91,9 @@ const Accordion = ({ defaultActive = 0 }) => {
                 ></ion-icon>
               </AccordionTitle>
               <AccordionContent show={show}>
-                <div>{i.content}</div>
-                <div>{i.content2}</div>
-                <div>{i.content3}</div>
+                <div><p>{i.content}</p></div>
+                <div><p>{i.content2}</p></div>
+                <div><p>{i.content3}</p></div>
               </AccordionContent>
             </AccordionItem>
           );

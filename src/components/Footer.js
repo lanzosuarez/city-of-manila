@@ -70,6 +70,18 @@ const GovDetailsText = styled.div`
   grid-gap: 10px;
   grid-template-columns: 10px 1fr;
 `;
+const IconContainer = styled.div`
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-gap: 1px;
+  width: 50%;
+  margin: 15px 0px;
+`;
+const iconStyle = {
+  color: 'white'
+};
 
 const Footer = () => {
   return (
@@ -78,6 +90,20 @@ const Footer = () => {
         <Section>
           <h4 style={LineHeight}> Welcome to my page.<br/>Together, we can make Manila vibrant again.<br/>Bangon, Maynila!</h4>
           <img width="60%" alt="mayor signature" src={sign}></img>
+          <IconContainer>
+            <a href="https://www.facebook.com/iskomorenodomagoso/ ">
+              <ion-icon style={iconStyle} name="logo-facebook"></ion-icon>
+            </a>
+            <a href="https://twitter.com/IskoMoreno ">
+              <ion-icon style={iconStyle} name="logo-twitter"></ion-icon>
+            </a>
+            <a href="https://www.youtube.com/iskoverychannel">
+              <ion-icon style={iconStyle} name="logo-youtube"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/iskomorenodomagoso">
+              <ion-icon style={iconStyle} name="logo-instagram"></ion-icon>
+            </a>
+          </IconContainer>
         </Section>
         <Section>
           <h4>Services</h4>

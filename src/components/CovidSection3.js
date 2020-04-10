@@ -11,6 +11,8 @@ const Header = styled.div`
   margin: 0 auto;
   text-align: center;
   padding-bottom: 20px;
+  padding-right:15px;
+  padding-left:15px;
 
   @media (max-width: 768px) {
     h1 {
@@ -61,6 +63,10 @@ const LinkStyle = styled.div`
         color: #365899;
     }
 `;
+const IndentText = {
+  marginLeft:'25px'
+};
+ 
 
 const iconStyle = {
     marginRight: '5px'
@@ -99,12 +105,11 @@ const CovidSection3 = () => {
                 <span>
                   <ion-icon name="call" style={iconStyle}></ion-icon>
                 </span>Manila Emergency Operation Center Hotline (MEOC)
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8926-2385 and 8926-2386
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8527-5174
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0961-062-7013
+                <div style={IndentText}>
+                8926-2385 and 8926-2386 <br/>
+                8527-5174 <br/>
+                0961-062-7013
+                </div>
           </p>
         </LeftContainer>
         <RightContainer>
