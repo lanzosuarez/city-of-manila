@@ -99,7 +99,8 @@ const CardContainer = styled.div`
 const iconStyle = {
   color: '#01bcb1',
   fontSize: '20px',
-  marginRight: ' 0.5rem'
+  marginRight: ' 0.5rem',
+  marginTop: '3px'
 };
 
 const pStyle = {

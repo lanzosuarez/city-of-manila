@@ -96,7 +96,8 @@ const GridContainer = styled.div`
 const iconStyle = {
   color: '#01bcb1',
   fontSize: '20px',
-  marginRight: '0.2rem'
+  marginRight: '0.2rem',
+  marginTop: '3px'
 };
 
 const ArrowStyle = {
