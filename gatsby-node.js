@@ -1,42 +1,38 @@
-const { createFilePath } = require(`gatsby-source-filesystem`);
 const path = require('path');
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  if (node.internal.type === 'MarkdownRemark') {
-    const { createNodeField } = actions;
-    const slug = createFilePath({ node, getNode, basePath: `pages` });
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug
-    });
-  }
-};
+// exports.onCreateNode = ({ node, getNode, actions }) => {
+//   if (node.internal.type === 'MarkdownRemark') {
+//     const { createNodeField } = actions;
+//     const slug = createFilePath({ node, getNode, basePath: `pages` });
+//     createNodeField({
+//       node,
+//       name: `slug`,
+//       value: slug
+//     });
+//   }
+// };
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allContentfulPrograms {
         edges {
           node {
-            fields {
-              slug
-            }
+            slug
           }
         }
       }
     }
   `);
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allContentfulPrograms.edges.forEach(({ node }) => {
+    console.log(node.slug);
     createPage({
-      path: node.fields.slug,
-      component: path.resolve(`./src/templates/newsTemplate.js`),
+      path: node.slug,
+      component: path.resolve(`./src/templates/program.js`),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug
+        slug: node.slug
       }
     });
   });

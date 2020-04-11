@@ -89,7 +89,33 @@ export const listItems = [
   },
   {
     title: 'Programs',
-    path: '/programs'
+    path: '/programs/economic-alleviation',
+    sections: [
+      {
+        title: 'Economic Alleviation',
+        path: '/programs/economic-alleviation'
+      },
+      {
+        title: 'Social Amelioration',
+        path: '/programs/social-amelioration'
+      },
+      {
+        title: 'Physical Redevelopment',
+        path: '/programs/physical-redevelopment'
+      },
+      {
+        title: 'Green Spaces',
+        path: '/programs/green-spaces'
+      },
+      {
+        title: 'Business And Investor Revitalization',
+        path: '/programs/business-and-investor-revitalization'
+      },
+      {
+        title: 'Tourism',
+        path: '/programs/tourism'
+      }
+    ]
   },
   {
     title: 'Latest Updates',

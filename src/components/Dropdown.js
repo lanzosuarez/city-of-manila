@@ -69,12 +69,15 @@ const Item = styled.li`
 const Dropdown = ({ show, dropDownList = [] }) => {
   const close = e => e.stopPropagation();
 
-  const isPartiallyActive = path => ({ location: { hash } }) => {
-    if (hash === getHash(path)) {
+  const isPartiallyActive = path => ({ location: { hash, pathname } }) => {
+    if (hash && hash === getHash(path)) {
       return {
         className: 'active-dropdown-item'
       };
-    }
+    } else if (path === pathname)
+      return {
+        className: 'active-dropdown-item'
+      };
     return {};
   };
 
