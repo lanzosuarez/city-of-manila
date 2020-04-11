@@ -25,6 +25,10 @@ const AccordionTitle = styled.div`
   span {
     font-weight: bold;
   }
+
+  @media (max-width: 576px) {
+    padding: 15px 10px;
+  }
 `;
 
 const AccordionContent = styled.div`

@@ -23,6 +23,10 @@ const SubContainer = styled.div`
   @media (max-width: 576px) {
     margin: 15px 15px;
   }
+
+  @media (max-width: 350px) {
+    margin: 15px 10px;
+  }
 `;
 
 const InfoSection = styled.div`
