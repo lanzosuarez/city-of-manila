@@ -17,47 +17,13 @@ const H1Style = {
 };
 
 const LeftContainer = styled.div`
-  width: 90%;
-  @media only screen and (max-width: 425px) {
+  width: 100%;
+  @media only screen and (max-width: 1024px) {
     display: block;
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
     margin-bottom: 1rem;
-  }
-  @media only screen and (min-width: 426px) and (max-width: 768px) {
-    width: 78%;
-    margin-bottom: 1rem;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    width: 80%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-`;
-const RightContainer = styled.div`
-  width: 10%;
-  display: flex;
-  justify-content: space-evenly;
-  @media only screen and (max-width: 425px) {
-    display: flex;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-    justify-content: start;
-    margin-bottom: 1rem;
-  }
-  @media only screen and (min-width: 426px) and (max-width: 768px) {
-    width: 22%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    width: 20%;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 `;
 
@@ -93,44 +59,12 @@ const GridContainer = styled.div`
   }
 `;
 
-const iconStyle = {
-  color: '#01bcb1',
-  fontSize: '20px',
-  marginRight: '0.2rem',
-  marginTop: '3px'
-};
-
-const ArrowStyle = {
-  color: 'rgb(0, 0, 0)',
-  fontSize: '30px'
-};
-
 const ArrowStyle2 = {
   color: 'rgb(0, 0, 0)',
   fontSize: '14px',
   marginLeft: '5px',
   paddingTop: '7px'
 };
-
-const pStyle = {
-  fontWeight: '800',
-  marginBottom: '3px'
-};
-
-const LinkStyle = styled.div`
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 900;
-  color: black;
-  margin-right: 3rem;
-  @media only screen and (max-width: 425px) {
-    margin-right: 1rem;
-    font-size: 12px;
-  }
-  @media only screen and (min-width: 426px) and (max-width: 768px) {
-    margin-right: 1rem;
-  }
-`;
 
 const GridContent = styled.div`
   position: relative;
@@ -298,9 +232,6 @@ const TagCovid = styled.div`
   padding-top: 2px;
 `;
 
-const LinkFlex = styled.div`
-  display: flex;
-`;
 
 const HomeSection7 = () => {
   return (
@@ -309,39 +240,9 @@ const HomeSection7 = () => {
         <div className="section">
           <Section>
             <LeftContainer>
-              <h1 style={H1Style}>Ongoing Programs</h1>
+              <h1 style={H1Style}>Program Highlight</h1>
               <img src={line} alt="blue line" className="line" />
             </LeftContainer>
-            <RightContainer>
-              <span>
-                <ion-icon style={iconStyle} name="apps"></ion-icon>
-              </span>
-              <p style={pStyle}>View All</p>
-            </RightContainer>
-          </Section>
-          <Section>
-            <LeftContainer>
-              <LinkFlex>
-                <LinkStyle>All</LinkStyle>
-                <LinkStyle>COVID-19</LinkStyle>
-                <LinkStyle>Conference</LinkStyle>
-                <LinkStyle>Meeting</LinkStyle>
-              </LinkFlex>
-            </LeftContainer>
-            <RightContainer>
-              <span>
-                <ion-icon
-                  style={ArrowStyle}
-                  name="arrow-back-outline"
-                ></ion-icon>
-              </span>
-              <span>
-                <ion-icon
-                  style={ArrowStyle}
-                  name="arrow-forward-outline"
-                ></ion-icon>
-              </span>
-            </RightContainer>
           </Section>
           <GridContainer>
             <Grid bg={bg1}>
