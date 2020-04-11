@@ -7,6 +7,7 @@ const AccordionList = styled.ul`
   list-style: none;
   display: grid;
   grid-gap: 10px;
+  word-break: break-word;
 `;
 
 const AccordionItem = styled.li`
