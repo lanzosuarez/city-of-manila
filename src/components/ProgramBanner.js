@@ -34,7 +34,6 @@ const HeaderText = styled.h1`
   color: #fefefe;
   font-size: 52px;
   line-height: 52px;
-  width: 50%;
   word-break: break-word;
   margin: 0;
   @media (max-width: 768px) {

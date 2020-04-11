@@ -52,6 +52,7 @@ const AccordionContent = styled.div`
 
 const items = [
   {
+    id: 'item1',
     title: 'What is the Enhanced Community Quarantine or ECQ?',
     content:
       'Concerned by the rising number of Covid-19 cases in the country, President Rodrigo Duterte signed Proclamation No. 929 imposing an Enhanced Community Quarantine (ECQ) over the entire island of Luzon in an attempt to flatten the curve, or limit the spread of the virus in the communities.',
@@ -59,6 +60,7 @@ const items = [
       'Under the ECQ, all residents in Luzon, with an estimated population of 57 million, are put under strict home quarantine. Only the movement of essential personnel such as health and emergency front liners, and those working in supermarkets, pharmacies and similar establishments, are permitted. Public transportation is suspended, and the movement of goods is regulated. The ECQ will be in effect until 30 April 2020, or unless otherwise deemed extended by the Interagency Task Force for the Management of Emerging Infectious Diseases and approved by the President of the Philippines. '
   },
   {
+    id: 'item2',
     title: 'How will ECQ help get rId of COVID-19? ',
     content: 'Flattening the curve. ',
     content2:
@@ -67,11 +69,13 @@ const items = [
       'Covid-19 is spread through small droplets in the air when an infected person coughs or sneezes, which you can breathe in if you&rsquo;re standing too close. By staying home, you&rsquo;re doing your part in cotaining the spread of the virus. '
   },
   {
+    id: 'item3',
     title: 'Until when will we be in ECQ?',
     content:
       'The IATF, in its Joint Resolution No. 20 dated 6 April 2020, declared the extension of the Enhanced Community Quarantine over the entire island of Luzon, until 11:59PM of 30 April 2020. Said Resolution was approved by President Rodrigo Duterte on 7 April 2020. As such, all implementing rules and guidelines of the Enhanced Community Quarantine will remain in place. '
   },
   {
+    id: 'item4',
     title: 'What happens after ECQ? ',
     content:
       'The University of the Philippines has released a study with analysis and recommendations for a post-ECQ scenario',
@@ -91,13 +95,24 @@ const Accordion = ({ defaultActive = 0 }) => {
     setActiveItem(i);
   };
 
+  const scrollToItem = id => () => {
+    const el = document.getElementById(id);
+    if (el) {
+      window.setTimeout(() => {
+        el.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }, 500);
+    }
+  };
+
   return (
     <Container>
       <AccordionList>
         {items.map((i, idx) => {
           const show = activeItem === idx;
           return (
-            <AccordionItem key={idx}>
+            <AccordionItem onClick={scrollToItem(i.id)} id={i.id} key={idx}>
               <AccordionTitle onClick={setActive(idx)} show={show}>
                 <span>{i.title}</span>
                 <ion-icon
