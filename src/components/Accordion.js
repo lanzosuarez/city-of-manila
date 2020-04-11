@@ -40,8 +40,14 @@ const AccordionContent = styled.div`
   overflow: ${props => (props.show ? ' auto' : 'hidden')};
 
   div {
-    margin: 20px 40px
+    margin: 20px 40px;
+    
+    @media (max-width: 576px) {
+      margin: 15px 20px;
+    }
   }
+
+ 
 `;
 
 const items = [
