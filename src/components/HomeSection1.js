@@ -15,7 +15,7 @@ const MainCon = styled.div`
 `;
 
 const Container = styled.div`
-  padding: 0px 88px 0px;
+  padding: 0px 0px 0px;
   display: grid;
   grid-gap: 30px;
   justify-content: center;
