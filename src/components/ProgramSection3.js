@@ -9,6 +9,7 @@ const Container = styled.div`
   text-align: center;
   grid-gap: 20px;
   margin: 0 auto;
+  padding: 4rem 15px;
   padding-bottom: 50px;
 `;
 
@@ -24,8 +25,6 @@ const Title = styled.h2`
 `;
 
 const Content = styled.p`
-  width: 800px;
-  margin: 0 auto;
   text-align: justify;
   display: grid;
   grid-gap: 20px;

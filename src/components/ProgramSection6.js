@@ -15,7 +15,7 @@ const Container = styled.div`
   display: grid;
   text-align: center;
   grid-gap: 20px;
-  padding: 50px 0px;
+  padding: 4rem 15px;
   margin: 0 auto;
 `;
 
@@ -37,8 +37,6 @@ const BlueLine = styled.img`
 
 const Content = styled.p`
   color: white;
-  width: 800px;
-  margin: 0 auto;
   text-align: justify;
 
   @media (max-width: 768px) {
