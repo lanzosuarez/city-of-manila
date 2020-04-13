@@ -20,7 +20,7 @@ const Title = styled.h2`
 `;
 
 const Content = styled.div`
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
   text-align: justify;
 

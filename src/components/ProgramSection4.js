@@ -19,7 +19,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.p`
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
   text-align: justify;
   color: white;

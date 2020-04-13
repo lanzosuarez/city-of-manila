@@ -276,7 +276,7 @@ const MobileLocalTime = ({ transitionFlag }) => {
 const Banner = () => {
   const interval = useRef(null);
   const [activeBanner, setActiveBanner] = useState(banner1);
-  const [activeText, setActiveText] = useState(1);
+  const [activeText, setActiveText] = useState(0);
 
   const setActiveInterval = () => {
     setActiveBanner(prev => {

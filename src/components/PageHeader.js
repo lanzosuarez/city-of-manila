@@ -22,6 +22,10 @@ const PageContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 576px) {
+    padding: 0px 20px;
+  }
 `;
 
 const HeaderText = styled.h1`
@@ -36,12 +40,12 @@ const PageBreadcrumbs = styled.p`
   line-height: 24px;
 `;
 
-const PageHeader = props => {
+const PageHeader = ({ name }) => {
   return (
     <Container bg={pageBg}>
       <PageContent>
-        <HeaderText>{props.name}</HeaderText>
-        <PageBreadcrumbs>Home / {props.name}</PageBreadcrumbs>
+        <HeaderText>{name}</HeaderText>
+        <PageBreadcrumbs>Home / {name}</PageBreadcrumbs>
       </PageContent>
     </Container>
   );

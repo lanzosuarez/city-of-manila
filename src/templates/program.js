@@ -28,7 +28,6 @@ const ProgramsTemplate = ({ data }) => {
   const {
     contentfulPrograms: { bannerTitle }
   } = data;
-  console.log(bannerTitle);
   return (
     <NavigationProvider>
       <Layout>
