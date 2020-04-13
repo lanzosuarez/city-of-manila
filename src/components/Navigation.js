@@ -74,7 +74,7 @@ export const listItems = [
     path: '/covid',
     sections: [
       {
-        title: 'Digital Help Survey',
+        title: 'Digital Health Survey',
         path: '/covid#digital-survey'
       },
       {

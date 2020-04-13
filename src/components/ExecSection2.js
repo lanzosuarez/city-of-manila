@@ -31,6 +31,7 @@ const Figure = styled.h3`
   display: inline;
   margin: 0;
   color: var(--blue);
+  margin-right: 10px;
 `;
 
 const iconStyle = {
