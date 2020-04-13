@@ -134,7 +134,7 @@ const BannerTextBig = styled.h1`
   }
 
   @media (max-width: 400px) {
-    font-size: 30px;
+    font-size: 2rem;
   }
 `;
 
@@ -222,7 +222,7 @@ const texts = [
   },
   {
     banner: banner2,
-    small: 'The most difficult public health challenge of our lifetime',
+    small: 'The greatest public health challenge of our lifetime',
     big: 'We will defeat Covid-19 together',
     btn: {
       text: 'LEARN MORE',

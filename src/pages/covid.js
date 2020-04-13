@@ -175,7 +175,7 @@ const CovidPage = ({ location }) => {
         <CovidBanner>
           <PageContainer>
             <BannerContainer>
-              <p>The most difficult public health challenge of our lifetime</p>
+              <p>The greatest public health challenge of our lifetime</p>
               <h1>We will defeat Covid-19 together</h1>
               <p>
                 Covid-19 is the single biggest public health and livelihood
