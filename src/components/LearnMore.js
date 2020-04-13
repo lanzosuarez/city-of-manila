@@ -14,7 +14,7 @@ const Button = styled.button`
   font-size: 14px;
   border-style: none;
   border-radius: 28px;
-  padding: 16px 32px;
+  padding: 16px 25px;
   cursor: pointer;
   text-transform: uppercase;
   width: ${props => props.width};
