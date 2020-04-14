@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 
-import line from '../images/blue-line.png';
 import VideoPlaceholder from '../images/video-placeholder.jpg';
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
