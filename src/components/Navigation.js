@@ -89,7 +89,7 @@ export const listItems = [
   },
   {
     title: 'Programs',
-    path: '/programs/economic-alleviation',
+    path: '',
     sections: [
       {
         title: 'Economic Alleviation',

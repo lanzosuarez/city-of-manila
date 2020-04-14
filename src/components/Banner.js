@@ -240,13 +240,15 @@ const LocalTime = ({ transitionFlag }) => {
       timeout={{ enter: 10000 }}
     >
       <BannerTimeSection>
-        <h4 className="time-section-weather">
-          26 &#8451; <ion-icon name="sunny"></ion-icon>
-        </h4>
-        <h4 className="time-section-local">
-          <span>14:12</span>
-          &nbsp; LOCAL TIME
-        </h4>
+        <div>
+          <h4 className="time-section-weather">
+            26 &#8451; <ion-icon name="sunny"></ion-icon>
+          </h4>
+          <h4 className="time-section-local">
+            <span>14:12</span>
+            &nbsp; LOCAL TIME
+          </h4>
+        </div>
       </BannerTimeSection>
     </CSSTransition>
   );

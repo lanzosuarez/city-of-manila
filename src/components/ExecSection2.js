@@ -50,40 +50,50 @@ const List = styled.div`
 const ListItem = styled.div`
   display: grid;
   grid-template-columns: 170px 1fr;
-  height: 200px;
-  grid-gap: 10px;
+  grid-gap: 15px;
   padding-bottom: 40px;
   border-bottom: 2px solid #efefef;
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Avatar = styled.img`
   height: 100%;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
 
 const Details = styled.div`
   flex: 1;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-auto-rows: auto 1fr auto auto;
 `;
 
 const Type = styled.h6`
   margin: 0;
   font-family: 'Nunito';
+  letter-spacing: 1.5px;
 `;
 
 const Name = styled.h4`
-  margin: 0;
+  margin: 0px 0px 10px;
   color: var(--blue);
 `;
 
 const Date = styled.h5`
   margin: 0;
   font-weight: lighter;
-  font-size: 0.8rem;
 `;
 
 const Buttons = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 200px));
+  grid-gap: 10px;
   button {
     border: none;
     outline: none;
@@ -94,11 +104,11 @@ const Buttons = styled.div`
     display: inline-flex;
     align-items: center;
     cursor: pointer;
+    justify-content: center;
   }
 `;
 
 const ButtonMemo = styled.button`
-  margin-right: 10px;
   background: #269cc0;
 
   &:active {
@@ -142,7 +152,7 @@ const ExecSection2 = () => {
           <ListItem>
             <Avatar alt="item_avatar" src={placeholder}></Avatar>
             <Details>
-              <Type>Legislation</Type>
+              <Type>LEGISLATION</Type>
               <Name>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit,

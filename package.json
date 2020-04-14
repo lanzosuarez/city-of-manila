@@ -16,6 +16,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@wojtekmaj/react-daterange-picker": "^2.5.0",
     "gatsby": "^2.19.45",
     "gatsby-plugin-emotion": "^4.2.1",
     "gatsby-plugin-manifest": "^2.3.3",
@@ -26,7 +27,6 @@
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-remark": "^2.7.1",
     "react": "^16.12.0",
-    "react-date-picker": "^8.0.1",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-transition-group": "^4.3.0"

@@ -43,20 +43,29 @@ const IconContainer = styled.span`
 const NavigationItem = ({ title, path, sections = [] }) => {
   const [showDropDown, setShowDropDown] = useState(false);
 
-  const toggleDropdown = () => setShowDropDown(l => !l);
+  const openDropdown = () => {
+    if (!showDropDown) setShowDropDown(true);
+  };
+
+  const closeDropdown = () => setShowDropDown(false);
 
   const hasDropDown = sections.length > 0;
 
   return (
-    <Container onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
-      <Link
-        partiallyActive
-        activeClassName="active-page"
-        className="page-link"
-        to={path}
-      >
-        {title}
-      </Link>
+    <Container onMouseEnter={openDropdown} onMouseLeave={closeDropdown}>
+      {path !== '' ? (
+        <Link
+          onClick={closeDropdown}
+          partiallyActive
+          activeClassName="active-page"
+          className="page-link"
+          to={path}
+        >
+          {title}
+        </Link>
+      ) : (
+        <a className="page-link">{title}</a>
+      )}
       {hasDropDown && (
         <IconContainer>
           <ion-icon name="chevron-down"></ion-icon>
