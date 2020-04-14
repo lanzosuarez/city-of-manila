@@ -640,3 +640,25 @@ li {
 .side-nav-active-route {
   color: var(--blue) !important;
 }
+
+.react-daterange-picker__clear-button.react-daterange-picker__button,
+.react-daterange-picker__calendar-button.react-daterange-picker__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.react-daterange-picker__wrapper {
+  border: none !important;
+}
+
+.react-daterange-picker__inputGroup {
+  font-family: Quicksand;
+}
+
+.react-daterange-picker__inputGroup > span,
+.react-daterange-picker__inputGroup > input {
+  color: #9a9999;
+  font-size: 0.8rem;
+}
