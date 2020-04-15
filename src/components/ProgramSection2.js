@@ -14,6 +14,12 @@ const Container = styled.div`
   padding: 4rem 15px;
   grid-gap: 20px;
   margin: 0 auto;
+  width: 800px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.h2`
@@ -60,27 +66,30 @@ const Content = styled.p`
 const Button = styled.button`
   margin: 0 auto;
   background: var(--blue);
-  color: white;
   border-radius: 20px;
   border: none;
   padding: 10px 50px;
   font-size: 0.8rem;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 `;
 
-const ProgramsSection2 = () => {
+const ProgramsSection2 = ({ content }) => {
   return (
     <MaxContainer>
       <Container>
-        <SubTitle>Lorem Ipsum Dolor</SubTitle>
-        <Title>Excepteur sint occaecat cupidatat non proident</Title>
+        <SubTitle>{content.subtitle}</SubTitle>
+        <Title>{content.title}</Title>
         <BlueLine alt="line" src={line} />
-        <Content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </Content>
-        <Button>LEARN MORE</Button>
+        <Content>{content.content}</Content>
+        {!!content.hasCTA && (
+          <Button>
+            <a href={content.btnLink}>{content.btnText}</a>
+          </Button>
+        )}
       </Container>
     </MaxContainer>
   );

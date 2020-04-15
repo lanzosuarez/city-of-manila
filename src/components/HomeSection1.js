@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { Link } from 'gatsby';
 import '../styles/index.css';
 
 import civilIcon from '../images/home-economic.svg';
@@ -67,27 +68,33 @@ const TextStyle = {
 const items = [
   {
     title: 'Economic Development',
-    path: civilIcon
+    path: civilIcon,
+    page: '/programs/economic-alleviation'
   },
   {
     title: 'Social Amelioration',
-    path: commIcon
+    path: commIcon,
+    page: '/programs/social-ameleoration'
   },
   {
     title: 'Physical Redevelopment',
-    path: criminalIcon
+    path: criminalIcon,
+    page: '/programs/physical-redevelopment'
   },
   {
     title: 'Green Spaces',
-    path: ecomIcon
+    path: ecomIcon,
+    page: '/programs/green-spaces'
   },
   {
     title: 'Business and Investor Revitalization',
-    path: educIcon
+    path: educIcon,
+    page: '/programs/business-and-investor-revitalization'
   },
   {
     title: 'Tourism',
-    path: envIcon
+    path: envIcon,
+    page: '/programs/tourism'
   }
 ];
 
@@ -97,8 +104,10 @@ const HomeSection1 = () => {
     <Container>
       {items.map((i, idx) => (
         <Item key={idx}>
-          <ItemImg alt={i.title} src={i.path}></ItemImg>
-          <p style={TextStyle}>{i.title}</p>
+          <Link to={i.page}>
+            <ItemImg alt={i.title} src={i.path}></ItemImg>
+            <p style={TextStyle}>{i.title}</p>
+          </Link>
         </Item>
       ))}
     </Container>

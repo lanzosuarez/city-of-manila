@@ -97,7 +97,7 @@ export const listItems = [
       },
       {
         title: 'Social Amelioration',
-        path: '/programs/social-amelioration'
+        path: '/programs/social-ameleoration'
       },
       {
         title: 'Physical Redevelopment',
