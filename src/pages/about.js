@@ -122,6 +122,14 @@ const Section33Container = styled.div`
   background-color: #fcfcfc;
 `;
 
+const Section3PageContainer = styled.div`
+  max-width: 1200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+`;
+
 const Section3 = styled.div`
   padding: 4rem 0;
   text-align: center;
@@ -191,16 +199,6 @@ const SwiperContainer = styled.div`
   @media (max-width: 767px) {
     display: none;
   }
-`;
-
-const arrowStyle = {
-  color: '#01bcb1',
-  cursor: 'pointer'
-};
-
-const HeaderItem = styled.div`
-  text-align: right;
-  margin-bottom: 1.5 rem;
 `;
 
 const items = [
@@ -444,24 +442,12 @@ const AboutPage = ({ location }) => {
             </ContentContainer>
           </Section3Container>
           <Section32Container>
-            <PageContainer>
+            <Section3PageContainer>
               <Section3>
                 <h1> Education </h1>
                 <img src={line} alt="blue line" className="line" />
                 <MobileTimeline />
                 <SwiperContainer className="swiper-container">
-                  <HeaderItem>
-                    <ion-icon
-                      style={{ ...arrowStyle, marginRight: 10 }}
-                      size="large"
-                      name="arrow-back"
-                    ></ion-icon>
-                    <ion-icon
-                      style={arrowStyle}
-                      size="large"
-                      name="arrow-forward"
-                    ></ion-icon>
-                  </HeaderItem>
                   <div className="swiper-wrapper timeline">
                     {items.map(i => (
                       <div className="swiper-slide">
@@ -477,7 +463,7 @@ const AboutPage = ({ location }) => {
                   </div>
                 </SwiperContainer>
               </Section3>
-            </PageContainer>
+            </Section3PageContainer>
           </Section32Container>
           <Section33Container>
             <ContentContainer>
