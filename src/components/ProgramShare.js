@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  MailruShareButton
+} from 'react-share';
 
 const Container = styled.div`
   background: #fd942b;
@@ -29,17 +34,34 @@ const Icons = styled.div`
   align-items: center;
   grid-auto-flow: column;
   grid-gap: 10px;
+
+  .react-share__ShareButton {
+    display: flex;
+  }
 `;
 
 const ProgramShare = () => {
+  const websiteUrl = 'https://www.facebook.com/iskomorenodomagoso';
+  const openGmail = () => {
+    let url =
+      'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Your+Subject+here&body=' +
+      websiteUrl +
+      '&ui=2&tf=1&pli=1';
+
+    window.open(url, 'sharer', 'toolbar=0,status=0,width=648,height=395');
+  };
   return (
     <Container>
       <SubContainer>
         <span>Share Overview</span>
         <Icons>
-          <ion-icon name="mail-outline"></ion-icon>
-          <ion-icon name="logo-twitter"></ion-icon>
-          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon onClick={openGmail} name="mail-outline"></ion-icon>
+          <TwitterShareButton url={websiteUrl}>
+            <ion-icon name="logo-twitter"></ion-icon>
+          </TwitterShareButton>
+          <FacebookShareButton url={websiteUrl}>
+            <ion-icon name="logo-facebook"></ion-icon>
+          </FacebookShareButton>
         </Icons>
       </SubContainer>
     </Container>
