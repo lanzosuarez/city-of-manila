@@ -23,6 +23,14 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
+const ContentContainer = styled.div`
+  max-width: 1010px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+`;
+
 const LeftContainer = styled.div`
   width: 39%;
   padding: 15px;
@@ -100,6 +108,12 @@ const Section3Container = styled.div`
   background-attachment: fixed;
   background-position: top;
 `;
+const Text = styled.div`
+  text-align: justify;
+  @media only screen and (max-width: 424px) {
+    text-align: center;
+  }
+`;
 
 const Section32Container = styled.div`
   background-color: white;
@@ -163,6 +177,40 @@ const Section5Social = styled.div`
   }
 `;
 
+const items = [
+  {
+    date: 'College',
+    school: 'Harvard Univesity',
+    course: 'Executive Education Program '
+  },
+  {
+    date: 'College',
+    school: 'Oxford University',
+    course: 'Strategic Leadership Program'
+  },
+  {
+    date: 'College',
+    school: 'University of the Philippines, Diliman',
+    course: 'Local Legislation and Local Finance'
+  },
+  {
+    date: 'College',
+    school: 'Pamantasan ng Lungsod ng Maynila',
+    course: 'Public Administration'
+  },
+  {
+    date: 'College',
+    school: 'Arellano University',
+    course: 'Bachelor of Laws'
+  },
+  { date: 'High School', school: 'Tondo, Manila', course: 'Tondo High School' },
+  {
+    date: 'Elementary',
+    school: 'Tondo, Manila',
+    course: 'Rosauro Alamario Elementary School'
+  }
+];
+
 const AboutPage = ({ location }) => {
   useEffect(() => {
     scrollToSection(location);
@@ -216,171 +264,115 @@ const AboutPage = ({ location }) => {
             </div>
           </PageContainer>
           <Section3Container>
-            <PageContainer id="background">
+            <ContentContainer id="background">
               <Section3>
                 <h1> Background </h1>
                 <img src={line} alt="blue line" className="line" />
-                <p>
-                  Francisco Moreno Domagoso is the only child of Joaquin
-                  Domagoso, from Tondo, Manila and Rosario Moreno, from Allen,
-                  Northern Samar.
-                </p>
+                <Text>
+                  <p>
+                    Francisco Moreno Domagoso is the only child of Joaquin
+                    Domagoso, from Tondo, Manila and Rosario Moreno, from Allen,
+                    Northern Samar.
+                  </p>
 
-                <p>
-                  His father was a stevedore who worked at Manila’s North
-                  Harbour, also in Tondo; Moreno’s mother managed to keep a
-                  loving household for the precocious Domagoso.
-                </p>
+                  <p>
+                    His father was a stevedore who worked at Manila’s North
+                    Harbour, also in Tondo; Moreno’s mother managed to keep a
+                    loving household for the precocious Domagoso.
+                  </p>
 
-                <p>
-                  As a child, the young Domagoso learned the ways of Tondo’s
-                  hardscrabble streets and contributed to the family’s tight
-                  budget. He became a young entrepreneur, pushing a streetcart
-                  going house-to-house to collect newspapers, glass bottles and
-                  other recyclables, which he would resell to a junk dealer. He
-                  also salvaged in restaurant garbage bins for leftovers which
-                  were repurposed by his practical mother into the family
-                  dinner.
-                </p>
+                  <p>
+                    As a child, the young Domagoso learned the ways of Tondo’s
+                    hardscrabble streets and contributed to the family’s tight
+                    budget. He became a young entrepreneur, pushing a streetcart
+                    going house-to-house to collect newspapers, glass bottles
+                    and other recyclables, which he would resell to a junk
+                    dealer. He also salvaged in restaurant garbage bins for
+                    leftovers which were repurposed by his practical mother into
+                    the family dinner.
+                  </p>
 
-                <p>
-                  In 1993, the fair-skinned Domagoso caught the attention of
-                  Filipino talent scout Wowie Roxas who was attending a funeral
-                  in Tondo. Persuaded to enter Philippine show business and
-                  under a new screen name, “Isko Moreno” soon emerged a popular
-                  host of then daily entertainment variety show, “That’s
-                  Entertainment”, produced by the late German Moreno, a pillar
-                  of the local entertainment industry.
-                </p>
+                  <p>
+                    In 1993, the fair-skinned Domagoso caught the attention of
+                    Filipino talent scout Wowie Roxas who was attending a
+                    funeral in Tondo. Persuaded to enter Philippine show
+                    business and under a new screen name, “Isko Moreno” soon
+                    emerged a popular host of then daily entertainment variety
+                    show, “That’s Entertainment”, produced by the late German
+                    Moreno, a pillar of the local entertainment industry.
+                  </p>
 
-                <p>
-                  However, Domagoso’s newfound affluence and public popularity
-                  could never take him far from his roots in Tondo.
-                </p>
+                  <p>
+                    However, Domagoso’s newfound affluence and public popularity
+                    could never take him far from his roots in Tondo.
+                  </p>
 
-                <p>
-                  He ran for and won a City Council seat in 1998, representing
-                  Manila’s first district. Was reelected in 2001 and 2004 and in
-                  2007 won his firm term as Manila’s Vice Mayor.
-                </p>
+                  <p>
+                    He ran for and won a City Council seat in 1998, representing
+                    Manila’s first district. Was reelected in 2001 and 2004 and
+                    in 2007 won his firm term as Manila’s Vice Mayor.
+                  </p>
 
-                <p>
-                  To ensure he could craft and deliver the right policies to his
-                  constituents, Domagoso undertook courses in Municipal
-                  Legislation and Finance at University of the Philippines. He
-                  studied Public Administration in Pamantasan ng Lungsod ng
-                  Maynila (University of the City of Manila) and Law at Arellano
-                  University. Domagoso undertook further education modules at
-                  Harvard University’s Kennedy School of Government and at the
-                  Said Busines School at Oxford.
-                </p>
+                  <p>
+                    To ensure he could craft and deliver the right policies to
+                    his constituents, Domagoso undertook courses in Municipal
+                    Legislation and Finance at University of the Philippines. He
+                    studied Public Administration in Pamantasan ng Lungsod ng
+                    Maynila (University of the City of Manila) and Law at
+                    Arellano University. Domagoso undertook further education
+                    modules at Harvard University’s Kennedy School of Government
+                    and at the Said Busines School at Oxford.
+                  </p>
 
-                <p>
-                  In 2013, in a controversial election, former Philippine
-                  President Joseph Estrada was elected 26th Mayor of Manila. In
-                  2016, Domagoso ran for the Philippines’ Senate – all 24
-                  Philippine Senators are elected nationally, 12 every 3 year
-                  election cycle – and narrowly missed his opportunity to sit in
-                  the legislative upper house. In 2017 Domagoso was appointed
-                  Chairman of the Board of then North Luzon Railways
-                  Corporation. In 2018 he was appointed Undersecretary for Luzon
-                  Affairs of the Department of Social Welfare.
-                </p>
+                  <p>
+                    In 2013, in a controversial election, former Philippine
+                    President Joseph Estrada was elected 26th Mayor of Manila.
+                    In 2016, Domagoso ran for the Philippines’ Senate – all 24
+                    Philippine Senators are elected nationally, 12 every 3 year
+                    election cycle – and narrowly missed his opportunity to sit
+                    in the legislative upper house. In 2017 Domagoso was
+                    appointed Chairman of the Board of then North Luzon Railways
+                    Corporation. In 2018 he was appointed Undersecretary for
+                    Luzon Affairs of the Department of Social Welfare.
+                  </p>
 
-                <p>
-                  However, Domagoso’s heart has never strayed from Manila’s
-                  dynamic, colourful streets and in 2019 he ran for City Mayor,
-                  achieving an outstanding electoral victory. For the people of
-                  Manila, one of their very own – a &ldquo; Batang Manila
-                  &rdquo; – had finally become their leader.
-                </p>
+                  <p>
+                    However, Domagoso’s heart has never strayed from Manila’s
+                    dynamic, colourful streets and in 2019 he ran for City
+                    Mayor, achieving an outstanding electoral victory. For the
+                    people of Manila, one of their very own – a
+                    &ldquo;&nbsp;Batang Manila&nbsp;&rdquo; – had finally become
+                    their leader.
+                  </p>
+                </Text>
               </Section3>
-            </PageContainer>
+            </ContentContainer>
           </Section3Container>
           <Section32Container>
             <PageContainer>
               <Section3>
                 <h1> Education </h1>
                 <img src={line} alt="blue line" className="line" />
-                <div>
-                  <ul className="timeline timeline-split">
-                    <li className="timeline-item">
-                      <div className="timeline-content tlTitles"></div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                        <span>College | Harvard University</span>
-                        <h3 className="timeline-title">
-                          Executive Education Program
-                        </h3>
+                <div className="swiper-container">
+                  <div className="swiper-wrapper timeline">
+                    {items.map(i => (
+                      <div className="swiper-slide">
+                        <div className="status">
+                          <span>{i.course}</span>
+                        </div>
+                        <div class="timestamp">
+                          <span className="school">{i.school}</span>
+                          <span className="date">{i.date}</span>
+                        </div>
                       </div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-content tlTitles"></div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles">
-                        <span>College | Oxford University</span>
-                        <h3 className="timeline-title">
-                          Strategic Leadership Program
-                        </h3>
-                      </div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-content tlTitles">
-                        <span>
-                          College | University of the Philippines, Diliman
-                        </span>
-                        <h3 className="timeline-title">
-                          Local Legislation and Local Finance
-                        </h3>
-                      </div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles"></div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-content tlTitles">
-                        <span>College | Pamantasan ng Lungsod ng Maynila</span>
-                        <h3 className="timeline-title">
-                          Public Administration
-                        </h3>
-                      </div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles"></div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-content tlTitles">
-                        <span>College | Arellano University</span>
-                        <h3 className="timeline-title">Bachelor of Laws</h3>
-                      </div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles"></div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-content tlTitles">
-                        <span>High School</span>
-                        <h3 className="timeline-title">
-                          Tondo High School, Tondo, Manila
-                        </h3>
-                      </div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles"></div>
-                    </li>
-                    <li className="timeline-item">
-                      <div className="timeline-content tlTitles">
-                        <span>Elementary</span>
-                        <h3 className="timeline-title">
-                          Rosauro Alamario Elementary School, Tondo, Manila
-                        </h3>
-                      </div>
-                      <div className="timeline-marker"></div>
-                      <div className="timeline-content tlTitles"></div>
-                    </li>
-                  </ul>
+                    ))}
+                  </div>
                 </div>
               </Section3>
             </PageContainer>
           </Section32Container>
           <Section33Container>
-            <PageContainer>
+            <ContentContainer>
               <Section3>
                 <h1> Personal </h1>
                 <img src={line} alt="blue line" className="line" />
@@ -390,7 +382,7 @@ const AboutPage = ({ location }) => {
                   and Drake Marcus.
                 </p>
               </Section3>
-            </PageContainer>
+            </ContentContainer>
           </Section33Container>
           <Section5Container>
             <PageContainer id="links-to-social-media">

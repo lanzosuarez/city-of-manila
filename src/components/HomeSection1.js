@@ -66,7 +66,7 @@ const TextStyle = {
 
 const items = [
   {
-    title: 'Economic Alleviation',
+    title: 'Economic Development',
     path: civilIcon
   },
   {

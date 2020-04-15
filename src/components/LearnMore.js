@@ -20,6 +20,15 @@ const Button = styled.button`
   min-width: 150px;
   width: ${props => props.width};
 
+  @media (max-width: 1024px) {
+    height: 38px;
+    padding: 0px 0px;
+    min-width: 139px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+
   &:hover {
     background: ${props => props.focusBgColor};
     color: ${props => props.focusTextColor};

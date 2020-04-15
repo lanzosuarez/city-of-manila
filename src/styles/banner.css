@@ -111,6 +111,7 @@
 
 .time-section-weather {
   display: grid;
+  margin-bottom: 10px;
   grid-auto-flow: column;
   grid-gap: 10px;
   align-items: center;
@@ -123,5 +124,12 @@
 
 .time-section-local,
 .time-section-weather {
-  font-weight: 400;
+  font-weight: 700;
+}
+.time-section-local{
+  margin-bottom:0px;
+}
+
+.time-section-weather{
+  margin-bottom:5px;
 }

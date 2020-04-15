@@ -32,7 +32,7 @@ const Item = styled.div`
       opacity: 1;
     }
     div.content {
-      max-height: 150px;
+      max-height: 100%;
     }
   }
 `;
@@ -55,7 +55,7 @@ const Text = styled.h3`
 
 const Paragraph = styled.p`
   margin: 0;
-  height: 90px;
+  height: auto;
 `;
 
 const Overlay = styled.div`
@@ -76,11 +76,8 @@ const HomeSection3 = () => {
       <Item bg={bg3}>
         <Overlay className="overlay" />
         <Content className="content">
-          <Text>Lorem Ipsum</Text>
-          <Paragraph>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </Paragraph>
+          <Text>Digital Health Survey</Text>
+          <Paragraph>Take the survey now and help save a life.</Paragraph>
         </Content>
         <ion-icon
           style={{
@@ -96,10 +93,9 @@ const HomeSection3 = () => {
       <Item bg={bg2}>
         <Overlay className="overlay" />
         <Content className="content">
-          <Text>Lorem Ipsum</Text>
+          <Text>Enhanced Community Quarantine</Text>
           <Paragraph>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Important information on the Enhanced Community Quarantine
           </Paragraph>
         </Content>
         <ion-icon
@@ -116,10 +112,12 @@ const HomeSection3 = () => {
       <Item bg={bg1}>
         <Overlay className="overlay" />
         <Content className="content">
-          <Text>Lorem Ipsum</Text>
+          <Text>Manila's Reponse to COVID-19</Text>
           <Paragraph>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            We understand the difficulties our constituents are facing during
+            this public health emergency. The City of Manila has committed to
+            alleviating this hardship by providing them with the appropriate
+            care and assistance during the Enhanced Community Quarantine.
           </Paragraph>
         </Content>
         <ion-icon

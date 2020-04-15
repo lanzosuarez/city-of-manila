@@ -7,7 +7,6 @@ import HomeSection3 from '../components/HomeSection3';
 import HomeSection4 from '../components/HomeSection4';
 import HomeSection5 from '../components/HomeSection5';
 import HomeSection6 from '../components/HomeSection6';
-import HomeSection7 from '../components/HomeSection7';
 import HomeSection8 from '../components/HomeSection8';
 import HomeSection9 from '../components/HomeSection9';
 
@@ -25,7 +24,6 @@ const IndexPage = () => {
         <HomeSection4 />
         <HomeSection5 />
         <HomeSection6 />
-        <HomeSection7 />
         <HomeSection8 />
         <HomeSection9 />
       </Layout>
