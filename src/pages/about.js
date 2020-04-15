@@ -354,6 +354,20 @@ const AboutPage = ({ location }) => {
                 <h1> Education </h1>
                 <img src={line} alt="blue line" className="line" />
                 <div className="swiper-container">
+                  <p class="swiper-control">
+                    <button
+                      type="button"
+                      className="btn btn-default btn-sm prev-slide"
+                    >
+                      Prev
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-default btn-sm next-slide"
+                    >
+                      Next
+                    </button>
+                  </p>
                   <div className="swiper-wrapper timeline">
                     {items.map(i => (
                       <div className="swiper-slide">
