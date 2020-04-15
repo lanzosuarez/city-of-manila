@@ -67,19 +67,14 @@ const Button = styled.button`
   font-size: 0.8rem;
 `;
 
-const ProgramsSection2 = () => {
+const ProgramsSection2 = ({ content }) => {
   return (
     <MaxContainer>
       <Container>
-        <SubTitle>Lorem Ipsum Dolor</SubTitle>
-        <Title>Excepteur sint occaecat cupidatat non proident</Title>
+        <SubTitle>{content.subtitle}</SubTitle>
+        <Title>{content.title}</Title>
         <BlueLine alt="line" src={line} />
-        <Content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </Content>
+        <Content>{content.content}</Content>
         <Button>LEARN MORE</Button>
       </Container>
     </MaxContainer>

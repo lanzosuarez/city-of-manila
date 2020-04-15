@@ -40,17 +40,12 @@ const Content = styled.p`
   }
 `;
 
-const ProgramsSection1 = () => {
+const ProgramsSection1 = ({ content }) => {
   return (
     <Container>
-      <Title>Excepteur sint occaecat cupidatat non proident</Title>
+      <Title>{content.title}</Title>
       <BlueLine alt="line" src={line} />
-      <Content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </Content>
+      <Content>{content.content}</Content>
     </Container>
   );
 };

@@ -26,8 +26,9 @@ const Grid = styled.div`
 
 const ProgramsTemplate = ({ data }) => {
   const {
-    contentfulPrograms: { bannerTitle, pageType }
+    contentfulPrograms: { bannerTitle, pageType, section1, section2, section3 }
   } = data;
+  console.log(section3);
   return (
     <NavigationProvider>
       <Layout>
@@ -38,12 +39,12 @@ const ProgramsTemplate = ({ data }) => {
         <ProgramShare />
         <Grid>
           <PageContainer>
-            <ProgramsSection1 />
+            <ProgramsSection1 content={section1} />
           </PageContainer>
-          <ProgramsSection2 />
+          <ProgramsSection2 content={section2} />
           {pageType === 2 && (
             <PageContainer>
-              <ProgramsSection3 />
+              <ProgramsSection3 content={section3} />
             </PageContainer>
           )}
         </Grid>
@@ -68,9 +69,10 @@ export const query = graphql`
         content
       }
       section3 {
-        items {
+        title
+        content {
           title
-          btnLink
+          subtitle
           content
         }
       }
