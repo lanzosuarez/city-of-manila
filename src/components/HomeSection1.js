@@ -74,7 +74,7 @@ const items = [
   {
     title: 'Social Amelioration',
     path: commIcon,
-    page: '/programs/social-ameleoration'
+    page: '/programs/social-amelioration'
   },
   {
     title: 'Physical Redevelopment',

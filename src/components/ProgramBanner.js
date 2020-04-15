@@ -18,16 +18,9 @@ const Container = styled.div`
 
 const PageContent = styled.div`
   height: 100%;
-  padding: 0px 100px;
+  -ms-flex-align: center;
   align-items: center;
-  max-width: 1170px;
-
-  @media (max-width: 768px) {
-    padding: 35px 50px;
-  }
-  @media (max-width: 576px) {
-    padding: 35px 35px;
-  }
+  width: 100%;
 `;
 
 const HeaderText = styled.h1`
@@ -36,6 +29,7 @@ const HeaderText = styled.h1`
   line-height: 52px;
   word-break: break-word;
   margin: 0;
+  text-align: center;
   @media (max-width: 768px) {
     width: 100%;
   }
