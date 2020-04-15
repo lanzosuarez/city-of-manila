@@ -5,6 +5,7 @@ import {
   TwitterShareButton,
   MailruShareButton
 } from 'react-share';
+import { WEBSITE_URL } from '../constants';
 
 const Container = styled.div`
   background: #fd942b;
@@ -41,11 +42,10 @@ const Icons = styled.div`
 `;
 
 const ProgramShare = () => {
-  const websiteUrl = 'https://www.facebook.com/iskomorenodomagoso';
   const openGmail = () => {
     let url =
       'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Your+Subject+here&body=' +
-      websiteUrl +
+      WEBSITE_URL +
       '&ui=2&tf=1&pli=1';
 
     window.open(url, 'sharer', 'toolbar=0,status=0,width=648,height=395');
@@ -56,10 +56,10 @@ const ProgramShare = () => {
         <span>Share Overview</span>
         <Icons>
           <ion-icon onClick={openGmail} name="mail-outline"></ion-icon>
-          <TwitterShareButton url={websiteUrl}>
+          <TwitterShareButton url={WEBSITE_URL}>
             <ion-icon name="logo-twitter"></ion-icon>
           </TwitterShareButton>
-          <FacebookShareButton url={websiteUrl}>
+          <FacebookShareButton url={WEBSITE_URL}>
             <ion-icon name="logo-facebook"></ion-icon>
           </FacebookShareButton>
         </Icons>
