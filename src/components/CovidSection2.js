@@ -42,7 +42,7 @@ const LeftContainer = styled.div`
 
   @media (max-width: 576px) {
     iframe {
-      height: 400px;
+      height: 100vw;
     }
   }
 `;
@@ -50,10 +50,14 @@ const RightContainer = styled.div``;
 const DisplayFlex = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 50px;
   padding: 20px 15px;
   height: 100%;
   /* align-items: center; */
+  
+  @media (max-width: 768px) {
+    grid-gap: 30px;
+  }
 `;
 const ButtonTracker = styled.div`
   background-color: #05326b;
