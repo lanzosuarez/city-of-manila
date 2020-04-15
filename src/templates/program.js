@@ -28,7 +28,6 @@ const ProgramsTemplate = ({ data }) => {
   const {
     contentfulPrograms: { bannerTitle, pageType, section1, section2, section3 }
   } = data;
-  console.log(section3);
   return (
     <NavigationProvider>
       <Layout>
@@ -67,6 +66,8 @@ export const query = graphql`
         subtitle
         btnLink
         content
+        btnText
+        hasCTA
       }
       section3 {
         title

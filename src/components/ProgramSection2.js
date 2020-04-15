@@ -14,6 +14,12 @@ const Container = styled.div`
   padding: 4rem 15px;
   grid-gap: 20px;
   margin: 0 auto;
+  width: 800px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.h2`
@@ -60,11 +66,15 @@ const Content = styled.p`
 const Button = styled.button`
   margin: 0 auto;
   background: var(--blue);
-  color: white;
   border-radius: 20px;
   border: none;
   padding: 10px 50px;
   font-size: 0.8rem;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 `;
 
 const ProgramsSection2 = ({ content }) => {
@@ -75,7 +85,11 @@ const ProgramsSection2 = ({ content }) => {
         <Title>{content.title}</Title>
         <BlueLine alt="line" src={line} />
         <Content>{content.content}</Content>
-        <Button>LEARN MORE</Button>
+        {!!content.hasCTA && (
+          <Button>
+            <a href={content.btnLink}>{content.btnText}</a>
+          </Button>
+        )}
       </Container>
     </MaxContainer>
   );

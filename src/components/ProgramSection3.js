@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import line from '../images/blue-line.png';
-import placeholder from '../images/team-placeholder.png';
+import placeholder from '../images/image-placeholder.jpg';
 
 const Container = styled.div`
   background: white;
@@ -12,6 +12,7 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 4rem 15px;
   padding-bottom: 50px;
+  width: 100%;
 `;
 
 const Title = styled.h2`
@@ -28,8 +29,9 @@ const Title = styled.h2`
 const Content = styled.p`
   text-align: justify;
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: auto 1fr;
+  grid-gap: 40px;
+  grid-template-columns: 350px 1fr;
+  align-items: center;
 
   @media (max-width: 576px) {
     grid-template-columns: 1fr;
@@ -97,10 +99,8 @@ const TextContent = styled.p`
 `;
 
 const ProgramsSection3 = ({ content: { title, content } }) => {
-  console.log(content);
   return (
     <Container>
-      <Title>{title}</Title>
       <Content>
         <Avatar alt="card-image" src={placeholder}></Avatar>
         <TextContainer>

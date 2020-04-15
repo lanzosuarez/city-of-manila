@@ -9,6 +9,12 @@ const Container = styled.div`
   text-align: center;
   padding: 4rem 15px;
   grid-gap: 20px;
+  width: 800px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.h2`
@@ -41,6 +47,7 @@ const Content = styled.p`
 `;
 
 const ProgramsSection1 = ({ content }) => {
+  console.log(content);
   return (
     <Container>
       <Title>{content.title}</Title>
