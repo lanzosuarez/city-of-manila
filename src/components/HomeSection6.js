@@ -2,9 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import bg from '../images/home-section6-bg.png';
-import logo1 from '../images/testimonial-logo-bg-1.png';
-import logo2 from '../images/testimonial-logo-bg-2.png';
-import logo3 from '../images/testimonial-logo-bg-3.png';
+import logo1 from '../images/testimonial-logo-bg-1.jpg';
+import logo2 from '../images/testimonial-logo-bg-2.jpg';
+import logo3 from '../images/testimonial-logo-bg-3.jpg';
 
 const Container = styled.div`
   display: grid;
@@ -122,25 +122,25 @@ const Item = ({ img, title, sub, content }) => {
 
 const items = [
   {
-    title: 'Esquire Philippines',
+    title: 'Rappler',
     sub: 'Jul 8, 2019',
     img: logo1,
     content:
-      'Within the next few days, he turns up again almost incessantly on social media news feeds and TV newscasts—there he is brandishing a sledgehammer and whacking gambling machines operating within Manila City Hall grounds.... The new mayor clearly means business and he’s not wasting a single minute of his three-year term.'
+      'Manila has become one of the first cities to pass a curfew ordinance, and the only city in Metro Manila which has build an infectious disease center.'
   },
   {
-    title: 'Philippine Tatler ',
+    title: 'Manila Bulletin',
     sub: 'Mar 10, 2020',
     img: logo2,
     content:
-      'This is my pat on the back. Every cup [of Starbucks] reminds me to be grateful that now I can afford 120 pesos for coffee when, once upon a time I could not. I thank God and ask for forgiveness, guidance, strength'
+      'In view of the crisis caused by COVID-19, the City Government of Manila appeals and humbly requests all lessors of commercial establishments in the City of Manila that were closed during the one month period of general community quarantine to waive the corresponding rental fees and charges thereof.'
   },
   {
-    title: 'Daily Pedia',
-    sub: 'July 26, 2019',
+    title: 'CNN',
+    sub: 'April, 2020',
     img: logo3,
     content:
-      'When people who watch Isko actually go to Manila and experience the changes, their minds will be blown, not because they understand the political implications of this change, but because nakakatuwa lang talaga na makita ang isang lugar na dating magulo na ngayon ay maayos na. Salamat kay Yorme.'
+      'The city of Manila is now ready to conduct localized mass targeted testing for COVID-19, with the Philippine capital capable of conducting more than 1,000 swab tests weekly. Covid-19 response chief implementer Carlito Galvez described Sunday the planned aggressive testing as a “game changer” as it would be the key to the government’s plan to identify COVID-19 patients, isolate and treat them. “Hindi tayo makakaahon sa enhanced community quarantine hanngga’t hindi tayo magkakaroon ng targeted testing,” Galvez said.'
   },
   {
     title: 'Lotty De La Ritta',

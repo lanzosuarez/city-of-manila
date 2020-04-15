@@ -19,7 +19,7 @@ const SectionContainer = styled.div`
 
 const Section = styled.div`
     color:white;
-    max-width:500px;
+    max-width:700px;
     display:flex;
     flex-direction: column;
     margin: 0 auto;
@@ -59,8 +59,8 @@ const HomeSection8 = () => {
         <SectionContainer>
             <PageContainer>
                 <Section>
-                    <SectionHeader> Lorem Ipsum Dolor Sit Ameti </SectionHeader>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <SectionHeader>Feeding a city of 1.8 million during a crisis</SectionHeader>
+                    <p>We committed to delivering food packs to close to 600,000 families. It was challenging, we had our shortcomings, but we will not stop until we reach every single family.</p>
                     <div>
                         <IconBox>
                             <ion-icon style={iconStyle} name="caret-forward-outline"></ion-icon>
