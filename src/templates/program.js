@@ -26,7 +26,7 @@ const Grid = styled.div`
 
 const ProgramsTemplate = ({ data }) => {
   const {
-    contentfulPrograms: { bannerTitle }
+    contentfulPrograms: { bannerTitle, pageType }
   } = data;
   return (
     <NavigationProvider>
@@ -41,14 +41,11 @@ const ProgramsTemplate = ({ data }) => {
             <ProgramsSection1 />
           </PageContainer>
           <ProgramsSection2 />
-          <PageContainer>
-            <ProgramsSection3 />
-          </PageContainer>
-          <ProgramsSection4 />
-          <PageContainer>
-            <ProgramsSection5 />
-          </PageContainer>
-          <ProgramsSection6 />
+          {pageType === 2 && (
+            <PageContainer>
+              <ProgramsSection3 />
+            </PageContainer>
+          )}
         </Grid>
       </Layout>
     </NavigationProvider>
@@ -59,6 +56,7 @@ export const query = graphql`
   query($slug: String!) {
     contentfulPrograms(slug: { eq: $slug }) {
       bannerTitle
+      pageType
       section1 {
         title
         content
