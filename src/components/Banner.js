@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 import '../styles/banner.css';
 
 import banner1 from '../images/header-slide-1-1440px.jpg';
-import banner2 from '../images/header-slide2.jpg';
+import banner2 from '../images/header-slide3.jpg';
 import Notice from './Notice';
 import Navigation from './Navigation';
 import LearnMore from './LearnMore';
@@ -61,7 +61,7 @@ const BannerTexts = styled.div`
     margin-top: 60px;
     margin-left: 20px;
     margin-right: 20px;
-    height: 450px;
+    height: 460px;
   }
 
   /* &::after {
@@ -111,48 +111,47 @@ const BannerTextSmall = styled.h3`
   }
 
   @media (max-width: 576px) {
-    margin-bottom: 20px;
-    font-size: 0.95rem;
+    margin-bottom: 5px;
+    font-size: 3.9vw;
+    line-height: 1.2;
   }
 `;
 
 const BannerTextBig = styled.h1`
-  max-width: 500px;
-  font-size: 50px;
+  font-size: 49px;
   margin-bottom: 40px;
   color: #ffffff;
   line-height: 1.2;
   word-break: break-word;
   font-weight: 600;
-  margin-right: 30px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1280px) {
     font-size: 40px;
   }
+  @media (max-width: 920px) {
+    font-size: 36px;
+  }
   @media (max-width: 576px) {
-    font-size: 40px;
+    font-size: 29px;
+    margin-bottom: 20px;
   }
 
   @media (max-width: 400px) {
-    font-size: 2rem;
+    font-size: 23px;
+    margin-bottom: 18px;
   }
 `;
 
 const BannerTextsSection = styled.div`
-  flex: 2;
+  max-width: 45%;
 
-  @media (max-width: 576px) {
-    padding-top: 30px;
+  @media (max-width: 920px) {
+    max-width: 100%;
   }
 `;
 
 const BannerTimeSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-  justify-content: center;
-  flex: 1;
-
+  align-self: center;
   @media (max-width: 576px) {
     display: none;
   }
@@ -161,18 +160,32 @@ const BannerTimeSection = styled.div`
 const MobileTimeSection = styled.div`
   display: none;
   @media (max-width: 576px) {
-    display: grid;
-    grid-gap: 10px;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     font-size: 0.8rem !important;
   }
+  h4{
+    @media (max-width: 576px) {
+      font-size: 12px;
+      line-height: 1.5;
+    }
 `;
 
 const ButtonCon = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
   @media (max-width: 576px) {
+    width: 100%;
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 1.5fr 1fr;
+    grid-column-gap: 16px;
+    grid-auto-flow: column;
+    justify-content: start;
+  }
+  @media only screen and (min-width: 577px) and (max-width: 920px) {
+    width: 95%;
+    display: grid;
+    grid-gap: 31px;
   }
 `;
 
@@ -222,7 +235,7 @@ const texts = [
   },
   {
     banner: banner2,
-    small: 'The greatest public health challenge of our lifetime',
+    small: 'The most difficult public health challenge of our lifetime',
     big: 'We will defeat Covid-19 together',
     btn: {
       text: 'LEARN MORE',
@@ -355,10 +368,10 @@ const Banner = () => {
                   transition
                   transitionFlag={activeText === idx}
                 />
+                <LocalTime transitionFlag={activeText === idx} />
                 <MobileLocalTime transitionFlag={activeText === idx} />
               </ButtonCon>
             </BannerTextsSection>
-            <LocalTime transitionFlag={activeText === idx} />
             <CSSTransition
               appear
               in={activeText === idx}

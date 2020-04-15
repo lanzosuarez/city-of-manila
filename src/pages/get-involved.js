@@ -103,25 +103,29 @@ const ButtonTracker = styled.div`
 `;
 const Content = styled.div`
   padding: 1rem 1.5rem;
-`;
-const iconStyle = {
-  fontSize: '20px',
-  marginRight: '10px'
-};
-const DonateButton = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: #ffa537;
-  padding: 15px;
+  height: 350px;
+  @media only screen and (max-width: 768px) {
+    height: auto;
+  }
+  @media only screen and (min-width: 769px) and (max-width: 834px) {
+    height:532px;
+  }
+  @media only screen and (min-width: 835px) and (max-width: 1048px) {
+    height:26rem;
+  }
 `;
 
-const ButtonText = styled.p`
-  margin-bottom: 0px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  align-items: center;
-  display: flex;
-  height: 100%;
+const DonateButton = styled.div`
+  align-self: flex-end;
+  text-align: center;
+  background-color: #ffa537;
+  padding: 15px;
+  h3{
+    margin-bottom:5px;
+  }
+  p{
+    margin-bottom:5px;
+  }
 `;
 
 const GetInvolvedPage = ({ location }) => {
@@ -140,13 +144,11 @@ const GetInvolvedPage = ({ location }) => {
           <Section1>
             <PageContainer>
               <Section>
-                <h1>Duis aute irure dolor in reprehenderit</h1>
+                <h1>How you can help the city</h1>
                 <img src={line} alt="blue line" className="line" />
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  The city of Manila calls on its residents to help build a
+                  better future for everyone.
                 </p>
               </Section>
             </PageContainer>
@@ -154,14 +156,20 @@ const GetInvolvedPage = ({ location }) => {
           <Section2>
             <PageContainer>
               <Section>
-                <h1>Excepteur sint occaecat cupidatat non proident</h1>
+                <h1>Digital Health Survey</h1>
                 <img src={line} alt="blue line" className="line" />
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit.
+                  An online Facebook questionnaire which allows Manileños to
+                  update city health officials about their current health
+                  situation through an easy and accessible channel.
+                </p>
+                <p>
+                  This helpful tool encourages respondents to think objectively
+                  about their health within the Covid-19 context.
+                </p>
+                <p>
+                  You can access the survey 24x7 by hitting the “Send Message”
+                  button on his official FB Page.
                 </p>
                 <ButtonTracker>
                   <a href="http://m.me/iskomorenodomagoso/">Take The Survey</a>
@@ -172,79 +180,54 @@ const GetInvolvedPage = ({ location }) => {
           <Section3>
             <PageContainer>
               <Section>
-                <h1>Duis aute irure dolor in reprehenderit</h1>
+                <h1>How to help</h1>
                 <img src={line} alt="blue line" className="line" />
                 <ItemWrap>
                   <Item>
                     <img src={placeholder} alt="placeholder" />
                     <Content>
-                      <h1>Lorem ipsum dolor sit amet ad minim veniam</h1>
+                      <h1>Cash donations in any currency</h1>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat
+                        For online donations, you may deposit through Landbank,
+                        account name Landbank of the Philppines Trust Fund with
+                        account number 1982-1003-36, any currency will be
+                        accepted.
                       </p>
                     </Content>
                     <DonateButton>
-                      <a href="#">
-                        <ButtonText>
-                          <ion-icon
-                            style={iconStyle}
-                            name="caret-forward-outline"
-                          />
-                          Donate
-                        </ButtonText>
-                      </a>
+                      <h3>Donate.</h3>
+                      <p>Help someone in need.</p>
                     </DonateButton>
                   </Item>
                   <Item>
                     <img src={placeholder} alt="placeholder" />
                     <Content>
-                      <h1>Lorem ipsum dolor sit amet ad minim veniam</h1>
+                      <h1>Cash donations in Philippine currency</h1>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat
+                        For online donations, you may deposit through the
+                        Development Bank of the Philippines, account name
+                        LGU-MANILA-COVID19 with account number 0-05113-410-5.
                       </p>
                     </Content>
                     <DonateButton>
-                      <a href="#">
-                        <ButtonText>
-                          <ion-icon
-                            style={iconStyle}
-                            name="caret-forward-outline"
-                          />
-                          Donate
-                        </ButtonText>
-                      </a>
+                      <h3>Donate.</h3>
+                      <p>Help someone in need.</p>
                     </DonateButton>
                   </Item>
                   <Item>
                     <img src={placeholder} alt="placeholder" />
                     <Content>
-                      <h1>Lorem ipsum dolor sit amet ad minim veniam</h1>
+                      <h1>Donate goods and supplies</h1>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat
+                        The city is in need of medical, transportation, and food
+                        supplies. Learn more on how to help by emailing us at
+                        mayorofmanila@gmail.com or calling us through
+                        +63921-966-0384.
                       </p>
                     </Content>
                     <DonateButton>
-                      <a href="#">
-                        <ButtonText>
-                          <ion-icon
-                            style={iconStyle}
-                            name="caret-forward-outline"
-                          />
-                          Donate
-                        </ButtonText>
-                      </a>
+                      <h3>Donate.</h3>
+                      <p>Help someone in need.</p>
                     </DonateButton>
                   </Item>
                 </ItemWrap>

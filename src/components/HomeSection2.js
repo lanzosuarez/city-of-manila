@@ -93,7 +93,8 @@ const HomeSection2 = () => {
         <Header>Executive Orders</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-          Directive issued by the President of the Philippines that manages operations of the national government.
+          Directive issued by the Mayor of Manila that manages operations of the
+          city government.
         </Content>
         <Footer>
           <Link>READ MORE</Link>
@@ -111,7 +112,8 @@ const HomeSection2 = () => {
         <Header>Legislation</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-          A bill that was proposed and approved by Congress into law to be effective after publication. 
+          Resolutions and ordinances passed by the City Council to be effective
+          after publication.
         </Content>
         <Footer>
           <Link>READ MORE</Link>
@@ -129,7 +131,8 @@ const HomeSection2 = () => {
         <Header>How To Help Manila</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-            The city is in need of medical and food supplies, as well as volunteers. Learn more on how to help or volunteer, please call (63)921-966-0384 For online donations, you may deposit through Landbank,  account name Landbank of the Philppines Trust Fund with account number 1982-1003-36, any currency will be accepted or through the Development Bank of the Philippines, account name LGU-MANILA-COVID19 with account number 0-05113-410-5. 
+          The city is in need of medical and food supplies, as well as
+          volunteers. Learn how to donate or volunteer.
         </Content>
         <Footer>
           <Link>READ MORE</Link>
