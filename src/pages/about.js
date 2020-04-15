@@ -177,6 +177,32 @@ const Section5Social = styled.div`
   }
 `;
 
+const MobileContent = styled.div`
+  display:none @media (max-width: 767px) {
+    display: block;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const SwiperContainer = styled.div`
+  display: block;
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
+
+const arrowStyle = {
+  color: '#01bcb1',
+  cursor: 'pointer'
+};
+
+const HeaderItem = styled.div`
+  text-align: right;
+  margin-bottom: 1.5 rem;
+`;
+
 const items = [
   {
     date: 'College',
@@ -210,6 +236,75 @@ const items = [
     course: 'Rosauro Alamario Elementary School'
   }
 ];
+
+const MobileTimeline = () => {
+  return (
+    <MobileContent>
+      <ul className="timeline2 timeline-split">
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles"></div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles">
+            <span>College | Harvard University</span>
+            <h3 className="timeline-title">Executive Education Program</h3>
+          </div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles"></div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles">
+            <span>College | Oxford University</span>
+            <h3 className="timeline-title">Strategic Leadership Program</h3>
+          </div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles">
+            <span>College | University of the Philippines, Diliman</span>
+            <h3 className="timeline-title">
+              Local Legislation and Local Finance
+            </h3>
+          </div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles"></div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles">
+            <span>College | Pamantasan ng Lungsod ng Maynila</span>
+            <h3 className="timeline-title">Public Administration</h3>
+          </div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles"></div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles">
+            <span>College | Arellano University</span>
+            <h3 className="timeline-title">Bachelor of Laws</h3>
+          </div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles"></div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles">
+            <span>High School</span>
+            <h3 className="timeline-title">Tondo High School, Tondo, Manila</h3>
+          </div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles"></div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles">
+            <span>Elementary</span>
+            <h3 className="timeline-title">
+              Rosauro Alamario Elementary School, Tondo, Manila
+            </h3>
+          </div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles"></div>
+        </li>
+      </ul>
+    </MobileContent>
+  );
+};
 
 const AboutPage = ({ location }) => {
   useEffect(() => {
@@ -353,7 +448,20 @@ const AboutPage = ({ location }) => {
               <Section3>
                 <h1> Education </h1>
                 <img src={line} alt="blue line" className="line" />
-                <div className="swiper-container">
+                <MobileTimeline />
+                <SwiperContainer className="swiper-container">
+                  <HeaderItem>
+                    <ion-icon
+                      style={{ ...arrowStyle, marginRight: 10 }}
+                      size="large"
+                      name="arrow-back"
+                    ></ion-icon>
+                    <ion-icon
+                      style={arrowStyle}
+                      size="large"
+                      name="arrow-forward"
+                    ></ion-icon>
+                  </HeaderItem>
                   <div className="swiper-wrapper timeline">
                     {items.map(i => (
                       <div className="swiper-slide">
@@ -367,7 +475,7 @@ const AboutPage = ({ location }) => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </SwiperContainer>
               </Section3>
             </PageContainer>
           </Section32Container>

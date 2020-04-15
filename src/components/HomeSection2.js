@@ -135,7 +135,7 @@ const HomeSection2 = () => {
           volunteers. Learn how to donate or volunteer.
         </Content>
         <Footer>
-          <Link>READ MORE</Link>
+          <Link to="/get-involved">READ MORE</Link>
           <IconCon>
             <ion-icon
               data-icon="icon"

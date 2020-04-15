@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { Link } from 'gatsby';
 
 import blueline from '../images/blue-line.png';
 import Accordion from './Accordion';
@@ -57,6 +58,40 @@ const InfoContent = styled.p`
   padding-top: 20px;
 `;
 
+const Footer = styled.div`
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: #04326a;
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: color 300ms;
+  }
+
+  &:hover {
+    a {
+      color: #e21130;
+    }
+    [name='arrow-forward'] {
+      color: #e21130 !important;
+    }
+    span {
+      transform: translateX(10px);
+    }
+  }
+`;
+const IconCon = styled.span`
+  display: flex;
+  align-items: center;
+  transition: transform 300ms;
+  cursor: pointer;
+`;
+
 const CovidSection1 = () => {
   return (
     <Container>
@@ -90,6 +125,16 @@ const CovidSection1 = () => {
             advisories, to eliminate and curtail the COVID-19 threat and ensure
             the safety and well-being of everyone.
           </InfoContent>
+          <Footer>
+            <Link>Learn More</Link>
+            <IconCon>
+              <ion-icon
+                data-icon="icon"
+                style={{ color: '#04326a' }}
+                name="arrow-forward"
+              ></ion-icon>
+            </IconCon>
+          </Footer>
         </InfoSection>
         <AccordionSection>
           <Accordion />
