@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import format from 'date-fns/format';
 
 import placeholder from '../images/team-placeholder.png';
+import DownloadExec from './DownloadExec';
 
 const Container = styled.div`
   max-width: 1170px;
@@ -9,12 +11,12 @@ const Container = styled.div`
 `;
 
 const ListContainer = styled.div`
-  width: 800px;
+  /* width: 800px; */
   margin: 0 auto;
   background: white;
   margin-top: 50px;
   display: grid;
-  padding: 20px 0px;
+  padding: 20px 20px;
   grid-gap: 30px;
 
   @media (max-width: 768px) {
@@ -45,6 +47,7 @@ const iconStyle = {
 
 const List = styled.div`
   display: grid;
+  grid-gap: 40px;
 `;
 
 const ListItem = styled.div`
@@ -78,6 +81,7 @@ const Type = styled.h6`
   margin: 0;
   font-family: 'Nunito';
   letter-spacing: 1.5px;
+  text-transform: uppercase;
 `;
 
 const Name = styled.h4`
@@ -85,15 +89,12 @@ const Name = styled.h4`
   color: var(--blue);
 `;
 
-const Date = styled.h5`
+const ItemDate = styled.h5`
   margin: 0;
   font-weight: lighter;
 `;
 
 const Buttons = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 200px));
-  grid-gap: 10px;
   button {
     border: none;
     outline: none;
@@ -108,32 +109,13 @@ const Buttons = styled.div`
   }
 `;
 
-const ButtonMemo = styled.button`
-  background: #269cc0;
-
-  &:active {
-    background: rgb(38, 156, 192, 0.8);
-  }
-`;
-const ButtonLegislation = styled.button`
-  background: #fd942d;
-
-  &:active {
-    background: rgb(253, 148, 45, 0.8);
-  }
-`;
-
-const butttonIconStyle = {
-  marginRight: 5
-};
-
-const ExecSection2 = () => {
+const ExecSection2 = ({ items }) => {
   return (
     <Container>
       <ListContainer>
         <Header>
           <HeaderItem>
-            <Figure>420</Figure> Legislation
+            <Figure>{items.length}</Figure> Legislation
           </HeaderItem>
           <HeaderItem>
             <ion-icon
@@ -149,34 +131,25 @@ const ExecSection2 = () => {
           </HeaderItem>
         </Header>
         <List>
-          <ListItem>
-            <Avatar alt="item_avatar" src={placeholder}></Avatar>
-            <Details>
-              <Type>LEGISLATION</Type>
-              <Name>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod
-              </Name>
-              <Date>April 04, 2020</Date>
-              <Buttons>
-                <ButtonMemo>
-                  <ion-icon
-                    style={butttonIconStyle}
-                    name="download-outline"
-                  ></ion-icon>
-                  Download Memo
-                </ButtonMemo>
-                <ButtonLegislation>
-                  <ion-icon
-                    style={butttonIconStyle}
-                    name="download-outline"
-                  ></ion-icon>
-                  Download Legislation
-                </ButtonLegislation>
-              </Buttons>
-            </Details>
-          </ListItem>
+          {items.map(({ node: i }, idx) => (
+            <ListItem key={idx}>
+              <Avatar alt="item_avatar" src={placeholder}></Avatar>
+              <Details>
+                <Type>{i.name}</Type>
+                <Name>{i.description.description}</Name>
+                <ItemDate>
+                  {format(new Date(i.publishedDate), 'MMMM dd, yyyy')}
+                </ItemDate>
+                <Buttons>
+                  <DownloadExec
+                    type={i.type}
+                    url={i.file.file.url}
+                    filename={i.name}
+                  />
+                </Buttons>
+              </Details>
+            </ListItem>
+          ))}
         </List>
       </ListContainer>
     </Container>
