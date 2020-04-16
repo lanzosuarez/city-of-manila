@@ -14,6 +14,7 @@ import ProgramBanner from '../components/ProgramBanner';
 import ProgramShare from '../components/ProgramShare';
 import ProgramsSection2 from '../components/ProgramSection2';
 import ProgramsSection3 from '../components/ProgramSection3';
+import ProgramsNav from '../components/ProgramsNav';
 import ProgramsSection4 from '../components/ProgramSection4';
 import ProgramsSection5 from '../components/ProgramSection5';
 import ProgramsSection6 from '../components/ProgramSection6';
@@ -47,6 +48,7 @@ const ProgramsTemplate = ({ data }) => {
             </PageContainer>
           )}
         </Grid>
+        <ProgramsNav/>
       </Layout>
     </NavigationProvider>
   );

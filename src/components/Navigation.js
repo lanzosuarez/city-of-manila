@@ -84,6 +84,10 @@ export const listItems = [
       {
         title: 'What You Need To Know',
         path: '/covid#what-you-need-to-know'
+      },
+      {
+        title: `Manila's Response`,
+        path: `/covid#manila's-response`
       }
     ]
   },
