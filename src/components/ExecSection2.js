@@ -63,7 +63,6 @@ const ListItem = styled.div`
 `;
 
 const Avatar = styled.img`
-  height: 100%;
 
   @media (max-width: 576px) {
     display: none;
