@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from '@emotion/styled';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+import { ExecAndLegislationContext } from '../context/ExecAndLegislationProvider';
 
 const Container = styled.div`
   max-width: 1170px;
@@ -33,12 +34,18 @@ const SearchContainer = styled.div`
 
 const Categories = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
   align-items: center;
 
   @media (max-width: 768px) {
     grid-row: 2;
   }
+  /* 
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  } */
 `;
 
 const Category = styled.div`
@@ -109,14 +116,12 @@ const iconStyle = {
   color: '#1ab1a2'
 };
 
-const tabs = ['All', 'Executive Orders', 'Legislation'];
+const tabs = ['All', 'Executive Orders', 'City Resolution', 'Ordinance'];
 
 const ExecSection1 = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [dateFilter, setDateFilter] = useState({
-    dateRange: [new Date(), new Date()],
-    show: false
-  });
+  const { activeTab, dateFilter, setActiveTab, setDateFilter } = useContext(
+    ExecAndLegislationContext
+  );
 
   const onSelectTab = idx => () => setActiveTab(idx);
   const selectRange = dateRange => setDateFilter({ ...dateFilter, dateRange });
