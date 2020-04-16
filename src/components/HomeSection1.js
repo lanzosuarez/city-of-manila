@@ -69,7 +69,7 @@ const items = [
   {
     title: 'Economic Development',
     path: civilIcon,
-    page: '/programs/economic-alleviation'
+    page: '/programs/economic-development'
   },
   {
     title: 'Social Amelioration',

@@ -137,17 +137,10 @@ const items = [
   },
   {
     title: 'CNN',
-    sub: 'April, 2020',
+    sub: 'April 13, 2020',
     img: logo3,
     content:
-      'The city of Manila is now ready to conduct localized mass targeted testing for COVID-19, with the Philippine capital capable of conducting more than 1,000 swab tests weekly. Covid-19 response chief implementer Carlito Galvez described Sunday the planned aggressive testing as a “game changer” as it would be the key to the government’s plan to identify COVID-19 patients, isolate and treat them. “Hindi tayo makakaahon sa enhanced community quarantine hanngga’t hindi tayo magkakaroon ng targeted testing,” Galvez said.'
-  },
-  {
-    title: 'Lotty De La Ritta',
-    sub: 'Citizen',
-    img: logo1,
-    content:
-      'When people who watch Isko actually go to Manila and experience the changes, their minds will be blown, not because they understand the political implications of this change, but because nakakatuwa lang talaga na makita ang isang lugar na dating magulo na ngayon ay maayos na. Salamat kay Yorme.'
+      'The city of Manila is now ready to conduct localized mass targeted testing for COVID-19, with the Philippine capital capable of conducting more than 1,000 swab tests weekly. Covid-19 response chief implementer Carlito Galvez described Sunday the planned aggressive testing as a “game changer” as it would be the key to the government’s plan to identify COVID-19 patients, isolate and treat them. '
   }
 ];
 
@@ -161,12 +154,6 @@ const HomeSection6 = () => {
       </CarouselContainer>
       <Dots>
         <Circle className="home-active-dot">
-          <Dot />
-        </Circle>
-        <Circle>
-          <Dot />
-        </Circle>
-        <Circle>
           <Dot />
         </Circle>
       </Dots>

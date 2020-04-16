@@ -449,7 +449,7 @@ const AboutPage = ({ location }) => {
                 <MobileTimeline />
                 <SwiperContainer className="swiper-container">
                   <div className="swiper-wrapper timeline">
-                    {items.map(i => (
+                    {items.reverse().map(i => (
                       <div className="swiper-slide">
                         <div className="status">
                           <span>{i.course}</span>

@@ -4,6 +4,8 @@ import bg1 from '../images/home-section3-1.png';
 import bg2 from '../images/home-section3-2.png';
 import bg3 from '../images/home-section3-3.png';
 
+import { Link } from 'gatsby';
+
 const Container = styled.div`
   padding: 0px 70px 80px;
   display: grid;
@@ -41,7 +43,7 @@ const Content = styled.div`
   color: white;
   margin-bottom: 20px;
   position: relative;
-  max-height: 25px;
+  max-height: 27px;
   overflow: hidden;
   transition: max-height 500ms;
   z-index: 2;
@@ -79,6 +81,7 @@ const HomeSection3 = () => {
           <Text>Digital Health Survey</Text>
           <Paragraph>Take the survey now and help save a life.</Paragraph>
         </Content>
+        <Link to="/covid#digital-survey">
         <ion-icon
           style={{
             position: 'relative',
@@ -89,6 +92,7 @@ const HomeSection3 = () => {
           size="large"
           name="arrow-forward-circle-outline"
         ></ion-icon>
+        </Link>
       </Item>
       <Item bg={bg2}>
         <Overlay className="overlay" />
@@ -98,6 +102,7 @@ const HomeSection3 = () => {
             Important information on the Enhanced Community Quarantine
           </Paragraph>
         </Content>
+        <Link to="/covid#ecq">
         <ion-icon
           style={{
             position: 'relative',
@@ -108,6 +113,7 @@ const HomeSection3 = () => {
           size="large"
           name="arrow-forward-circle-outline"
         ></ion-icon>
+        </Link>
       </Item>
       <Item bg={bg1}>
         <Overlay className="overlay" />
@@ -120,6 +126,7 @@ const HomeSection3 = () => {
             care and assistance during the Enhanced Community Quarantine.
           </Paragraph>
         </Content>
+        <Link to="/covid">
         <ion-icon
           style={{
             position: 'relative',
@@ -130,6 +137,7 @@ const HomeSection3 = () => {
           size="large"
           name="arrow-forward-circle-outline"
         ></ion-icon>
+        </Link>
       </Item>
     </Container>
   );

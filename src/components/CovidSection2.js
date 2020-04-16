@@ -54,7 +54,7 @@ const DisplayFlex = styled.div`
   padding: 20px 15px;
   height: 100%;
   /* align-items: center; */
-  
+
   @media (max-width: 768px) {
     grid-gap: 30px;
   }
@@ -113,7 +113,7 @@ const CovidSection2 = () => {
               Digital Health Survey.
             </p>
             <p>
-              This helpful tool provides Manilenos and Filipinos with an easy
+              This helpful tool provides Manileños and Filipinos with an easy
               and accessible means to think objectively about their health
               within the Covid-19 context.
             </p>

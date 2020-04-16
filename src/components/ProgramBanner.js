@@ -32,6 +32,8 @@ const HeaderText = styled.h1`
   text-align: center;
   @media (max-width: 768px) {
     width: 100%;
+    font-size: 2.6rem;
+    line-height: 1.3;
   }
 `;
 

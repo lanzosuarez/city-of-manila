@@ -92,8 +92,8 @@ export const listItems = [
     path: '',
     sections: [
       {
-        title: 'Economic Alleviation',
-        path: '/programs/economic-alleviation'
+        title: 'Economic Development',
+        path: '/programs/economic-development'
       },
       {
         title: 'Social Amelioration',
