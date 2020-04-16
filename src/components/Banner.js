@@ -101,8 +101,13 @@ const Progress = styled.div`
 `;
 
 const BannerTextSmall = styled.h3`
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 400;
+  font-size: 1.2rem;
+
+  @media (max-width: 1280px) {
+    font-size: 1.1rem;
+  }
 
   @media (max-width: 768px) {
     margin-bottom: 0px;
@@ -143,7 +148,7 @@ const BannerTextBig = styled.h1`
 `;
 
 const BannerTextsSection = styled.div`
-  max-width: 45%;
+  max-width: 48%;
 
   @media (max-width: 920px) {
     max-width: 100%;

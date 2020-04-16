@@ -180,7 +180,7 @@ const GetInvolvedPage = ({ location }) => {
           <Section3>
             <PageContainer>
               <Section>
-                <h1>How to help</h1>
+                <h1 id="how-to-help">How to help</h1>
                 <img src={line} alt="blue line" className="line" />
                 <ItemWrap>
                   <Item>

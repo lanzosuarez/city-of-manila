@@ -63,7 +63,7 @@ const HomeSection8 = () => {
                     <p>We committed to delivering food packs to close to 600,000 families. It was challenging, we had our shortcomings, but we will not stop until we reach every single family.</p>
                     <div>
                         <IconBox>
-                            <ion-icon style={iconStyle} name="caret-forward-outline"></ion-icon>
+                            <a href="https://www.facebook.com/iskomorenodomagoso/videos/858541134613248/"><ion-icon style={iconStyle} name="caret-forward-outline"></ion-icon></a>
                         </IconBox>
                     </div>
                 </Section>
