@@ -79,7 +79,7 @@ const CovidSection3 = () => {
     <PageContainer>
       <Header>
         <h1>COVID-19 : What you need to know to protect you and your family</h1>
-        <img src={blueline} alt="blue line" className="line" />
+        <img loading="lazy" src={blueline} alt="blue line" className="line" />
       </Header>
       <DisplayFlex>
         <LeftContainer>
@@ -91,7 +91,11 @@ const CovidSection3 = () => {
           <p>5. Cover your nose and mouth when coughing and sneezing</p>
         </LeftContainer>
         <RightContainer>
-          <ImgContainer src={CovidPlaceholder} alt="How to prevent COVID-19" />
+          <ImgContainer
+            loading="lazy"
+            src={CovidPlaceholder}
+            alt="How to prevent COVID-19"
+          />
         </RightContainer>
       </DisplayFlex>
       <DisplayFlex>
@@ -116,6 +120,7 @@ const CovidSection3 = () => {
         </LeftContainer>
         <RightContainer>
           <ImgContainer
+            loading="lazy"
             src={CovidPlaceholder}
             alt="When else you need to call a doctor"
           />
@@ -150,7 +155,11 @@ const CovidSection3 = () => {
           </p>
         </LeftContainer>
         <RightContainer>
-          <ImgContainer src={CovidPlaceholder} alt="Do not break ECQ rules " />
+          <ImgContainer
+            loading="lazy"
+            src={CovidPlaceholder}
+            alt="Do not break ECQ rules "
+          />
         </RightContainer>
       </DisplayFlex>
       <DisplayFlex>
@@ -177,6 +186,7 @@ const CovidSection3 = () => {
         </LeftContainer>
         <RightContainer>
           <ImgContainer
+            loading="lazy"
             src={CovidPlaceholder}
             alt="Don't forget about mental health"
           />
@@ -216,7 +226,11 @@ const CovidSection3 = () => {
           </LinkStyle>
         </LeftContainer>
         <RightContainer>
-          <ImgContainer src={CovidPlaceholder} alt="Stay informed" />
+          <ImgContainer
+            loading="lazy"
+            src={CovidPlaceholder}
+            alt="Stay informed"
+          />
         </RightContainer>
       </DisplayFlex>
     </PageContainer>

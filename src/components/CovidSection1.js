@@ -101,7 +101,7 @@ const CovidSection1 = () => {
             <InfoTitle>
               Enhanced Community Quarantine: What You Need To Know
             </InfoTitle>
-            <img alt="blue-line" src={blueline}></img>
+            <img loading="lazy" alt="blue-line" src={blueline}></img>
           </InfoHeader>
           <InfoContent>
             COVID-19 is a new coronavirus that was first reported in Wuhan,

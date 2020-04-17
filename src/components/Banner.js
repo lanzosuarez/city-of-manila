@@ -339,7 +339,7 @@ const Banner = () => {
             classNames="banner-fade"
             timeout={{ enter: 10000, exit: 10000 }}
           >
-            <BannerImg src={b.banner} zIndex={b.zIndex} />
+            <BannerImg loading="lazy" src={b.banner} zIndex={b.zIndex} />
           </CSSTransition>
         ))}
         {texts.map((t, idx) => (
