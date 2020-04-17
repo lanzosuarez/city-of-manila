@@ -13,6 +13,7 @@ import PageContainer from '../components/PageContainer';
 import Notice from '../components/Notice';
 import Navigation from '../components/Navigation';
 import scrollToSection from '../hooks/scrollToSection';
+import covidbg from '../images/covid-bg.png';
 
 const CovidBanner = styled.div`
   width: 100%;
@@ -164,6 +165,14 @@ const Section1 = styled.div`
   padding: 4rem 0;
   background-color: #f8f8f8;
 `;
+const Section4 = styled.div`
+  padding: 4rem 0;
+  background-image: url(${covidbg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom center;
+`;
 
 const CovidPage = ({ location }) => {
   useEffect(() => scrollToSection(location), []);
@@ -218,11 +227,11 @@ const CovidPage = ({ location }) => {
             <CovidSection3 />
           </PageContainer>
         </Section>
-        <Section>
+        <Section4>
           <PageContainer id="manila's-response">
             <CovidSection4 />
           </PageContainer>
-        </Section>
+        </Section4>
       </Layout>
     </NavigationProvider>
   );

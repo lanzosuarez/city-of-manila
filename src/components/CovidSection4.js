@@ -67,7 +67,7 @@ const Section = styled.div`
   }
 `;
 const Check = styled.img`
- height:auto;
+  height: auto;
 `;
 
 const items = [

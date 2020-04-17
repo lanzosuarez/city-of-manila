@@ -6,29 +6,36 @@ const MaxContainer = styled.div`
 `;
 
 const Container = styled.div`
-  max-width: 800px;
   display: grid;
   text-align: center;
   grid-gap: 20px;
-  padding: 4rem 15px;
   margin: 0 auto;
 `;
 
 const NavWrap = styled.div`
   display: grid;
   grid-auto-flow: column;
+  height: 100%;
+  align-items: center;
   @media only screen and (max-width: 425px) {
     h3 {
-      font-size: 16px;
+      font-size: 12px;
       line-height: 1.2;
     }
+  }
+  h3{
+    margin-bottom: 0px;
   }
 `;
 
 const NavItemLeft = styled.div`
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 37px auto;
+  grid-template-columns: 10% 90%;
+  height: 100%;
+  align-items: center;
+  background-color: #e5e5e5;
+  padding: 1.5rem;
   &:hover {
     a {
       color: black;
@@ -39,15 +46,20 @@ const NavItemLeft = styled.div`
     span {
       transform: translateX(-10px);
     }
+    background-color: #ffa537;
   }
   @media only screen and (max-width: 425px) {
-    grid-template-columns: 37px 6rem;
-  }
+    grid-template-columns: 20% 70%;
+    grid-column-gap: 5px;
 `;
 const NavItemRight = styled.div`
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: auto 37px;
+  grid-template-columns: 90% 10%;
+  height: 100%;
+  align-items: center;
+  background-color: #dddddd;
+  padding: 1.5rem;
   &:hover {
     a {
       color: black;
@@ -58,9 +70,11 @@ const NavItemRight = styled.div`
     span {
       transform: translateX(10px);
     }
+    background-color: #ffa537;
   }
   @media only screen and (max-width: 425px) {
-    grid-template-columns: 6rem 37px;
+    grid-template-columns: 70% 20%;
+    grid-column-gap: 5px;
   }
 `;
 

@@ -60,7 +60,7 @@ const InfoContent = styled.p`
 
 const Footer = styled.div`
   padding: 20px 0px;
-  display: flex;
+  display: none;
   align-items: center;
   cursor: pointer;
 
@@ -99,7 +99,7 @@ const CovidSection1 = () => {
         <InfoSection>
           <InfoHeader>
             <InfoTitle>
-              Enhanced Community Quarantine: What You Need To Know
+              Enhanced Community Quarantine:<br/>What You Need To Know
             </InfoTitle>
             <img loading="lazy" alt="blue-line" src={blueline}></img>
           </InfoHeader>

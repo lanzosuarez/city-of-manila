@@ -7,7 +7,7 @@ const Container = styled.div`
   background: white;
   display: grid;
   text-align: center;
-  padding: 4rem 15px;
+  padding: 2rem 15px;
   grid-gap: 20px;
   width: 800px;
   margin: 0 auto;
