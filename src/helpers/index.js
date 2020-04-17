@@ -9,9 +9,8 @@ export const downloadFile = async (url, filename) => {
     const response = await fetch(url);
     const blob = await response.blob();
     a.href = window.URL.createObjectURL(blob);
-    a.setAttribute('download', filename);
+    a.setAttribute('download', `${filename}.pdf`);
     a.click();
-    // Cleanup
     window.URL.revokeObjectURL(a.href);
     document.body.removeChild(a);
   } catch (error) {
