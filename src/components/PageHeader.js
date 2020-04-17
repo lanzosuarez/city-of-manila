@@ -34,7 +34,7 @@ const PageContent = styled.div`
 
 const HeaderText = styled.h1`
   color: #fefefe;
-  font-size: 52px;
+  font-size: 45px;
   line-height: 1.3;
   @media (max-width: 768px) {
     width: 100%;

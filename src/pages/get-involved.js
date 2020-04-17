@@ -34,6 +34,13 @@ const Section2 = styled.div`
   text-align: center;
   background-color: #fafafa;
 `;
+const Section2Container = styled.div`
+  max-width: 900px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+`;
 const Section3 = styled.div``;
 const ItemWrap = styled.div`
   width: 100%;
@@ -155,7 +162,7 @@ const GetInvolvedPage = ({ location }) => {
             </PageContainer>
           </Section1>
           <Section2>
-            <PageContainer>
+            <Section2Container>
               <Section>
                 <h1>Take the Digital Health Survey Now</h1>
                 <img src={line} alt="blue line" className="line" />
@@ -178,7 +185,7 @@ const GetInvolvedPage = ({ location }) => {
                   <a href="http://m.me/iskomorenodomagoso/">Take The Survey</a>
                 </ButtonTracker>
               </Section>
-            </PageContainer>
+            </Section2Container>
           </Section2>
           <Section3>
             <PageContainer>

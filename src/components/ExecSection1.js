@@ -116,7 +116,7 @@ const iconStyle = {
   color: '#1ab1a2'
 };
 
-export const tabs = ['All', 'Executive Orders', 'City Resolution', 'Ordinance'];
+export const tabs = ['All', 'Executive Orders', 'City Resolutions', 'Ordinances'];
 
 const ExecSection1 = () => {
   const { activeTab, dateFilter, setActiveTab, setDateFilter } = useContext(

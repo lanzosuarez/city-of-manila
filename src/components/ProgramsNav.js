@@ -102,10 +102,10 @@ const ProgramsNav = () => {
                 ></ion-icon>
               </a>
             </IconCon>
-            <h3>Program Previous</h3>
+            <h3>Previous Program</h3>
           </NavItemLeft>
           <NavItemRight>
-            <h3>Program Next</h3>
+            <h3>Next Program</h3>
             <IconCon>
               <a href="">
                 <ion-icon
