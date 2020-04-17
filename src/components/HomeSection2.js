@@ -92,10 +92,7 @@ const HomeSection2 = () => {
         <OverlayHeader>01</OverlayHeader>
         <Header>Executive Orders</Header>
         <LineImage src={line} alt="blue line" />
-        <Content>
-          Directive issued by the Mayor of Manila that manages operations of the
-          city government.
-        </Content>
+        <Content>Directives issued by the Mayor of Manila.</Content>
         <Footer>
           <Link>READ MORE</Link>
           <IconCon>
@@ -112,8 +109,7 @@ const HomeSection2 = () => {
         <Header>Legislation</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-          Resolutions and ordinances passed by the City Council to be effective
-          after publication.
+          Resolutions and ordinances passed by Manila City Council
         </Content>
         <Footer>
           <Link>READ MORE</Link>
@@ -131,8 +127,8 @@ const HomeSection2 = () => {
         <Header>How To Help Manila</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-          The city is in need of medical and food supplies, as well as
-          volunteers. Learn how to donate or volunteer.
+          The city is in need of medical and food supplies. Learn you can do so
+          now.
         </Content>
         <Footer>
           <Link to="/get-involved#how-to-help">READ MORE</Link>

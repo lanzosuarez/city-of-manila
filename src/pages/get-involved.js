@@ -108,10 +108,10 @@ const Content = styled.div`
     height: auto;
   }
   @media only screen and (min-width: 769px) and (max-width: 834px) {
-    height:532px;
+    height: 532px;
   }
   @media only screen and (min-width: 835px) and (max-width: 1048px) {
-    height:26rem;
+    height: 26rem;
   }
 `;
 
@@ -120,11 +120,11 @@ const DonateButton = styled.div`
   text-align: center;
   background-color: #ffa537;
   padding: 15px;
-  h3{
-    margin-bottom:5px;
+  h3 {
+    margin-bottom: 5px;
   }
-  p{
-    margin-bottom:5px;
+  p {
+    margin-bottom: 5px;
   }
 `;
 
@@ -144,11 +144,12 @@ const GetInvolvedPage = ({ location }) => {
           <Section1>
             <PageContainer>
               <Section>
-                <h1>How you can help the city</h1>
+                <h1>How you can help Manila</h1>
                 <img src={line} alt="blue line" className="line" />
                 <p>
-                  The city of Manila calls on its residents to help build a
-                  better future for everyone.
+                  Mayor Isko calls on everyone in true bayanihan spirit to help
+                  Manilenos surivive the current Covid-19 pandemic and once we
+                  are out of this period, build a better future for Manila.
                 </p>
               </Section>
             </PageContainer>
@@ -156,20 +157,22 @@ const GetInvolvedPage = ({ location }) => {
           <Section2>
             <PageContainer>
               <Section>
-                <h1>Digital Health Survey</h1>
+                <h1>Take the Digital Health Survey Now</h1>
                 <img src={line} alt="blue line" className="line" />
                 <p>
-                  An online Facebook questionnaire which allows Manileños to
-                  update city health officials about their current health
-                  situation through an easy and accessible channel.
+                  Transparent and open sharing of information is critical
+                  towards identifying persons who may be at risk for
+                  coronavirus.
                 </p>
                 <p>
-                  This helpful tool encourages respondents to think objectively
-                  about their health within the Covid-19 context.
+                  This helpful tool embedded in Mayor Isko's FB page encourages
+                  respondents to think objectively about their health within the
+                  Covid-19 context.
                 </p>
                 <p>
-                  You can access the survey 24x7 by hitting the “Send Message”
-                  button on his official FB Page.
+                  Data collected from the survey will help the City of Manila to
+                  proactively reach out to you, if you need critical health
+                  assistance now.
                 </p>
                 <ButtonTracker>
                   <a href="http://m.me/iskomorenodomagoso/">Take The Survey</a>

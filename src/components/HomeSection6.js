@@ -113,9 +113,6 @@ const Item = ({ img, title, sub, content, content2 }) => {
       </ItemHeader>
       <Content>
         {content}
-        <br />
-        <br />
-        {content2}
       </Content>
     </ItemContainer>
   );
@@ -127,7 +124,7 @@ const items = [
     sub: 'Jul 8, 2019',
     img: logo1,
     content:
-      '"Manila has become one of the first cities to pass a curfew ordinance, and the only city in Metro Manila which has build an infectious disease center."'
+      '"Manila has become one of the first cities to pass a curfew ordinance, and the only city in Metro Manila which has built an infectious disease center."'
   },
   {
     title: 'Manila Bulletin',
@@ -141,9 +138,7 @@ const items = [
     sub: 'April 13, 2020',
     img: logo3,
     content:
-      '"The city of Manila is now ready to conduct localized mass targeted testing for COVID-19, with the Philippine capital capable of conducting more than 1,000 swab tests weekly.',
-    content2:
-      'Covid-19 response chief implementer Carlito Galvez described Sunday the planned aggressive testing as a “game changer” as it would be the key to the government’s plan to identify COVID-19 patients, isolate and treat them."'
+      '"Manila is now ready to conduct localized mass targeted testing for COVID-19, with the Philippine capital capable of conducting more than 1,000 swab tests weekly... Covid-19 response chief implementer Carlito Galvez described Sunday the planned aggressive testing as a “game changer” as it would be the key to the government’s plan to identify COVID-19 patients, isolate and treat them."'
   }
 ];
 

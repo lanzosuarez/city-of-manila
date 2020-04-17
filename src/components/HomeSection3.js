@@ -78,8 +78,8 @@ const HomeSection3 = () => {
       <Item bg={bg3}>
         <Overlay className="overlay" />
         <Content className="content">
-          <Text>Digital Health Survey</Text>
-          <Paragraph>Take the survey now and help save a life.</Paragraph>
+          <Text>Covid-19 Digital Health Survey</Text>
+          <Paragraph>Take one of the world's first Covid-19 health surveys now and help us flatten the curve.</Paragraph>
         </Content>
         <Link to="/covid#digital-survey">
         <ion-icon
@@ -99,7 +99,7 @@ const HomeSection3 = () => {
         <Content className="content">
           <Text>Enhanced Community Quarantine</Text>
           <Paragraph>
-            Important information on the Enhanced Community Quarantine
+            Important information on the Enhanced Community Quarantine.
           </Paragraph>
         </Content>
         <Link to="/covid#ecq">

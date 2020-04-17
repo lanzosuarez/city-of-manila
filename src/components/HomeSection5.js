@@ -78,9 +78,8 @@ const HomeSection5 = () => {
         <Text>Meet Mayor Isko</Text>
         <img src={line} style={lineStyle} alt="blue line" className="line" />
         <SubText>
-          The City of Manila will retake her place as a leading global city,
-          with opporunities for all, prosperity for many, compassion for
-          everyone.
+          "The City of Manila will retake her place as a leading global city,
+          with opportunities for all and compassion for everyone."
         </SubText>
         <LearnMore
           to="/about"

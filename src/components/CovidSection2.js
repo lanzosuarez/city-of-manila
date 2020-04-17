@@ -105,8 +105,8 @@ const CovidSection2 = () => {
         </LeftContainer>
         <RightContainer>
           <Header>
-            <p>Do your part</p>
-            <h1> Take the digital health survey. Save a life. </h1>
+            <p>You can help us flatten the curve now</p>
+            <h1>Take the Covid-19 Digital Health Survey now; your life just might depend on it</h1>
             <img
               loading="lazy"
               src={blueline}
