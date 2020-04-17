@@ -19,10 +19,10 @@ const ExecutiveAndLegislativePage = ({ data }) => {
     <NavigationProvider>
       <ExecAndLegislationProvider>
         <Layout>
-          <SEO title="Executive And Legislation" />
+          <SEO title="Executive Orders, City Resolutions, and Ordinances" />
           <Notice />
           <Navigation />
-          <PageHeader name="Executive And Legislation" />
+          <PageHeader name="Executive Orders, City Resolutions, and Ordinances" />
           <ExecSection1 items={items} />
           <ExecSection2 items={items} />
         </Layout>

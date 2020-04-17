@@ -22,16 +22,25 @@ const PageContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
 
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     padding: 0px 20px;
+    width: 100%;
   }
 `;
 
 const HeaderText = styled.h1`
   color: #fefefe;
   font-size: 52px;
-  line-height: 52px;
+  line-height: 1.3;
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 1.3;
+  }
 `;
 
 const PageBreadcrumbs = styled.p`

@@ -25,7 +25,7 @@ const ItemWrap = styled.div`
   display: grid;
   grid-column-gap: 102px;
   grid-row-gap: 16px;
-  grid-template-columns: 40% 40%;
+  grid-template-columns: 45% 45%;
   justify-content: center;
   align-items: flex-start;
 
