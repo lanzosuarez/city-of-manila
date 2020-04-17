@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import format from 'date-fns/format';
 
 import placeholder from '../images/team-placeholder.png';
 import DownloadExec from './DownloadExec';
+import { ExecAndLegislationContext } from '../context/ExecAndLegislationProvider';
 
 const Container = styled.div`
   max-width: 1170px;
@@ -63,7 +64,6 @@ const ListItem = styled.div`
 `;
 
 const Avatar = styled.img`
-
   @media (max-width: 576px) {
     display: none;
   }
@@ -109,6 +109,22 @@ const Buttons = styled.div`
 `;
 
 const ExecSection2 = ({ items }) => {
+  const { activeTab } = useContext(ExecAndLegislationContext);
+  const activeCategory = () => {
+    switch (activeTab) {
+      case 0:
+        return 'All';
+      case 1:
+        return 'Executive Order';
+      case 2:
+        return 'City Resolution';
+      case 3:
+        return 'Ordinance';
+      default:
+        return 'All';
+    }
+  };
+
   return (
     <Container>
       <ListContainer>
@@ -130,25 +146,33 @@ const ExecSection2 = ({ items }) => {
           </HeaderItem>
         </Header>
         <List>
-          {items.map(({ node: i }, idx) => (
-            <ListItem key={idx}>
-              <Avatar alt="item_avatar" src={placeholder}></Avatar>
-              <Details>
-                <Type>{i.name}</Type>
-                <Name>{i.description.description}</Name>
-                <ItemDate>
-                  {format(new Date(i.publishedDate), 'MMMM dd, yyyy')}
-                </ItemDate>
-                <Buttons>
-                  <DownloadExec
-                    type={i.type}
-                    url={i.file.file.url}
-                    filename={i.name}
-                  />
-                </Buttons>
-              </Details>
-            </ListItem>
-          ))}
+          {items
+            .filter(i => {
+              const categoryFilter = activeCategory();
+              if (categoryFilter === 'All') {
+                return true;
+              }
+              return i.node.type === categoryFilter;
+            })
+            .map(({ node: i }, idx) => (
+              <ListItem key={idx}>
+                <Avatar alt="item_avatar" src={placeholder}></Avatar>
+                <Details>
+                  <Type>{i.name}</Type>
+                  <Name>{i.description.description}</Name>
+                  <ItemDate>
+                    {format(new Date(i.publishedDate), 'MMMM dd, yyyy')}
+                  </ItemDate>
+                  <Buttons>
+                    <DownloadExec
+                      type={i.type}
+                      url={i.file.file.url}
+                      filename={i.name}
+                    />
+                  </Buttons>
+                </Details>
+              </ListItem>
+            ))}
         </List>
       </ListContainer>
     </Container>
