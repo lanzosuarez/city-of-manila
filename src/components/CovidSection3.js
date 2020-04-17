@@ -86,7 +86,7 @@ const CovidSection3 = () => {
           <TextHeader>How to prevent COVID-19</TextHeader>
           <p>1. Avoid touching your eyes, nose and mouth with unwashed hands</p>
           <p>2. Wash your hands thouroughly with soap and water</p>
-          <p>3. Clean and diisinfect surfaces such as doorknobs</p>
+          <p>3. Clean and disinfect surfaces such as doorknobs</p>
           <p>4. Practice social distancing</p>
           <p>5. Cover your nose and mouth when coughing and sneezing</p>
         </LeftContainer>
@@ -212,14 +212,7 @@ const CovidSection3 = () => {
             <a href="www.covid19.gov.ph">
               <ManilaContactDiv>
                 <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
-                Official website of the IAFT
-                <br />
-              </ManilaContactDiv>
-            </a>
-            <a href="www.manila.gov.ph">
-              <ManilaContactDiv>
-                <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
-                Official website of the City of Manila
+                Official website of the IATF
                 <br />
               </ManilaContactDiv>
             </a>
