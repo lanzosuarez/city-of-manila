@@ -126,7 +126,7 @@ const HomeSection3 = () => {
             care and assistance during the Enhanced Community Quarantine.
           </Paragraph>
         </Content>
-        <Link to="/covid">
+        <Link to="/covid#manila's-response">
         <ion-icon
           style={{
             position: 'relative',

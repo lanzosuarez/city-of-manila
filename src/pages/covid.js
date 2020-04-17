@@ -6,6 +6,7 @@ import NavigationProvider from '../context/NavigationProvider';
 import CovidSection1 from '../components/CovidSection1';
 import CovidSection2 from '../components/CovidSection2';
 import CovidSection3 from '../components/CovidSection3';
+import CovidSection4 from '../components/CovidSection4';
 import banner from '../images/covid-banner.jpg';
 import styled from '@emotion/styled';
 import PageContainer from '../components/PageContainer';
@@ -194,7 +195,9 @@ const CovidPage = ({ location }) => {
                   <Link to="/contact">Contact</Link>
                 </Button>
                 <ButtonTracker>
-                  <a href="https://www.doh.gov.ph/covid19tracker">COVID-19 Tracker</a>
+                  <a href="https://www.doh.gov.ph/covid19tracker">
+                    COVID-19 Tracker
+                  </a>
                 </ButtonTracker>
               </ButtonContainer>
             </BannerContainer>
@@ -213,6 +216,11 @@ const CovidPage = ({ location }) => {
         <Section>
           <PageContainer id="what-you-need-to-know">
             <CovidSection3 />
+          </PageContainer>
+        </Section>
+        <Section>
+          <PageContainer id="manila's-response">
+            <CovidSection4 />
           </PageContainer>
         </Section>
       </Layout>
