@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { programsPath } from '../templates/program';
+import { Link } from 'gatsby';
 
 const MaxContainer = styled.div`
   background-color: #dddddd;
@@ -23,7 +25,7 @@ const NavWrap = styled.div`
       line-height: 1.2;
     }
   }
-  h3{
+  h3 {
     margin-bottom: 0px;
   }
 `;
@@ -51,6 +53,7 @@ const NavItemLeft = styled.div`
   @media only screen and (max-width: 425px) {
     grid-template-columns: 20% 70%;
     grid-column-gap: 5px;
+  }
 `;
 const NavItemRight = styled.div`
   display: grid;
@@ -88,33 +91,44 @@ const IconCon = styled.span`
   cursor: pointer;
 `;
 
-const ProgramsNav = () => {
+const ProgramsNav = ({ activeProgram }) => {
+  const activeProgramIndex = programsPath.indexOf(activeProgram);
+  const hasNext = activeProgramIndex <= programsPath.length - 2;
+  const hasPrev = activeProgramIndex >= 1;
+
+  const next = programsPath[activeProgramIndex + 1];
+  const prev = programsPath[activeProgramIndex - 1];
+
   return (
     <MaxContainer>
       <Container>
         <NavWrap>
-          <NavItemLeft>
-            <IconCon>
-              <a href="">
-                <ion-icon
-                  style={iconStyle}
-                  name="arrow-back-outline"
-                ></ion-icon>
-              </a>
-            </IconCon>
-            <h3>Previous Program</h3>
-          </NavItemLeft>
-          <NavItemRight>
-            <h3>Next Program</h3>
-            <IconCon>
-              <a href="">
-                <ion-icon
-                  style={iconStyle}
-                  name="arrow-forward-outline"
-                ></ion-icon>
-              </a>
-            </IconCon>
-          </NavItemRight>
+          {hasPrev && (
+            <NavItemLeft>
+              <IconCon>
+                <Link to={prev}>
+                  <ion-icon
+                    style={iconStyle}
+                    name="arrow-back-outline"
+                  ></ion-icon>
+                </Link>
+              </IconCon>
+              <h3>Previous Program</h3>
+            </NavItemLeft>
+          )}
+          {hasNext && (
+            <NavItemRight>
+              <h3>Next Program</h3>
+              <IconCon>
+                <Link to={next}>
+                  <ion-icon
+                    style={iconStyle}
+                    name="arrow-forward-outline"
+                  ></ion-icon>
+                </Link>
+              </IconCon>
+            </NavItemRight>
+          )}
         </NavWrap>
       </Container>
     </MaxContainer>

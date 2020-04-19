@@ -17,3 +17,15 @@ export const downloadFile = async (url, filename) => {
     throw error;
   }
 };
+
+export const searchItems = (term, arr) => {
+  if (term === '') return arr;
+  const regex = new RegExp(term, 'ig');
+
+  return arr.filter(
+    i => regex.test(i.node.name) || regex.test(i.node.description.description)
+  );
+};
+
+export const pipe = (...fns) => val =>
+  fns.reduce((currentValue, currentFn) => currentFn(currentValue), val);

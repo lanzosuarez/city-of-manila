@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import styled from '@emotion/styled';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import { ExecAndLegislationContext } from '../context/ExecAndLegislationProvider';
+import CustomSelect from './CustomSelect';
 
 const Container = styled.div`
   max-width: 1170px;
@@ -29,6 +30,12 @@ const SearchContainer = styled.div`
   @media (max-width: 576px) {
     width: 90%;
     padding: 20px 15px;
+    grid-template-rows: auto 1fr;
+
+    #custom-select {
+      display: flex;
+      grid-row: 2;
+    }
   }
 `;
 
@@ -40,12 +47,10 @@ const Categories = styled.div`
   @media (max-width: 768px) {
     grid-row: 2;
   }
-  /* 
+
   @media (max-width: 576px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 20px;
-  } */
+    display: none;
+  }
 `;
 
 const Category = styled.div`
@@ -109,6 +114,10 @@ const SearchInput = styled.input`
   font-size: 0.7rem;
   padding: 5px 10px;
   border-radius: 5px;
+
+  @media (max-width: 576px) {
+    height: 40px;
+  }
 `;
 
 const iconStyle = {
@@ -116,31 +125,45 @@ const iconStyle = {
   color: '#1ab1a2'
 };
 
-export const tabs = ['All', 'Executive Orders', 'City Resolutions', 'Ordinances'];
+export const tabs = [
+  'All',
+  'Executive Orders',
+  'City Resolutions',
+  'Ordinances'
+];
 
 const ExecSection1 = () => {
-  const { activeTab, dateFilter, setActiveTab, setDateFilter } = useContext(
+  const { activeTab, filters, setActiveTab, setFilters } = useContext(
     ExecAndLegislationContext
   );
 
   const onSelectTab = idx => () => setActiveTab(idx);
-  const selectRange = dateRange => setDateFilter({ ...dateFilter, dateRange });
+  const selectRange = dateRange => setFilters({ ...filters, dateRange });
+  const searchByText = e =>
+    setFilters({ ...filters, searchText: e.target.value });
 
-  const showDateFilter = () => setDateFilter({ ...dateFilter, show: true });
+  const showDateFilter = () => setFilters({ ...filters, showDateFilter: true });
+
+  const onSelect = idx => setActiveTab(idx);
 
   return (
     <Container>
       <SearchContainer>
+        <CustomSelect onChange={onSelect} activeTab={activeTab} />
         <Categories>
           {tabs.map((tab, idx) => (
-            <Category onClick={onSelectTab(idx)} active={idx === activeTab}>
+            <Category
+              key={idx}
+              onClick={onSelectTab(idx)}
+              active={idx === activeTab}
+            >
               <span>{tab}</span>
             </Category>
           ))}
         </Categories>
         <Filters>
           <SearchCon>
-            {!dateFilter.show ? (
+            {!filters.showDateFilter ? (
               <FilterByDate>
                 <h5> Filter by Date</h5>
                 <ion-icon
@@ -167,7 +190,7 @@ const ExecSection1 = () => {
                     name="calendar"
                   ></ion-icon>
                 }
-                value={dateFilter.dateRange}
+                value={filters.dateRange}
               />
             )}
           </SearchCon>
@@ -176,7 +199,12 @@ const ExecSection1 = () => {
               style={{ ...iconStyle, marginRight: 10 }}
               name="search"
             ></ion-icon>
-            <SearchInput placeholder="Keyword" type="text"></SearchInput>
+            <SearchInput
+              pattern="^[a-zA-Z0-9]+$"
+              onChange={searchByText}
+              placeholder="Keyword"
+              type="text"
+            ></SearchInput>
           </SearchCon>
         </Filters>
       </SearchContainer>
