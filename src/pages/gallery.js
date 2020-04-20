@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React,  { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 
 import VideoPlaceholder from '../images/video-placeholder.jpg';
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
+import VideoGallery from '../components/VideoGallery';
+import PhotoGallery from '../components/PhotoGallery';
 import Layout from '../components/Layout';
 import NavigationProvider from '../context/NavigationProvider';
 import SEO from '../components/SEO';
@@ -60,81 +62,25 @@ const TabContainer = styled.div`
   margin: 0 auto;
 `;
 
-const Tab = styled.h3`
+const Tab = styled.div`
+  cursor: pointer;
   margin: 0 auto;
-  color: #989797;
-  font-weight: 600;
-`;
-
-const active = {
-  borderBottom: '2px solid #05326b',
-  color: '#05326b',
-  fontWeight: '700',
-  paddingBottom: '8px'
-};
-
-const ListContainer = styled.div`
-  margin: 0 auto;
-  background: white;
-  margin-top: 50px;
-  display: grid;
-
-  @media (max-width: 768px) {
-    width: 90%;
+  color: ${props => (props.active ? '#05326b' : '#989797')};
+  font-weight: ${props => (props.active ? '700' : '600')};
+  padding-bottom: ${props => (props.active ? '8px' : '0px')};
+  border-bottom: ${props => (props.active ? '2px solid #05326b' : 'none')};
+  h3{
+    margin-bottom: 0.5rem;
   }
 `;
 
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
+export const tabs = ['Videos', 'Photos'];
 
-const HeaderItem = styled.div`
-  /* flex: 1; */
-`;
-
-const Figure = styled.h3`
-  display: inline;
-  margin: 0;
-  color: var(--blue);
-  margin-right: 10px;
-`;
-
-const iconStyle = {
-  color: 'var(--blue)',
-  cursor: 'pointer'
-};
-const AssetContainer = styled.div`
-  max-height: 309px;
-  @media only screen and (max-width: 768px) {
-    max-height: 100%;
-  }
-`;
-const VideoItem = styled.img`
-  width: 100%;
-  height: auto;
-`;
-const AssetWrap = styled.div`
-  width: 48%;
-  h3 {
-    margin-top: 1.45rem;
-    margin-bottom: 1rem;
-    color: #05326b;
-    line-height: 1.3;
-  }
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-  }
-`;
-const AssetList = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 100%;
-  margin: 1rem 0px;
-`;
 const GalleryPage = ({ location }) => {
+  const [activeTab, setActiveTab ] = useState(0);
+
+  const onSelectTab = idx => () => setActiveTab(idx);
+
   useEffect(() => {
     scrollToSection(location);
   }, [location]);
@@ -164,72 +110,18 @@ const GalleryPage = ({ location }) => {
             </PageContainer>
             <Section>
               <TabContainer>
-                <Tab style={active}>Videos</Tab>
-                <Tab>Photos</Tab>
+                {tabs.map((tab, idx) => (
+                  <Tab
+                    key={idx}
+                    onClick={onSelectTab(idx)}
+                    active={idx === activeTab}
+                  >
+                    <h3>{tab}</h3>
+                  </Tab>
+                ))}
               </TabContainer>
-              <PageContainer>
-                <ListContainer>
-                  <Header>
-                    <HeaderItem>
-                      <Figure>100</Figure>Videos
-                    </HeaderItem>
-                    <HeaderItem>
-                      <ion-icon
-                        style={{ ...iconStyle, marginRight: 10 }}
-                        size="large"
-                        name="arrow-back"
-                      ></ion-icon>
-                      <ion-icon
-                        style={iconStyle}
-                        size="large"
-                        name="arrow-forward"
-                      ></ion-icon>
-                    </HeaderItem>
-                  </Header>
-                </ListContainer>
-                <AssetList>
-                  <AssetWrap>
-                    <AssetContainer>
-                      <VideoItem src={VideoPlaceholder} alt="Featured Video" />
-                    </AssetContainer>
-                    <h3>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor
-                    </h3>
-                    <p>April 04, 2020</p>
-                  </AssetWrap>
-                  <AssetWrap>
-                    <AssetContainer>
-                      <VideoItem src={VideoPlaceholder} alt="Featured Video" />
-                    </AssetContainer>
-                    <h3>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor
-                    </h3>
-                    <p>April 04, 2020</p>
-                  </AssetWrap>
-                  <AssetWrap>
-                    <AssetContainer>
-                      <VideoItem src={VideoPlaceholder} alt="Featured Video" />
-                    </AssetContainer>
-                    <h3>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor
-                    </h3>
-                    <p>April 04, 2020</p>
-                  </AssetWrap>
-                  <AssetWrap>
-                    <AssetContainer>
-                      <VideoItem src={VideoPlaceholder} alt="Featured Video" />
-                    </AssetContainer>
-                    <h3>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor
-                    </h3>
-                    <p>April 04, 2020</p>
-                  </AssetWrap>
-                </AssetList>
-              </PageContainer>
+              {activeTab == '0' && <VideoGallery/>}
+              {activeTab == '1' && <PhotoGallery/>}
             </Section>
           </PageContainer>
         </Wrapper>
