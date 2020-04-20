@@ -15,9 +15,6 @@ import ProgramShare from '../components/ProgramShare';
 import ProgramsSection2 from '../components/ProgramSection2';
 import ProgramsSection3 from '../components/ProgramSection3';
 import ProgramsNav from '../components/ProgramsNav';
-import ProgramsSection4 from '../components/ProgramSection4';
-import ProgramsSection5 from '../components/ProgramSection5';
-import ProgramsSection6 from '../components/ProgramSection6';
 
 const Grid = styled.div`
   display: grid;
@@ -25,9 +22,25 @@ const Grid = styled.div`
   grid-gap: 50px;
 `;
 
+export const programsPath = [
+  '/programs/economic-development',
+  '/programs/social-amelioration',
+  '/programs/physical-redevelopment',
+  '/programs/green-spaces',
+  '/programs/business-and-investor-revitalization',
+  '/programs/tourism'
+];
+
 const ProgramsTemplate = ({ data }) => {
   const {
-    contentfulPrograms: { bannerTitle, pageType, section1, section2, section3 }
+    contentfulPrograms: {
+      bannerTitle,
+      pageType,
+      section1,
+      section2,
+      section3,
+      slug
+    }
   } = data;
   return (
     <NavigationProvider>
@@ -48,7 +61,7 @@ const ProgramsTemplate = ({ data }) => {
             </PageContainer>
           )}
         </Grid>
-        <ProgramsNav/>
+        <ProgramsNav activeProgram={slug} />
       </Layout>
     </NavigationProvider>
   );
@@ -57,6 +70,7 @@ const ProgramsTemplate = ({ data }) => {
 export const query = graphql`
   query($slug: String!) {
     contentfulPrograms(slug: { eq: $slug }) {
+      slug
       bannerTitle
       pageType
       section1 {

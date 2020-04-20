@@ -47,7 +47,6 @@ const Content = styled.p`
 `;
 
 const ProgramsSection1 = ({ content }) => {
-  console.log(content);
   return (
     <Container>
       <Title>{content.title}</Title>
