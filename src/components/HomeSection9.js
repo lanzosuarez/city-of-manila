@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import format from 'date-fns/format';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import line from '../images/blue-line.png';
-import section9Img1 from '../images/section-9-img-1.png';
-import section9Img2 from '../images/section-9-img-2.png';
-import section9Img3 from '../images/section-9-img-3.png';
-import section9Img4 from '../images/section-9-img-4.png';
 
 import PageContainer from '../components/PageContainer';
 
@@ -162,7 +160,33 @@ const DateStyle = styled.p`
   font-weight: 800;
 `;
 
+const Avatar = styled.div`
+  background: ${props => `url(${props.imgUrl})`};
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
 const HomeSection9 = () => {
+  const { allContentfulLatestUpdate } = useStaticQuery(
+    graphql`
+      query {
+        allContentfulLatestUpdate {
+          edges {
+            node {
+              name {
+                name
+              }
+              publishedDate
+              link
+              imgUrl
+            }
+          }
+        }
+      }
+    `
+  );
   return (
     <Wrapper>
       <PageContainer>
@@ -171,60 +195,39 @@ const HomeSection9 = () => {
             <LeftContainer>
               <h1 style={H1Style}>Latest Updates</h1>
               <img src={line} alt="blue line" className="line" />
-              <p>Lorem ipsum dolor sit amet</p>
             </LeftContainer>
             <RightContainer>
               <span>
                 <ion-icon style={iconStyle} name="apps"></ion-icon>
               </span>
-              <p style={pStyle}>View All</p>
+              <p style={pStyle}>
+                <a
+                  target="__blank"
+                  href="http://manila.gov.ph/news-and-events/?fbclid=IwAR3daba7n261vJWRy3znEw3zmlXL15cv0ZV1kpW4h3yomxVdtErjsfO56_A"
+                >
+                  View All
+                </a>
+              </p>
             </RightContainer>
           </Section>
           <CardContainer>
-            <Card>
-              <img src={section9Img1} alt="Latest Update" className="line" />
-              <CardContent>
-                <CardHeader>
-                  Lorem ipsum dolor sit amet
-                </CardHeader>
-              </CardContent>
-              <DateContent>
-                <DateStyle>April 04, 2020</DateStyle>
-              </DateContent>
-            </Card>
-            <Card>
-              <img src={section9Img2} alt="Latest Update" className="line" />
-              <CardContent>
-                <CardHeader>
-                  Lorem ipsum dolor sit amet
-                </CardHeader>
-              </CardContent>
-              <DateContent>
-                <DateStyle>April 04, 2020</DateStyle>
-              </DateContent>
-            </Card>
-            <Card>
-              <img src={section9Img3} alt="Latest Update" className="line" />
-              <CardContent>
-                <CardHeader>
-                  Lorem ipsum dolor sit amet
-                </CardHeader>
-              </CardContent>
-              <DateContent>
-                <DateStyle>April 04, 2020</DateStyle>
-              </DateContent>
-            </Card>
-            <Card>
-              <img src={section9Img4} alt="Latest Update" className="line" />
-              <CardContent>
-                <CardHeader>
-                  Lorem ipsum dolor sit amet
-                </CardHeader>
-              </CardContent>
-              <DateContent>
-                <DateStyle>April 04, 2020</DateStyle>
-              </DateContent>
-            </Card>
+            {allContentfulLatestUpdate.edges.map(({ node }) => (
+              <Card>
+                <Avatar imgUrl={node.imgUrl} />
+                <CardContent>
+                  <CardHeader>
+                    <a target="__blank" href={node.link}>
+                      {node.name.name}
+                    </a>
+                  </CardHeader>
+                </CardContent>
+                <DateContent>
+                  <DateStyle>
+                    {format(new Date(node.publishedDate), 'MMMM dd, yyyy')}
+                  </DateStyle>
+                </DateContent>
+              </Card>
+            ))}
           </CardContainer>
         </div>
       </PageContainer>

@@ -44,7 +44,8 @@ const Pagination = ({
   setPage: setItemPage,
   onPageChange = () => {},
   nextPage,
-  prevPage
+  prevPage,
+  activeTab
 }) => {
   const pages = Math.ceil(items.length / 5);
 
@@ -56,7 +57,7 @@ const Pagination = ({
       .map((_, idx) => items[skip + idx])
       .filter(i => !!i);
     onPageChange(paginatedItems);
-  }, [itemPage, items]);
+  }, [itemPage, items, activeTab]);
 
   const showdedButtons = useMemo(() => {
     const numOfPages = Math.ceil(items.length / 5);
@@ -67,7 +68,7 @@ const Pagination = ({
     const btns = [...new Array(numOfPages)].map((_, i) => i + 1);
 
     return btns.slice(skip);
-  }, [itemPage, items]);
+  }, [itemPage, items, activeTab]);
 
   return (
     <Container>
