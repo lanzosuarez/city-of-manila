@@ -111,7 +111,7 @@ const Card = styled.div`
   border-radius: 2px;
   display: flex;
   flex-direction: column;
-  height: 360px;
+  height: 327px;
   position: relative;
   width: 270px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.06);
@@ -121,6 +121,7 @@ const Card = styled.div`
   }
   @media only screen and (max-width: 425px) {
     margin: 20px auto;
+    height: 277px;
   }
   @media only screen and (min-width: 426px) and (max-width: 728px) {
     margin: 20px auto;
@@ -131,33 +132,37 @@ const Card = styled.div`
 `;
 
 const CardContent = styled.div`
-  width: 200px;
+  width: 100%;
   margin: 0 auto;
-  height: 150px;
+  height: inherit;
+  min-height: 100px;
   overflow-y: hidden;
-  margin-bottom: 20px;
-  margin-top: 5px;
+  padding: 1rem;
 `;
 
 const CardHeader = styled.h3`
   line-height: 1.3;
   color: #2d2d2d;
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0px;
 `;
 
 const DateContent = styled.div`
+  align-self: center;
   height: 50px;
   display: flex;
-  padding: 15px 40px;
+  padding: 15px 1rem;
   border-top: 1px solid #e1e1e1;
+  width: 100%;
 `;
 
 const DateStyle = styled.p`
   margin-bottom: 0px;
   align-self: center;
   color: #04326a;
-  font-weight: 800;
+  font-weight: 600;
+  font-size: 1rem;
 `;
 
 const Avatar = styled.div`

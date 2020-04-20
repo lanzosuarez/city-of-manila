@@ -23,7 +23,7 @@ const Pages = styled.ul`
 `;
 
 const Page = styled.li`
-  font-size: 1.3rem;
+  font-size: 18px;
   width: 30px;
   height: 30px;
   background: ${props => (props.active ? '#17b1a2' : 'none')};
