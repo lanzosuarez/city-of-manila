@@ -135,7 +135,7 @@ const ExecSection2 = ({ items }) => {
 
   useEffect(() => {
     setPage(1);
-  }, [filters, items]);
+  }, [filters, items, activeTab]);
 
   const pageItems = useMemo(
     () =>
@@ -157,7 +157,7 @@ const ExecSection2 = ({ items }) => {
             return isAfter(pDate, p) && isBefore(pDate, a);
           })
       )(items),
-    [filters]
+    [filters, activeTab]
   );
 
   const pages = Math.ceil(pageItems.length / 5);
@@ -218,6 +218,7 @@ const ExecSection2 = ({ items }) => {
         page={page}
         items={pageItems}
         onPageChange={setPaginatedItems}
+        activeTab={activeTab}
       />
     </Container>
   );

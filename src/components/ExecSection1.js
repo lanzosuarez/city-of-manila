@@ -142,7 +142,8 @@ const ExecSection1 = () => {
   const searchByText = e =>
     setFilters({ ...filters, searchText: e.target.value });
 
-  const showDateFilter = () => setFilters({ ...filters, showDateFilter: true });
+  const showDateFilter = showDateFilter => () =>
+    setFilters({ ...filters, showDateFilter: true });
 
   const onSelect = idx => setActiveTab(idx);
 
@@ -167,7 +168,7 @@ const ExecSection1 = () => {
               <FilterByDate>
                 <h5> Filter by Date</h5>
                 <ion-icon
-                  onClick={showDateFilter}
+                  onClick={showDateFilter(true)}
                   size="small"
                   style={iconStyle}
                   name="calendar"
@@ -178,6 +179,7 @@ const ExecSection1 = () => {
                 onChange={selectRange}
                 clearIcon={
                   <ion-icon
+                    onClick={showDateFilter(false)}
                     size="small"
                     style={iconStyle}
                     name="close-outline"
