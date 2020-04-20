@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import '../styles/about.css';
 
 import line from '../images/blue-line.png';
-import placeholder from '../images/get-involved-placeholder.png';
+import placeholder from '../images/get-involved-placeholder2.png';
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
 import Layout from '../components/Layout';

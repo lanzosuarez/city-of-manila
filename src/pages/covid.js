@@ -204,7 +204,7 @@ const CovidPage = ({ location }) => {
                   <Link to="/contact">Contact</Link>
                 </Button>
                 <ButtonTracker>
-                  <a href="https://www.doh.gov.ph/covid19tracker">
+                  <a href="https://covid19stats.ph/">
                     COVID-19 Tracker
                   </a>
                 </ButtonTracker>
