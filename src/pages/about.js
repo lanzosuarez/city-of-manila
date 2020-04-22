@@ -4,11 +4,11 @@ import '../styles/about.css';
 
 import line from '../images/blue-line.png';
 import whiteline from '../images/white-line.png';
-import imgSection2 from '../images/about-section-2.png';
+import imgSection2 from '../images/about-section-2.jpg';
 import imgSection2Quote from '../images/about-section-2-quote-box.png';
 import section3Bg from '../images/about-section-3.png';
 import section5Bg from '../images/about-section-5.png';
-import section5Img from '../images/about-section-5-img.png';
+import section5Img from '../images/about-section-5-img.jpg';
 
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';

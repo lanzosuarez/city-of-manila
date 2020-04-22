@@ -89,8 +89,6 @@ const VideoGallery = () => {
 
  const items = data.allContentfulVideoGallery.edges;
 
- console.log(items)
-
   return (
     <PageContainer>
       <ListContainer>
