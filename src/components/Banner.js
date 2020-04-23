@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import { CSSTransition } from 'react-transition-group';
+import format from 'date-fns/format';
 
 import '../styles/banner.css';
 
@@ -9,6 +10,7 @@ import banner2 from '../images/header-slide-2.jpg';
 import Notice from './Notice';
 import Navigation from './Navigation';
 import LearnMore from './LearnMore';
+import { getTemp } from '../helpers';
 
 const Container = styled.div`
   position: relative;
@@ -38,11 +40,19 @@ const BannerOverlay = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgb(3,28,59);
-  background: linear-gradient(90deg, rgba(5,16,29,0.7906512946975666) 12%, rgba(5,16,29,0.1856092778908438) 53%);
+  background: rgb(3, 28, 59);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 16, 29, 0.7906512946975666) 12%,
+    rgba(5, 16, 29, 0.1856092778908438) 53%
+  );
   z-index: 3;
   @media (max-width: 576px) {
-    background:  linear-gradient(177deg, rgba(5,16,29,0.7906512946975666) 0%, rgba(5,16,29,0.1856092778908438) 59%);
+    background: linear-gradient(
+      177deg,
+      rgba(5, 16, 29, 0.7906512946975666) 0%,
+      rgba(5, 16, 29, 0.1856092778908438) 59%
+    );
   }
 `;
 
@@ -183,11 +193,12 @@ const MobileTimeSection = styled.div`
     flex-direction: column;
     font-size: 0.8rem !important;
   }
-  h4{
+  h4 {
     @media (max-width: 576px) {
       font-size: 12px;
       line-height: 1.5;
     }
+  }
 `;
 
 const ButtonCon = styled.div`
@@ -263,7 +274,9 @@ const texts = [
   }
 ];
 
-const LocalTime = ({ transitionFlag }) => {
+const localTime = () => format(new Date(), 'H:mm ');
+
+const LocalTime = ({ transitionFlag, temp }) => {
   return (
     <CSSTransition
       appear
@@ -274,10 +287,10 @@ const LocalTime = ({ transitionFlag }) => {
       <BannerTimeSection>
         <div>
           <h4 className="time-section-weather">
-            26 &#8451; <ion-icon name="sunny"></ion-icon>
+            {temp} &#8451; <ion-icon name="sunny"></ion-icon>
           </h4>
           <h4 className="time-section-local">
-            <span>14:12</span>
+            <span>{localTime()}</span>
             &nbsp; LOCAL TIME
           </h4>
         </div>
@@ -286,7 +299,7 @@ const LocalTime = ({ transitionFlag }) => {
   );
 };
 
-const MobileLocalTime = ({ transitionFlag }) => {
+const MobileLocalTime = ({ transitionFlag, temp }) => {
   return (
     <CSSTransition
       appear
@@ -296,10 +309,10 @@ const MobileLocalTime = ({ transitionFlag }) => {
     >
       <MobileTimeSection>
         <h4 className="" style={{ margin: 0, fontWeight: 500 }}>
-          26 &#8451; <ion-icon name="sunny"></ion-icon>
+          {temp} &#8451; <ion-icon name="sunny"></ion-icon>
         </h4>
         <h4 className="" style={{ margin: 0, fontWeight: 500 }}>
-          <span>14:12</span>
+          <span>{localTime()}</span>
           &nbsp; LOCAL TIME
         </h4>
       </MobileTimeSection>
@@ -311,6 +324,16 @@ const Banner = () => {
   const interval = useRef(null);
   const [activeBanner, setActiveBanner] = useState(banner1);
   const [activeText, setActiveText] = useState(0);
+  const [temp, setTemp] = useState(null);
+
+  const getLocalWeather = async () => {
+    const data = await getTemp();
+    setTemp(data.main.temp);
+  };
+
+  useEffect(() => {
+    getLocalWeather();
+  }, []);
 
   const setActiveInterval = () => {
     setActiveBanner(prev => {
@@ -323,12 +346,12 @@ const Banner = () => {
       setActiveText(1);
     });
   };
-  useEffect(() => {
-    interval.current = window.setInterval(setActiveInterval, 10000);
-    return () => {
-      window.clearInterval(interval.current);
-    };
-  }, []);
+  // useEffect(() => {
+  //   interval.current = window.setInterval(setActiveInterval, 10000);
+  //   return () => {
+  //     window.clearInterval(interval.current);
+  //   };
+  // }, []);
 
   const setActive = () => {
     setActiveInterval();
@@ -354,7 +377,7 @@ const Banner = () => {
             timeout={{ enter: 10000, exit: 10000 }}
           >
             <div>
-              <BannerOverlay loading="lazy"/>
+              <BannerOverlay loading="lazy" />
               <BannerImg loading="lazy" src={b.banner} zIndex={b.zIndex} />
             </div>
           </CSSTransition>
@@ -390,8 +413,15 @@ const Banner = () => {
                   transition
                   transitionFlag={activeText === idx}
                 />
-                <LocalTime transitionFlag={activeText === idx} />
-                <MobileLocalTime transitionFlag={activeText === idx} />
+                {temp && (
+                  <LocalTime temp={temp} transitionFlag={activeText === idx} />
+                )}
+                {temp && (
+                  <MobileLocalTime
+                    temp={temp}
+                    transitionFlag={activeText === idx}
+                  />
+                )}
               </ButtonCon>
             </BannerTextsSection>
             <CSSTransition

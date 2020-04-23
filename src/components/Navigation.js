@@ -123,7 +123,8 @@ export const listItems = [
   },
   {
     title: 'Latest Updates',
-    path: 'https://manila.gov.ph/news-and-events/'
+    path: 'https://manila.gov.ph/news-and-events/',
+    external: true
   },
   {
     title: 'Gallery',
