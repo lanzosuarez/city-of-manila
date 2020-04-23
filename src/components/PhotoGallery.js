@@ -44,6 +44,7 @@ const AssetContainer = styled.div`
 `;
 const AssetWrap = styled.div`
   width: 48%;
+  height: 100%;
   h3 {
     margin-top: 1.45rem;
     margin-bottom: 1rem;
@@ -66,22 +67,22 @@ const AssetList = styled.div`
 const PhotoGallery = () => {
   const data = useStaticQuery(
     graphql`
-    query{
-      allContentfulPhotoGallery{
-        edges{
-          node{
-            image{
-              file{
-                url
-              }
-              fluid{
-                src
+      query{
+        allContentfulPhotoGallery{
+          edges{
+            node{
+              image{
+                file{
+                  url
+                }
+                fluid{
+                  ...GatsbyContentfulFluid
+                }
               }
             }
           }
         }
       }
-    }    
     `
   );
 
@@ -112,7 +113,7 @@ const PhotoGallery = () => {
           <AssetWrap>
             <AssetContainer>
               <Img
-                fluid={item.node.image.fluid.src}
+                fluid={item.node.image.fluid}
                 alt="Gallery Image"
               />
             </AssetContainer>
