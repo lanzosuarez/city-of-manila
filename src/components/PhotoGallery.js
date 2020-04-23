@@ -20,6 +20,7 @@ const ListContainer = styled.div`
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 `;
 
 const HeaderItem = styled.div`
@@ -60,10 +61,25 @@ const AssetList = styled.div`
   /* margin: 1rem 0px; */
   grid-gap: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fill, 32%);
+  grid-auto-rows: 350px;
   justify-content: center;
   grid-auto-flow: dense;
+
+  @media (max-width: 1028px) {
+    grid-template-columns: repeat(auto-fill,48%);
+    grid-auto-rows: 300px;
+  }
+  @media (max-width: 809px) {
+    grid-template-columns: repeat(auto-fill,45%);
+    grid-auto-rows: 300px;
+  }
+
+  @media (max-width: 426px) {
+    grid-template-columns: repeat(auto-fill,100%);
+    grid-auto-rows: 300px;
+  }
+  
   /* .item.v2 {
     grid-row: span 3;
   }
