@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import bg1 from '../images/home-section3-1.png';
-import bg2 from '../images/home-section3-2.png';
+import bg2 from '../images/home-section3-2.jpg';
 import bg3 from '../images/home-section3-3.png';
 
 import { Link } from 'gatsby';
