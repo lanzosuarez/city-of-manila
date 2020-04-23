@@ -40,7 +40,7 @@ const IconContainer = styled.span`
   justify-content: centerl;
 `;
 
-const NavigationItem = ({ title, path, sections = [] }) => {
+const NavigationItem = ({ title, path, sections = [], external }) => {
   const [showDropDown, setShowDropDown] = useState(false);
 
   const openDropdown = () => {
@@ -50,10 +50,9 @@ const NavigationItem = ({ title, path, sections = [] }) => {
   const closeDropdown = () => setShowDropDown(false);
 
   const hasDropDown = sections.length > 0;
-
   return (
     <Container onMouseEnter={openDropdown} onMouseLeave={closeDropdown}>
-      {path !== '' ? (
+      {path !== '' && !external ? (
         <Link
           onClick={closeDropdown}
           partiallyActive
@@ -64,7 +63,9 @@ const NavigationItem = ({ title, path, sections = [] }) => {
           {title}
         </Link>
       ) : (
-        <a className="page-link">{title}</a>
+        <a href={external ? path : '#'} className="page-link">
+          {title}
+        </a>
       )}
       {hasDropDown && (
         <IconContainer>

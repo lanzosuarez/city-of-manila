@@ -29,3 +29,16 @@ export const searchItems = (term, arr) => {
 
 export const pipe = (...fns) => val =>
   fns.reduce((currentValue, currentFn) => currentFn(currentValue), val);
+
+export const getTemp = async () => {
+  try {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=Manila&appid=${process.env.OPW_API_KEY}&units=metric`;
+
+    const res = await fetch(url);
+    if (res.ok) {
+      return res.json();
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};

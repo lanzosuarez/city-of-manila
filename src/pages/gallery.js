@@ -1,4 +1,4 @@
-import React,  { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 
 import GalleryFbVideo from '../components/GalleryFbVideo';
@@ -64,7 +64,7 @@ const Tab = styled.div`
   font-weight: ${props => (props.active ? '700' : '600')};
   padding-bottom: ${props => (props.active ? '8px' : '0px')};
   border-bottom: ${props => (props.active ? '2px solid #05326b' : 'none')};
-  h3{
+  h3 {
     margin-bottom: 0.5rem;
   }
 `;
@@ -72,7 +72,7 @@ const Tab = styled.div`
 export const tabs = ['Videos', 'Photos'];
 
 const GalleryPage = ({ location }) => {
-  const [activeTab, setActiveTab ] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
   const onSelectTab = idx => () => setActiveTab(idx);
 
@@ -91,7 +91,7 @@ const GalleryPage = ({ location }) => {
           <PageContainer>
             <Section>
               <FeaturedContainer>
-                  <GalleryFbVideo />
+                <GalleryFbVideo />
               </FeaturedContainer>
               <FeaturedText>Featured Video</FeaturedText>
               <FeaturedContent>
@@ -114,8 +114,8 @@ const GalleryPage = ({ location }) => {
                   </Tab>
                 ))}
               </TabContainer>
-              {activeTab == '0' && <VideoGallery/>}
-              {activeTab == '1' && <PhotoGallery/>}
+              {activeTab === '0' && <VideoGallery />}
+              {activeTab === '1' && <PhotoGallery />}
             </Section>
           </PageContainer>
         </Wrapper>
