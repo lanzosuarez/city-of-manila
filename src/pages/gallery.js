@@ -1,7 +1,7 @@
 import React,  { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 
-import VideoPlaceholder from '../images/video-placeholder.jpg';
+import GalleryFbVideo from '../components/GalleryFbVideo';
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
 import VideoGallery from '../components/VideoGallery';
@@ -23,17 +23,12 @@ const Section = styled.div`
 
 const FeaturedContainer = styled.div`
   max-width: 1280px;
-  max-height: 720px;
-`;
-
-const FeaturedVideo = styled.img`
-  width: 100%;
-  height: auto;
+  height: 100%;
 `;
 
 const FeaturedText = styled.p`
   color: #d33c35;
-  margin: 2rem 0px 1rem 0px;
+  margin: 0.5rem 0px 1rem 0px;
   font-weight: 600;
   font-family: Quicksand;
 `;
@@ -96,12 +91,11 @@ const GalleryPage = ({ location }) => {
           <PageContainer>
             <Section>
               <FeaturedContainer>
-                <FeaturedVideo src={VideoPlaceholder} alt="Featured Video" />
+                  <GalleryFbVideo />
               </FeaturedContainer>
               <FeaturedText>Featured Video</FeaturedText>
               <FeaturedContent>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna
+                Feeding a city of 1.8 million during a crisis.
               </FeaturedContent>
               <Date>April 04, 2020</Date>
             </Section>

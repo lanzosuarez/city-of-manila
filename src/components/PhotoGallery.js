@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import PageContainer from '../components/PageContainer';
+import Img from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const ListContainer = styled.div`
@@ -36,14 +37,10 @@ const iconStyle = {
   cursor: 'pointer'
 };
 const AssetContainer = styled.div`
-  max-height: 309px;
+  max-height: auto;
   @media only screen and (max-width: 768px) {
     max-height: 100%;
   }
-`;
-const VideoItem = styled.img`
-  width: 100%;
-  height: auto;
 `;
 const AssetWrap = styled.div`
   width: 48%;
@@ -69,21 +66,22 @@ const AssetList = styled.div`
 const PhotoGallery = () => {
   const data = useStaticQuery(
     graphql`
-      query {
-        allContentfulPhotoGallery {
-          edges {
-            node {
-              title
-              publishedDate
-              image {
-                file {
-                  url
-                }
+    query{
+      allContentfulPhotoGallery{
+        edges{
+          node{
+            image{
+              file{
+                url
+              }
+              fluid{
+                src
               }
             }
           }
         }
       }
+    }    
     `
   );
 
@@ -113,10 +111,11 @@ const PhotoGallery = () => {
         {items.map(item => (
           <AssetWrap>
             <AssetContainer>
-              <VideoItem src={item.node.image.file.url} alt="Featured Video" />
+              <Img
+                fluid={item.node.image.fluid.src}
+                alt="Gallery Image"
+              />
             </AssetContainer>
-            <h3>{item.node.title}</h3>
-            {item.node.publishedDate}
           </AssetWrap>
         ))}
       </AssetList>

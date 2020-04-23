@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import bg1 from '../images/home-section3-1.png';
+import bg1 from '../images/home-section3-1.jpg';
 import bg2 from '../images/home-section3-2.jpg';
-import bg3 from '../images/home-section3-3.png';
+import bg3 from '../images/home-section3-3.jpg';
 
 import { Link } from 'gatsby';
 
@@ -75,7 +75,7 @@ const Overlay = styled.div`
 const HomeSection3 = () => {
   return (
     <Container>
-      <Item bg={bg3}>
+      <Item bg={bg1}>
         <Overlay className="overlay" />
         <Content className="content">
           <Text>Covid-19 Digital Health Survey</Text>
@@ -115,7 +115,7 @@ const HomeSection3 = () => {
         ></ion-icon>
         </Link>
       </Item>
-      <Item bg={bg1}>
+      <Item bg={bg3}>
         <Overlay className="overlay" />
         <Content className="content">
           <Text>Manila's Reponse to COVID-19</Text>

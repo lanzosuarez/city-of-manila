@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 
 import PageContainer from '../components/PageContainer';
+import GalleryVideo from '../components/GalleryVideo';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const ListContainer = styled.div`
@@ -45,8 +46,13 @@ const VideoItem = styled.img`
   width: 100%;
   height: auto;
 `;
+const VideoCon = styled.div`
+  width: 100%;
+  height: auto;
+`;
 const AssetWrap = styled.div`
   width: 48%;
+  margin-bottom: 2rem;
   h3 {
     margin-top: 1.45rem;
     margin-bottom: 1rem;
@@ -75,11 +81,7 @@ const VideoGallery = () => {
             node {
               title
               publishedDate
-              video {
-                file {
-                  url
-                }
-              }
+              videoUrl
             }
           }
         }
@@ -87,7 +89,7 @@ const VideoGallery = () => {
     `
   );
 
- const items = data.allContentfulVideoGallery.edges;
+  const items = data.allContentfulVideoGallery.edges;
 
   return (
     <PageContainer>
@@ -111,11 +113,11 @@ const VideoGallery = () => {
         </Header>
       </ListContainer>
       <AssetList>
-          {items.map(item => (
+        {items.map(item => (
           <AssetWrap>
-            <AssetContainer>
-              <VideoItem src={item.node.video.file.url} alt="Featured Video" />
-            </AssetContainer>
+            <VideoCon>
+              <GalleryVideo url={item.node.videoUrl} />
+            </VideoCon>
             <h3>{item.node.title}</h3>
             {item.node.publishedDate}
           </AssetWrap>

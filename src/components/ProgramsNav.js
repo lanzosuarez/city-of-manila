@@ -104,30 +104,30 @@ const ProgramsNav = ({ activeProgram }) => {
       <Container>
         <NavWrap>
           {hasPrev && (
-            <NavItemLeft>
-              <IconCon>
-                <Link to={prev}>
+            <Link to={prev}>
+              <NavItemLeft>
+                <IconCon>
                   <ion-icon
                     style={iconStyle}
                     name="arrow-back-outline"
                   ></ion-icon>
-                </Link>
-              </IconCon>
-              <h3>Previous Program</h3>
-            </NavItemLeft>
+                </IconCon>
+                <h3>Previous Program</h3>
+              </NavItemLeft>
+            </Link>
           )}
           {hasNext && (
-            <NavItemRight>
-              <h3>Next Program</h3>
-              <IconCon>
-                <Link to={next}>
+            <Link to={next}>
+              <NavItemRight>
+                <h3>Next Program</h3>
+                <IconCon>
                   <ion-icon
                     style={iconStyle}
                     name="arrow-forward-outline"
                   ></ion-icon>
-                </Link>
-              </IconCon>
-            </NavItemRight>
+                </IconCon>
+              </NavItemRight>
+            </Link>
           )}
         </NavWrap>
       </Container>
