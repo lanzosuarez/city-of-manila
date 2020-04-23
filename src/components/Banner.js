@@ -4,8 +4,8 @@ import { CSSTransition } from 'react-transition-group';
 
 import '../styles/banner.css';
 
-import banner1 from '../images/header-slide-1-1440px.jpg';
-import banner2 from '../images/header-slide3.jpg';
+import banner1 from '../images/header-slide-1.jpg';
+import banner2 from '../images/header-slide-2.jpg';
 import Notice from './Notice';
 import Navigation from './Navigation';
 import LearnMore from './LearnMore';

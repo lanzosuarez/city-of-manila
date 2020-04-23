@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
-import section8Bg from '../images/section-8-bg.jpg';
+import section8Bg from '../images/section-8-bg-1.jpg';
 
 import PageContainer from '../components/PageContainer';
 import HomeVideo from '../components/HomeVideo';
