@@ -114,8 +114,8 @@ const GalleryPage = ({ location }) => {
                   </Tab>
                 ))}
               </TabContainer>
-              {activeTab === '0' && <VideoGallery />}
-              {activeTab === '1' && <PhotoGallery />}
+              {activeTab === 0 && <VideoGallery />}
+              {activeTab === 1 && <PhotoGallery />}
             </Section>
           </PageContainer>
         </Wrapper>

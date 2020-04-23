@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
 import PageContainer from '../components/PageContainer';
 import Img from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
+import { randomNumber } from '../helpers';
 
 const ListContainer = styled.div`
   margin: 0 auto;
@@ -43,7 +44,7 @@ const AssetContainer = styled.div`
   }
 `;
 const AssetWrap = styled.div`
-  width: 48%;
+  /* width: 48%; */
   height: 100%;
   h3 {
     margin-top: 1.45rem;
@@ -56,26 +57,69 @@ const AssetWrap = styled.div`
   }
 `;
 const AssetList = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 100%;
-  margin: 1rem 0px;
+  /* margin: 1rem 0px; */
+  grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-auto-rows: 300px;
+  justify-content: center;
+  grid-auto-flow: dense;
+  /* .item.v2 {
+    grid-row: span 3;
+  }
+
+  .item.v3 {
+    grid-row: span 3;
+  }
+
+  .item.h2 {
+    grid-column: span 2;
+  }
+
+  .item.h3 {
+    grid-column: span 3;
+  } */
 `;
 
+// const randomNum
+
+const Overlay = styled.div`
+  position: fixed;
+  /* display: flex; */
+  display: ${props => (props.open ? 'flex' : 'none')};
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+`;
+
+const Modal = ({ selectedImage }) => {
+  return (
+    <Overlay open={selectedImage}>
+      <div>
+        <ion-icon name="close-outline"></ion-icon>
+      </div>
+      {selectedImage && <Img fluid={selectedImage} alt="Gallery Image" />}
+    </Overlay>
+  );
+};
+
 const PhotoGallery = () => {
+  const [selectedImage, setSelectedImg] = useState(null);
   const data = useStaticQuery(
     graphql`
-      query{
-        allContentfulPhotoGallery{
-          edges{
-            node{
-              image{
-                file{
+      query {
+        allContentfulPhotoGallery {
+          edges {
+            node {
+              image {
+                file {
                   url
                 }
-                fluid{
+                fluid {
                   ...GatsbyContentfulFluid
                 }
               }
@@ -85,6 +129,8 @@ const PhotoGallery = () => {
       }
     `
   );
+
+  const selectImg = img => () => setSelectedImg(img);
 
   const items = data.allContentfulPhotoGallery.edges;
   return (
@@ -109,17 +155,19 @@ const PhotoGallery = () => {
         </Header>
       </ListContainer>
       <AssetList>
-        {items.map(item => (
-          <AssetWrap>
-            <AssetContainer>
-              <Img
-                fluid={item.node.image.fluid}
-                alt="Gallery Image"
-              />
-            </AssetContainer>
-          </AssetWrap>
-        ))}
+        {items.map(item => {
+          const h = randomNumber(2);
+          const v = randomNumber(2);
+          return (
+            <Img
+              className={`item h${h} v${v}`}
+              fluid={item.node.image.fluid}
+              alt="Gallery Image"
+            />
+          );
+        })}
       </AssetList>
+      <Modal selectedImage={selectedImage} />
     </PageContainer>
   );
 };

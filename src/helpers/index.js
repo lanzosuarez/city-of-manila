@@ -42,3 +42,5 @@ export const getTemp = async () => {
     console.error(error);
   }
 };
+
+export const randomNumber = limit => Math.floor(Math.random() * limit) + 1;
