@@ -32,6 +32,20 @@ const BannerCon = styled.div`
   /* padding: 300px 70px 50px; */
 `;
 
+const BannerOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(3,28,59);
+  background: linear-gradient(90deg, rgba(5,16,29,0.7906512946975666) 12%, rgba(5,16,29,0.1856092778908438) 53%);
+  z-index: 3;
+  @media (max-width: 576px) {
+    background:  linear-gradient(177deg, rgba(5,16,29,0.7906512946975666) 0%, rgba(5,16,29,0.1856092778908438) 59%);
+  }
+`;
+
 const BannerTexts = styled.div`
   position: relative;
   display: ${props => (props.show ? 'flex' : 'none')};
@@ -339,7 +353,10 @@ const Banner = () => {
             classNames="banner-fade"
             timeout={{ enter: 10000, exit: 10000 }}
           >
-            <BannerImg loading="lazy" src={b.banner} zIndex={b.zIndex} />
+            <div>
+              <BannerOverlay loading="lazy"/>
+              <BannerImg loading="lazy" src={b.banner} zIndex={b.zIndex} />
+            </div>
           </CSSTransition>
         ))}
         {texts.map((t, idx) => (
