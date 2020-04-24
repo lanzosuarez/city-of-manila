@@ -93,7 +93,45 @@ const Overlay = styled.div`
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
 `;
+
+const ImgCon = styled.div`
+  /* height: 60px; */
+  background: white;
+  padding: 20px;
+  width: 80%;
+  display: grid;
+  grid-gap: 20px;
+  border-radius: 10px;
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: flex-end;
+  }
+`;
+
+const Modal = ({ selectedImage, onClose }) => {
+  return (
+    <Overlay open={selectedImage}>
+      {selectedImage && (
+        <ImgCon>
+          <div onClick={onClose}>
+            <ion-icon name="close-outline"></ion-icon>
+            Close
+          </div>
+          <img src={selectedImage} alt="Gallery Image" />
+        </ImgCon>
+      )}
+    </Overlay>
+  );
+};
 
 const PhotoGallery = () => {
   const [selectedImage, setSelectedImg] = useState(null);
@@ -118,20 +156,11 @@ const PhotoGallery = () => {
     `
   );
 
-  const Modal = ({ selectedImage }) => {
-    return (
-      <Overlay open={selectedImage}>
-        <div>
-          <ion-icon name="close-outline"></ion-icon>
-        </div>
-        {selectedImage && <Img fluid={selectedImage} alt="Gallery Image" />}
-      </Overlay>
-    );
+  const onClick = img => () => {
+    setSelectedImg(img);
   };
 
-  const onClick = (img) => {
-    setSelectedImg(img)
-  };
+  const onClose = () => setSelectedImg(null);
 
   const items = data.allContentfulPhotoGallery.edges;
   return (
@@ -160,10 +189,13 @@ const PhotoGallery = () => {
           {items.map(item => {
             const h = randomNumber(2);
             const v = randomNumber(2);
+            console.log(item);
             return (
-              <Content onClick={onClick}>
+              <Content
+                key={item.node.image.file.url}
+                onClick={onClick(item.node.image.file.url)}
+              >
                 <Img
-                  key={item.node.image.fluid.src}
                   className={`item h${h} v${v}`}
                   fluid={item.node.image.fluid}
                   alt="Gallery Image"
@@ -172,7 +204,9 @@ const PhotoGallery = () => {
             );
           })}
         </AssetList>
-        {selectedImage ? <Modal selectedImage={selectedImage} /> : null}
+        {selectedImage && (
+          <Modal onClose={onClose} selectedImage={selectedImage} />
+        )}
       </Fragment>
     </PageContainer>
   );
