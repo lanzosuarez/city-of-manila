@@ -32,7 +32,8 @@ export const pipe = (...fns) => val =>
 
 export const getTemp = async () => {
   try {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=Manila&appid=${process.env.OPW_API_KEY}&units=metric`;
+    console.log(process.env);
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=Manila&appid=81a765e261feeffe4568e53cfe4a47e0&units=metric`;
 
     const res = await fetch(url);
     if (res.ok) {
