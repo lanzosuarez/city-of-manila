@@ -29,6 +29,7 @@ const HeaderItem = styled.div`
 
 const Content = styled.div`
   display: contents;
+  cursor: pointer;
 `;
 
 const Figure = styled.h3`
@@ -98,10 +99,9 @@ const Overlay = styled.div`
 `;
 
 const ImgCon = styled.div`
-  /* height: 60px; */
   background: white;
   padding: 20px;
-  width: 60%;
+  max-width: 700px;
   display: grid;
   grid-gap: 20px;
   border-radius: 10px;
@@ -117,17 +117,20 @@ const ImgCon = styled.div`
     justify-content: flex-end;
   }
 `;
+const ModalImg = styled.img`
+  max-height:600px;
+`;
 
-const Modal = ({ selectedImage, onClose }) => {
+const Modal = ({ selectedImage, onClose, preventClose }) => {
   return (
-    <Overlay open={selectedImage}>
+    <Overlay open={selectedImage} onClick={onClose}>
       {selectedImage && (
         <ImgCon>
           <div onClick={onClose}>
             <ion-icon name="close-outline"></ion-icon>
             Close
           </div>
-          <img src={selectedImage} alt="Gallery Image" />
+          <ModalImg src={selectedImage} alt="Gallery Image" onClick={preventClose} />
         </ImgCon>
       )}
     </Overlay>
@@ -162,6 +165,7 @@ const PhotoGallery = () => {
   };
 
   const onClose = () => setSelectedImg(null);
+  const preventClose = (e) => e.stopPropagation();
 
   const items = data.allContentfulPhotoGallery.edges;
   return (
@@ -206,7 +210,7 @@ const PhotoGallery = () => {
           })}
         </AssetList>
         {selectedImage && (
-          <Modal onClose={onClose} selectedImage={selectedImage} />
+          <Modal onClose={onClose} preventClose={preventClose} selectedImage={selectedImage} />
         )}
       </Fragment>
     </PageContainer>
