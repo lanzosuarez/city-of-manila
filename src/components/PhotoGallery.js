@@ -40,7 +40,8 @@ const Figure = styled.h3`
 
 const iconStyle = {
   color: 'var(--blue)',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  display: 'none'
 };
 const AssetList = styled.div`
   /* margin: 1rem 0px; */
@@ -100,7 +101,7 @@ const ImgCon = styled.div`
   /* height: 60px; */
   background: white;
   padding: 20px;
-  width: 80%;
+  width: 60%;
   display: grid;
   grid-gap: 20px;
   border-radius: 10px;

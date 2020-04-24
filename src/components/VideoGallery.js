@@ -34,18 +34,10 @@ const Figure = styled.h3`
 
 const iconStyle = {
   color: 'var(--blue)',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  display: 'none'
 };
-const AssetContainer = styled.div`
-  max-height: 309px;
-  @media only screen and (max-width: 768px) {
-    max-height: 100%;
-  }
-`;
-const VideoItem = styled.img`
-  width: 100%;
-  height: auto;
-`;
+
 const VideoCon = styled.div`
   width: 100%;
   height: auto;
