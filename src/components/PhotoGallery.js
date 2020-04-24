@@ -38,25 +38,6 @@ const iconStyle = {
   color: 'var(--blue)',
   cursor: 'pointer'
 };
-const AssetContainer = styled.div`
-  max-height: auto;
-  @media only screen and (max-width: 768px) {
-    max-height: 100%;
-  }
-`;
-const AssetWrap = styled.div`
-  /* width: 48%; */
-  height: 100%;
-  h3 {
-    margin-top: 1.45rem;
-    margin-bottom: 1rem;
-    color: #05326b;
-    line-height: 1.3;
-  }
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-  }
-`;
 const AssetList = styled.div`
   /* margin: 1rem 0px; */
   grid-gap: 20px;
@@ -96,8 +77,6 @@ const AssetList = styled.div`
     grid-column: span 3;
   } */
 `;
-
-// const randomNum
 
 const Overlay = styled.div`
   position: fixed;
