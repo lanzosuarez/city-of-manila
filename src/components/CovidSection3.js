@@ -202,14 +202,14 @@ const CovidSection3 = () => {
             confusion and disinformation.
           </p>
           <LinkStyle>
-            <a href="www.doh.gov.ph">
+            <a href="https://www.doh.gov.ph">
               <ManilaContactDiv>
                 <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
                 DOH Official Website
               </ManilaContactDiv>
             </a>
 
-            <a href="www.covid19.gov.ph">
+            <a href="https://www.covid19.gov.ph">
               <ManilaContactDiv>
                 <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
                 Official website of the IATF
