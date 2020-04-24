@@ -41,8 +41,7 @@ const Figure = styled.h3`
 
 const iconStyle = {
   color: 'var(--blue)',
-  cursor: 'pointer',
-  display: 'none'
+  cursor: 'pointer'
 };
 const AssetList = styled.div`
   /* margin: 1rem 0px; */
@@ -118,7 +117,7 @@ const ImgCon = styled.div`
   }
 `;
 const ModalImg = styled.img`
-  max-height:600px;
+  max-height: 600px;
 `;
 
 const Modal = ({ selectedImage, onClose, preventClose }) => {
@@ -130,7 +129,11 @@ const Modal = ({ selectedImage, onClose, preventClose }) => {
             <ion-icon name="close-outline"></ion-icon>
             Close
           </div>
-          <ModalImg src={selectedImage} alt="Gallery Image" onClick={preventClose} />
+          <ModalImg
+            src={selectedImage}
+            alt="Gallery Image"
+            onClick={preventClose}
+          />
         </ImgCon>
       )}
     </Overlay>
@@ -139,6 +142,8 @@ const Modal = ({ selectedImage, onClose, preventClose }) => {
 
 const PhotoGallery = () => {
   const [selectedImage, setSelectedImg] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+
   const data = useStaticQuery(
     graphql`
       query {
@@ -165,9 +170,24 @@ const PhotoGallery = () => {
   };
 
   const onClose = () => setSelectedImg(null);
-  const preventClose = (e) => e.stopPropagation();
+  const preventClose = e => e.stopPropagation();
 
   const items = data.allContentfulPhotoGallery.edges;
+
+  const maxPage = Math.ceil(items.length / 9);
+  const nextPage = () => {
+    setCurrentPage(currentPage => Math.min(currentPage + 1, maxPage));
+  };
+  const prevPage = () => {
+    setCurrentPage(currentPage => Math.max(currentPage - 1, 1));
+  };
+
+  function currentItems() {
+    const begin = (currentPage - 1) * 9;
+    const end = begin + 9;
+    return items.slice(begin, end);
+  }
+
   return (
     <PageContainer>
       <ListContainer>
@@ -176,22 +196,28 @@ const PhotoGallery = () => {
             <Figure>{items.length}</Figure>Photos
           </HeaderItem>
           <HeaderItem>
+            {currentPage > 1 && items.length && (
             <ion-icon
+              onClick={prevPage}
               style={{ ...iconStyle, marginRight: 10 }}
               size="large"
               name="arrow-back"
             ></ion-icon>
+            )}
+            {currentPage < maxPage && items.length && (
             <ion-icon
+              onClick={nextPage}
               style={iconStyle}
               size="large"
               name="arrow-forward"
             ></ion-icon>
+            )}
           </HeaderItem>
         </Header>
       </ListContainer>
       <Fragment>
         <AssetList>
-          {items.map(item => {
+          {currentItems().map(item => {
             const h = randomNumber(2);
             const v = randomNumber(2);
             console.log(item);
@@ -210,7 +236,11 @@ const PhotoGallery = () => {
           })}
         </AssetList>
         {selectedImage && (
-          <Modal onClose={onClose} preventClose={preventClose} selectedImage={selectedImage} />
+          <Modal
+            onClose={onClose}
+            preventClose={preventClose}
+            selectedImage={selectedImage}
+          />
         )}
       </Fragment>
     </PageContainer>
