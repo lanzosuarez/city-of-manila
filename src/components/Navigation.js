@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 import styled from '@emotion/styled';
 import NavigationItem from './NavigationItem';
+import ManilaLogo from '../images/manila-logo.png';
 
 const Container = styled.div`
   height: 100px;
@@ -44,6 +45,11 @@ const NavList = styled.ul`
   align-items: center;
   list-style: none;
   padding: 0px 20px;
+`;
+
+const LogoItem = styled.img`
+  display: flex;
+  align-items: center;
 `;
 
 export const listItems = [
@@ -144,7 +150,9 @@ const Navigation = ({ maxWidth = '100%' }) => {
   return (
     <Container maxWidth={maxWidth}>
       <Logo>
-        <Link to="/">logo .</Link>
+        <Link to="/">
+          <LogoItem src={ManilaLogo} alt="City of Manila logo" />
+        </Link>
       </Logo>
       <NavList>
         {listItems.map((i, idx) => (

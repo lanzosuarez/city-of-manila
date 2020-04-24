@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import { NavigationContext } from '../context/NavigationProvider';
+import ManilaLogo from '../images/manila-logo.png';
 
 const Container = styled.div`
   display: none;
@@ -34,6 +35,12 @@ const Logo = styled.div`
   font-weight: bold;
 `;
 
+const LogoItem = styled.img`
+  display: flex;
+  align-items: center;
+  height: 66px;
+`;
+
 const MobileHeader = () => {
   const { toggleNav } = useContext(NavigationContext);
   const showNav = () => toggleNav(true);
@@ -46,7 +53,7 @@ const MobileHeader = () => {
         size="large"
       ></ion-icon>
       <Logo>
-        <Link to="/">logo .</Link>
+        <Link to="/"><LogoItem src={ManilaLogo} alt="City of Manila logo" /></Link>
       </Logo>
       <div />
     </Container>

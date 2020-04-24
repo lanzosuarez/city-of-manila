@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import styled from '@emotion/styled';
 
 import PageContainer from '../components/PageContainer';
@@ -27,6 +27,10 @@ const HeaderItem = styled.div`
   /* flex: 1; */
 `;
 
+const Content = styled.div`
+  display: contents;
+`;
+
 const Figure = styled.h3`
   display: inline;
   margin: 0;
@@ -38,25 +42,6 @@ const iconStyle = {
   color: 'var(--blue)',
   cursor: 'pointer'
 };
-const AssetContainer = styled.div`
-  max-height: auto;
-  @media only screen and (max-width: 768px) {
-    max-height: 100%;
-  }
-`;
-const AssetWrap = styled.div`
-  /* width: 48%; */
-  height: 100%;
-  h3 {
-    margin-top: 1.45rem;
-    margin-bottom: 1rem;
-    color: #05326b;
-    line-height: 1.3;
-  }
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-  }
-`;
 const AssetList = styled.div`
   /* margin: 1rem 0px; */
   grid-gap: 20px;
@@ -67,19 +52,19 @@ const AssetList = styled.div`
   grid-auto-flow: dense;
 
   @media (max-width: 1028px) {
-    grid-template-columns: repeat(auto-fill,48%);
+    grid-template-columns: repeat(auto-fill, 48%);
     grid-auto-rows: 300px;
   }
   @media (max-width: 809px) {
-    grid-template-columns: repeat(auto-fill,45%);
+    grid-template-columns: repeat(auto-fill, 45%);
     grid-auto-rows: 300px;
   }
 
   @media (max-width: 426px) {
-    grid-template-columns: repeat(auto-fill,100%);
+    grid-template-columns: repeat(auto-fill, 100%);
     grid-auto-rows: 300px;
   }
-  
+
   /* .item.v2 {
     grid-row: span 3;
   }
@@ -97,8 +82,6 @@ const AssetList = styled.div`
   } */
 `;
 
-// const randomNum
-
 const Overlay = styled.div`
   position: fixed;
   /* display: flex; */
@@ -111,17 +94,6 @@ const Overlay = styled.div`
   left: 0;
   background: rgba(0, 0, 0, 0.3);
 `;
-
-const Modal = ({ selectedImage }) => {
-  return (
-    <Overlay open={selectedImage}>
-      <div>
-        <ion-icon name="close-outline"></ion-icon>
-      </div>
-      {selectedImage && <Img fluid={selectedImage} alt="Gallery Image" />}
-    </Overlay>
-  );
-};
 
 const PhotoGallery = () => {
   const [selectedImage, setSelectedImg] = useState(null);
@@ -146,7 +118,20 @@ const PhotoGallery = () => {
     `
   );
 
-  const selectImg = img => () => setSelectedImg(img);
+  const Modal = ({ selectedImage }) => {
+    return (
+      <Overlay open={selectedImage}>
+        <div>
+          <ion-icon name="close-outline"></ion-icon>
+        </div>
+        {selectedImage && <Img fluid={selectedImage} alt="Gallery Image" />}
+      </Overlay>
+    );
+  };
+
+  const onClick = (img) => {
+    setSelectedImg(img)
+  };
 
   const items = data.allContentfulPhotoGallery.edges;
   return (
@@ -170,20 +155,25 @@ const PhotoGallery = () => {
           </HeaderItem>
         </Header>
       </ListContainer>
-      <AssetList>
-        {items.map(item => {
-          const h = randomNumber(2);
-          const v = randomNumber(2);
-          return (
-            <Img
-              className={`item h${h} v${v}`}
-              fluid={item.node.image.fluid}
-              alt="Gallery Image"
-            />
-          );
-        })}
-      </AssetList>
-      <Modal selectedImage={selectedImage} />
+      <Fragment>
+        <AssetList>
+          {items.map(item => {
+            const h = randomNumber(2);
+            const v = randomNumber(2);
+            return (
+              <Content onClick={onClick}>
+                <Img
+                  key={item.node.image.fluid.src}
+                  className={`item h${h} v${v}`}
+                  fluid={item.node.image.fluid}
+                  alt="Gallery Image"
+                />
+              </Content>
+            );
+          })}
+        </AssetList>
+        {selectedImage ? <Modal selectedImage={selectedImage} /> : null}
+      </Fragment>
     </PageContainer>
   );
 };
