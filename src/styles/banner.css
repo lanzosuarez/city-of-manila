@@ -1,5 +1,5 @@
 .banner-fade-appear {
-  opacity: 0 !important;
+  opacity: 0.3 !important;
 }
 
 .banner-fade-appear-active {
@@ -7,7 +7,7 @@
 }
 
 .banner-fade-enter {
-  opacity: 0;
+  opacity: 0.3;
 }
 
 .banner-fade-enter-active {

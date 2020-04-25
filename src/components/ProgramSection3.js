@@ -12,7 +12,7 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 4rem 15px;
   padding-bottom: 50px;
-  width: 100%;
+  width: ${props => (props.noImage ? '950px' : '100%')};
 `;
 
 const Title = styled.h2`
@@ -30,7 +30,7 @@ const Content = styled.p`
   text-align: justify;
   display: grid;
   grid-gap: 40px;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: ${props => (props.noImage ? '1fr' : '350px 1fr')};
   align-items: center;
 
   @media (max-width: 576px) {
@@ -98,11 +98,14 @@ const TextContent = styled.p`
   }
 `;
 
-const ProgramsSection3 = ({ content: { title, content } }) => {
+const ProgramsSection3 = ({ content: { content } }) => {
+  console.log(content);
   return (
-    <Container>
-      <Content>
-        <Avatar alt="card-image" src={placeholder}></Avatar>
+    <Container noImage={!content.imageUrl}>
+      <Content noImage={!content.imageUrl}>
+        {content.imageUrl && (
+          <Avatar alt="card-image" src={placeholder}></Avatar>
+        )}
         <TextContainer>
           <SubTitle>{content.subtitle}</SubTitle>
           <TextTitle>{content.title}</TextTitle>

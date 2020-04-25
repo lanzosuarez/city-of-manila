@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import img1 from '../images/home-section5-img-1.jpg';
 import img2 from '../images/home-section5-img-2.jpg';
 import sign from '../images/sign.png';
 import LearnMore from './LearnMore';
 import line from '../images/blue-line.png';
+import { CSSTransition } from 'react-transition-group';
+import useSlideIn from '../hooks/useSlideIn';
 
 const Container = styled.div`
   padding: 80px 70px 80px;
@@ -55,10 +57,14 @@ const Section = styled.div`
   align-items: center;
 `;
 
+const Section2 = styled.div`
+  transform: translateX(200%);
+  transition: transform 600ms ease-in-out;
+`;
+
 const Section3 = styled.div`
-  /* display: flex;
-  align-self: center; */
-  position: relative;
+  transform: translateX(200%);
+  transition: transform 500ms ease-in-out 300ms;
 `;
 
 const Sign = styled.img`
@@ -72,8 +78,11 @@ const lineStyle = {
 };
 
 const HomeSection5 = () => {
+  const [slideIn, setSlideIn] = useState(false);
+  useSlideIn(() => setSlideIn(true), 'homeSection5');
+
   return (
-    <Container>
+    <Container id="homeSection5">
       <Item>
         <Text>Meet Mayor Isko</Text>
         <img src={line} style={lineStyle} alt="blue line" className="line" />
@@ -90,13 +99,17 @@ const HomeSection5 = () => {
         />
       </Item>
       <Section>
-        <div>
-          <img alt="mayor-isko" src={img1}></img>
-        </div>
-        <Section3>
-          <img alt="mayor-isko" src={img2}></img>
-          <Sign src={sign} />
-        </Section3>
+        <CSSTransition in={slideIn} classNames="slideIn">
+          <Section2 id="section-2">
+            <img alt="mayor-isko" src={img1}></img>
+          </Section2>
+        </CSSTransition>
+        <CSSTransition in={slideIn} classNames="slideIn">
+          <Section3 id="section-3">
+            <img alt="mayor-isko" src={img2}></img>
+            <Sign src={sign} />
+          </Section3>
+        </CSSTransition>
       </Section>
     </Container>
   );

@@ -54,8 +54,8 @@ const ProgramsTemplate = ({ data }) => {
           <PageContainer>
             <ProgramsSection1 content={section1} />
           </PageContainer>
-          <ProgramsSection2 content={section2} />
-          {pageType === 2 && (
+          {pageType !== 3 && <ProgramsSection2 content={section2} />}
+          {(pageType === 2 || pageType === 3) && (
             <PageContainer>
               <ProgramsSection3 content={section3} />
             </PageContainer>
@@ -91,6 +91,7 @@ export const query = graphql`
           title
           subtitle
           content
+          imageUrl
         }
       }
       section4 {

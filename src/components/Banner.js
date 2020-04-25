@@ -328,7 +328,6 @@ const Banner = () => {
 
   const getLocalWeather = async () => {
     const data = await getTemp();
-    console.log(data);
     setTemp(data.main.temp);
   };
 
