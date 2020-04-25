@@ -8,6 +8,7 @@ import PageHeader from '../components/PageHeader';
 import ExecSection1 from '../components/ExecSection1';
 import ExecSection2 from '../components/ExecSection2';
 import ExecAndLegislationProvider from '../context/ExecAndLegislationProvider';
+import pageBg from '../images/page-banner-eo.jpg';
 import { graphql } from 'gatsby';
 
 const ExecutiveAndLegislativePage = ({ data }) => {
@@ -22,7 +23,7 @@ const ExecutiveAndLegislativePage = ({ data }) => {
           <SEO title="Executive Orders, City Resolutions, and Ordinances" />
           <Notice />
           <Navigation />
-          <PageHeader name="Executive Orders, City Resolutions, and Ordinances" />
+          <PageHeader name="Executive Orders, City Resolutions, and Ordinances" bg={pageBg} />
           <ExecSection1 items={items} />
           <ExecSection2 items={items} />
         </Layout>
@@ -37,6 +38,11 @@ export const query = graphql`
       edges {
         node {
           id
+          logo {
+            file {
+              url
+            }
+          }
           name
           publishedDate
           type

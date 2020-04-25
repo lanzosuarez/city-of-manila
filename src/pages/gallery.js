@@ -12,6 +12,7 @@ import SEO from '../components/SEO';
 import Notice from '../components/Notice';
 import Navigation from '../components/Navigation';
 import scrollToSection from '../hooks/scrollToSection';
+import Banner from '../images/page-banner-gallery.jpg';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -87,7 +88,7 @@ const GalleryPage = ({ location }) => {
         <Notice />
         <Navigation />
         <Wrapper>
-          <PageHeader name="Gallery" />
+          <PageHeader name="Gallery" bg={Banner} />
           <PageContainer>
             <Section>
               <FeaturedContainer>

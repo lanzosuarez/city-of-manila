@@ -347,12 +347,12 @@ const Banner = () => {
       setActiveText(1);
     });
   };
-  // useEffect(() => {
-  //   interval.current = window.setInterval(setActiveInterval, 10000);
-  //   return () => {
-  //     window.clearInterval(interval.current);
-  //   };
-  // }, []);
+  useEffect(() => {
+    interval.current = window.setInterval(setActiveInterval, 10000);
+    return () => {
+      window.clearInterval(interval.current);
+    };
+  }, []);
 
   const setActive = () => {
     setActiveInterval();
@@ -366,7 +366,6 @@ const Banner = () => {
         <Notice maxWidth="1200px" />
         <Navigation maxWidth="1200px" />
       </OverlayNoticeAndNav>
-
       <BannerCon>
         {banners.map((b, idx) => (
           <CSSTransition

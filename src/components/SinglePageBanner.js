@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import pageBg from '../images/get-involved-header.jpg';
+import pageBg from '../images/page-banner-get-involved.jpg';
 
 const Container = styled.div`
   background-image: ${props => `url(${props.bg})`};

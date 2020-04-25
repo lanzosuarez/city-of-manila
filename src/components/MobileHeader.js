@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import { NavigationContext } from '../context/NavigationProvider';
-import ManilaLogo from '../images/manila-logo.png';
+import ManilaLogo from '../images/manila-logo-90x90px.png';
 
 const Container = styled.div`
   display: none;

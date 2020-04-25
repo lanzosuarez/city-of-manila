@@ -4,6 +4,7 @@ import '../styles/about.css';
 
 import line from '../images/blue-line.png';
 import placeholder from '../images/get-involved-placeholder2.png';
+import Banner from '../images/page-banner-get-involved.jpg';
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
 import Layout from '../components/Layout';
@@ -122,19 +123,6 @@ const Content = styled.div`
   }
 `;
 
-const DonateButton = styled.div`
-  align-self: flex-end;
-  text-align: center;
-  background-color: #ffa537;
-  padding: 15px;
-  h3 {
-    margin-bottom: 5px;
-  }
-  p {
-    margin-bottom: 5px;
-  }
-`;
-
 const GetInvolvedPage = ({ location }) => {
   useEffect(() => {
     scrollToSection(location);
@@ -147,7 +135,7 @@ const GetInvolvedPage = ({ location }) => {
         <Notice />
         <Navigation />
         <Wrapper>
-          <PageHeader name="Get Involved" />
+          <PageHeader name="Get Involved" bg={Banner} />
           <Section1>
             <PageContainer>
               <Section>
@@ -204,10 +192,6 @@ const GetInvolvedPage = ({ location }) => {
                         accepted.
                       </p>
                     </Content>
-                    <DonateButton>
-                      <h3>Donate.</h3>
-                      <p>Help someone in need.</p>
-                    </DonateButton>
                   </Item>
                   <Item>
                     <img src={placeholder} alt="placeholder" />
@@ -219,10 +203,6 @@ const GetInvolvedPage = ({ location }) => {
                         LGU-MANILA-COVID19 with account number 0-05113-410-5.
                       </p>
                     </Content>
-                    <DonateButton>
-                      <h3>Donate.</h3>
-                      <p>Help someone in need.</p>
-                    </DonateButton>
                   </Item>
                   <Item>
                     <img src={placeholder} alt="placeholder" />
@@ -235,10 +215,6 @@ const GetInvolvedPage = ({ location }) => {
                         +63921-966-0384.
                       </p>
                     </Content>
-                    <DonateButton>
-                      <h3>Donate.</h3>
-                      <p>Help someone in need.</p>
-                    </DonateButton>
                   </Item>
                 </ItemWrap>
               </Section>
