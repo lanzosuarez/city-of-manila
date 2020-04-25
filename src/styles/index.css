@@ -665,7 +665,7 @@ li {
 
 .player-wrapper {
   position: relative;
-  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
 }
 
 .react-player {
@@ -674,32 +674,42 @@ li {
   left: 0;
 }
 
-.display-block{
-  display:block!important;
+.display-block {
+  display: block !important;
 }
 
-.display-none{
-  display:none!important;
+.display-none {
+  display: none !important;
 }
 
 @media (max-width: 1157px) {
-  #featuredVid{
-    height:56vw;
+  #featuredVid {
+    height: 56vw;
     margin-bottom: 0px;
   }
 }
 
 @media (max-width: 790px) {
-  #featuredVid{
-    height:54vw;
+  #featuredVid {
+    height: 54vw;
     margin-bottom: 0px;
   }
 }
 
-
 @media (max-width: 375px) {
-  #featuredVid{
-    height:51vw;
+  #featuredVid {
+    height: 51vw;
     margin-bottom: 0px;
   }
+}
+.slideIn-enter {
+  transform: translateX(200%) !important;
+}
+
+.slideIn-enter-active {
+  transform: translateX(0%) !important;
+}
+
+.slideIn-enter-done {
+  transform: translateX(0%) !important;
 }

@@ -5,9 +5,7 @@ const useSlideIn = (cb, elementId) => {
     const element = document.getElementById(elementId);
     const slideInAt =
       window.scrollY + window.innerHeight - element.offsetHeight;
-    console.log(slideInAt);
-    console.log(element.offsetTop);
-    if (slideInAt > element.offsetTop) {
+    if (slideInAt > element.offsetTop - element.offsetHeight) {
       cb();
     }
   };
