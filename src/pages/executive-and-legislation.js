@@ -10,7 +10,7 @@ import ExecSection2 from '../components/ExecSection2';
 import ExecAndLegislationProvider from '../context/ExecAndLegislationProvider';
 import { graphql } from 'gatsby';
 
-const ExecutiveAndLegislativePage = ({ data }) => {
+const ExecutiveAndLegislativePage = ({ data, location }) => {
   const [items, setItems] = useState(
     data.allContentfulExecutiveAndLegislation.edges
   );
@@ -23,7 +23,7 @@ const ExecutiveAndLegislativePage = ({ data }) => {
           <Notice />
           <Navigation />
           <PageHeader name="Executive Orders, City Resolutions, and Ordinances" />
-          <ExecSection1 items={items} />
+          <ExecSection1 items={items} locationState={location.state} />
           <ExecSection2 items={items} />
         </Layout>
       </ExecAndLegislationProvider>

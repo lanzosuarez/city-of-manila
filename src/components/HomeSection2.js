@@ -94,7 +94,14 @@ const HomeSection2 = () => {
         <LineImage src={line} alt="blue line" />
         <Content>Directives issued by the Mayor of Manila.</Content>
         <Footer>
-          <Link>READ MORE</Link>
+          <Link
+            state={{
+              tab: 1
+            }}
+            to="/executive-and-legislation"
+          >
+            READ MORE
+          </Link>
           <IconCon>
             <ion-icon
               data-icon="icon"
@@ -112,7 +119,14 @@ const HomeSection2 = () => {
           Resolutions and ordinances passed by Manila City Council
         </Content>
         <Footer>
-          <Link>READ MORE</Link>
+          <Link
+            to="/executive-and-legislation"
+            state={{
+              tab: 3
+            }}
+          >
+            READ MORE
+          </Link>
           <IconCon>
             <ion-icon
               data-icon="icon"

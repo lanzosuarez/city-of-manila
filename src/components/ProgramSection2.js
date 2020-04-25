@@ -14,12 +14,12 @@ const Container = styled.div`
   padding: 4rem 15px;
   grid-gap: 20px;
   margin: 0 auto;
-  width: 950px;
-  margin: 0 auto;
+    width: 950px;
+    margin: 0 auto;
 
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
 `;
 
 const Title = styled.h2`

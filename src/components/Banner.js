@@ -328,7 +328,6 @@ const Banner = () => {
 
   const getLocalWeather = async () => {
     const data = await getTemp();
-    console.log(data);
     setTemp(data.main.temp);
   };
 
@@ -347,12 +346,12 @@ const Banner = () => {
       setActiveText(1);
     });
   };
-  // useEffect(() => {
-  //   interval.current = window.setInterval(setActiveInterval, 10000);
-  //   return () => {
-  //     window.clearInterval(interval.current);
-  //   };
-  // }, []);
+  useEffect(() => {
+    interval.current = window.setInterval(setActiveInterval, 10000);
+    return () => {
+      window.clearInterval(interval.current);
+    };
+  }, []);
 
   const setActive = () => {
     setActiveInterval();

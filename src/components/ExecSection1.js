@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import styled from '@emotion/styled';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import { ExecAndLegislationContext } from '../context/ExecAndLegislationProvider';
@@ -132,10 +132,16 @@ export const tabs = [
   'Ordinances'
 ];
 
-const ExecSection1 = () => {
+const ExecSection1 = ({ locationState }) => {
   const { activeTab, filters, setActiveTab, setFilters } = useContext(
     ExecAndLegislationContext
   );
+
+  useEffect(() => {
+    if (locationState) {
+      setActiveTab(locationState.tab);
+    }
+  }, []);
 
   const onSelectTab = idx => () => setActiveTab(idx);
   const selectRange = dateRange => setFilters({ ...filters, dateRange });
