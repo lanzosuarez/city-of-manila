@@ -138,7 +138,7 @@ const ExecSection1 = ({ locationState }) => {
   );
 
   useEffect(() => {
-    if (locationState) {
+    if (locationState && locationState.tab) {
       setActiveTab(locationState.tab);
     }
   }, []);
