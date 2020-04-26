@@ -79,8 +79,14 @@ const items = [
     title: 'What happens after ECQ? ',
     content:
       'The University of the Philippines has released a study with analysis and recommendations for a post-ECQ scenario',
-    content2:
-      'The report may be accessed at https://www.up.edu.ph/preparing-for-a-post-ecq-scenario-analysis-and-recommendations/'
+    content2: (
+      <>
+        The report may be accessed at{' '}
+        <a href="https://www.up.edu.ph/preparing-for-a-post-ecq-scenario-analysis-and-recommendations/">
+          https://www.up.edu.ph/preparing-for-a-post-ecq-scenario-analysis-and-recommendations
+        </a>
+      </>
+    )
   }
 ];
 
@@ -132,7 +138,7 @@ const Accordion = ({ defaultActive = 0 }) => {
                   <p>{i.content2}</p>
                 </div>
                 <div>
-                  <p>{i.content3}</p>
+                  <p dangerouslySetInnerHTML={{ __html: i.content3 }}></p>
                 </div>
               </AccordionContent>
             </AccordionItem>
