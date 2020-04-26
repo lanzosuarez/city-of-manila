@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import '../styles/about.css';
 
@@ -18,6 +18,8 @@ import SEO from '../components/SEO';
 import Notice from '../components/Notice';
 import Navigation from '../components/Navigation';
 import scrollToSection from '../hooks/scrollToSection';
+import useSlideIn from '../hooks/useSlideIn';
+import { CSSTransition } from 'react-transition-group';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -62,6 +64,8 @@ const QuoteStyle = styled.img`
   position: relative;
   width: 100%;
   max-width: 450px;
+  transform: translateX(200%);
+  transition: transform 600ms ease-in-out;
   @media only screen and (max-width: 425px) {
     max-width: 100%;
   }
@@ -73,6 +77,8 @@ const QuoteStyleBox = styled.img`
   right: 0px;
   max-width: 300px;
   width: 100%;
+  transform: translateX(200%);
+  transition: transform 500ms ease-in-out 300ms;
   @media only screen and (max-width: 480px) {
     position: relative;
     max-width: 100%;
@@ -186,7 +192,8 @@ const Section5Social = styled.div`
 `;
 
 const MobileContent = styled.div`
-  display:none @media (max-width: 767px) {
+  display: none;
+  @media (max-width: 767px) {
     display: block;
   }
   @media (min-width: 768px) {
@@ -305,6 +312,9 @@ const MobileTimeline = () => {
 };
 
 const AboutPage = ({ location }) => {
+  const [slideIn, setSlideIn] = useState(false);
+  useSlideIn(() => setSlideIn(true), 'mayor-profile');
+
   useEffect(() => {
     scrollToSection(location);
   }, [location]);
@@ -347,11 +357,18 @@ const AboutPage = ({ location }) => {
                   </p>
                 </LeftContainer>
                 <RightContainer>
-                  <QuoteStyle
-                    src={imgSection2}
-                    alt="Meet The Man Who Care About Our City"
-                  />
-                  <QuoteStyleBox src={imgSection2Quote} alt="From Mayor Isko" />
+                  <CSSTransition classNames="homeSection5-slideIn" in={slideIn}>
+                    <QuoteStyle
+                      src={imgSection2}
+                      alt="Meet The Man Who Care About Our City"
+                    />
+                  </CSSTransition>
+                  <CSSTransition classNames="homeSection5-slideIn" in={slideIn}>
+                    <QuoteStyleBox
+                      src={imgSection2Quote}
+                      alt="From Mayor Isko"
+                    />
+                  </CSSTransition>
                 </RightContainer>
               </div>
             </div>

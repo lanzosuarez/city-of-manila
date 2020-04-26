@@ -71,6 +71,9 @@ const Sign = styled.img`
   position: absolute;
   bottom: -50px;
   left: 0;
+  transition: all 500ms ease-in-out 600ms;
+  transform: translateY(-300px);
+  opacity: 0;
 `;
 
 const lineStyle = {
@@ -99,15 +102,17 @@ const HomeSection5 = () => {
         />
       </Item>
       <Section>
-        <CSSTransition in={slideIn} classNames="slideIn">
+        <CSSTransition in={slideIn} classNames="homeSection5-slideIn">
           <Section2 id="section-2">
             <img alt="mayor-isko" src={img1}></img>
           </Section2>
         </CSSTransition>
-        <CSSTransition in={slideIn} classNames="slideIn">
+        <CSSTransition in={slideIn} classNames="homeSection5-slideIn">
           <Section3 id="section-3">
             <img alt="mayor-isko" src={img2}></img>
-            <Sign src={sign} />
+            <CSSTransition in={slideIn} classNames="homeSection5-slideDown">
+              <Sign src={sign} />
+            </CSSTransition>
           </Section3>
         </CSSTransition>
       </Section>

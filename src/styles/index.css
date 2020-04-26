@@ -702,14 +702,22 @@ li {
     margin-bottom: 0px;
   }
 }
-.slideIn-enter {
+.homeSection5-slideIn-enter {
   transform: translateX(200%) !important;
 }
 
-.slideIn-enter-active {
+.homeSection5-slideIn-enter-active,
+.homeSection5-slideIn-enter-done {
   transform: translateX(0%) !important;
 }
 
-.slideIn-enter-done {
-  transform: translateX(0%) !important;
+.homeSection5-slideDown-enter {
+  transform: translateY(-300px) !important;
+  opacity: 0 !important;
+}
+
+.homeSection5-slideDown-enter-active,
+.homeSection5-slideDown-enter-done {
+  transform: translateY(0px) !important;
+  opacity: 1 !important;
 }
