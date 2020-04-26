@@ -12,7 +12,7 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 4rem 15px;
   padding-bottom: 50px;
-  width: ${props => (props.noImage ? '950px' : '100%')};
+  max-width: ${props => (props.noImage ? '950px' : '100%')};
 `;
 
 const Title = styled.h2`

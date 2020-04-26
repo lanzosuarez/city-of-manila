@@ -4,7 +4,6 @@ import format from 'date-fns/format';
 import isAfter from 'date-fns/isAfter';
 import isBefore from 'date-fns/isBefore';
 
-import placeholder from '../images/eo-logo.jpg';
 import DownloadExec from './DownloadExec';
 import { ExecAndLegislationContext } from '../context/ExecAndLegislationProvider';
 import { pipe, searchItems } from '../helpers';

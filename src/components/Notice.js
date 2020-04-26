@@ -25,6 +25,9 @@ const IconsContainer = styled.div`
   grid-auto-flow: column;
   align-items: center;
   grid-gap: 20px;
+  ion-icon:hover{
+    color:#04326a!important;
+  }
 `;
 
 const NoticeText = styled.div`

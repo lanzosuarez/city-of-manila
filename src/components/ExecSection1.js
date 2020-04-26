@@ -92,6 +92,9 @@ const Filters = styled.div`
 const SearchCon = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 `;
 
 const FilterByDate = styled.div`
@@ -116,7 +119,8 @@ const SearchInput = styled.input`
   border-radius: 5px;
 
   @media (max-width: 576px) {
-    height: 40px;
+    height: 35px;
+    width: 100%;
   }
 `;
 

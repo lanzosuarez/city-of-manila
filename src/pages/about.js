@@ -189,6 +189,9 @@ const Section5Social = styled.div`
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
     padding: 20px 20px 50px 0px;
   }
+  ion-icon:hover{
+    color:#ffa537!important;
+  }
 `;
 
 const MobileContent = styled.div`

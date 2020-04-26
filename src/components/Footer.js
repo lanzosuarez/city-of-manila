@@ -77,6 +77,9 @@ const IconContainer = styled.div`
   grid-gap: 1px;
   width: 50%;
   margin: 15px 0px;
+  ion-icon:hover{
+    color:#ffa537!important;
+  }
 `;
 const iconStyle = {
   color: 'white'
