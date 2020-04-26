@@ -4,7 +4,7 @@ import format from 'date-fns/format';
 import isAfter from 'date-fns/isAfter';
 import isBefore from 'date-fns/isBefore';
 
-import placeholder from '../images/team-placeholder.png';
+import placeholder from '../images/eo-logo.jpg';
 import DownloadExec from './DownloadExec';
 import { ExecAndLegislationContext } from '../context/ExecAndLegislationProvider';
 import { pipe, searchItems } from '../helpers';
@@ -133,6 +133,21 @@ const ExecSection2 = ({ items }) => {
     }
   };
 
+  const activePage = () => {
+    switch (activeTab) {
+      case 0:
+        return 'Total';
+      case 1:
+        return 'Executive Orders';
+      case 2:
+        return 'City Resolution';
+      case 3:
+        return 'Ordinances';
+      default:
+        return 'Total';
+    }
+  };
+
   useEffect(() => {
     setPage(1);
   }, [filters, items, activeTab]);
@@ -168,7 +183,7 @@ const ExecSection2 = ({ items }) => {
       <ListContainer>
         <Header>
           <HeaderItem>
-            <Figure>{pageItems.length}</Figure> Legislation
+            <Figure>{pageItems.length}</Figure> {activePage()}
           </HeaderItem>
           <HeaderItem>
             {page > 1 && pageItems.length && (
@@ -192,7 +207,7 @@ const ExecSection2 = ({ items }) => {
         <List>
           {paginatedItems.map(({ node: i }, idx) => (
             <ListItem key={idx}>
-              <Avatar alt="item_avatar" src={placeholder}></Avatar>
+              <Avatar alt="item_avatar" src={i.logo.file.url}></Avatar>
               <Details>
                 <Type>{i.name}</Type>
                 <Name>{i.description.description}</Name>

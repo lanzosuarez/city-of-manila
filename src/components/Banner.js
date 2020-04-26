@@ -363,7 +363,6 @@ const Banner = () => {
         <Notice maxWidth="1200px" />
         <Navigation maxWidth="1200px" />
       </OverlayNoticeAndNav>
-
       <BannerCon>
         {banners.map((b, idx) => (
           <BannerImg

@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import styled from '@emotion/styled';
 import NavigationItem from './NavigationItem';
-import ManilaLogo from '../images/manila-logo.png';
+import ManilaLogo from '../images/manila-logo-90x90px.png';
 
 const Container = styled.div`
   height: 100px;
@@ -23,7 +23,7 @@ const Container = styled.div`
 const Logo = styled.div`
   height: 100%;
   width: 200px;
-  background: red;
+  background: #05326b;
   display: flex;
   justify-content: center;
   align-items: center;

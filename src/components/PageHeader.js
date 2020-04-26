@@ -49,9 +49,9 @@ const PageBreadcrumbs = styled.p`
   line-height: 24px;
 `;
 
-const PageHeader = ({ name }) => {
+const PageHeader = ({ name, bg }) => {
   return (
-    <Container bg={pageBg}>
+    <Container bg={bg ? bg : pageBg} >
       <PageContent>
         <HeaderText>{name}</HeaderText>
         <PageBreadcrumbs>Home / {name}</PageBreadcrumbs>
