@@ -3,7 +3,9 @@ import styled from '@emotion/styled';
 import '../styles/about.css';
 
 import line from '../images/blue-line.png';
-import placeholder from '../images/get-involved-placeholder2.png';
+import landbank from '../images/get-involved-img-1.jpg';
+import dbp from '../images/get-involved-img-2.jpg';
+import donation from '../images/get-involved-img-3.jpg';
 import Banner from '../images/page-banner-get-involved.jpg';
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
@@ -178,11 +180,11 @@ const GetInvolvedPage = ({ location }) => {
           <Section3>
             <PageContainer>
               <Section>
-                <h1 id="how-to-help">How to help</h1>
+                <h1 id="how-to-help">How you can help further:</h1>
                 <img src={line} alt="blue line" className="line" />
                 <ItemWrap>
                   <Item>
-                    <img src={placeholder} alt="placeholder" />
+                    <img src={landbank} alt="Cash donations in any currency" />
                     <Content>
                       <h1>Cash donations in any currency</h1>
                       <p>
@@ -194,7 +196,7 @@ const GetInvolvedPage = ({ location }) => {
                     </Content>
                   </Item>
                   <Item>
-                    <img src={placeholder} alt="placeholder" />
+                    <img src={dbp} alt="Cash donations in Philippine currency" />
                     <Content>
                       <h1>Cash donations in Philippine currency</h1>
                       <p>
@@ -205,7 +207,7 @@ const GetInvolvedPage = ({ location }) => {
                     </Content>
                   </Item>
                   <Item>
-                    <img src={placeholder} alt="placeholder" />
+                    <img src={donation} alt="Donate goods and supplies" />
                     <Content>
                       <h1>Donate goods and supplies</h1>
                       <p>

@@ -104,7 +104,7 @@ const ProgramsSection3 = ({ content: { content } }) => {
     <Container noImage={!content.imageUrl}>
       <Content noImage={!content.imageUrl}>
         {content.imageUrl && (
-          <Avatar alt="card-image" src={placeholder}></Avatar>
+          <Avatar alt="card-image" src={content.imageUrl}></Avatar>
         )}
         <TextContainer>
           <SubTitle>{content.subtitle}</SubTitle>
