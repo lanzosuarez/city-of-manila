@@ -219,18 +219,15 @@ const ButtonCon = styled.div`
   }
 `;
 
-const BannerImg = styled.div`
-  background-image: ${props => `url(${props.src})`};
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+const BannerImg = styled.img`
+  filter: brightness(0.7);
   position: absolute;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+  opacity: ${props => (props.show ? 1 : 0)};
   left: 0;
   top: 0;
-  z-index: ${props => props.zIndex};
-  transition: opacity 1s 1s;
 `;
 
 const ArrowCon = styled.div`
@@ -244,12 +241,10 @@ const ArrowCon = styled.div`
 
 const banners = [
   {
-    banner: banner1,
-    zIndex: 2
+    banner: banner2
   },
   {
-    banner: banner2,
-    zIndex: 1
+    banner: banner1
   }
 ];
 
@@ -322,7 +317,7 @@ const MobileLocalTime = ({ transitionFlag, temp }) => {
 
 const Banner = () => {
   const interval = useRef(null);
-  const [activeBanner, setActiveBanner] = useState(banner1);
+  const [activeBanner, setActiveBanner] = useState(null);
   const [activeText, setActiveText] = useState(0);
   const [temp, setTemp] = useState(null);
 
@@ -332,6 +327,9 @@ const Banner = () => {
   };
 
   useEffect(() => {
+    window.setTimeout(() => {
+      setActiveBanner(banner1);
+    }, 400);
     getLocalWeather();
   }, []);
 
@@ -367,19 +365,14 @@ const Banner = () => {
       </OverlayNoticeAndNav>
       <BannerCon>
         {banners.map((b, idx) => (
-          <CSSTransition
-            appear
+          <BannerImg
+            width="100%"
+            show={activeBanner === b.banner}
+            loading="lazy"
+            src={b.banner}
+            alt={`banner-image-${idx}`}
             key={idx}
-            unmountOnExit
-            in={activeBanner === b.banner}
-            classNames="banner-fade"
-            timeout={{ enter: 10000, exit: 10000 }}
-          >
-            <div>
-              <BannerOverlay loading="lazy" />
-              <BannerImg loading="lazy" src={b.banner} zIndex={b.zIndex} />
-            </div>
-          </CSSTransition>
+          />
         ))}
         {texts.map((t, idx) => (
           <BannerTexts key={idx} show={activeText === idx}>
