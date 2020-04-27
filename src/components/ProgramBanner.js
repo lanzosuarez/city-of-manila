@@ -39,7 +39,7 @@ const HeaderText = styled.h1`
 
 const ProgramBanner = props => {
   return (
-    <Container bg={pageBg}>
+    <Container bg={props.bg ? props.bg : pageBg} >
       <PageContent>
         <HeaderText>{props.text}</HeaderText>
       </PageContent>

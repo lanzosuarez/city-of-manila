@@ -35,6 +35,7 @@ const ProgramsTemplate = ({ data }) => {
   const {
     contentfulPrograms: {
       bannerTitle,
+      banner,
       pageType,
       section1,
       section2,
@@ -48,7 +49,7 @@ const ProgramsTemplate = ({ data }) => {
         <SEO title="Programs" />
         <Notice />
         <Navigation />
-        <ProgramBanner text={bannerTitle} />
+        <ProgramBanner text={bannerTitle} bg={banner.file.url} />
         <ProgramShare />
         <Grid>
           <PageContainer>
@@ -72,6 +73,11 @@ export const query = graphql`
     contentfulPrograms(slug: { eq: $slug }) {
       slug
       bannerTitle
+      banner {
+        file {
+          url
+        }
+      }
       pageType
       section1 {
         title
