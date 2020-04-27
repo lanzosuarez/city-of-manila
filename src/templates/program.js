@@ -1,4 +1,4 @@
-import React, { useEffect }  from 'react';
+import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import Layout from '../components/Layout';
@@ -36,10 +36,9 @@ const ProgramsTemplate = ({ data }) => {
   const [addElement] = useFadeIn();
 
   useEffect(() => {
-    addElement('program-section1', { delay: '300ms' });
+    addElement('program-section1');
     addElement('program-section2', { delay: '300ms' });
     addElement('program-section3', { delay: '300ms' });
-    addElement('program-section4', { delay: '300ms' });
   }, []);
   const {
     contentfulPrograms: {
@@ -64,14 +63,19 @@ const ProgramsTemplate = ({ data }) => {
           <PageContainer data-usefadein="program-section1">
             <ProgramsSection1 content={section1} />
           </PageContainer>
-          {pageType !== 3 && <ProgramsSection2 content={section2} data-usefadein="program-section2"/>}
+          {pageType !== 3 && (
+            <ProgramsSection2
+              content={section2}
+              data-usefadein="program-section2"
+            />
+          )}
           {(pageType === 2 || pageType === 3) && (
             <PageContainer data-usefadein="program-section3">
               <ProgramsSection3 content={section3} />
             </PageContainer>
           )}
         </Grid>
-        <ProgramsNav activeProgram={slug} data-usefadein="program-section4"/>
+        <ProgramsNav activeProgram={slug} data-usefadein="program-section4" />
       </Layout>
     </NavigationProvider>
   );

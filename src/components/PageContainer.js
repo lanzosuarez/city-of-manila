@@ -9,8 +9,12 @@ const Container = styled.div`
   position: relative;
 `;
 
-const PageContainer = ({ children, id = '' }) => {
-  return <Container id={id}>{children}</Container>;
+const PageContainer = ({ children, id = '', ...props }) => {
+  return (
+    <Container {...props} id={id}>
+      {children}
+    </Container>
+  );
 };
 
 export default PageContainer;
