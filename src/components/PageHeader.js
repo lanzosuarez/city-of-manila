@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 
 import pageBg from '../images/about-header.png';
+import useFadeIn from '../hooks/useFadeIn';
 
 const Container = styled.div`
   background-image: ${props => `url(${props.bg})`};
@@ -50,11 +51,19 @@ const PageBreadcrumbs = styled.p`
 `;
 
 const PageHeader = ({ name, bg }) => {
+  const [addElement] = useFadeIn();
+  useEffect(() => {
+    addElement('banner-header-text', { dir: 'down' });
+    addElement('banner-breadcrumbs', { dir: 'down' });
+  }, []);
+
   return (
-    <Container bg={bg ? bg : pageBg} >
+    <Container bg={bg ? bg : pageBg}>
       <PageContent>
-        <HeaderText>{name}</HeaderText>
-        <PageBreadcrumbs>Home / {name}</PageBreadcrumbs>
+        <HeaderText data-usefadein="banner-header-text">{name}</HeaderText>
+        <PageBreadcrumbs data-usefadein="banner-breadcrumbs">
+          Home / {name}
+        </PageBreadcrumbs>
       </PageContent>
     </Container>
   );
