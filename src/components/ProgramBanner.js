@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 import styled from '@emotion/styled';
 
 import pageBg from '../images/about-header.png';
+import useFadeIn from '../hooks/useFadeIn';
 
 const Container = styled.div`
   background-image: ${props => `url(${props.bg})`};
@@ -38,10 +39,14 @@ const HeaderText = styled.h1`
 `;
 
 const ProgramBanner = props => {
+  const [addElement] = useFadeIn();
+  useEffect(() => {
+    addElement('banner-header-text', { dir: 'down' });
+  }, []);
   return (
     <Container bg={props.bg ? props.bg : pageBg} >
       <PageContent>
-        <HeaderText>{props.text}</HeaderText>
+        <HeaderText data-usefadein="banner-header-text">{props.text}</HeaderText>
       </PageContent>
     </Container>
   );

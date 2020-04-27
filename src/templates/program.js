@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import Layout from '../components/Layout';
@@ -15,6 +15,7 @@ import ProgramShare from '../components/ProgramShare';
 import ProgramsSection2 from '../components/ProgramSection2';
 import ProgramsSection3 from '../components/ProgramSection3';
 import ProgramsNav from '../components/ProgramsNav';
+import useFadeIn from '../hooks/useFadeIn';
 
 const Grid = styled.div`
   display: grid;
@@ -32,6 +33,14 @@ export const programsPath = [
 ];
 
 const ProgramsTemplate = ({ data }) => {
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('program-section1', { delay: '300ms' });
+    addElement('program-section2', { delay: '300ms' });
+    addElement('program-section3', { delay: '300ms' });
+    addElement('program-section4', { delay: '300ms' });
+  }, []);
   const {
     contentfulPrograms: {
       bannerTitle,
@@ -53,16 +62,16 @@ const ProgramsTemplate = ({ data }) => {
         <ProgramShare />
         <Grid>
           <PageContainer>
-            <ProgramsSection1 content={section1} />
+            <ProgramsSection1 content={section1} data-usefadein="program-section1"/>
           </PageContainer>
-          {pageType !== 3 && <ProgramsSection2 content={section2} />}
+          {pageType !== 3 && <ProgramsSection2 content={section2} data-usefadein="program-section2"/>}
           {(pageType === 2 || pageType === 3) && (
             <PageContainer>
-              <ProgramsSection3 content={section3} />
+              <ProgramsSection3 content={section3} data-usefadein="program-section3"/>
             </PageContainer>
           )}
         </Grid>
-        <ProgramsNav activeProgram={slug} />
+        <ProgramsNav activeProgram={slug} data-usefadein="program-section4"/>
       </Layout>
     </NavigationProvider>
   );
