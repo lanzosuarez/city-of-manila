@@ -61,13 +61,13 @@ const ProgramsTemplate = ({ data }) => {
         <ProgramBanner text={bannerTitle} bg={banner.file.url} />
         <ProgramShare />
         <Grid>
-          <PageContainer>
-            <ProgramsSection1 content={section1} data-usefadein="program-section1"/>
+          <PageContainer data-usefadein="program-section1">
+            <ProgramsSection1 content={section1} />
           </PageContainer>
           {pageType !== 3 && <ProgramsSection2 content={section2} data-usefadein="program-section2"/>}
           {(pageType === 2 || pageType === 3) && (
-            <PageContainer>
-              <ProgramsSection3 content={section3} data-usefadein="program-section3"/>
+            <PageContainer data-usefadein="program-section3">
+              <ProgramsSection3 content={section3} />
             </PageContainer>
           )}
         </Grid>
