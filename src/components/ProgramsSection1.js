@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 
 import line from '../images/blue-line.png';
+import useFadeIn from '../hooks/useFadeIn';
 
 const Container = styled.div`
   background: white;

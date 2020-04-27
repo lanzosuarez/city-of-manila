@@ -99,7 +99,6 @@ const TextContent = styled.p`
 `;
 
 const ProgramsSection3 = ({ content: { content } }) => {
-  console.log(content);
   return (
     <Container noImage={!content.imageUrl}>
       <Content noImage={!content.imageUrl}>
