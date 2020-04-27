@@ -30,10 +30,9 @@ const useFadeIn = () => {
   const setUpElement = (id, options = {}) => {
     const { dir = 'up', offset = '100px', delay = '' } = options;
     const el = document.querySelector(`[data-usefadein="${id}"]`);
-    const setElStyle = setStyle(el);
-    const visible = checkIfElIsAlreadyVisible(el);
-    console.log(id, visible);
     if (el) {
+      const setElStyle = setStyle(el);
+      const visible = checkIfElIsAlreadyVisible(el);
       setElStyle('transform', `translateY(${sign(dir)}${offset})`);
       setElStyle('opacity', visible ? 0.5 : 0);
       window.setTimeout(() => {
