@@ -80,7 +80,7 @@ const HomeSection8 = () => {
         <PageContainer>
           <div className={watchVideo ? 'display-block' : 'display-none'}>
             <HomeVideo
-              url="https://www.youtube.com/watch?v=NpEaa2P7qZI"
+              url="https://www.youtube.com/watch?v=2qKPzVLguDc"
               playing={watchVideo}
             />
           </div>
