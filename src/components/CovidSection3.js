@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import blueline from '../images/blue-line.png';
-import CovidPlaceholder from '../images/covid-placeholder.jpg';
+import Covid1 from '../images/covid-sec-4-img-1.jpg';
 import Covid2 from '../images/covid-sec-4-img-2.jpg';
 import Covid3 from '../images/covid-sec-4-img-3.jpg';
 import Covid4 from '../images/covid-sec-4-img-4.jpg';
@@ -97,7 +97,7 @@ const CovidSection3 = () => {
         <RightContainer>
           <ImgContainer
             loading="lazy"
-            src={CovidPlaceholder}
+            src={Covid1}
             alt="How to prevent COVID-19"
           />
         </RightContainer>
