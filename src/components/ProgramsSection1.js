@@ -10,7 +10,7 @@ const Container = styled.div`
   text-align: center;
   padding: 2rem 15px;
   grid-gap: 20px;
-  width: 950px;
+  max-width: 950px;
   margin: 0 auto;
 
   @media (max-width: 1024px) {

@@ -12,7 +12,7 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 4rem 15px;
   padding-bottom: 50px;
-  width: ${props => (props.noImage ? '950px' : '100%')};
+  max-width: ${props => (props.noImage ? '950px' : '100%')};
 `;
 
 const Title = styled.h2`
@@ -103,7 +103,7 @@ const ProgramsSection3 = ({ content: { content } }) => {
     <Container noImage={!content.imageUrl}>
       <Content noImage={!content.imageUrl}>
         {content.imageUrl && (
-          <Avatar alt="card-image" src={placeholder}></Avatar>
+          <Avatar alt="card-image" src={content.imageUrl}></Avatar>
         )}
         <TextContainer>
           <SubTitle>{content.subtitle}</SubTitle>

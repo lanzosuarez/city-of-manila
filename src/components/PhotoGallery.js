@@ -147,7 +147,7 @@ const PhotoGallery = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allContentfulPhotoGallery {
+        allContentfulPhotoGallery(sort: {fields: [updatedAt], order: DESC }) {
           edges {
             node {
               image {

@@ -20,6 +20,7 @@ import Navigation from '../components/Navigation';
 import scrollToSection from '../hooks/scrollToSection';
 import useSlideIn from '../hooks/useSlideIn';
 import { CSSTransition } from 'react-transition-group';
+import useFadeIn from '../hooks/useFadeIn';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -189,6 +190,9 @@ const Section5Social = styled.div`
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
     padding: 20px 20px 50px 0px;
   }
+  ion-icon:hover{
+    color:#ffa537!important;
+  }
 `;
 
 const MobileContent = styled.div`
@@ -312,6 +316,15 @@ const MobileTimeline = () => {
 };
 
 const AboutPage = ({ location }) => {
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('about-section2', { delay: '300ms' });
+    addElement('about-section3', { delay: '300ms' });
+    addElement('about-section5', { delay: '300ms' });
+    addElement('about-section6', { delay: '400ms' });
+  }, []);
+
   const [slideIn, setSlideIn] = useState(false);
   useSlideIn(() => setSlideIn(true), 'mayor-profile');
 
@@ -330,11 +343,11 @@ const AboutPage = ({ location }) => {
           <PageContainer id="mayor-profile">
             <div className="section">
               <div className="section-container">
-                <LeftContainer>
+                <LeftContainer data-usefadein="about-section2">
                   <h1> Meet Mayor Isko </h1>
                   <img src={line} alt="blue line" className="line" />
                   <p className="text-break">
-                    Mayor Francisco “Isko Moreno” Domagoso{' '}
+                    Mayor Francisco “Isko Moreno” Domagoso
                   </p>
                   <p>
                     (born October 24, 1974) – popularly known as "Isko Moreno"
@@ -374,7 +387,7 @@ const AboutPage = ({ location }) => {
             </div>
           </PageContainer>
           <Section3Container>
-            <ContentContainer id="background">
+            <ContentContainer id="background"  data-usefadein="about-section3">
               <Section3>
                 <h1> Background </h1>
                 <img src={line} alt="blue line" className="line" />
@@ -482,7 +495,7 @@ const AboutPage = ({ location }) => {
               </Section3>
             </Section3PageContainer>
           </Section32Container>
-          <Section33Container>
+          <Section33Container data-usefadein="about-section5">
             <ContentContainer>
               <Section3>
                 <h1> Personal </h1>
@@ -495,7 +508,7 @@ const AboutPage = ({ location }) => {
               </Section3>
             </ContentContainer>
           </Section33Container>
-          <Section5Container>
+          <Section5Container data-usefadein="about-section6"> 
             <PageContainer id="links-to-social-media">
               <div className="section-last">
                 <div className="section-container">
@@ -508,8 +521,8 @@ const AboutPage = ({ location }) => {
                       />
                     </Section5ImgContent>
                   </LeftContainer>
-                  <RightContainer>
-                    <Section5Social>
+                  <RightContainer >
+                    <Section5Social >
                       <h1 className="white">Connect with Mayor Isko</h1>
                       <img src={whiteline} alt="blue line" className="line" />
                       <p>I'm on social media and I want to hear from you!</p>

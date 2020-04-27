@@ -2,7 +2,11 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import blueline from '../images/blue-line.png';
-import CovidPlaceholder from '../images/covid-placeholder.jpg';
+import Covid1 from '../images/covid-sec-4-img-1.jpg';
+import Covid2 from '../images/covid-sec-4-img-2.jpg';
+import Covid3 from '../images/covid-sec-4-img-3.jpg';
+import Covid4 from '../images/covid-sec-4-img-4.jpg';
+import Covid5 from '../images/covid-sec-4-img-5.jpg';
 
 import PageContainer from '../components/PageContainer';
 
@@ -93,7 +97,7 @@ const CovidSection3 = () => {
         <RightContainer>
           <ImgContainer
             loading="lazy"
-            src={CovidPlaceholder}
+            src={Covid1}
             alt="How to prevent COVID-19"
           />
         </RightContainer>
@@ -121,7 +125,7 @@ const CovidSection3 = () => {
         <RightContainer>
           <ImgContainer
             loading="lazy"
-            src={CovidPlaceholder}
+            src={Covid2}
             alt="When else you need to call a doctor"
           />
         </RightContainer>
@@ -157,7 +161,7 @@ const CovidSection3 = () => {
         <RightContainer>
           <ImgContainer
             loading="lazy"
-            src={CovidPlaceholder}
+            src={Covid3}
             alt="Do not break ECQ rules "
           />
         </RightContainer>
@@ -187,7 +191,7 @@ const CovidSection3 = () => {
         <RightContainer>
           <ImgContainer
             loading="lazy"
-            src={CovidPlaceholder}
+            src={Covid4}
             alt="Don't forget about mental health"
           />
         </RightContainer>
@@ -221,7 +225,7 @@ const CovidSection3 = () => {
         <RightContainer>
           <ImgContainer
             loading="lazy"
-            src={CovidPlaceholder}
+            src={Covid5}
             alt="Stay informed"
           />
         </RightContainer>

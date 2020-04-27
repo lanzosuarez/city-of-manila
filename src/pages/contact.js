@@ -6,6 +6,7 @@ import styled from '@emotion/styled';
 
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
+import HeaderImg from '../images/page-banner-contact.jpg';
 import whiteline from '../images/white-line.png';
 import contactbg1 from '../images/contact-bg.png';
 import Notice from '../components/Notice';
@@ -129,7 +130,7 @@ const ContactPage = () => {
         <Notice />
         <Navigation />
         <Wrapper>
-          <PageHeader name="Contact" />
+          <PageHeader name="Contact" bg={HeaderImg}/>
           <PageContainer>
           <PageContainer>
             <Section2>
