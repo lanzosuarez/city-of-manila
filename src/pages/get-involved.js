@@ -13,6 +13,7 @@ import SEO from '../components/SEO';
 import Notice from '../components/Notice';
 import Navigation from '../components/Navigation';
 import scrollToSection from '../hooks/scrollToSection';
+import useFadeIn from '../hooks/useFadeIn';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -124,6 +125,14 @@ const Content = styled.div`
 `;
 
 const GetInvolvedPage = ({ location }) => {
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('get-involved-section1');
+    addElement('get-involved-section2', { delay: '300ms' });
+    addElement('get-involved-section3', { delay: '300ms' });
+  }, []);
+
   useEffect(() => {
     scrollToSection(location);
   }, [location]);
@@ -136,7 +145,7 @@ const GetInvolvedPage = ({ location }) => {
         <Navigation />
         <Wrapper>
           <PageHeader name="Get Involved" bg={Banner} />
-          <Section1>
+          <Section1 data-usefadein="get-involved-section1">
             <PageContainer>
               <Section>
                 <h1>How you can help Manila</h1>
@@ -149,7 +158,7 @@ const GetInvolvedPage = ({ location }) => {
               </Section>
             </PageContainer>
           </Section1>
-          <Section2>
+          <Section2 data-usefadein="get-involved-section2">
             <Section2Container>
               <Section>
                 <h1>Take the Digital Health Survey Now</h1>
@@ -175,7 +184,7 @@ const GetInvolvedPage = ({ location }) => {
               </Section>
             </Section2Container>
           </Section2>
-          <Section3>
+          <Section3 data-usefadein="get-involved-section3">
             <PageContainer>
               <Section>
                 <h1 id="how-to-help">How to help</h1>
