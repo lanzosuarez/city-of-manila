@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
 
 import blueline from '../images/blue-line.png';
 import Accordion from './Accordion';
@@ -60,7 +59,7 @@ const InfoContent = styled.p`
 
 const Footer = styled.div`
   padding: 20px 0px;
-  display: none;
+  display: flex;
   align-items: center;
   cursor: pointer;
 
@@ -99,7 +98,9 @@ const CovidSection1 = () => {
         <InfoSection>
           <InfoHeader>
             <InfoTitle>
-              Enhanced Community Quarantine:<br/>What You Need To Know
+              Enhanced Community Quarantine:
+              <br />
+              What You Need To Know
             </InfoTitle>
             <img loading="lazy" alt="blue-line" src={blueline}></img>
           </InfoHeader>
@@ -110,9 +111,15 @@ const CovidSection1 = () => {
           </InfoContent>
           <InfoContent>
             The Philippine Department of Health (DOH) reported the first case in
-            the Philippines on 30 January 2020. On 07 March 2020, the DOH raised
-            COVID-19 Alert System to Code Red Sub-level 1 to initiate efforts to
-            prevent widespread community transmission.
+            the Philippines on 30 January 2020.
+          </InfoContent>
+          <InfoContent>
+            <a href="https://www.doh.gov.ph/doh-press-release/doh-confirms-local-transmission-of-covid-19-in-ph">
+              <strong>
+                On 07 March 2020, the DOH raised COVID-19 Alert System
+              </strong>
+            </a> to Code Red Sub-level 1 to initiate efforts to prevent widespread
+            community transmission.
           </InfoContent>
           <InfoContent>
             On 08 March 2020, the Office of the President issued Proclamation
@@ -126,7 +133,9 @@ const CovidSection1 = () => {
             the safety and well-being of everyone.
           </InfoContent>
           <Footer>
-            <Link>Learn More</Link>
+            <a href="https://www.officialgazette.gov.ph/downloads/2020/02feb/20200308-PROC-922-RRD-1.pdf">
+              View Proclamation No. 922
+            </a>
             <IconCon>
               <ion-icon
                 data-icon="icon"

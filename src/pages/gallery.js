@@ -98,7 +98,7 @@ const GalleryPage = ({ location }) => {
               <FeaturedContent>
                 Feeding a city of 1.8 million during a crisis.
               </FeaturedContent>
-              <Date>April 04, 2020</Date>
+              <Date>March 25, 2020</Date>
             </Section>
             <PageContainer>
               <BorderLine />

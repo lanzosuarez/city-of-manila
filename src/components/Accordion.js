@@ -70,21 +70,67 @@ const items = [
   },
   {
     id: 'item3',
-    title: 'Until when will we be in ECQ?',
+    title: 'How long will the ECQ last?',
     content:
-      'The IATF, in its Joint Resolution No. 20 dated 6 April 2020, declared the extension of the Enhanced Community Quarantine over the entire island of Luzon, until 11:59PM of 30 April 2020. Said Resolution was approved by President Rodrigo Duterte on 7 April 2020. As such, all implementing rules and guidelines of the Enhanced Community Quarantine will remain in place. '
+      'On 24 April, President Duterte approved the recommendation of the Inter Agency Task Force for the Management of Emerging Infectious Diseases (IATF) to extend the Enhanced Community Quarantine (ECQ) in high risk areas until 15 May 2020. The National Capital Region, which includes the City of Manila, is among the list of high risk areas. Thus, the implementing rules and regulations of the ECQ are still in effect until said date. Areas not classified as high risk will move to a General Community Quarantine (GCQ) model beginning May 1st.'
   },
   {
     id: 'item4',
-    title: 'What happens after ECQ? ',
+    title: 'What happens after ECQ?',
     content:
-      'The University of the Philippines has released a study with analysis and recommendations for a post-ECQ scenario',
+      'Subject to evaluation of the IATF, the ECQ rules may be eased and areas previously under ECQ may move to the General Community Quarantine (GCQ) model. Under the GCQ, certain economic activities will be allowed to resume in a limited capacity. Industries allowed to resume include the following:',
     content2: (
       <>
-        The report may be accessed at{' '}
-        <a href="https://www.up.edu.ph/preparing-for-a-post-ecq-scenario-analysis-and-recommendations/">
-          https://www.up.edu.ph/preparing-for-a-post-ecq-scenario-analysis-and-recommendations
-        </a>
+        - Agriculture
+        <br />
+        - Fisheries
+        <br />
+        - Forestry
+        <br />
+        - Food manufacturing and its entire supply chain (including ink,
+        packaging, raw materials, etc.)
+        <br />
+        - Food retail (supermarket, market, and restaurant for takeout and
+        delivery only)
+        <br />
+        - Healthcare (hospitals, clinics, drugstores)
+        <br />
+        - Logistics
+        <br />
+        - Water
+        <br />
+        - Energy
+        <br />
+        - Internet
+        <br />
+        - Telecommunications
+        <br />
+        - Media
+        <br />
+        <br />
+        Establishments allowed to operate at reduced capicity include:
+        <br />
+        <br />
+        - Manufacturing of electronics and exports
+        <br />
+        - E-commerce and delivery for essential and non-essential items
+        <br />
+        - Repair and maintenance services
+        <br />
+        - Housing
+        <br />
+        - Office services
+        <br />
+        - Financial services
+        <br />
+        - Business process outsourcing
+        <br />
+        - Other non-leisure wholesale and retail trade and other non-leisure
+        services
+        <br />
+        <br />
+        Restricted mall openings covering non-leisure shops would be allowed,
+        and priority and essential construction projects could resume
       </>
     )
   }

@@ -7,6 +7,9 @@ import CovidSection1 from '../components/CovidSection1';
 import CovidSection2 from '../components/CovidSection2';
 import CovidSection3 from '../components/CovidSection3';
 import CovidSection4 from '../components/CovidSection4';
+import CovidSection5 from '../components/CovidSection5';
+import CovidSection6 from '../components/CovidSection6';
+import CovidSection7 from '../components/CovidSection7';
 import banner from '../images/covid-banner.jpg';
 import styled from '@emotion/styled';
 import PageContainer from '../components/PageContainer';
@@ -201,12 +204,10 @@ const CovidPage = ({ location }) => {
               <p>Bangon, Manila!</p>
               <ButtonContainer>
                 <Button>
-                  <Link to="/contact">Contact</Link>
+                 <Link to="/contact">Contact</Link>
                 </Button>
                 <ButtonTracker>
-                  <a href="https://covid19stats.ph/">
-                    COVID-19 Tracker
-                  </a>
+                  <a href="https://covid19stats.ph/">COVID-19 Tracker</a>
                 </ButtonTracker>
               </ButtonContainer>
             </BannerContainer>
@@ -229,7 +230,17 @@ const CovidPage = ({ location }) => {
         </Section>
         <Section4>
           <PageContainer id="manila's-response">
-            <CovidSection4 />
+            <CovidSection5 />
+          </PageContainer>
+        </Section4>
+        <Section>
+          <PageContainer>
+            <CovidSection6 />
+          </PageContainer>
+        </Section>
+        <Section4>
+          <PageContainer>
+            <CovidSection7 />
           </PageContainer>
         </Section4>
       </Layout>
