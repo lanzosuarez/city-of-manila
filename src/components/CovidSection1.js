@@ -55,6 +55,9 @@ const InfoTitle = styled.h3`
 const InfoContent = styled.p`
   margin: 0;
   padding-top: 20px;
+  a{
+    color:#04326a;
+  }
 `;
 
 const Footer = styled.div`
@@ -115,9 +118,7 @@ const CovidSection1 = () => {
           </InfoContent>
           <InfoContent>
             <a href="https://www.doh.gov.ph/doh-press-release/doh-confirms-local-transmission-of-covid-19-in-ph">
-              <strong>
                 On 07 March 2020, the DOH raised COVID-19 Alert System
-              </strong>
             </a> to Code Red Sub-level 1 to initiate efforts to prevent widespread
             community transmission.
           </InfoContent>

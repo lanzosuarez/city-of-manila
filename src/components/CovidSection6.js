@@ -25,7 +25,7 @@ const Text = styled.div`
 const Section = styled.div`
   text-align: center;
   h1{
-    max-width: 690px;
+    max-width: 600px;
     margin: 0 auto 1.45rem;
   }
   @media only screen and (max-width: 1024px) {
