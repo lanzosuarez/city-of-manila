@@ -161,7 +161,7 @@ const VideoGallery = () => {
               allowFullScreen="true"
             ></iframe>
           </VideoCon>
-          <h3>There is hope</h3>
+          <h3>There is hope.</h3>
           April 24, 2020
         </AssetWrap>
         <AssetWrap>
