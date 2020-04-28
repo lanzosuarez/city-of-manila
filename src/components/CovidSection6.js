@@ -23,7 +23,6 @@ const Text = styled.div`
 `;
 
 const Section = styled.div`
-  padding: 4rem 0;
   text-align: center;
   h1{
     max-width: 600px;

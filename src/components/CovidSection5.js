@@ -23,7 +23,6 @@ const Text = styled.div`
 `;
 
 const Section = styled.div`
-  padding: 4rem 0;
   text-align: center;
   @media only screen and (max-width: 1024px) {
     padding: 4rem 15px;
