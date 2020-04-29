@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import line from '../images/blue-line.png';
+import CovidPictures from '../components/CovidPictures';
+import covid1 from '../images/covid-acco-4.jpg';
+import covid2 from '../images/covid-acco-7.jpg';
+import covid3 from '../images/covid-acco-3.jpg';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -13,13 +16,6 @@ const ContentContainer = styled.div`
   margin-right: auto;
   position: relative;
   text-align: left;
-`;
-
-const Text = styled.div`
-  text-align: justify;
-  @media only screen and (max-width: 424px) {
-    text-align: center;
-  }
 `;
 
 const Item = styled.div`
@@ -37,48 +33,51 @@ const ItemContent = styled.div`
   text-align: left;
 `;
 
-const mitigates = [
+const delays = [
   {
-    desc: 'Realigned City of Manila budget for 2020 to address the Covid-19 pandemic and enable the City with cash resources to address the challenge'
+    desc: 'Launched aggressive public education campaign on proper personal hygiene and sanitation'
   },
   {
-    desc: 'Provided PhP 1,000 to all 568,000 families in the City of Manila (CACAF)'
+    desc: 'Launched extensive promotional effort to prompt participation in Covid-19 Digital Health Survey'
   },
   {
-    desc: 'Delivered 323,486 Food boxes delivered as of 15 April'
+    desc: 'Accelerated vaccine programs for over-60 senior citizens'
   },
   {
-    desc: 'Procured 50,000 sacks of rice from NFA'
+    desc: 'Cancelled all public events across the City of Manila as of 8 March 2020'
   },
   {
-    desc: 'Deployed Kadiwa Rolling Stores with DA'
+    desc: 'Cancelled all in-person public schools classes as of 9 March 2020'
   },
   {
-    desc: 'Provided Temporary housing for Street Dwellers at Delpan Evacuation Center'
+    desc: 'Cancelled all leave for Manila Disaster and Risk Reduction Management office'
   },
   {
-    desc: 'Effected Daily rescue of homeless and street dwellers'
+    desc: 'Increased citywide disinfecting and misting operations to 24-hour operational effectivity'
   },
   {
-    desc: 'Provided one sack of rice per Jeepney, e-trike and tricycle drivers'
+    desc: 'Directed strict strict temperature screening at all 15 bus terminals for all arriving and departing passengers'
   },
   {
-    desc: 'Passed Ordinance extending the 1st quarter deadline of payments for RPT, transfer tax & business tax to June 30, 2020'
+    desc: 'Readiness of the City Council to provide full legislative support for the initiatives of the Executive branch in the fight against Covid-19'
   },
   {
-    desc: 'Passaged Resolution granting moratorium to all market stallholders within the city of manila, public and privatized, from paying their rents for the duration of ECQ'
+    desc: 'Passage of Anti Covid-19 Discrimination Ordinance'
   },
   {
-    desc: 'Successfully appealed in writing to mall owners in the city of Manila to waive rental fees of establishments during the ECQ period'
+    desc: 'Passage of Anti-Spitting Ordinance'
   },
   {
-    desc: 'Released Php 3,000 as financial assistance to all employees of the City of Manila Government (regular, contract of service, JOs)'
+    desc: 'Passage of Anti Hoarding Ordinance'
   },
   {
-    desc: 'Early release of mid-year bonuses to all regular employees of the City of Manila'
+    desc: 'Strict enforcement of curfew hours, anti-hoarding, and ECQ guidelines and protocols in the city'
   },
   {
-    desc: 'Stranded students in the City of Manila university system provided emergency cash and food supplies'
+    desc: 'Imposed liquor ban'
+  },
+  {
+    desc: 'Implemented Sampaloc District “Hard Lockdown” in response to high growth of new infections and violations of extended community quarantine'
   }
 ];
 
@@ -86,8 +85,8 @@ const CovidSection10 = () => {
   return (
     <Wrapper>
       <ContentContainer>
-        <p>Mitigate</p>
-        {mitigates.map(i => (
+        <p><strong>Delay</strong></p>
+        {delays.map(i => (
           <Item>
             <ItemContent>
               <p>-</p>
@@ -96,6 +95,7 @@ const CovidSection10 = () => {
           </Item>
         ))}
       </ContentContainer>
+      <CovidPictures img1={covid1} img2={covid2} img3={covid3}/>
     </Wrapper>
   );
 };

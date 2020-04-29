@@ -2,14 +2,15 @@ import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import '../styles/covid.css';
 import NavigationProvider from '../context/NavigationProvider';
 import CovidSection1 from '../components/CovidSection1';
 import CovidSection2 from '../components/CovidSection2';
 import CovidSection3 from '../components/CovidSection3';
-import CovidSection4 from '../components/CovidSection4';
 import CovidSection5 from '../components/CovidSection5';
 import CovidSection6 from '../components/CovidSection6';
 import CovidSection7 from '../components/CovidSection7';
+import CovidSection8 from '../components/CovidSection8';
 import banner from '../images/covid-banner.jpg';
 import styled from '@emotion/styled';
 import PageContainer from '../components/PageContainer';
@@ -241,6 +242,7 @@ const CovidPage = ({ location }) => {
         <Section4>
           <PageContainer>
             <CovidSection7 />
+            <CovidSection8 />
           </PageContainer>
         </Section4>
       </Layout>

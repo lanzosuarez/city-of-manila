@@ -17,15 +17,22 @@ const ContentContainer = styled.div`
 
 const Text = styled.div`
   text-align: justify;
+  max-width: 840px;
+  margin: 0 auto;
   @media only screen and (max-width: 424px) {
     text-align: center;
+  }
+  @media only screen and (max-width: 860px) {
+    br{
+      display:none;
+    }
   }
 `;
 
 const Section = styled.div`
   text-align: center;
   h1{
-    max-width: 690px;
+    max-width: 600px;
     margin: 0 auto 1.45rem;
   }
   @media only screen and (max-width: 1024px) {
@@ -54,7 +61,7 @@ const CovidSection6 = () => {
             <p>
               On March 9 Mayor Isko met with Robert Deane, Head of the United
               Kingdom’s Foreign and Commonwealth Office Coronavirus Task Force
-              in London to discuss emerging challenges and best practices.
+              in London to discuss emerging challenges<br/> and best practices.
             </p>
 
             <p>
