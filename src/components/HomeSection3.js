@@ -79,19 +79,22 @@ const HomeSection3 = () => {
         <Overlay className="overlay" />
         <Content className="content">
           <Text>Covid-19 Digital Health Survey</Text>
-          <Paragraph>Take one of the world's first Covid-19 health surveys now and help us flatten the curve.</Paragraph>
+          <Paragraph>
+            Take one of the world's first Covid-19 health surveys now and help
+            us flatten the curve.
+          </Paragraph>
         </Content>
         <Link to="/covid#digital-survey">
-        <ion-icon
-          style={{
-            position: 'relative',
-            zIndex: 2,
-            color: 'white',
-            cursor: 'pointer'
-          }}
-          size="large"
-          name="arrow-forward-circle-outline"
-        ></ion-icon>
+          <ion-icon
+            style={{
+              position: 'relative',
+              zIndex: 2,
+              color: 'white',
+              cursor: 'pointer'
+            }}
+            size="large"
+            name="arrow-forward-circle-outline"
+          ></ion-icon>
         </Link>
       </Item>
       <Item bg={bg2}>
@@ -103,16 +106,16 @@ const HomeSection3 = () => {
           </Paragraph>
         </Content>
         <Link to="/covid#ecq">
-        <ion-icon
-          style={{
-            position: 'relative',
-            zIndex: 2,
-            color: 'white',
-            cursor: 'pointer'
-          }}
-          size="large"
-          name="arrow-forward-circle-outline"
-        ></ion-icon>
+          <ion-icon
+            style={{
+              position: 'relative',
+              zIndex: 2,
+              color: 'white',
+              cursor: 'pointer'
+            }}
+            size="large"
+            name="arrow-forward-circle-outline"
+          ></ion-icon>
         </Link>
       </Item>
       <Item bg={bg3}>
@@ -120,23 +123,22 @@ const HomeSection3 = () => {
         <Content className="content">
           <Text>Manila's Reponse to COVID-19</Text>
           <Paragraph>
-            We understand the difficulties our constituents are facing during
-            this public health emergency. The City of Manila has committed to
-            alleviating this hardship by providing them with the appropriate
-            care and assistance during the Enhanced Community Quarantine.
+            The City of Manila has committed to alleviating this hardship by
+            providing them with the appropriate care and assistance during the
+            Enhanced Community Quarantine.
           </Paragraph>
         </Content>
         <Link to="/covid#manila's-response">
-        <ion-icon
-          style={{
-            position: 'relative',
-            zIndex: 2,
-            color: 'white',
-            cursor: 'pointer'
-          }}
-          size="large"
-          name="arrow-forward-circle-outline"
-        ></ion-icon>
+          <ion-icon
+            style={{
+              position: 'relative',
+              zIndex: 2,
+              color: 'white',
+              cursor: 'pointer'
+            }}
+            size="large"
+            name="arrow-forward-circle-outline"
+          ></ion-icon>
         </Link>
       </Item>
     </Container>

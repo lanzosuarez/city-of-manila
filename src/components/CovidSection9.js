@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import line from '../images/blue-line.png';
+import CovidPictures from '../components/CovidPictures';
+import covid1 from '../images/covid-acco-1.jpg';
+import covid2 from '../images/covid-acco-2.jpg';
+import covid3 from '../images/covid-acco-6.jpg';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -13,13 +16,6 @@ const ContentContainer = styled.div`
   margin-right: auto;
   position: relative;
   text-align: left;
-`;
-
-const Text = styled.div`
-  text-align: justify;
-  @media only screen and (max-width: 424px) {
-    text-align: center;
-  }
 `;
 
 const Item = styled.div`
@@ -37,60 +33,70 @@ const ItemContent = styled.div`
   text-align: left;
 `;
 
-const delays = [
+const contains = [
   {
-    desc: 'Launched aggressive public education campaign on proper personal hygiene and sanitation'
+    desc: 'Established Manila Infectious Disease Control Center (MIDCC) with 33 rooms for Covid patients'
   },
   {
-    desc: 'Launched extensive promotional effort to prompt participation in Covid-19 Digital Health Survey'
+    desc: 'Established Manilla Emergency Operations Center (MEOC) with Online Health Consultation'
   },
   {
-    desc: 'Accelerated vaccine programs for over-60 senior citizens'
+    desc: 'Launched Covid-19 Digital Health Survey among the world’s first digital Covid-19 digital id systems'
   },
   {
-    desc: 'Cancelled all public events across the City of Manila as of 8 March 2020'
+    desc: 'Converted Delpan Evacuation Center to Quarantine area for mild cases of PUIs and PUMs'
   },
   {
-    desc: 'Cancelled all in-person public schools classes as of 9 March 2020'
+    desc: 'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-covid efforts of 6 city owned hospitals'
   },
   {
-    desc: 'Cancelled all leave for Manila Disaster and Risk Reduction Management office'
+    desc: 'Established external triage tents at all six city-owned hospitals'
   },
   {
-    desc: 'Increased citywide disinfecting and misting operations to 24-hour operational effectivity'
+    desc: 'Established strict entry-exit sanitation procedures across all City owned hospitals, health clinics and offices'
   },
   {
-    desc: 'Directed strict strict temperature screening at all 15 bus terminals for all arriving and departing passengers'
+    desc: 'Installed disinfecting gates in strategic locations in the city'
   },
   {
-    desc: 'Readiness of the City Council to provide full legislative support for the initiatives of the Executive branch in the fight against Covid-19'
+    desc: 'Installed HEPA-filter machines in 6 city owned  public hospitals'
   },
   {
-    desc: 'Passage of Anti Covid-19 Discrimination Ordinance'
+    desc: 'Installed decontamination tents to 6 city owned public hospitals and other establishments'
   },
   {
-    desc: 'Passage of Anti-Spitting Ordinance'
+    desc: 'Provided acetate full face shields for health workers in the 6 owned hospitals, private and national government hospitals, public markets'
   },
   {
-    desc: 'Passage of Anti Hoarding Ordinance'
+    desc: 'Established hotel accommodation for all non-resident health workers from 13 hospitals in Manila with the support of 17 hotels, motels, apartments and dorms located in the city'
   },
   {
-    desc: 'Strict enforcement of curfew hours, anti-hoarding, and ECQ guidelines and protocols in the city'
+    desc: 'Established hotel accommodation for all non-resident health workers from 13 hospitals in Manila with the support of 17 hotels, motels, apartments and dorms located in the city'
   },
   {
-    desc: 'Imposed liquor ban'
+    desc: 'Deployed one bus each for 6 city owned hospitals'
   },
   {
-    desc: 'Implemented Sampaloc District “Hard Lockdown” in response to high growth of new infections and violations of extended community quarantine'
+    desc: 'Provided Vitamin C for DPS personnel and other frontliners'
+  },
+  {
+    desc: 'Mobilized Manilans, local businessmen, conglomerates and concerned citizens to donate, procure and deliver PPEs for health workers, food and medicines for the people of Manila and hospital workers'
+  },
+  {
+    desc: 'Coordinated with Armed Forces of the Philippines and Bases Conversion and Development Authority for additional DOH quarantine facility at Rizal Memorial Colliseum'
+  },
+  {
+    desc: 'Opened Del Pan quarantine facility'
   }
 ];
 
 const CovidSection9 = () => {
+
   return (
     <Wrapper>
       <ContentContainer>
-        <p><strong>Delay</strong></p>
-        {delays.map(i => (
+        <p><strong>Contain</strong></p>
+        {contains.map(i => (
           <Item>
             <ItemContent>
               <p>-</p>
@@ -99,6 +105,7 @@ const CovidSection9 = () => {
           </Item>
         ))}
       </ContentContainer>
+      <CovidPictures img1={covid1} img2={covid2} img3={covid3}/>
     </Wrapper>
   );
 };

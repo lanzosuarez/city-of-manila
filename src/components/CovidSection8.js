@@ -2,23 +2,38 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import line from '../images/blue-line.png';
+import CovidSection9 from '../components/CovidSection9';
+import CovidSection10 from '../components/CovidSection10';
+import CovidSection11 from '../components/CovidSection11';
 
 const Wrapper = styled.div`
   width: 100%;
 `;
 
 const ContentContainer = styled.div`
+  max-width: 1070px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  text-align: left;
 `;
 
 const Text = styled.div`
   text-align: justify;
-  @media only screen and (max-width: 424px) {
-    text-align: center;
+`;
+
+const SubText = styled.div`
+  text-align: justify;
+`;
+
+const Section = styled.div`
+  text-align: center;
+  h1 {
+    max-width: 600px;
+    margin: 0 auto 1.45rem;
+  }
+  @media only screen and (max-width: 1024px) {
+    padding: 4rem 15px;
   }
 `;
 
@@ -34,79 +49,88 @@ const ItemContent = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 35px auto;
-  text-align: left;
-`;
-
-const contains = [
-  {
-    desc: 'Established Manila Infectious Disease Control Center (MIDCC) with 33 rooms for Covid patients'
-  },
-  {
-    desc: 'Established Manilla Emergency Operations Center (MEOC) with Online Health Consultation'
-  },
-  {
-    desc: 'Launched Covid-19 Digital Health Survey among the world’s first digital Covid-19 digital id systems'
-  },
-  {
-    desc: 'Converted Delpan Evacuation Center to Quarantine area for mild cases of PUIs and PUMs'
-  },
-  {
-    desc: 'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-covid efforts of 6 city owned hospitals'
-  },
-  {
-    desc: 'Established external triage tents at all six city-owned hospitals'
-  },
-  {
-    desc: 'Established strict entry-exit sanitation procedures across all City owned hospitals, health clinics and offices'
-  },
-  {
-    desc: 'Installed disinfecting gates in strategic locations in the city'
-  },
-  {
-    desc: 'Installed HEPA-filter machines in 6 city owned  public hospitals'
-  },
-  {
-    desc: 'Installed decontamination tents to 6 city owned public hospitals and other establishments'
-  },
-  {
-    desc: 'Provided acetate full face shields for health workers in the 6 owned hospitals, private and national government hospitals, public markets'
-  },
-  {
-    desc: 'Established hotel accommodation for all non-resident health workers from 13 hospitals in Manila with the support of 17 hotels, motels, apartments and dorms located in the city'
-  },
-  {
-    desc: 'Established hotel accommodation for all non-resident health workers from 13 hospitals in Manila with the support of 17 hotels, motels, apartments and dorms located in the city'
-  },
-  {
-    desc: 'Deployed one bus each for 6 city owned hospitals'
-  },
-  {
-    desc: 'Provided Vitamin C for DPS personnel and other frontliners'
-  },
-  {
-    desc: 'Mobilized Manilans, local businessmen, conglomerates and concerned citizens to donate, procure and deliver PPEs for health workers, food and medicines for the people of Manila and hospital workers'
-  },
-  {
-    desc: 'Coordinated with Armed Forces of the Philippines and Bases Conversion and Development Authority for additional DOH quarantine facility at Rizal Memorial Colliseum'
-  },
-  {
-    desc: 'Opened Del Pan quarantine facility'
+  @media only screen and (max-width: 780px) {
+      br{
+          display:none
+      }
   }
-];
+`;
 
 const CovidSection8 = () => {
   return (
     <Wrapper>
       <ContentContainer>
-        <p><strong>Contain</strong></p>
-        {contains.map(i => (
+        <Section>
+          <h1>Actions to Date</h1>
+          <img src={line} alt="blue line" className="line" />
+          <Text>
+          <p>
+            <strong>Mitigate:</strong> Provide best care possible to residents
+            of Manila via a multipronged approach:
+          </p>
+          </Text>
+          <SubText>
           <Item>
             <ItemContent>
               <p>-</p>
-              <p>{i.desc}</p>
+              <p>
+                Establish a dedicated Manila Infectious Disease Control Centre:
+                the first by any Philippine local government unit
+              </p>
             </ItemContent>
           </Item>
-        ))}
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Establish the City of Manila Covid-19 24x7 Emergency Operations
+                Centre, the first by any Philippine <br/>local government unit
+              </p>
+            </ItemContent>
+          </Item>
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Deploy the Philippines’ first municipal Covid-19 digital ID
+                system through the “Code-M Covid-19<br/> Digital Health Survey”
+              </p>
+            </ItemContent>
+          </Item>
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Provide additional personnel, equipment and financial resources
+                to hospitals across the City of Manila
+              </p>
+            </ItemContent>
+          </Item>
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Provide the best care possible for people who become sick and
+                increase ability to ensure<br/> patient successful recoveries
+              </p>
+            </ItemContent>
+          </Item>
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Minimize economic hardships for all residents with greatest
+                emphasis for City of Manila’s poorest through an aggressive
+                delivery program of food boxes, rice and emergency cash to all
+                households across the City of Manila
+              </p>
+            </ItemContent>
+          </Item>
+          </SubText>
+          <CovidSection9 />
+          <CovidSection10 />
+          <CovidSection11 />
+        </Section>
       </ContentContainer>
     </Wrapper>
   );

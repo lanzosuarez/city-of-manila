@@ -130,9 +130,9 @@ const HomeSection4 = () => {
       </Items>
       <Items>
         <Figure>
-          <Counter start={started} to={35} />
+          <Counter start={started} to={600} />K
         </Figure>
-        <Desc>Key Achievements</Desc>
+        <Desc>Families Reached</Desc>
       </Items>
       <Items>
         <Figure>

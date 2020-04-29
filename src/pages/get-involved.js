@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import '../styles/about.css';
 
 import line from '../images/blue-line.png';
+import survey from '../images/get-involved-sec2-img1.jpg';
 import landbank from '../images/get-involved-img-1.jpg';
 import dbp from '../images/get-involved-img-2.jpg';
 import donation from '../images/get-involved-img-3.jpg';
@@ -38,12 +39,28 @@ const Section2 = styled.div`
   text-align: center;
   background-color: #fafafa;
 `;
-const Section2Container = styled.div`
-  max-width: 900px;
+const Sec2Content = styled.div`
+  text-align: left;
+`;
+const Sec2Container = styled.div`
+  max-width: 1170px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   position: relative;
+`;
+
+const DisplayFlex = styled.div`
+  display: grid;
+  grid-template-columns: 400px auto;
+  grid-gap: 50px;
+  padding: 80px 15px;
+  height: 100%;
+  align-items: center;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: none;
+  }
 `;
 const Section3 = styled.div``;
 const ItemWrap = styled.div`
@@ -88,7 +105,7 @@ const ButtonTracker = styled.div`
   border: none;
   border-radius: 40px;
   font-size: 16px;
-  margin: 3rem auto 0;
+  margin: 1rem 0;
   text-transform: uppercase;
   -webkit-letter-spacing: 2px;
   -moz-letter-spacing: 2px;
@@ -110,6 +127,9 @@ const ButtonTracker = styled.div`
     color: #ffffff;
 
     border-radius: 40px;
+  }
+  @media only screen and (max-width: 490px) {
+    margin: 2rem 0;
   }
 `;
 const Content = styled.div`
@@ -161,30 +181,37 @@ const GetInvolvedPage = ({ location }) => {
             </PageContainer>
           </Section1>
           <Section2 data-usefadein="get-involved-section2">
-            <Section2Container>
-              <Section>
-                <h1>Take the Digital Health Survey Now</h1>
-                <img src={line} alt="blue line" className="line" />
-                <p>
-                  Transparent and open sharing of information is critical
-                  towards identifying persons who may be at risk for
-                  coronavirus.
-                </p>
-                <p>
-                  This helpful tool embedded in Mayor Isko's FB page encourages
-                  respondents to think objectively about their health within the
-                  Covid-19 context.
-                </p>
-                <p>
-                  Data collected from the survey will help the City of Manila to
-                  proactively reach out to you, if you need critical health
-                  assistance now.
-                </p>
-                <ButtonTracker>
-                  <a href="http://m.me/iskomorenodomagoso/">Take The Survey</a>
-                </ButtonTracker>
-              </Section>
-            </Section2Container>
+            <Sec2Container>
+              <DisplayFlex>
+                <div>
+                  <img src={survey} alt="Take the Digital Health Survey Now" />
+                </div>
+                <Sec2Content>
+                  <h1>Take the Digital Health Survey Now</h1>
+                  <img src={line} alt="blue line" className="line" />
+                  <p>
+                    Transparent and open sharing of information is critical
+                    towards identifying persons who may be at risk for
+                    coronavirus.
+                  </p>
+                  <p>
+                    This helpful tool embedded in Mayor Isko's FB page
+                    encourages respondents to think objectively about their
+                    health within the Covid-19 context.
+                  </p>
+                  <p>
+                    Data collected from the survey will help the City of Manila
+                    to proactively reach out to you, if you need critical health
+                    assistance now.
+                  </p>
+                  <ButtonTracker>
+                    <a href="http://m.me/iskomorenodomagoso/">
+                      Take The Survey
+                    </a>
+                  </ButtonTracker>
+                </Sec2Content>
+              </DisplayFlex>
+            </Sec2Container>
           </Section2>
           <Section3 data-usefadein="get-involved-section3">
             <PageContainer>
@@ -205,7 +232,10 @@ const GetInvolvedPage = ({ location }) => {
                     </Content>
                   </Item>
                   <Item>
-                    <img src={dbp} alt="Cash donations in Philippine currency" />
+                    <img
+                      src={dbp}
+                      alt="Cash donations in Philippine currency"
+                    />
                     <Content>
                       <h1>Cash donations in Philippine currency</h1>
                       <p>

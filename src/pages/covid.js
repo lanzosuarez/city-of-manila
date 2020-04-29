@@ -10,6 +10,7 @@ import CovidSection3 from '../components/CovidSection3';
 import CovidSection5 from '../components/CovidSection5';
 import CovidSection6 from '../components/CovidSection6';
 import CovidSection7 from '../components/CovidSection7';
+import CovidSection8 from '../components/CovidSection8';
 import banner from '../images/covid-banner.jpg';
 import styled from '@emotion/styled';
 import PageContainer from '../components/PageContainer';
@@ -241,6 +242,7 @@ const CovidPage = ({ location }) => {
         <Section4>
           <PageContainer>
             <CovidSection7 />
+            <CovidSection8 />
           </PageContainer>
         </Section4>
       </Layout>
