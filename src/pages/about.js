@@ -211,6 +211,14 @@ const SwiperContainer = styled.div`
     display: none;
   }
 `;
+const PhotoCredit = styled.div`
+  p {
+    font-size: 9px;
+    text-align: right;
+    color: #b2b2b2;
+    padding-bottom: 5px;
+  }
+`;
 
 const items = [
   {
@@ -470,6 +478,9 @@ const AboutPage = ({ location }) => {
                 </Text>
               </Section3>
             </ContentContainer>
+            <PhotoCredit>
+              <p>Background Photo Credit: Esquire Philippines</p>
+            </PhotoCredit>
           </Section3Container>
           <Section32Container>
             <Section3PageContainer>
