@@ -216,8 +216,8 @@ const HomeSection9 = () => {
             </RightContainer>
           </Section>
           <CardContainer>
-            {allContentfulLatestUpdate.edges.map(({ node }) => (
-              <Card>
+            {allContentfulLatestUpdate.edges.map(({ node }, idx) => (
+              <Card key={idx}>
                 <Avatar imgUrl={node.imgUrl} />
                 <CardContent>
                   <CardHeader>
