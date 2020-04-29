@@ -61,13 +61,16 @@ const Pagination = ({
 
   const showdedButtons = useMemo(() => {
     const numOfPages = Math.ceil(items.length / 5);
+
+    const start = itemPage - 3 < 0 ? 0 : itemPage - 3;
+    const end = start + 3;
     const skip =
       itemPage - MAX_BUTTONS_PER_PAGE <= 0
         ? 0
         : itemPage - MAX_BUTTONS_PER_PAGE;
     const btns = [...new Array(numOfPages)].map((_, i) => i + 1);
 
-    return btns.slice(skip);
+    return btns.slice(start, end);
   }, [itemPage, items, activeTab]);
 
   return (

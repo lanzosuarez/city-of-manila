@@ -41,7 +41,7 @@ const SearchContainer = styled.div`
 
 const Categories = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   align-items: center;
 
   @media (max-width: 768px) {
