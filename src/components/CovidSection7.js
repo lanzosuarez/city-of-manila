@@ -20,6 +20,29 @@ const Text = styled.div`
   margin-bottom: 2rem;
 `;
 
+const SubText = styled.div`
+  text-align: justify;
+`;
+
+const Item = styled.div`
+  grid-auto-flow: column;
+  display: grid;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-left: 1rem;
+`;
+
+const ItemContent = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 35px auto;
+  @media only screen and (max-width: 780px) {
+      br{
+          display:none
+      }
+  }
+`;
+
 const Section = styled.div`
   text-align: center;
   h1 {
@@ -59,6 +82,68 @@ const CovidSection7 = () => {
             of Manila and implement strict but compassionate lockdown measures
             to ensure its slow spread.
           </p>
+          <p>
+            <strong>Mitigate:</strong> Provide best care possible to residents
+            of Manila via a multipronged approach:
+          </p>
+          <SubText>
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Establish a dedicated Manila Infectious Disease Control Centre:
+                the first by any Philippine local government unit
+              </p>
+            </ItemContent>
+          </Item>
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Establish the City of Manila Covid-19 24x7 Emergency Operations
+                Centre, the first by any Philippine <br/>local government unit
+              </p>
+            </ItemContent>
+          </Item>
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Deploy the Philippines’ first municipal Covid-19 digital ID
+                system through the “Code-M Covid-19<br/> Digital Health Survey”
+              </p>
+            </ItemContent>
+          </Item>
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Provide additional personnel, equipment and financial resources
+                to hospitals across the City of Manila
+              </p>
+            </ItemContent>
+          </Item>
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Provide the best care possible for people who become sick and
+                increase ability to ensure<br/> patient successful recoveries
+              </p>
+            </ItemContent>
+          </Item>
+          <Item>
+            <ItemContent>
+              <p>-</p>
+              <p>
+                Minimize economic hardships for all residents with greatest
+                emphasis for City of Manila’s poorest through an aggressive
+                delivery program of food boxes, rice and emergency cash to all
+                households across the City of Manila
+              </p>
+            </ItemContent>
+          </Item>
+          </SubText>
           </Text>
         </Section>
       </ContentContainer>
