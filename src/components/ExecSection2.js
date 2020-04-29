@@ -140,7 +140,7 @@ const ExecSection2 = ({ items }) => {
       case 1:
         return 'Executive Orders';
       case 2:
-        return 'City Resolution';
+        return 'City Resolutions';
       case 3:
         return 'Ordinances';
       default:
