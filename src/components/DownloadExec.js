@@ -15,7 +15,7 @@ const butttonIconStyle = {
   marginRight: 5
 };
 
-const DownloadExec = ({ type, url, filename }) => {
+const DownloadExec = ({ type, url, filename, disabled }) => {
   const [loading, setLoading] = useState(false);
   const onClick = async () => {
     try {
@@ -30,9 +30,9 @@ const DownloadExec = ({ type, url, filename }) => {
 
   return (
     <ButtonLegislation
-      disabled={loading}
-      aria-disabled={loading}
-      loading={loading}
+      disabled={loading || disabled}
+      aria-disabled={loading || disabled}
+      loading={loading || disabled}
       onClick={onClick}
     >
       <ion-icon style={butttonIconStyle} name="download-outline"></ion-icon>

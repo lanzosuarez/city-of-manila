@@ -23,6 +23,7 @@ const Pages = styled.ul`
 `;
 
 const Page = styled.li`
+  cursor: pointer;
   font-size: 18px;
   width: 30px;
   height: 30px;

@@ -216,16 +216,14 @@ const ExecSection2 = ({ items }) => {
                     {format(new Date(i.publishedDate), 'MMMM dd, yyyy')}
                   </ItemDate>
                 )}
-
-                {i.file && (
-                  <Buttons>
-                    <DownloadExec
-                      type={i.type}
-                      url={i.file.file.url}
-                      filename={i.name}
-                    />
-                  </Buttons>
-                )}
+                <Buttons>
+                  <DownloadExec
+                    disabled={!i.file}
+                    type={i.type}
+                    url={i.file ? i.file.file.url : ''}
+                    filename={i.name}
+                  />
+                </Buttons>
               </Details>
             </ListItem>
           ))}
