@@ -127,6 +127,7 @@ const ExecSection2 = ({ items }) => {
         return 'City Resolution';
       case 3:
         return 'Ordinance';
+      case 4:
       default:
         return 'All';
     }
@@ -210,16 +211,21 @@ const ExecSection2 = ({ items }) => {
               <Details>
                 <Type>{i.name}</Type>
                 <Name>{i.description.description}</Name>
-                <ItemDate>
-                  {format(new Date(i.publishedDate), 'MMMM dd, yyyy')}
-                </ItemDate>
-                <Buttons>
-                  <DownloadExec
-                    type={i.type}
-                    url={i.file.file.url}
-                    filename={i.name}
-                  />
-                </Buttons>
+                {i.publishedDate && (
+                  <ItemDate>
+                    {format(new Date(i.publishedDate), 'MMMM dd, yyyy')}
+                  </ItemDate>
+                )}
+
+                {i.file && (
+                  <Buttons>
+                    <DownloadExec
+                      type={i.type}
+                      url={i.file.file.url}
+                      filename={i.name}
+                    />
+                  </Buttons>
+                )}
               </Details>
             </ListItem>
           ))}
