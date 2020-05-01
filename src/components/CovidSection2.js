@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import blueline from '../images/blue-line.png';
-import FbVideo from '../components/FbVideo';
+import GalleryVideo from '../components/GalleryVideo';
 import PageContainer from '../components/PageContainer';
 import LearnMore from './LearnMore';
 
@@ -16,9 +16,11 @@ const Header = styled.div`
   p:nth-child(1) {
     text-transform: uppercase;
     color: #05326b;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 2px;
   }
 
   a {
@@ -56,6 +58,8 @@ const DisplayFlex = styled.div`
   /* align-items: center; */
 
   @media (max-width: 768px) {
+    grid-template-columns: none;
+    grid-template-rows: 96vw auto;
     grid-gap: 30px;
   }
 `;
@@ -101,7 +105,7 @@ const CovidSection2 = () => {
     <PageContainer>
       <DisplayFlex>
         <LeftContainer>
-          <FbVideo />
+            <GalleryVideo url="https://www.facebook.com/watch/?v=220490752632700" />
         </LeftContainer>
         <RightContainer>
           <Header>

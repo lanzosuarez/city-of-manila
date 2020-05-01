@@ -10,11 +10,6 @@ import ecomIcon from '../images/home-green.svg';
 import educIcon from '../images/home-Investor.svg';
 import envIcon from '../images/home-tourism.svg';
 
-const MainCon = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
 const Container = styled.div`
   padding: 0px 0px 0px;
   display: grid;
@@ -100,7 +95,6 @@ const items = [
 
 const HomeSection1 = () => {
   return (
-    // <MainCon>
     <Container>
       {items.map((i, idx) => (
         <Item key={idx}>
@@ -111,7 +105,6 @@ const HomeSection1 = () => {
         </Item>
       ))}
     </Container>
-    // </MainCon>
   );
 };
 

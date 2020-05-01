@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import useFadeIn from '../hooks/useFadeIn';
 import '../styles/covid.css';
 import NavigationProvider from '../context/NavigationProvider';
 import CovidSection1 from '../components/CovidSection1';
@@ -180,6 +181,18 @@ const Section4 = styled.div`
 
 const CovidPage = ({ location }) => {
   useEffect(() => scrollToSection(location), []);
+
+  const [addElement] = useFadeIn();
+  useEffect(() => {
+    addElement('covid-section1', { dir: 'down' });
+    addElement('covid-section2', { delay: '300ms' });
+    addElement('covid-section3', { delay: '300ms' });
+    addElement('covid-section4', { delay: '300ms' });
+    addElement('covid-section5', { delay: '300ms' });
+    addElement('covid-section6', { delay: '300ms' });
+    addElement('covid-section7', { delay: '300ms' });
+  }, []);
+
   return (
     <NavigationProvider>
       <Layout>
@@ -188,7 +201,7 @@ const CovidPage = ({ location }) => {
         <Navigation />
         <CovidBanner>
           <PageContainer>
-            <BannerContainer>
+            <BannerContainer data-usefadein="covid-section1">
               <p>The most difficult public health challenge of our lifetime</p>
               <h1>We will defeat Covid-19 together</h1>
               <p>
@@ -215,32 +228,32 @@ const CovidPage = ({ location }) => {
           </PageContainer>
         </CovidBanner>
         <Section1>
-          <PageContainer id="digital-survey">
+          <PageContainer id="digital-survey" data-usefadein="covid-section2">
             <CovidSection2 />
           </PageContainer>
         </Section1>
         <Section2>
-          <PageContainer id="ecq">
+          <PageContainer id="ecq" data-usefadein="covid-section3">
             <CovidSection1 />
           </PageContainer>
         </Section2>
         <Section>
-          <PageContainer id="what-you-need-to-know">
+          <PageContainer id="what-you-need-to-know" data-usefadein="covid-section4">
             <CovidSection3 />
           </PageContainer>
         </Section>
         <Section4>
-          <PageContainer id="manila's-response">
+          <PageContainer id="manila's-response" data-usefadein="covid-section5">
             <CovidSection5 />
           </PageContainer>
         </Section4>
         <Section>
-          <PageContainer>
+          <PageContainer data-usefadein="covid-section6">
             <CovidSection6 />
           </PageContainer>
         </Section>
         <Section4>
-          <PageContainer>
+          <PageContainer data-usefadein="covid-section7">
             <CovidSection7 />
             <CovidSection8 />
           </PageContainer>

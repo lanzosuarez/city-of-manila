@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import { listItems } from './Navigation';
 import { NavigationContext } from '../context/NavigationProvider';
 import { getHash } from '../helpers';
+import ManilaLogo from '../images/manila-logo-90x90px.png';
 
 const Container = styled.div`
   height: 100vh;
@@ -100,7 +101,13 @@ const SubPagesItem = styled.li`
   }
 `;
 
-const NavItemComponent = ({ title, path, sections = [] }) => {
+const LogoItem = styled.img`
+  display: flex;
+  align-items: center;
+`;
+
+
+const NavItemComponent = ({title, path, sections = [] }) => {
   const [showSubPages, toggleSubPages] = useState(false);
   const { showNav } = useContext(NavigationContext);
   const rotate = showSubPages ? { transform: 'rotate(90deg)' } : {};
@@ -171,7 +178,7 @@ const SideNavigation = () => {
         <ion-icon name="close-outline" size="large"></ion-icon>
       </CloseIcon>
       <Logo>
-        <Link to="/">logo .</Link>
+        <Link to="/"><LogoItem src={ManilaLogo} alt="City of Manila logo" /></Link>
       </Logo>
       <NavList>
         {listItems.map((i, idx) => (

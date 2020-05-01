@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
+import useFadeIn from '../hooks/useFadeIn';
 
 import line from '../images/blue-line.png';
 
@@ -86,8 +87,13 @@ const LineImage = styled.img`
 `;
 
 const HomeSection2 = () => {
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('home-section2', { delay: '500ms' });
+  }, []);
   return (
-    <Container>
+    <Container data-usefadein="home-section2">
       <Item>
         <OverlayHeader>01</OverlayHeader>
         <Header>Executive Orders</Header>
@@ -145,7 +151,7 @@ const HomeSection2 = () => {
           now.
         </Content>
         <Footer>
-          <Link to="/get-involved#how-to-help">READ MORE</Link>
+          <Link to="/help-manila#how-to-help">READ MORE</Link>
           <IconCon>
             <ion-icon
               data-icon="icon"

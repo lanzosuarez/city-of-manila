@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `City Of Manila`,
     author: 'Analie Moreno',
-    description: 'Website of city of manila'
+    description: 'Official website of City of Manila Mayor Isko Moreno Domagoso. Find information on Manila\'s Covid-19 response.'
   },
   plugins: [
     `gatsby-plugin-emotion`,

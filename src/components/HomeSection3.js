@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
+import useFadeIn from '../hooks/useFadeIn';
 import bg1 from '../images/home-section3-1.jpg';
 import bg2 from '../images/home-section3-2.jpg';
 import bg3 from '../images/home-section3-3.jpg';
@@ -47,6 +48,13 @@ const Content = styled.div`
   overflow: hidden;
   transition: max-height 500ms;
   z-index: 2;
+  @media (max-width: 768px) {
+    max-height: 82px;
+  }
+  @media (max-width: 576px) {
+    max-height: 49px;
+    margin-bottom: 9px;
+  }
 `;
 
 const Text = styled.h3`
@@ -73,8 +81,13 @@ const Overlay = styled.div`
 `;
 
 const HomeSection3 = () => {
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('home-section3', { delay: '600ms' });
+  }, []);
   return (
-    <Container>
+    <Container data-usefadein="home-section3">
       <Item bg={bg1}>
         <Overlay className="overlay" />
         <Content className="content">

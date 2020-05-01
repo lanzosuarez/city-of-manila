@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
+import useFadeIn from '../hooks/useFadeIn';
 
 import bg from '../images/home-section6-bg.png';
 import logo1 from '../images/testimonial-logo-bg-1.jpg';
@@ -101,7 +102,7 @@ const Content = styled.div`
   line-height: 1.6;
 `;
 
-const Item = ({ img, title, sub, content, content2 }) => {
+const Item = ({ img, title, sub, content }) => {
   return (
     <ItemContainer>
       <ItemHeader>
@@ -140,8 +141,13 @@ const items = [
 ];
 
 const HomeSection6 = () => {
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('home-section6', { delay: '300ms' });
+  }, []);
   return (
-    <Container>
+    <Container data-usefadein="home-section6">
       <CarouselContainer>
         {items.map((i, idx) => (
           <Item key={idx} {...i} />

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import format from 'date-fns/format';
 import isAfter from 'date-fns/isAfter';
 import isBefore from 'date-fns/isBefore';
-
+import useFadeIn from '../hooks/useFadeIn';
 import DownloadExec from './DownloadExec';
 import { ExecAndLegislationContext } from '../context/ExecAndLegislationProvider';
 import { pipe, searchItems } from '../helpers';
@@ -178,8 +178,14 @@ const ExecSection2 = ({ items }) => {
   const pages = Math.ceil(pageItems.length / 5);
   const nextPage = () => setPage(p => p + 1);
   const prevPage = () => setPage(p => p - 1);
+
+  const [addElement] = useFadeIn();
+  useEffect(() => {
+    addElement('exec-section2', { delay: '400ms' });
+  }, []);
+
   return (
-    <Container>
+    <Container data-usefadein="exec-section2">
       <ListContainer>
         <Header>
           <HeaderItem>

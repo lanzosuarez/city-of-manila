@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
 import line from '../images/blue-line.png';
 
 const Wrapper = styled.div`
@@ -22,6 +21,9 @@ const Text = styled.div`
 
 const SubText = styled.div`
   text-align: justify;
+  p{
+    margin-bottom: 0rem;
+  }
 `;
 
 const Item = styled.div`
@@ -56,7 +58,7 @@ const Section = styled.div`
 
 const CovidSection7 = () => {
   return (
-    <Wrapper>
+    <Wrapper >
       <ContentContainer>
         <Section>
           <h1>City of Manila Code-M Contain, Delay and Mitigate Program</h1>

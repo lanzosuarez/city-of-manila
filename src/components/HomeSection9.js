@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import format from 'date-fns/format';
-import { useStaticQuery, graphql, Link } from 'gatsby';
-
+import { useStaticQuery, graphql} from 'gatsby';
+import useFadeIn from '../hooks/useFadeIn';
 import line from '../images/blue-line.png';
-
 import PageContainer from '../components/PageContainer';
 
 const Wrapper = styled.div`
@@ -192,8 +191,15 @@ const HomeSection9 = () => {
       }
     `
   );
+
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('home-section9', { delay: '400ms' });
+  }, []);
+
   return (
-    <Wrapper>
+    <Wrapper data-usefadein="home-section9">
       <PageContainer>
         <div className="section">
           <Section>

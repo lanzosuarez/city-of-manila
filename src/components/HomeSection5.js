@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import img1 from '../images/home-section5-img-1.jpg';
 import img2 from '../images/home-section5-img-2.jpg';

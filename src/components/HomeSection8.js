@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
+import useFadeIn from '../hooks/useFadeIn';
 
 import section8Bg from '../images/section-8-bg-1.jpg';
 
@@ -74,8 +75,15 @@ const HomeSection8 = () => {
     setWatchVideo(true);
     scrollToItem();
   };
+
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('home-section8', { delay: '400ms' });
+  }, []);
+
   return (
-    <Wrapper id="video-section">
+    <Wrapper id="video-section" data-usefadein="home-section8">
       <SectionContainer>
         <PageContainer>
           <div className={watchVideo ? 'display-block' : 'display-none'}>

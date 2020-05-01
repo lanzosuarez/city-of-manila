@@ -256,7 +256,7 @@ const items = [
 
 const MobileTimeline = () => {
   return (
-    <MobileContent>
+    <MobileContent data-usefadein="about-section4">
       <ul className="timeline2 timeline-split">
         <li className="timeline-item">
           <div className="timeline-content tlTitles"></div>
@@ -329,6 +329,7 @@ const AboutPage = ({ location }) => {
   useEffect(() => {
     addElement('about-section2', { delay: '300ms' });
     addElement('about-section3', { delay: '300ms' });
+    addElement('about-section4', { delay: '300ms' });
     addElement('about-section5', { delay: '300ms' });
     addElement('about-section6', { delay: '400ms' });
   }, []);
@@ -483,7 +484,7 @@ const AboutPage = ({ location }) => {
             </PhotoCredit>
           </Section3Container>
           <Section32Container>
-            <Section3PageContainer>
+            <Section3PageContainer data-usefadein="about-section4">
               <Section3>
                 <h1> Education </h1>
                 <img src={line} alt="blue line" className="line" />

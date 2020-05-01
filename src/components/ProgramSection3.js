@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import line from '../images/blue-line.png';
-import placeholder from '../images/image-placeholder.jpg';
 
 const Container = styled.div`
   background: white;
@@ -13,17 +12,6 @@ const Container = styled.div`
   padding: 4rem 15px;
   padding-bottom: 50px;
   max-width: ${props => (props.noImage ? '950px' : '100%')};
-`;
-
-const Title = styled.h2`
-  color: var(--blue);
-  line-height: 1.5;
-  margin: 0;
-  margin-bottom: 30px;
-
-  @media (max-width: 576px) {
-    padding: 0px 15px;
-  }
 `;
 
 const Content = styled.p`

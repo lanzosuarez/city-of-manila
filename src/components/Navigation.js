@@ -137,8 +137,8 @@ export const listItems = [
     path: '/gallery'
   },
   {
-    title: 'Get Involved',
-    path: '/get-involved'
+    title: 'Help Manila',
+    path: '/help-manila'
   },
   {
     title: 'Contact',

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 
-import GalleryFbVideo from '../components/GalleryFbVideo';
+import GalleryVideo from '../components/GalleryVideo';
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
 import VideoGallery from '../components/VideoGallery';
@@ -29,7 +29,7 @@ const FeaturedContainer = styled.div`
 
 const FeaturedText = styled.p`
   color: #d33c35;
-  margin: 0.5rem 0px 1rem 0px;
+  margin: 1.45rem 0px 1rem 0px;
   font-weight: 600;
   font-family: Quicksand;
 `;
@@ -92,7 +92,7 @@ const GalleryPage = ({ location }) => {
           <PageContainer>
             <Section>
               <FeaturedContainer>
-                <GalleryFbVideo />
+                <GalleryVideo url="https://www.facebook.com/watch/?v=858541134613248" />
               </FeaturedContainer>
               <FeaturedText>Featured Video</FeaturedText>
               <FeaturedContent>

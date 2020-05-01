@@ -6,6 +6,24 @@ import PageContainer from '../components/PageContainer';
 
 const Content = styled.div`
   display: contents;
+
+  @media (max-width: 1028px) {
+    img{
+      object-fit:cover;
+      height: 300px;
+      display: block;
+      margin: 0 auto;
+    }
+
+  @media (max-width: 426px) {
+    img{
+      object-fit:cover;
+      height: 300px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
 `;
 
 const AssetList = styled.div`
@@ -15,14 +33,10 @@ const AssetList = styled.div`
   grid-auto-rows: 350px;
   justify-content: center;
   grid-auto-flow: dense;
-  padding: 1rem 0;
+  padding: 1rem 0 3rem;
 
   @media (max-width: 1028px) {
-    grid-template-columns: repeat(auto-fill, 48%);
-    grid-auto-rows: 300px;
-  }
-  @media (max-width: 809px) {
-    grid-template-columns: repeat(auto-fill, 45%);
+    grid-template-columns: repeat(auto-fill,30%);
     grid-auto-rows: 300px;
   }
 

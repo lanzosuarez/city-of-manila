@@ -146,7 +146,7 @@ const Content = styled.div`
   }
 `;
 
-const GetInvolvedPage = ({ location }) => {
+const HelpManilaPage = ({ location }) => {
   const [addElement] = useFadeIn();
 
   useEffect(() => {
@@ -162,15 +162,15 @@ const GetInvolvedPage = ({ location }) => {
   return (
     <NavigationProvider>
       <Layout>
-        <SEO title="Get Involved" />
+        <SEO title="Help Manila" />
         <Notice />
         <Navigation />
         <Wrapper>
-          <PageHeader name="Get Involved" bg={Banner} />
+          <PageHeader name="Help Manila" bg={Banner} />
           <Section1 data-usefadein="get-involved-section1">
             <PageContainer>
               <Section>
-                <h1>How you can help Manila</h1>
+                <h1>How You Can Get Involved</h1>
                 <img src={line} alt="blue line" className="line" />
                 <p>
                   Mayor Isko calls on everyone in true bayanihan spirit to help
@@ -267,4 +267,4 @@ const GetInvolvedPage = ({ location }) => {
   );
 };
 
-export default GetInvolvedPage;
+export default HelpManilaPage;

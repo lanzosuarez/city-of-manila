@@ -5,7 +5,6 @@ import { downloadFile } from '../helpers';
 const ButtonLegislation = styled.button`
   background: ${props =>
     props.loading ? 'rgba(180, 180, 180, 0.8)' : '#fd942d'};
-
   &:active {
     background: rgb(253, 148, 45, 0.9);
   }

@@ -683,26 +683,6 @@ li {
   display: none !important;
 }
 
-@media (max-width: 1157px) {
-  #featuredVid {
-    height: 56vw;
-    margin-bottom: 0px;
-  }
-}
-
-@media (max-width: 790px) {
-  #featuredVid {
-    height: 54vw;
-    margin-bottom: 0px;
-  }
-}
-
-@media (max-width: 375px) {
-  #featuredVid {
-    height: 51vw;
-    margin-bottom: 0px;
-  }
-}
 .homeSection5-slideIn-enter {
   transform: translateX(200%) !important;
 }

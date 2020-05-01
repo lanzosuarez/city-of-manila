@@ -92,7 +92,7 @@ const CovidSection11 = () => {
   return (
     <Wrapper>
       <ContentContainer>
-        <p>Mitigate</p>
+        <p><strong>Mitigate</strong></p>
         {mitigates.map((i, idx) => (
           <Fragment key={idx}>
             <Item>
