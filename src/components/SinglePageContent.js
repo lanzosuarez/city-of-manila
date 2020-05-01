@@ -6,6 +6,8 @@ import ImagePlaceholder from '../images/news-image-placeholder.png';
 import Quote from '../images/quote-blue.png';
 import line from '../images/blue-line.png';
 import ImagePost from '../images/section-9-img-2.png';
+import { formatDate } from '../helpers';
+import { Link } from 'gatsby';
 
 const Section = styled.div`
   padding: 4rem 0;
@@ -98,15 +100,26 @@ const PostImg = styled.img`
 `;
 const PostContent = styled.div`
   width: 65%;
-`;
-const PostHeader = styled.h3`
-  font-size: 20px;
-  line-height: 1.3;
-  margin-bottom: 0.5rem;
-  @media (max-width: 768px) {
-    font-size: 18px;
+
+  a {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    color: var(--blue);
+    font-weight: bold;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   }
 `;
+// const PostHeader = styled.h3`
+//   font-size: 20px;
+//   line-height: 1.3;
+//   margin-bottom: 0.5rem;
+//   @media (max-width: 768px) {
+//     font-size: 18px;
+//   }
+// `;
 const PostDate = styled.p`
   font-size: 14px;
 `;
@@ -122,106 +135,46 @@ const BorderLine = styled.hr`
   background: white;
 `;
 
-const SinglePageContent = () => {
+const SinglePageContent = ({ data, recentPosts }) => {
   return (
     <PageContainer>
       <Section>
         <ContainerWrap>
           <LeftContainer>
-            <HeaderText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </HeaderText>
+            <HeaderText>{data.body1.body1}</HeaderText>
             <ImageContainer src={ImagePlaceholder} alt="Image Placeholder" />
-            <QuoteContent>
-              <QuoteImage src={Quote} alt="Quotation" />
-              <QuoteText>
-                <QuoteHeader>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </QuoteHeader>
-                <QuoteSign>Mayor Isko Moreno</QuoteSign>
-              </QuoteText>
-            </QuoteContent>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            {data.quote && (
+              <QuoteContent>
+                <QuoteImage src={Quote} alt="Quotation" />
+                <QuoteText>
+                  <QuoteHeader>{data.quote.quote}</QuoteHeader>
+                  <QuoteSign>Mayor Isko Moreno</QuoteSign>
+                </QuoteText>
+              </QuoteContent>
+            )}
+            <p>{data.body2.body2}</p>
           </LeftContainer>
           <RightContainer>
             <RecentPostHeader>
               <h3>Recent Posts</h3>
               <img src={line} alt="blue line" className="line" />
             </RecentPostHeader>
-            <Post>
-              <PostsWrap>
-                <PostImg src={ImagePost} alt="Post Image Header" />
-                <PostContent>
-                  <PostHeader>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  </PostHeader>
-                  <PostDate>April 11, 2020</PostDate>
-                </PostContent>
-              </PostsWrap>
-              <Border>
-                <BorderLine />
-              </Border>
-            </Post>
-            <Post>
-              <PostsWrap>
-                <PostImg src={ImagePost} alt="Post Image Header" />
-                <PostContent>
-                  <PostHeader>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  </PostHeader>
-                  <PostDate>April 11, 2020</PostDate>
-                </PostContent>
-              </PostsWrap>
-              <Border>
-                <BorderLine />
-              </Border>
-            </Post>
-            <Post>
-              <PostsWrap>
-                <PostImg src={ImagePost} alt="Post Image Header" />
-                <PostContent>
-                  <PostHeader>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  </PostHeader>
-                  <PostDate>April 11, 2020</PostDate>
-                </PostContent>
-              </PostsWrap>
-              <Border>
-                <BorderLine />
-              </Border>
-            </Post>
+            {recentPosts.map(({ node }, idx) => (
+              <Post key={idx}>
+                <PostsWrap>
+                  <PostImg src={node.photo.file.url} alt="Post Image Header" />
+                  <PostContent>
+                    <Link to={`/latest-updates/${node.id}`}>
+                      {node.heading1}
+                    </Link>
+                    <PostDate>{formatDate(node.date)}</PostDate>
+                  </PostContent>
+                </PostsWrap>
+                <Border>
+                  <BorderLine />
+                </Border>
+              </Post>
+            ))}
           </RightContainer>
         </ContainerWrap>
       </Section>
