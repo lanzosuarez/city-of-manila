@@ -18,7 +18,7 @@ const Container = styled.div`
 
 const PageContent = styled.div`
   height: 100%;
-  padding: 0px 100px;
+  padding: 2rem 100px;
   align-items: center;
   @media (max-width: 768px) {
     padding: 35px 50px;
