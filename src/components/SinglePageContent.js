@@ -136,6 +136,10 @@ const BorderLine = styled.hr`
 `;
 
 const SinglePageContent = ({ data, recentPosts }) => {
+  // const videoOrPhoto = () => {
+  //   if(data.)
+  // }
+  console.log(data);
   return (
     <PageContainer>
       <Section>

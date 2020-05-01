@@ -22,7 +22,7 @@ const SinglePage = ({ location, data }) => {
     scrollToSection(location);
   }, [location]);
 
-  const { heading1, date } = data.contentfulLatestUpdates;
+  const { heading1, date, photo, by, tags } = data.contentfulLatestUpdates;
 
   return (
     <NavigationProvider>
@@ -31,7 +31,13 @@ const SinglePage = ({ location, data }) => {
         <Notice />
         <Navigation />
         <Wrapper>
-          <SinglePageBanner text={heading1} datetext={formatDate(date)} />
+          <SinglePageBanner
+            tags={tags}
+            by={by}
+            bg={photo}
+            text={heading1}
+            datetext={formatDate(date)}
+          />
           <SinglePageShare />
           <SinglePageContent
             data={data.contentfulLatestUpdates}
@@ -46,6 +52,13 @@ const SinglePage = ({ location, data }) => {
 export const query = graphql`
   query($id: String!) {
     contentfulLatestUpdates(id: { eq: $id }) {
+      tags
+      by
+      photo {
+        file {
+          url
+        }
+      }
       heading1
       date
       body1 {
@@ -57,6 +70,7 @@ export const query = graphql`
       quote {
         quote
       }
+      youtubeLink
     }
     allContentfulLatestUpdates(
       filter: { id: { ne: $id } }

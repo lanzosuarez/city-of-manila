@@ -14,12 +14,25 @@ const Container = styled.div`
   margin-bottom: 0px;
   display: flex;
   align-items: center;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
 `;
 
 const PageContent = styled.div`
   height: 100%;
   padding: 2rem 100px;
   align-items: center;
+  position: relative;
+  z-index: 2;
   @media (max-width: 768px) {
     padding: 35px 50px;
   }
@@ -77,23 +90,24 @@ const TagList = styled.div`
 `;
 
 const ProgramBanner = props => {
+  const tags = props.tags.split(',');
   return (
-    <Container bg={pageBg}>
+    <Container bg={props.bg.file.url}>
       <PageContent>
         <Category>Category</Category>
         <HeaderText>{props.text}</HeaderText>
         <Text>
           <p>
-            {props.datetext}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;By&nbsp;{props.author}
+            {props.datetext}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;By&nbsp;
+            {props.by}
           </p>
         </Text>
         <TagList>
-          <Tag>
-            <p>Tag Name 1</p>
-          </Tag>
-          <Tag>
-            <p>Tag Name 1</p>
-          </Tag>
+          {tags.map((t, idx) => (
+            <Tag key={idx}>
+              <p>{t}</p>
+            </Tag>
+          ))}
         </TagList>
       </PageContent>
     </Container>
