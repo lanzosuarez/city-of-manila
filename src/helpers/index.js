@@ -1,3 +1,5 @@
+import format from 'date-fns/format';
+
 export const isMobile = () => window.innerWidth <= 576;
 export const getHash = path => `#${path.split('#')[1]}`;
 
@@ -27,6 +29,19 @@ export const searchItems = (term, arr) => {
   );
 };
 
+export const searchLatestUpdates = (term, arr) => {
+  if (term === '') return arr;
+  const regex = new RegExp(term, 'ig');
+
+  return arr.filter(
+    i =>
+      regex.test(i.node.heading1) ||
+      regex.test(i.node.body1.body1) ||
+      regex.test(i.node.body2.body2) ||
+      regex.test(i.node.by)
+  );
+};
+
 export const pipe = (...fns) => val =>
   fns.reduce((currentValue, currentFn) => currentFn(currentValue), val);
 
@@ -44,3 +59,13 @@ export const getTemp = async () => {
 };
 
 export const randomNumber = limit => Math.floor(Math.random() * limit) + 1;
+
+export const withReadMore = text => {
+  const limit = 200;
+  if (text.length > limit) {
+    return text.slice(0, limit) + '...';
+  }
+  return text;
+};
+
+export const formatDate = date => format(new Date(date), 'MMMM dd, yyyy');

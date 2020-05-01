@@ -15,12 +15,12 @@ const Section = styled.div`
 `;
 
 const ContainerWrap = styled.div`
-  display:flex;
-  flex-wrap: wrap:
-  height:100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
   justify-content: space-between;
   @media (max-width: 768px) {
-    flex-direction:column;
+    flex-direction: column;
   }
 `;
 const LeftContainer = styled.div`

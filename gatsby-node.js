@@ -35,4 +35,26 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     });
   });
+
+  const latestUpdates = await graphql(`
+    query {
+      allContentfulLatestUpdates {
+        edges {
+          node {
+            id
+          }
+        }
+      }
+    }
+  `);
+
+  latestUpdates.data.allContentfulLatestUpdates.edges.forEach(({ node }) => {
+    createPage({
+      path: `/latest-updates/${node.id}`,
+      component: path.resolve(`./src/templates/latest-update.js`),
+      context: {
+        id: node.id
+      }
+    });
+  });
 };
