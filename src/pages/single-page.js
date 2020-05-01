@@ -30,6 +30,7 @@ const SinglePage = ({ location }) => {
           <SinglePageBanner
             text="Lorem ipsum dolor sit amet, consectetur minim veniam adipiscing elit ut enim ad, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             datetext="April 14, 2020"
+            author = "Author"
           />
           <SinglePageShare />
           <SinglePageContent/>

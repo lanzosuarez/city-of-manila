@@ -20,8 +20,6 @@ const PageContent = styled.div`
   height: 100%;
   padding: 0px 100px;
   align-items: center;
-  max-width: 1170px;
-
   @media (max-width: 768px) {
     padding: 35px 50px;
   }
@@ -42,18 +40,61 @@ const HeaderText = styled.h1`
     font-size: 24px;
   }
 `;
-const DateText = styled.p`
+
+const Text = styled.div`
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  p {
+    margin-bottom: 0.5rem;
+    color: #fefefe;
+    font-size: 20px;
+  }
+`;
+
+const Category = styled.p`
   color: #fefefe;
   font-size: 20px;
-  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+`;
+const Tag = styled.div`
+  background-color: #ffa537;
+  width: inherit;
+  padding: 5px 23px;
+  text-align: center;
+  border-radius: 45px;
+  p {
+    color: #fefefe;
+    font-size: 0.8rem;
+    margin-bottom: 0rem;
+  }
+`;
+
+const TagList = styled.div`
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-column-gap: 9px;
 `;
 
 const ProgramBanner = props => {
   return (
     <Container bg={pageBg}>
       <PageContent>
+        <Category>Category</Category>
         <HeaderText>{props.text}</HeaderText>
-        <DateText>{props.datetext}</DateText>
+        <Text>
+          <p>
+            {props.datetext}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;By&nbsp;{props.author}
+          </p>
+        </Text>
+        <TagList>
+          <Tag>
+            <p>Tag Name 1</p>
+          </Tag>
+          <Tag>
+            <p>Tag Name 1</p>
+          </Tag>
+        </TagList>
       </PageContent>
     </Container>
   );
