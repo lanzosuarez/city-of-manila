@@ -266,7 +266,7 @@ const LatestUpdatesSection2 = ({ items }) => {
                     <h5 className="author">By {i.by}</h5>
                   </div>
                   <p>{withReadMore(i.body1.body1)}</p>
-                  <Link>
+                  <Link to={`/latest-updates/${i.id}`}>
                     READ MORE{' '}
                     <ion-icon data-icon="icon" name="arrow-forward"></ion-icon>
                   </Link>

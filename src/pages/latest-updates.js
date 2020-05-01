@@ -50,6 +50,7 @@ export const query = graphql`
     allContentfulLatestUpdates(sort: { fields: [date], order: ASC }) {
       edges {
         node {
+          id
           heading1
           body1 {
             body1
