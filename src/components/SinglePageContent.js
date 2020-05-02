@@ -8,6 +8,7 @@ import line from '../images/blue-line.png';
 import ImagePost from '../images/section-9-img-2.png';
 import { formatDate } from '../helpers';
 import { Link } from 'gatsby';
+import GalleryVideo from './GalleryVideo';
 
 const Section = styled.div`
   padding: 4rem 0;
@@ -146,7 +147,11 @@ const SinglePageContent = ({ data, recentPosts }) => {
         <ContainerWrap>
           <LeftContainer>
             <HeaderText>{data.body1.body1}</HeaderText>
-            <ImageContainer src={ImagePlaceholder} alt="Image Placeholder" />
+            {data.youtubeLink ? (
+              <GalleryVideo url={data.youtubeLink} />
+            ) : (
+              <ImageContainer src={data.photoLink} alt="Image Placeholder" />
+            )}
             {data.quote && (
               <QuoteContent>
                 <QuoteImage src={Quote} alt="Quotation" />

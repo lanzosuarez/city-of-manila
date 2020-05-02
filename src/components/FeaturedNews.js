@@ -80,6 +80,7 @@ const FeaturedNews = ({}) => {
   const data = useStaticQuery(graphql`
     query {
       contentfulLatestUpdates(featured: { eq: true }) {
+        id
         heading1
         body1 {
           body1
@@ -100,7 +101,8 @@ const FeaturedNews = ({}) => {
     by,
     body1,
     date,
-    photo
+    photo,
+    id
   } = data.contentfulLatestUpdates;
   return (
     <Container>
@@ -117,7 +119,7 @@ const FeaturedNews = ({}) => {
           <h5 className="author">By {by}</h5>
         </div>
         <p>{withReadMore(body1.body1)}</p>
-        <Link>
+        <Link to={`/latest-updates/${id}`}>
           READ MORE <ion-icon data-icon="icon" name="arrow-forward"></ion-icon>
         </Link>
       </NewsCon>
