@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import format from 'date-fns/format';
-import { useStaticQuery, graphql} from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import useFadeIn from '../hooks/useFadeIn';
 import line from '../images/blue-line.png';
 import PageContainer from '../components/PageContainer';
+import { formatDate } from '../helpers';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -145,6 +146,9 @@ const CardHeader = styled.h3`
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0px;
+  a {
+    color: var(--blue);
+  }
 `;
 
 const DateContent = styled.div`
@@ -173,18 +177,23 @@ const Avatar = styled.div`
 `;
 
 const HomeSection9 = () => {
-  const { allContentfulLatestUpdate } = useStaticQuery(
+  const { allContentfulLatestUpdates } = useStaticQuery(
     graphql`
       query {
-        allContentfulLatestUpdate {
+        allContentfulLatestUpdates(
+          sort: { fields: [date], order: ASC }
+          limit: 4
+        ) {
           edges {
             node {
-              name {
-                name
+              id
+              heading1
+              date
+              photo {
+                file {
+                  url
+                }
               }
-              publishedDate
-              link
-              imgUrl
             }
           }
         }
@@ -212,30 +221,23 @@ const HomeSection9 = () => {
                 <ion-icon style={iconStyle} name="apps"></ion-icon>
               </span>
               <p style={pStyle}>
-                <a
-                  target="__blank"
-                  href="http://manila.gov.ph/news-and-events/?fbclid=IwAR3daba7n261vJWRy3znEw3zmlXL15cv0ZV1kpW4h3yomxVdtErjsfO56_A"
-                >
-                  View All
-                </a>
+                <Link to="latest-updates">View All</Link>
               </p>
             </RightContainer>
           </Section>
           <CardContainer>
-            {allContentfulLatestUpdate.edges.map(({ node }, idx) => (
+            {allContentfulLatestUpdates.edges.map(({ node }, idx) => (
               <Card key={idx}>
-                <Avatar imgUrl={node.imgUrl} />
+                <Avatar imgUrl={node.photo.file.url} />
                 <CardContent>
                   <CardHeader>
-                    <a target="__blank" href={node.link}>
-                      {node.name.name}
-                    </a>
+                    <Link to={`/latest-updates/${node.id}`}>
+                      {node.heading1}
+                    </Link>
                   </CardHeader>
                 </CardContent>
                 <DateContent>
-                  <DateStyle>
-                    {format(new Date(node.publishedDate), 'MMMM dd, yyyy')}
-                  </DateStyle>
+                  <DateStyle>{formatDate(node.date)}</DateStyle>
                 </DateContent>
               </Card>
             ))}
