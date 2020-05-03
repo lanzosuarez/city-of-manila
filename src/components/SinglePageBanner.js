@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import useFadeIn from '../hooks/useFadeIn';
 
-
 const Container = styled.div`
   background-image: ${props => `url(${props.bg})`};
   background-size: cover;
@@ -68,8 +67,8 @@ const Text = styled.div`
   }
   @media (max-width: 580px) {
     display: block;
-    p:nth-child(2){
-      display:none;
+    p:nth-child(2) {
+      display: none;
     }
   }
 `;
@@ -98,7 +97,7 @@ const TagList = styled.div`
   grid-column-gap: 9px;
   @media (max-width: 765px) {
     display: grid;
-    grid-template-columns: repeat(auto-fill,49%);
+    grid-template-columns: repeat(auto-fill, 49%);
     grid-gap: 5px;
     grid-auto-flow: inherit;
   }
@@ -112,12 +111,13 @@ const SinglePageBanner = props => {
     addElement('banner-header-text', { dir: 'down' });
     addElement('banner-header-tag', { dir: 'down' });
   }, []);
-
   const tags = props.tags.split(',');
   return (
-    <Container bg={props.bg.file.url} >
+    <Container bg={props.bg.file.url}>
       <PageContent>
-        <Category data-usefadein="banner-header-category">{props.category}</Category>
+        <Category data-usefadein="banner-header-category">
+          {props.category}
+        </Category>
         <HeaderText data-usefadein="banner-header">{props.text}</HeaderText>
         <Text data-usefadein="banner-header-text">
           <p>{props.datetext}</p>

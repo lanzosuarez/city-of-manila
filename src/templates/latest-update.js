@@ -30,7 +30,6 @@ const SinglePage = ({ location, data }) => {
     tags,
     category
   } = data.contentfulLatestUpdates;
-
   return (
     <NavigationProvider>
       <Layout>
