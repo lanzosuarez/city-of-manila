@@ -1,10 +1,11 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 
 import PageContainer from '../components/PageContainer';
 import Img from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
 import { randomNumber } from '../helpers';
+import Modal from './Modal';
 
 const ListContainer = styled.div`
   margin: 0 auto;
@@ -85,12 +86,11 @@ const AssetList = styled.div`
 
 const Overlay = styled.div`
   position: fixed;
-  /* display: flex; */
   display: ${props => (props.open ? 'flex' : 'none')};
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.3);
@@ -120,7 +120,7 @@ const ModalImg = styled.img`
   max-height: 600px;
 `;
 
-const Modal = ({ selectedImage, onClose, preventClose }) => {
+const ModalContent = ({ selectedImage, onClose, preventClose }) => {
   return (
     <Overlay open={selectedImage} onClick={onClose}>
       {selectedImage && (
@@ -147,7 +147,7 @@ const PhotoGallery = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allContentfulPhotoGallery(sort: {fields: [updatedAt], order: DESC }) {
+        allContentfulPhotoGallery(sort: { fields: [updatedAt], order: DESC }) {
           edges {
             node {
               image {
@@ -197,52 +197,52 @@ const PhotoGallery = () => {
           </HeaderItem>
           <HeaderItem>
             {currentPage > 1 && items.length && (
-            <ion-icon
-              onClick={prevPage}
-              style={{ ...iconStyle, marginRight: 10 }}
-              size="large"
-              name="arrow-back"
-            ></ion-icon>
+              <ion-icon
+                onClick={prevPage}
+                style={{ ...iconStyle, marginRight: 10 }}
+                size="large"
+                name="arrow-back"
+              ></ion-icon>
             )}
             {currentPage < maxPage && items.length && (
-            <ion-icon
-              onClick={nextPage}
-              style={iconStyle}
-              size="large"
-              name="arrow-forward"
-            ></ion-icon>
+              <ion-icon
+                onClick={nextPage}
+                style={iconStyle}
+                size="large"
+                name="arrow-forward"
+              ></ion-icon>
             )}
           </HeaderItem>
         </Header>
       </ListContainer>
-      <Fragment>
-        <AssetList>
-          {currentItems().map(item => {
-            const h = randomNumber(2);
-            const v = randomNumber(2);
-            console.log(item);
-            return (
-              <Content
-                key={item.node.image.file.url}
-                onClick={onClick(item.node.image.file.url)}
-              >
-                <Img
-                  className={`item h${h} v${v}`}
-                  fluid={item.node.image.fluid}
-                  alt="Gallery Image"
-                />
-              </Content>
-            );
-          })}
-        </AssetList>
-        {selectedImage && (
-          <Modal
+
+      <AssetList>
+        {currentItems().map(item => {
+          const h = randomNumber(2);
+          const v = randomNumber(2);
+          return (
+            <Content
+              key={item.node.image.file.url}
+              onClick={onClick(item.node.image.file.url)}
+            >
+              <Img
+                className={`item h${h} v${v}`}
+                fluid={item.node.image.fluid}
+                alt="Gallery Image"
+              />
+            </Content>
+          );
+        })}
+      </AssetList>
+      {selectedImage && (
+        <Modal>
+          <ModalContent
             onClose={onClose}
             preventClose={preventClose}
             selectedImage={selectedImage}
           />
-        )}
-      </Fragment>
+        </Modal>
+      )}
     </PageContainer>
   );
 };
