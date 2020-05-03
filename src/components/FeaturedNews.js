@@ -131,7 +131,7 @@ const FeaturedNews = ({}) => {
           <h5 className="author">By {by}</h5>
         </div>
         <p>{withReadMore(body1.body1)}</p>
-        <Link to={`/latest-updates/${id}`}>
+        <Link to={`/news-room/${id}`}>
           READ MORE <ion-icon data-icon="icon" name="arrow-forward"></ion-icon>
         </Link>
       </NewsCon>

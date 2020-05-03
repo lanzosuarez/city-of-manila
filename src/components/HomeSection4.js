@@ -14,6 +14,7 @@ const Container = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: 40px 100px;
   align-items: center;
+  justify-items: flex-end;
 
   @media (max-width: 576px) {
     margin: 0px 15px;
@@ -130,7 +131,8 @@ const HomeSection4 = () => {
       </Items>
       <Items>
         <Figure>
-          <Counter start={started} to={6} />00K
+          <Counter start={started} to={6} />
+          00K
         </Figure>
         <Desc>Families Reached</Desc>
       </Items>
