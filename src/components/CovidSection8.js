@@ -87,10 +87,10 @@ const CovidSection8 = () => {
           <CovidSection11 />
           <Footer>
             <Link
-              state={{
-                tab: 1
-              }}
               to="/executive-and-legislation"
+              state={{
+                tabs: 2
+              }}
             >
               View Executive Order
             </Link>
