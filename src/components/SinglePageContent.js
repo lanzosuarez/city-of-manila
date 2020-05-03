@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
-
+import useFadeIn from '../hooks/useFadeIn';
 import PageContainer from '../components/PageContainer';
-import ImagePlaceholder from '../images/news-image-placeholder.png';
 import Quote from '../images/quote-blue.png';
 import line from '../images/blue-line.png';
-import ImagePost from '../images/section-9-img-2.png';
 import { formatDate } from '../helpers';
 import { Link } from 'gatsby';
 import GalleryVideo from './GalleryVideo';
@@ -48,6 +46,11 @@ const HeaderText = styled.h2`
   }
 `;
 const ImageContainer = styled.img`
+  width: 100%;
+  height: auto;
+  margin: 0.5rem 0 1.5rem;
+`;
+const AssetContainer = styled.div`
   width: 100%;
   height: auto;
   margin: 0.5rem 0 1.5rem;
@@ -113,14 +116,7 @@ const PostContent = styled.div`
     }
   }
 `;
-// const PostHeader = styled.h3`
-//   font-size: 20px;
-//   line-height: 1.3;
-//   margin-bottom: 0.5rem;
-//   @media (max-width: 768px) {
-//     font-size: 18px;
-//   }
-// `;
+
 const PostDate = styled.p`
   font-size: 14px;
 `;
@@ -137,6 +133,14 @@ const BorderLine = styled.hr`
 `;
 
 const SinglePageContent = ({ data, recentPosts }) => {
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('content-section1', { delay: '300ms' });
+    addElement('content-section2', { delay: '300ms' });
+    addElement('content-section3', { delay: '300ms' });
+    addElement('content-section4', { delay: '300ms' });
+  }, []);
   // const videoOrPhoto = () => {
   //   if(data.)
   // }
@@ -146,14 +150,16 @@ const SinglePageContent = ({ data, recentPosts }) => {
       <Section>
         <ContainerWrap>
           <LeftContainer>
-            <HeaderText>{data.body1.body1}</HeaderText>
-            {data.youtubeLink ? (
-              <GalleryVideo url={data.youtubeLink} />
-            ) : (
-              <ImageContainer src={data.photoLink} alt="Image Placeholder" />
-            )}
+            <HeaderText data-usefadein="content-section1">{data.body1.body1}</HeaderText>
+            <AssetContainer data-usefadein="content-section2">
+              {data.youtubeLink ? (
+                <GalleryVideo url={data.youtubeLink} />
+              ) : (
+                <ImageContainer src={data.photoLink} alt="Image Placeholder" />
+              )}
+            </AssetContainer>
             {data.quote && (
-              <QuoteContent>
+              <QuoteContent data-usefadein="content-section3">
                 <QuoteImage src={Quote} alt="Quotation" />
                 <QuoteText>
                   <QuoteHeader>{data.quote.quote}</QuoteHeader>
@@ -163,9 +169,9 @@ const SinglePageContent = ({ data, recentPosts }) => {
             )}
             <p>{data.body2.body2}</p>
           </LeftContainer>
-          <RightContainer>
-            <RecentPostHeader>
-              <h3>Recent Posts</h3>
+          <RightContainer data-usefadein="content-section4">
+            <RecentPostHeader >
+              <h3>Recent News</h3>
               <img src={line} alt="blue line" className="line" />
             </RecentPostHeader>
             {recentPosts.map(({ node }, idx) => (

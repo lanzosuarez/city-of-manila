@@ -22,7 +22,7 @@ const SinglePage = ({ location, data }) => {
     scrollToSection(location);
   }, [location]);
 
-  const { heading1, date, photo, by, tags } = data.contentfulLatestUpdates;
+  const { heading1, date, photo, by, tags, category } = data.contentfulLatestUpdates;
 
   return (
     <NavigationProvider>
@@ -32,6 +32,7 @@ const SinglePage = ({ location, data }) => {
         <Navigation />
         <Wrapper>
           <SinglePageBanner
+            category={category}
             tags={tags}
             by={by}
             bg={photo}
@@ -52,6 +53,7 @@ const SinglePage = ({ location, data }) => {
 export const query = graphql`
   query($id: String!) {
     contentfulLatestUpdates(id: { eq: $id }) {
+      category
       tags
       by
       photo {

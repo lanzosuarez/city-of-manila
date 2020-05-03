@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState }from 'react';
 import styled from '@emotion/styled';
 import NavigationProvider from '../context/NavigationProvider';
 import Layout from '../components/Layout';
@@ -21,17 +21,17 @@ const Container = styled(PageContainer)`
   width: 90%;
 `;
 
-const LatestUpdatePage = ({ location, data }) => {
+const NewsRoomPage = ({ location, data }) => {
   const [items, setItems] = useState(data.allContentfulLatestUpdates.edges);
 
   return (
     <NavigationProvider>
       <LatestUpdatesProvider>
         <Layout>
-          <SEO title="Latest Updates" />
+          <SEO title="News Room" />
           <Notice />
           <Navigation />
-          <PageHeader name="Newsroom" bg={banner} />
+          <PageHeader name="News Room" bg={banner} />
           <PageContainer>
             <Container>
               <FeaturedNews />
@@ -72,4 +72,4 @@ export const query = graphql`
   }
 `;
 
-export default LatestUpdatePage;
+export default NewsRoomPage;

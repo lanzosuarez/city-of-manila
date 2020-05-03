@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import CustomSelect from './CustomSelect';
 import { LatestUpdatesContext } from '../context/LatestUpdateProvider';
+import useFadeIn from '../hooks/useFadeIn';
 
 const SearchContainer = styled.div`
   background: white;
@@ -139,6 +140,12 @@ const LatestUpdatesSection1 = ({ locationState }) => {
   //   }
   // }, []);
 
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('news1', { delay: '500ms' });
+  }, []);
+
   const onSelectTab = idx => () => setActiveTab(idx);
   const selectRange = dateRange => setFilters({ ...filters, dateRange });
   const searchByText = e =>
@@ -151,7 +158,7 @@ const LatestUpdatesSection1 = ({ locationState }) => {
 
   return (
     <>
-      <SearchContainer>
+      <SearchContainer data-usefadein="news1">
         <CustomSelect onChange={onSelect} activeTab={activeTab} />
         <Categories>
           {tabs.map((tab, idx) => (

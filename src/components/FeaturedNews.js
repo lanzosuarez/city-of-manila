@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import { withReadMore, formatDate } from '../helpers';
+import useFadeIn from '../hooks/useFadeIn';
 
 const Container = styled.div`
   display: grid;
@@ -44,6 +45,7 @@ const NewsCon = styled.div`
     align-items: center;
     color: red;
     font-weight: bold;
+    font-size: 16px;
 
     &:hover {
       [name='arrow-forward'] {
@@ -104,13 +106,23 @@ const FeaturedNews = ({}) => {
     photo,
     id
   } = data.contentfulLatestUpdates;
+
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('featured-news1', { delay: '300ms' });
+    addElement('featured-news2', { delay: '300ms' });
+    addElement('featured-news3', { delay: '500ms' });
+    addElement('featured-news4', { delay: '500ms' });
+  }, []);
+
   return (
     <Container>
-      <Title>Featured News</Title>
-      <PlaceholderCon>
+      <Title data-usefadein="featured-news1">Featured News</Title>
+      <PlaceholderCon data-usefadein="featured-news2">
         <PlaceHolderImg src={photo.file.url}></PlaceHolderImg>
       </PlaceholderCon>
-      <NewsCon>
+      <NewsCon data-usefadein="featured-news3">
         <h4>{category}</h4>
         <h3>{heading1}</h3>
         <div className="author-con">
@@ -123,7 +135,7 @@ const FeaturedNews = ({}) => {
           READ MORE <ion-icon data-icon="icon" name="arrow-forward"></ion-icon>
         </Link>
       </NewsCon>
-      <div className="divider"></div>
+      <div className="divider" data-usefadein="featured-news4"></div>
     </Container>
   );
 };

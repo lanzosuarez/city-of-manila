@@ -27,6 +27,12 @@ const Section = styled.div`
   @media only screen and (max-width: 1024px) {
     padding: 4rem 15px;
   }
+  @media only screen and (max-width: 768px){
+      h1 {
+        font-size: 26px;
+    }
+  }
+   
 `;
 
 const CovidSection5 = () => {
