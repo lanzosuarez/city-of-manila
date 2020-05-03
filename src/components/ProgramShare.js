@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  MailruShareButton
-} from 'react-share';
+import { FacebookShareButton, TwitterShareButton } from 'react-share';
 import { WEBSITE_URL } from '../constants';
 
 const Container = styled.div`
