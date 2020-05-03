@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styled from '@emotion/styled';
 import Footer from './Footer';
 import MobileHeader from './MobileHeader';
@@ -6,6 +6,8 @@ import SideNavigation from './SideNavigation';
 import { NavigationContext } from '../context/NavigationProvider';
 
 import '../styles/index.css';
+import { detectIE } from '../helpers';
+import { navigate } from 'gatsby';
 
 const Container = styled.div`
   width: 100%;
@@ -29,6 +31,9 @@ const Overlay = styled.div`
 
 const Layout = ({ children }) => {
   const { showNav, toggleNav } = useContext(NavigationContext);
+
+  if (!detectIE()) navigate('/not-supported');
+
   return (
     <Container id="page-layout" noscroll={showNav}>
       <Overlay onClick={() => toggleNav(false)} show={showNav} />
