@@ -173,6 +173,7 @@ const SinglePageContent = ({ data, recentPosts }) => {
               dangerouslySetInnerHTML={{
                 __html: data.body2.childMarkdownRemark.html
               }}
+              data-usefadein="content-section4"
             ></p>
           </LeftContainer>
           <RightContainer data-usefadein="content-section4">
