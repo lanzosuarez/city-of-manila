@@ -49,6 +49,7 @@ template {
   display: none;
 }
 a {
+  cursor: pointer;
   text-decoration: none;
   color: var(--link);
   background-color: transparent;

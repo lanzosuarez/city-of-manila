@@ -28,6 +28,11 @@ const Section = styled.div`
   @media only screen and (max-width: 1024px) {
     padding: 4rem 15px;
   }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 26px;
+    }
+  }
 `;
 
 const Footer = styled.div`
@@ -73,7 +78,7 @@ const CovidSection8 = () => {
 
   return (
     <Wrapper>
-      <ContentContainer data-usefadein="covid-section8"> 
+      <ContentContainer data-usefadein="covid-section8">
         <Section>
           <h1>Actions to Date</h1>
           <img src={line} alt="blue line" className="line" />

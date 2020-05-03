@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-
+import useFadeIn from '../hooks/useFadeIn';
 import GalleryVideo from '../components/GalleryVideo';
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
@@ -81,6 +81,14 @@ const GalleryPage = ({ location }) => {
     scrollToSection(location);
   }, [location]);
 
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('gallery-page1', { delay: '300ms' });
+    addElement('gallery-page2', { delay: '300ms' });
+    addElement('gallery-page3', { delay: '300ms' });
+  }, []);
+
   return (
     <NavigationProvider>
       <Layout>
@@ -90,9 +98,9 @@ const GalleryPage = ({ location }) => {
         <Wrapper>
           <PageHeader name="Gallery" bg={Banner} />
           <PageContainer>
-            <Section>
+            <Section data-usefadein="gallery-page1">
               <FeaturedContainer>
-                <GalleryVideo url="https://www.facebook.com/watch/?v=858541134613248" />
+                <GalleryVideo url="https://www.youtube.com/watch?v=2qKPzVLguDc&" />
               </FeaturedContainer>
               <FeaturedText>Featured Video</FeaturedText>
               <FeaturedContent>
@@ -100,11 +108,11 @@ const GalleryPage = ({ location }) => {
               </FeaturedContent>
               <Date>March 25, 2020</Date>
             </Section>
-            <PageContainer>
+            <PageContainer data-usefadein="gallery-page2">
               <BorderLine />
             </PageContainer>
-            <Section>
-              <TabContainer>
+            <Section data-usefadein="gallery-page3">
+              <TabContainer >
                 {tabs.map((tab, idx) => (
                   <Tab
                     key={idx}

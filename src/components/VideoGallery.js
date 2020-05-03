@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import PageContainer from '../components/PageContainer';
 import GalleryVideo from '../components/GalleryVideo';
 import { graphql, useStaticQuery } from 'gatsby';
+import { formatDate } from '../helpers';
 
 const ListContainer = styled.div`
   margin: 0 auto;
@@ -112,7 +113,7 @@ const VideoGallery = () => {
               <GalleryVideo url={item.node.videoUrl} />
             </VideoCon>
             <h3>{item.node.title}</h3>
-            {item.node.publishedDate}
+            {formatDate(item.node.publishedDate)}
           </AssetWrap1>
         ))}
       </AssetList>

@@ -128,8 +128,8 @@ export const listItems = [
     ]
   },
   {
-    title: 'Latest Updates',
-    path: '/latest-updates'
+    title: 'News Room',
+    path: '/news-room'
   },
   {
     title: 'Gallery',

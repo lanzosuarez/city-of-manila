@@ -221,7 +221,7 @@ const HomeSection9 = () => {
                 <ion-icon style={iconStyle} name="apps"></ion-icon>
               </span>
               <p style={pStyle}>
-                <Link to="latest-updates">View All</Link>
+                <Link to="news-room">View All</Link>
               </p>
             </RightContainer>
           </Section>

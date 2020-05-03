@@ -95,7 +95,7 @@ const contains = [
   },
   {
     desc:
-      'Coordinated with Armed Forces of the Philippines and Bases Conversion and Development Authority for additional DOH quarantine facility at Rizal Memorial Colliseum'
+      'Coordinated with Armed Forces of the Philippines and Bases Conversion and Development Authority for additional DOH quarantine facility at Rizal Memorial Coliseum'
   },
   {
     desc: 'Opened Del Pan quarantine facility'

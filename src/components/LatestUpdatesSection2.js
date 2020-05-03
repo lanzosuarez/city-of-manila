@@ -119,6 +119,7 @@ const NewsCon = styled.div`
     align-items: center;
     color: red;
     font-weight: bold;
+    font-size: 16px;
 
     &:hover {
       [name='arrow-forward'] {
@@ -147,6 +148,11 @@ const NewsCon = styled.div`
 
     .author {
       color: black;
+    }
+    @media (max-width: 580px) {
+      h5{
+        line-height: 1.5;
+      }
     }
   }
 `;
