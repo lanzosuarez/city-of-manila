@@ -32,7 +32,7 @@ const Overlay = styled.div`
 const Layout = ({ children }) => {
   const { showNav, toggleNav } = useContext(NavigationContext);
 
-  if (!detectIE()) navigate('/not-supported');
+  if (detectIE()) navigate('/not-supported');
 
   return (
     <Container id="page-layout" noscroll={showNav}>
