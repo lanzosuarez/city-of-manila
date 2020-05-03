@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   latestUpdates.data.allContentfulLatestUpdates.edges.forEach(({ node }) => {
     createPage({
-      path: `/latest-updates/${node.id}`,
+      path: `/news-room/${node.id}`,
       component: path.resolve(`./src/templates/latest-update.js`),
       context: {
         id: node.id

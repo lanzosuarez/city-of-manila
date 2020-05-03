@@ -10,7 +10,7 @@ import SEO from '../components/SEO';
 import Notice from '../components/Notice';
 import Navigation from '../components/Navigation';
 import scrollToSection from '../hooks/scrollToSection';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { formatDate } from '../helpers';
 
 const Wrapper = styled.div`
@@ -22,8 +22,14 @@ const SinglePage = ({ location, data }) => {
     scrollToSection(location);
   }, [location]);
 
-  const { heading1, date, photo, by, tags, category } = data.contentfulLatestUpdates;
-
+  const {
+    heading1,
+    date,
+    photo,
+    by,
+    tags,
+    category
+  } = data.contentfulLatestUpdates;
   return (
     <NavigationProvider>
       <Layout>
@@ -67,7 +73,9 @@ export const query = graphql`
         body1
       }
       body2 {
-        body2
+        childMarkdownRemark {
+          html
+        }
       }
       quote {
         quote

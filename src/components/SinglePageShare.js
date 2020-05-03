@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { FacebookShareButton, TwitterShareButton } from 'react-share';
 
 import PageContainer from '../components/PageContainer';
+import { WEBSITE_URL } from '../constants';
 
 const Container = styled.div`
   background: #05326b;
@@ -31,18 +33,34 @@ const Icons = styled.div`
   align-items: center;
   grid-auto-flow: column;
   grid-gap: 10px;
+
+  .react-share__ShareButton {
+    display: flex;
+  }
 `;
 
 const SinglePageShare = () => {
+  const openGmail = () => {
+    let url =
+      'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Your+Subject+here&body=' +
+      WEBSITE_URL +
+      '&ui=2&tf=1&pli=1';
+
+    window.open(url, 'sharer', 'toolbar=0,status=0,width=648,height=395');
+  };
   return (
     <Container>
       <PageContainer>
         <SubContainer>
           <span>Share Overview</span>
           <Icons>
-            <ion-icon name="mail"></ion-icon>
-            <ion-icon name="logo-twitter"></ion-icon>
-            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon onClick={openGmail} name="mail"></ion-icon>
+            <FacebookShareButton url={WEBSITE_URL}>
+              <ion-icon name="logo-facebook"></ion-icon>
+            </FacebookShareButton>
+            <TwitterShareButton url={WEBSITE_URL}>
+              <ion-icon name="logo-twitter"></ion-icon>
+            </TwitterShareButton>
           </Icons>
         </SubContainer>
       </PageContainer>

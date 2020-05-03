@@ -150,7 +150,9 @@ const SinglePageContent = ({ data, recentPosts }) => {
       <Section>
         <ContainerWrap>
           <LeftContainer>
-            <HeaderText data-usefadein="content-section1">{data.body1.body1}</HeaderText>
+            <HeaderText data-usefadein="content-section1">
+              {data.body1.body1}
+            </HeaderText>
             <AssetContainer data-usefadein="content-section2">
               {data.youtubeLink ? (
                 <GalleryVideo url={data.youtubeLink} />
@@ -167,10 +169,14 @@ const SinglePageContent = ({ data, recentPosts }) => {
                 </QuoteText>
               </QuoteContent>
             )}
-            <p>{data.body2.body2}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: data.body2.childMarkdownRemark.html
+              }}
+            ></p>
           </LeftContainer>
           <RightContainer data-usefadein="content-section4">
-            <RecentPostHeader >
+            <RecentPostHeader>
               <h3>Recent News</h3>
               <img src={line} alt="blue line" className="line" />
             </RecentPostHeader>
@@ -179,9 +185,7 @@ const SinglePageContent = ({ data, recentPosts }) => {
                 <PostsWrap>
                   <PostImg src={node.photo.file.url} alt="Post Image Header" />
                   <PostContent>
-                    <Link to={`/latest-updates/${node.id}`}>
-                      {node.heading1}
-                    </Link>
+                    <Link to={`/news-room/${node.id}`}>{node.heading1}</Link>
                     <PostDate>{formatDate(node.date)}</PostDate>
                   </PostContent>
                 </PostsWrap>

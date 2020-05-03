@@ -8,12 +8,12 @@ import Logo from '../images/manila-logo-90x90px.png';
 import Bg from '../images/about-section-5.png';
 
 const Wrapper = styled.div`
-  background-image: url(${Bg})};
+  background-image: ${`url(${Bg})`};
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
-  z-index:100;
+  z-index: 100;
 `;
 
 const Cover = styled.div`
@@ -22,10 +22,10 @@ const Cover = styled.div`
   height: 26rem;
   display: flex;
   justify-content: center;
-  z-index:200;
-  
-  &::before{
-    content: "";
+  z-index: 200;
+
+  &::before {
+    content: '';
     width: 100%;
     height: inherit;
     background-color: #000000;
@@ -38,7 +38,7 @@ const Cover = styled.div`
 
 const Item = styled.div`
   align-self: center;
-  z-index:200;
+  z-index: 200;
   padding: 0 15px;
   p {
     color: white;

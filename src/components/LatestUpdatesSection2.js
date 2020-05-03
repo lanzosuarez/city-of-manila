@@ -150,7 +150,7 @@ const NewsCon = styled.div`
       color: black;
     }
     @media (max-width: 580px) {
-      h5{
+      h5 {
         line-height: 1.5;
       }
     }
@@ -272,7 +272,7 @@ const LatestUpdatesSection2 = ({ items }) => {
                     <h5 className="author">By {i.by}</h5>
                   </div>
                   <p>{withReadMore(i.body1.body1)}</p>
-                  <Link to={`/latest-updates/${i.id}`}>
+                  <Link to={`/news-room/${i.id}`}>
                     READ MORE{' '}
                     <ion-icon data-icon="icon" name="arrow-forward"></ion-icon>
                   </Link>

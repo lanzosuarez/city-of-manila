@@ -231,9 +231,7 @@ const HomeSection9 = () => {
                 <Avatar imgUrl={node.photo.file.url} />
                 <CardContent>
                   <CardHeader>
-                    <Link to={`/latest-updates/${node.id}`}>
-                      {node.heading1}
-                    </Link>
+                    <Link to={`/news-room/${node.id}`}>{node.heading1}</Link>
                   </CardHeader>
                 </CardContent>
                 <DateContent>
