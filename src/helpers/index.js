@@ -39,7 +39,7 @@ export const searchLatestUpdates = (term, arr) => {
       regex.test(i.node.body1.body1) ||
       regex.test(i.node.body2.body2) ||
       regex.test(i.node.by) ||
-      regex.test(i.node.tag)
+      regex.test(i.node.tags)
   );
 };
 
