@@ -177,10 +177,10 @@ const Avatar = styled.div`
 `;
 
 const HomeSection9 = () => {
-  const { allContentfulLatestUpdates } = useStaticQuery(
+  const { allContentfulNewsroom } = useStaticQuery(
     graphql`
       query {
-        allContentfulLatestUpdates(
+        allContentfulNewsroom(
           sort: { fields: [date], order: ASC }
           limit: 4
         ) {
@@ -226,7 +226,7 @@ const HomeSection9 = () => {
             </RightContainer>
           </Section>
           <CardContainer>
-            {allContentfulLatestUpdates.edges.map(({ node }, idx) => (
+            {allContentfulNewsroom.edges.map(({ node }, idx) => (
               <Card key={idx}>
                 <Avatar imgUrl={node.photo.file.url} />
                 <CardContent>

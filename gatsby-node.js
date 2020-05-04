@@ -38,7 +38,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const latestUpdates = await graphql(`
     query {
-      allContentfulLatestUpdates {
+      allContentfulNewsroom {
         edges {
           node {
             id
@@ -48,7 +48,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  latestUpdates.data.allContentfulLatestUpdates.edges.forEach(({ node }) => {
+  latestUpdates.data.allContentfulNewsroom.edges.forEach(({ node }) => {
     createPage({
       path: `/news-room/${node.id}`,
       component: path.resolve(`./src/templates/latest-update.js`),
