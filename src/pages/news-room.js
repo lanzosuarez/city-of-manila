@@ -28,10 +28,10 @@ const NewsRoomPage = ({ location, data }) => {
     <NavigationProvider>
       <LatestUpdatesProvider>
         <Layout>
-          <SEO title="News Room" />
+          <SEO title="Newsroom" />
           <Notice />
           <Navigation />
-          <PageHeader name="News Room" bg={banner} />
+          <PageHeader name="Newsroom" bg={banner} />
           <PageContainer>
             <Container>
               <FeaturedNews />

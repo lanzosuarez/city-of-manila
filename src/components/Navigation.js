@@ -128,7 +128,7 @@ export const listItems = [
     ]
   },
   {
-    title: 'News Room',
+    title: 'Newsroom',
     path: '/news-room'
   },
   {
