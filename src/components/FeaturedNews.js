@@ -124,7 +124,7 @@ const FeaturedNews = ({}) => {
       </PlaceholderCon>
       <NewsCon data-usefadein="featured-news3">
         <h4>{category}</h4>
-        <h3>{heading1}</h3>
+        <Link to={`/news-room/${id}`}><h3>{heading1}</h3></Link>
         <div className="author-con">
           <h5>{formatDate(date)}</h5>
           <span>|</span>
