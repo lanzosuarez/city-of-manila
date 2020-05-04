@@ -109,6 +109,7 @@ const NewsCon = styled.div`
   h5 {
     margin: 0;
     color: var(--blue);
+    line-height: 1.5;
   }
 
   p {
@@ -150,9 +151,25 @@ const NewsCon = styled.div`
     .author {
       color: black;
     }
+    @media (max-width: 982px) {
+      h5 {
+        line-height: 1.5;
+        margin-right: 10px;
+        min-width: 92px;
+        font-size: 12px;
+      }
+      span {
+        margin-right: 10px;
+      }
+    }
     @media (max-width: 580px) {
       h5 {
         line-height: 1.5;
+        margin-right: 10px;
+        min-width: 92px;
+      }
+      span {
+        margin-right: 10px;
       }
     }
   }
@@ -272,7 +289,7 @@ const LatestUpdatesSection2 = ({ items, location }) => {
               <Details>
                 <NewsCon>
                   <h4>{i.category}</h4>
-                  <h3>{i.heading1}</h3>
+                  <Link to={`/news-room/${i.id}`}><h3>{i.heading1}</h3></Link>
                   <div className="author-con">
                     <h5>{formatDate(i.date)}</h5>
                     <span>|</span>
