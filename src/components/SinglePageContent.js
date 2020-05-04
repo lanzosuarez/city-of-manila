@@ -108,6 +108,7 @@ const PostContent = styled.div`
     font-weight: bold;
     @media (max-width: 768px) {
       font-size: 18px;
+      margin-bottom: 1px;
     }
   }
 `;
