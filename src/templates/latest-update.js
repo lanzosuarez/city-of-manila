@@ -29,7 +29,7 @@ const SinglePage = ({ location, data }) => {
     by,
     tags,
     category
-  } = data.contentfulLatestUpdates;
+  } = data.contentfulNewsroom;
   return (
     <NavigationProvider>
       <Layout>
@@ -47,8 +47,8 @@ const SinglePage = ({ location, data }) => {
           />
           <SinglePageShare />
           <SinglePageContent
-            data={data.contentfulLatestUpdates}
-            recentPosts={data.allContentfulLatestUpdates.edges}
+            data={data.contentfulNewsroom}
+            recentPosts={data.allContentfulNewsroom.edges}
           />
         </Wrapper>
       </Layout>
@@ -58,7 +58,7 @@ const SinglePage = ({ location, data }) => {
 
 export const query = graphql`
   query($id: String!) {
-    contentfulLatestUpdates(id: { eq: $id }) {
+    contentfulNewsroom(id: { eq: $id }) {
       category
       tags
       by
@@ -82,7 +82,7 @@ export const query = graphql`
       }
       youtubeLink
     }
-    allContentfulLatestUpdates(
+    allContentfulNewsroom(
       filter: { id: { ne: $id } }
       sort: { fields: [date], order: ASC }
       limit: 3

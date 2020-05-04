@@ -81,7 +81,7 @@ const NewsCon = styled.div`
 const FeaturedNews = ({}) => {
   const data = useStaticQuery(graphql`
     query {
-      contentfulLatestUpdates(featured: { eq: true }) {
+      contentfulNewsroom(featured: { eq: true }) {
         id
         heading1
         body1 {
@@ -105,7 +105,7 @@ const FeaturedNews = ({}) => {
     date,
     photo,
     id
-  } = data.contentfulLatestUpdates;
+  } = data.contentfulNewsroom;
 
   const [addElement] = useFadeIn();
 

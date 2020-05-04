@@ -37,7 +37,7 @@ const SubLogo = styled.div`
 `;
 
 const NewsRoomPage = ({ location, data }) => {
-  const [items, setItems] = useState(data.allContentfulLatestUpdates.edges);
+  const [items, setItems] = useState(data.allContentfulNewsroom.edges);
 
   return (
     <NavigationProvider>
@@ -65,7 +65,7 @@ const NewsRoomPage = ({ location, data }) => {
 
 export const query = graphql`
   query {
-    allContentfulLatestUpdates(sort: { fields: [date], order: ASC }) {
+    allContentfulNewsroom(sort: { fields: [date], order: ASC }) {
       edges {
         node {
           id
