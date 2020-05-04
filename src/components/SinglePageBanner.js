@@ -85,6 +85,7 @@ const Tag = styled.div`
   padding: 5px 23px;
   text-align: center;
   border-radius: 45px;
+  cursor: pointer;
   p {
     color: #fefefe;
     font-size: 0.8rem;

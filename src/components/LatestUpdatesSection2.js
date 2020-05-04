@@ -62,6 +62,7 @@ const ListItem = styled.div`
 
   @media (max-width: 576px) {
     grid-template-columns: 1fr;
+    grid-gap: 25px;
   }
 `;
 
@@ -71,7 +72,8 @@ const Avatar = styled.div`
   background-size: cover;
   background-position: center;
   @media (max-width: 576px) {
-    display: none;
+    width: 100%;
+    height: 300px;
   }
 `;
 
