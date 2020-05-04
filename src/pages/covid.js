@@ -214,8 +214,7 @@ const CovidPage = ({ location }) => {
                 continues, 24x7. We will not stop, until we win the war against
                 Covid -19.
               </p>
-              <p>Let's beat Covid-19 together. Bangon, Manila!</p>
-              <p>Bangon, Manila!</p>
+              <p>Let us beat Covid-19 together. Bangon, Manila!</p>
               <ButtonContainer>
                 <Button>
                  <Link to="/contact">Contact</Link>
