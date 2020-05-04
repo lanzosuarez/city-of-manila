@@ -37,13 +37,8 @@ const RightContainer = styled.div`
     width: 100%;
   }
 `;
-const HeaderText = styled.h2`
-  line-height: 1.3;
-  font-weight: 600;
-  font-size: 32px;
-  @media (max-width: 768px) {
-    font-size: 24px;
-  }
+const HeaderText = styled.p`
+  font-weight: 700;
 `;
 const ImageContainer = styled.img`
   width: 100%;
