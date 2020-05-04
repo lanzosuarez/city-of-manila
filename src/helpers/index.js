@@ -72,20 +72,22 @@ export const withReadMore = text => {
 export const formatDate = date => format(new Date(date), 'MMMM dd, yyyy');
 
 export const detectIE = () => {
-  var isIE = false;
-  var ua = window.navigator.userAgent;
-  var old_ie = ua.indexOf('MSIE ');
-  var new_ie = ua.indexOf('Trident/');
+  if (typeof window !== 'undefined') {
+    let isIE = false;
+    const ua = window.navigator.userAgent;
+    const old_ie = ua.indexOf('MSIE ');
+    const new_ie = ua.indexOf('Trident/');
 
-  if (old_ie > -1 || new_ie > -1) {
-    isIE = true;
+    if (old_ie > -1 || new_ie > -1) {
+      isIE = true;
+    }
+
+    if (isIE) {
+      //IE specific code goes here
+    }
+
+    return isIE;
   }
-
-  if (isIE) {
-    //IE specific code goes here
-  }
-
-  return isIE;
 };
 
 export const sortByDate = (items, dateKey) =>

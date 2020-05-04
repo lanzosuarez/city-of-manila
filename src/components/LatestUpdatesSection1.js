@@ -154,11 +154,13 @@ const LatestUpdatesSection1 = ({ location }) => {
 
   const setTextFilter = searchText => {
     setFilters({ ...filters, searchText });
-    window.history.pushState(
-      {},
-      `search ${searchText}`,
-      `/news-room?q=${searchText}${location.hash}`
-    );
+    if (typeof window !== 'undefined') {
+      window.history.pushState(
+        {},
+        `search ${searchText}`,
+        `/news-room?q=${searchText}${location.hash}`
+      );
+    }
   };
   const searchByText = e => setTextFilter(e.target.value);
 

@@ -159,11 +159,13 @@ const ExecSection1 = ({ location }) => {
 
   const setTextFilter = searchText => {
     setFilters({ ...filters, searchText });
-    window.history.pushState(
-      {},
-      `search ${searchText}`,
-      `/executive-and-legislation?q=${searchText}`
-    );
+    if (typeof window !== 'undefined') {
+      window.history.pushState(
+        {},
+        `search ${searchText}`,
+        `/executive-and-legislation?q=${searchText}`
+      );
+    }
   };
 
   const searchByText = e => setTextFilter(e.target.value);
