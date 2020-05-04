@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import NavigationProvider from '../context/NavigationProvider';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import useFadeIn from '../hooks/useFadeIn';
-import banner from '../images/latest-updates-banner.jpg';
+import logo from '../images/logo-150px.png';
+import banner from '../images/page-banner-newsroom.jpg';
 import Navigation from '../components/Navigation';
 import Notice from '../components/Notice';
 import PageHeader from '../components/PageHeader';
@@ -21,6 +21,21 @@ const Container = styled(PageContainer)`
   width: 90%;
 `;
 
+const Logo = styled.img`
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width:100px;
+  @media only screen and (max-width: 1024px) {
+    bottom: 0.5rem;
+    top: unset;
+    width: 80px;
+  }
+`;
+const SubLogo = styled.div`
+  position: relative;
+`;
+
 const NewsRoomPage = ({ location, data }) => {
   const [items, setItems] = useState(data.allContentfulLatestUpdates.edges);
 
@@ -31,7 +46,10 @@ const NewsRoomPage = ({ location, data }) => {
           <SEO title="Newsroom" />
           <Notice />
           <Navigation />
-          <PageHeader name="Newsroom" bg={banner} />
+          <SubLogo>
+            <Logo src={logo} alt="newsroom logo" />
+            <PageHeader name="Newsroom" bg={banner} />
+          </SubLogo>
           <PageContainer>
             <Container>
               <FeaturedNews />

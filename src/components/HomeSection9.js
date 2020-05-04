@@ -213,7 +213,7 @@ const HomeSection9 = () => {
         <div className="section">
           <Section>
             <LeftContainer>
-              <h1 style={H1Style}>Latest Updates</h1>
+              <h1 style={H1Style}>Newsroom</h1>
               <img src={line} alt="blue line" className="line" />
             </LeftContainer>
             <RightContainer>
