@@ -61,7 +61,7 @@ const items = [
   },
   {
     id: 'item2',
-    title: 'How will ECQ help get rId of COVID-19? ',
+    title: 'How will ECQ help get rid of COVID-19? ',
     content: 'Flattening the curve. ',
     content2:
       'By staying at home and practicing social distancing (maintaining at least 1 meter distancce between yourself and another person, according to advice by the World Health Organization) you can limit the spread of the virus by avoiding contact with a potentially infected individual. ',
