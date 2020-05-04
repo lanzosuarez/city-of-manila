@@ -1,4 +1,4 @@
-import React, { useEffect, useState }from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import NavigationProvider from '../context/NavigationProvider';
 import Layout from '../components/Layout';
@@ -35,8 +35,8 @@ const NewsRoomPage = ({ location, data }) => {
           <PageContainer>
             <Container>
               <FeaturedNews />
-              <LatestUpdatesSection1 />
-              <LatestUpdatesSection2 items={items} />
+              <LatestUpdatesSection1 location={location} />
+              <LatestUpdatesSection2 items={items} location={location} />
             </Container>
           </PageContainer>
         </Layout>
@@ -51,6 +51,7 @@ export const query = graphql`
       edges {
         node {
           id
+          tags
           heading1
           body1 {
             body1

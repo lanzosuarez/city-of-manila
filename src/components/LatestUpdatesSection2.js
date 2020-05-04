@@ -13,6 +13,7 @@ import Pagination from './Pagination';
 import { useState } from 'react';
 import { LatestUpdatesContext } from '../context/LatestUpdateProvider';
 import { Link } from 'gatsby';
+import scrollToSection from '../hooks/scrollToSection';
 
 const ListContainer = styled.div`
   margin: 0 auto;
@@ -157,7 +158,7 @@ const NewsCon = styled.div`
   }
 `;
 
-const LatestUpdatesSection2 = ({ items }) => {
+const LatestUpdatesSection2 = ({ items, location }) => {
   const { activeTab, filters } = useContext(LatestUpdatesContext);
   const [page, setPage] = useState(1);
   const [paginatedItems, setPaginatedItems] = useState([]);
@@ -200,9 +201,15 @@ const LatestUpdatesSection2 = ({ items }) => {
     setPage(1);
   }, [filters, items, activeTab]);
 
+  useEffect(() => {
+    scrollToSection(location);
+  }, [location]);
+
   const pageItems = useMemo(
     () =>
       pipe(
+        items =>
+          items.sort((a, b) => new Date(b.node.date) - new Date(a.node.date)),
         items =>
           items.filter(i => {
             const categoryFilter = activeCategory();
@@ -233,7 +240,7 @@ const LatestUpdatesSection2 = ({ items }) => {
   }, []);
 
   return (
-    <div data-usefadein="latest-update-section2">
+    <div id="news-list" data-usefadein="latest-update-section2">
       <ListContainer>
         <Header>
           <HeaderItem>

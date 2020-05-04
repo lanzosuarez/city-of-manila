@@ -156,6 +156,11 @@ const ExecSection2 = ({ items }) => {
     () =>
       pipe(
         items =>
+          items.sort(
+            (a, b) =>
+              new Date(b.node.publishedDate) - new Date(a.node.publishedDate)
+          ),
+        items =>
           items.filter(i => {
             const categoryFilter = activeCategory();
             if (categoryFilter === 'All') return true;

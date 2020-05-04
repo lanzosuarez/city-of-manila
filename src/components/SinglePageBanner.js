@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import useFadeIn from '../hooks/useFadeIn';
+import { navigate } from 'gatsby';
 
 const Container = styled.div`
   background-image: ${props => `url(${props.bg})`};
@@ -112,6 +113,10 @@ const SinglePageBanner = props => {
     addElement('banner-header-tag', { dir: 'down' });
   }, []);
   const tags = props.tags.split(',');
+
+  const navigateOnClick = tag => () =>
+    navigate(`/news-room?q=${tag}#news-list`);
+
   return (
     <Container bg={props.bg.file.url}>
       <PageContent>
@@ -126,7 +131,7 @@ const SinglePageBanner = props => {
         </Text>
         <TagList data-usefadein="banner-header-tag">
           {tags.map((t, idx) => (
-            <Tag key={idx}>
+            <Tag onClick={navigateOnClick(t)} key={idx}>
               <p>{t}</p>
             </Tag>
           ))}

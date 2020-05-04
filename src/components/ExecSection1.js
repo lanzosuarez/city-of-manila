@@ -1,6 +1,9 @@
 import React, { useEffect, useContext } from 'react';
 import styled from '@emotion/styled';
+import { navigate } from 'gatsby';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+import querystring from 'query-string';
+
 import { ExecAndLegislationContext } from '../context/ExecAndLegislationProvider';
 import CustomSelect from './CustomSelect';
 
@@ -136,24 +139,37 @@ export const tabs = [
   'Ordinances'
 ];
 
-const ExecSection1 = ({ locationState }) => {
+const ExecSection1 = ({ location }) => {
   const { activeTab, filters, setActiveTab, setFilters } = useContext(
     ExecAndLegislationContext
   );
 
   useEffect(() => {
-    if (locationState && locationState.tab) {
-      setActiveTab(locationState.tab);
+    if (location.state && location.state.tab) {
+      setActiveTab(location.state.tab);
+    }
+    const query = querystring.parse(location.search);
+    if (query.q) {
+      setTextFilter(query.q);
     }
   }, []);
 
   const onSelectTab = idx => () => setActiveTab(idx);
   const selectRange = dateRange => setFilters({ ...filters, dateRange });
-  const searchByText = e =>
-    setFilters({ ...filters, searchText: e.target.value });
+
+  const setTextFilter = searchText => {
+    setFilters({ ...filters, searchText });
+    window.history.pushState(
+      {},
+      `search ${searchText}`,
+      `/executive-and-legislation?q=${searchText}`
+    );
+  };
+
+  const searchByText = e => setTextFilter(e.target.value);
 
   const showDateFilter = showDateFilter => () =>
-    setFilters({ ...filters, showDateFilter: true });
+    setFilters({ ...filters, showDateFilter });
 
   const onSelect = idx => setActiveTab(idx);
 
@@ -212,6 +228,7 @@ const ExecSection1 = ({ locationState }) => {
               name="search"
             ></ion-icon>
             <SearchInput
+              value={filters.searchText}
               pattern="^[a-zA-Z0-9]+$"
               onChange={searchByText}
               placeholder="Keyword"

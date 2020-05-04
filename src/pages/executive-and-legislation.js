@@ -23,8 +23,11 @@ const ExecutiveAndLegislativePage = ({ data, location }) => {
           <SEO title="Executive Orders, City Resolutions, and Ordinances" />
           <Notice />
           <Navigation />
-          <PageHeader name="Executive Orders, City Resolutions, and Ordinances" bg={pageBg} />
-          <ExecSection1 items={items} locationState={location.state} />
+          <PageHeader
+            name="Executive Orders, City Resolutions, and Ordinances"
+            bg={pageBg}
+          />
+          <ExecSection1 items={items} location={location} />
           <ExecSection2 items={items} />
         </Layout>
       </ExecAndLegislationProvider>

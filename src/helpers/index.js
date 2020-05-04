@@ -87,3 +87,8 @@ export const detectIE = () => {
 
   return isIE;
 };
+
+export const sortByDate = (items, dateKey) =>
+  items.sort((a, b) => {
+    return new Date(a[dateKey]) - new Date(b[dateKey]);
+  });

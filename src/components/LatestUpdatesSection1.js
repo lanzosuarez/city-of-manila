@@ -1,6 +1,8 @@
 import React, { useEffect, useContext } from 'react';
 import styled from '@emotion/styled';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+import querystring from 'query-string';
+
 import CustomSelect from './CustomSelect';
 import { LatestUpdatesContext } from '../context/LatestUpdateProvider';
 import useFadeIn from '../hooks/useFadeIn';
@@ -129,16 +131,17 @@ export const tabs = [
   'Multimedia'
 ];
 
-const LatestUpdatesSection1 = ({ locationState }) => {
+const LatestUpdatesSection1 = ({ location }) => {
   const { activeTab, filters, setActiveTab, setFilters } = useContext(
     LatestUpdatesContext
   );
 
-  // useEffect(() => {
-  //   if (locationState && locationState.tab) {
-  //     setActiveTab(locationState.tab);
-  //   }
-  // }, []);
+  useEffect(() => {
+    const query = querystring.parse(location.search);
+    if (query.q) {
+      setTextFilter(query.q);
+    }
+  }, []);
 
   const [addElement] = useFadeIn();
 
@@ -148,8 +151,16 @@ const LatestUpdatesSection1 = ({ locationState }) => {
 
   const onSelectTab = idx => () => setActiveTab(idx);
   const selectRange = dateRange => setFilters({ ...filters, dateRange });
-  const searchByText = e =>
-    setFilters({ ...filters, searchText: e.target.value });
+
+  const setTextFilter = searchText => {
+    setFilters({ ...filters, searchText });
+    window.history.pushState(
+      {},
+      `search ${searchText}`,
+      `/news-room?q=${searchText}${location.hash}`
+    );
+  };
+  const searchByText = e => setTextFilter(e.target.value);
 
   const showDateFilterFn = showDateFilter => () =>
     setFilters({ ...filters, showDateFilter });
@@ -211,6 +222,7 @@ const LatestUpdatesSection1 = ({ locationState }) => {
               name="search"
             ></ion-icon>
             <SearchInput
+              value={filters.searchText}
               pattern="^[a-zA-Z0-9]+$"
               onChange={searchByText}
               placeholder="Keyword"

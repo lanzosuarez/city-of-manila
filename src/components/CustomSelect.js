@@ -41,7 +41,6 @@ const CustomSelect = ({ onChange = () => {}, activeTab }) => {
 
   const selectTab = idx => () => onChange(idx);
 
-  console.log(tabs[activeTab]);
   return (
     <Container onClick={toggle(!open)} id="custom-select">
       {tabs[activeTab]}
