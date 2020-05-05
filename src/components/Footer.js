@@ -13,7 +13,7 @@ const Container = styled.div`
 const SectionsContainer = styled.div`
   margin: 60px 100px 40px;
   display: grid;
-  grid-gap: 65px;
+  grid-gap: 49px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
   @media (max-width: 768px) {

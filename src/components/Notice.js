@@ -25,8 +25,8 @@ const IconsContainer = styled.div`
   grid-auto-flow: column;
   align-items: center;
   grid-gap: 20px;
-  ion-icon:hover{
-    color:#04326a!important;
+  ion-icon:hover {
+    color: #04326a !important;
   }
 `;
 
@@ -57,7 +57,7 @@ const Notice = ({ maxWidth = '100%' }) => {
         </a>
       </IconsContainer>
       <NoticeText>
-        Open Hours Of City Government Monday - Friday 8:00 am - 5:00 pm
+        City of Manila office hours: Monday to Friday 8:00 am to 5:00 pm
       </NoticeText>
     </Container>
   );

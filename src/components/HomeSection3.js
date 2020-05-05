@@ -16,18 +16,6 @@ const Container = styled.div`
   @media (max-width: 576px) {
     padding: 50px 15px 100px;
   }
-  @media (max-width: 322px) {
-    div:nth-child(2) {
-      .content {
-        max-height: 73px !important;
-      }
-    }
-  }
-  div:nth-child(2) {
-    .content {
-      max-height: 55px;
-    }
-  }
 `;
 
 const Item = styled.div`
@@ -73,6 +61,7 @@ const Text = styled.h3`
   color: white;
   margin: 0;
   margin-bottom: 20px;
+  font-size: 1.2rem;
 `;
 
 const Paragraph = styled.p`

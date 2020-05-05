@@ -2,7 +2,6 @@ import React, { useContext, useMemo, useEffect } from 'react';
 import styled from '@emotion/styled';
 import isAfter from 'date-fns/isAfter';
 import isBefore from 'date-fns/isBefore';
-import useFadeIn from '../hooks/useFadeIn';
 import {
   pipe,
   searchLatestUpdates,
@@ -30,6 +29,7 @@ const ListContainer = styled.div`
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  z-index: auto;
 `;
 
 const HeaderItem = styled.div`
@@ -176,6 +176,19 @@ const NewsCon = styled.div`
     }
   }
 `;
+const Title = styled.div`
+  background-color: #01bcb1;
+  display: block;
+  width: max-content;
+  padding: 0.3rem 1rem;
+  h4 {
+    color: white!important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
+`;
 
 const LatestUpdatesSection2 = ({ items, location }) => {
   const { activeTab, filters } = useContext(LatestUpdatesContext);
@@ -253,14 +266,9 @@ const LatestUpdatesSection2 = ({ items, location }) => {
   const nextPage = () => setPage(p => p + 1);
   const prevPage = () => setPage(p => p - 1);
 
-  const [addElement] = useFadeIn();
-  useEffect(() => {
-    addElement('latest-update-section2', { delay: '400ms' });
-  }, []);
-
   return (
-    <div id="news-list" data-usefadein="latest-update-section2">
-      <ListContainer>
+    <div id="news-list">
+      <ListContainer >
         <Header>
           <HeaderItem>
             <Figure>{pageItems.length}</Figure> {activePage()}
@@ -290,7 +298,7 @@ const LatestUpdatesSection2 = ({ items, location }) => {
               <Avatar alt="item_avatar" src={i.photo.file.url}></Avatar>
               <Details>
                 <NewsCon>
-                  <h4>{i.category}</h4>
+                  <Title><h4>{i.category}</h4></Title>
                   <Link to={`/news-room/${i.id}`}><h3>{i.heading1}</h3></Link>
                   <div className="author-con">
                     <h5>{formatDate(i.date)}</h5>

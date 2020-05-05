@@ -22,7 +22,6 @@ const Container = styled.div`
   @media (max-width: 576px) {
     padding: 4rem 0px 1rem;
   }
-
 `;
 
 const Grid = styled.div`
@@ -47,9 +46,18 @@ const PlaceholderCon = styled.div``;
 
 const PlaceHolderImg = styled.img``;
 
-const Title = styled.h2`
-  margin: 0;
-  color: var(--blue);
+const Title = styled.div`
+  background-color: #01bcb1;
+  display: block;
+  width: max-content;
+  padding: 0.3rem 1rem;
+  h4 {
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
 `;
 
 const NewsCon = styled.div`
@@ -153,7 +161,9 @@ const FeaturedNews = ({}) => {
         </PlaceholderCon>
         <NewsCon data-usefadein="featured-news2">
           {/* <Title data-usefadein="featured-news1">Top Story</Title> */}
-          <h4>Top Story</h4>
+          <Title>
+            <h4>Top Story</h4>
+          </Title>
           <Link to={`/news-room/${id}`}>
             <h3>{heading1}</h3>
           </Link>

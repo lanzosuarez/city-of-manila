@@ -38,7 +38,6 @@ const SubLogo = styled.div`
 
 const NewsRoomPage = ({ location, data }) => {
   const [items, setItems] = useState(data.allContentfulNewsroom.edges);
-
   return (
     <NavigationProvider>
       <LatestUpdatesProvider>
