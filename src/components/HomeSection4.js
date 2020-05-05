@@ -15,8 +15,23 @@ const Container = styled.div`
   padding: 40px 100px;
   align-items: center;
   justify-items: flex-end;
-
-  @media (max-width: 576px) {
+  @media (min-width:1800px) {
+    justify-items: center;
+  }
+  @media only screen and (min-width: 940px) and (max-width: 1244px) {
+    grid-template-columns: repeat(auto-fit,minmax(178px,1fr));
+    padding: 40px 44px;
+  }
+  @media only screen and (min-width: 600px) and (max-width: 939px) {
+    padding: 40px 99px;
+    justify-items: center;
+  }
+  @media only screen and (min-width: 560px) and (max-width: 599px) {
+    padding: 40px 81px;
+    justify-items: center;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 559px) {
+    justify-items: center;
     margin: 0px 15px;
     padding: 50px 60px;
     height: auto;
@@ -66,6 +81,14 @@ const Items = styled.div`
   @media (max-width: 576px) {
     padding: 0px;
   }
+  @media only screen and (min-width: 600px) and (max-width: 939px) {
+    grid-gap: 7px;
+    padding: 0px 14px;
+  }
+  @media only screen and (min-width: 940px) and (max-width: 1244px) {
+    grid-gap: 7px;
+    padding: 0px 14px;
+  }
 `;
 
 const Figure = styled.h3`
@@ -75,6 +98,19 @@ const Figure = styled.h3`
   justify-content: flex-start;
   letter-spacing: 5px;
   font-size: 3rem;
+  
+  @media only screen and (min-width: 940px) and (max-width: 1244px) {
+    font-size: 4vw;
+  }
+  @media only screen and (min-width: 600px) and (max-width: 939px) {
+    font-size: 5vw;
+  }
+  @media only screen and (min-width: 560px) and (max-width: 599px) {
+    font-size: 7vw;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 559px) {
+    font-size: 2rem
+  }
 `;
 
 const Desc = styled.h5`
@@ -84,6 +120,20 @@ const Desc = styled.h5`
   line-height: 2;
   text-transform: uppercase;
   /* font-size: 1rem; */
+  @media only screen and (min-width: 940px) and (max-width: 1244px) {
+    font-size: 1vw;
+  }
+  @media only screen and (min-width: 600px) and (max-width: 939px) {
+    font-size: 0.6rem;
+    line-height: 1.5;
+  }
+  @media only screen and (min-width: 560px) and (max-width: 599px) {
+    font-size: 2.3vw;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 559px) {
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
 `;
 
 const Counter = ({ start, to, from = 0 }) => {
