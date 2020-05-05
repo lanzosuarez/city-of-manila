@@ -16,6 +16,23 @@ const Container = styled.div`
   @media (max-width: 576px) {
     padding: 50px 15px 100px;
   }
+  @media (max-width: 401px) {
+    div:nth-child(2) .content {
+      max-height: 26px;
+    }
+  }
+  @media (max-width: 358px) {
+    div:nth-child(1) .content {
+      max-height: 45px;
+    }
+    div:nth-child(2) .content {
+      max-height: 35px;
+    }
+    div:nth-child(3) .content {
+      max-height: 20px;
+    }
+  }
+
 `;
 
 const Item = styled.div`
@@ -44,15 +61,19 @@ const Content = styled.div`
   color: white;
   margin-bottom: 20px;
   position: relative;
-  max-height: 27px;
+  max-height: 26px;
   overflow: hidden;
   transition: max-height 500ms;
   z-index: 2;
+  @media (max-width: 1024px) {
+    max-height: 70px;
+  }
   @media (max-width: 768px) {
-    max-height: 82px;
+    max-height: 47px;
   }
   @media (max-width: 576px) {
-    max-height: 49px;
+    max-height: 22px;
+    font-size: 0.8rem;
     margin-bottom: 9px;
   }
 `;
@@ -62,6 +83,12 @@ const Text = styled.h3`
   margin: 0;
   margin-bottom: 20px;
   font-size: 1.2rem;
+  @media only screen and (min-width: 769px) and (max-width: 1081px)
+    font-size: 1rem;
+  }
+  @media (max-width: 576px) {
+    font-size: 1rem;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -92,9 +119,9 @@ const HomeSection3 = () => {
       <Item bg={bg1}>
         <Overlay className="overlay" />
         <Content className="content">
-          <Text>Covid-19 Digital Health Survey</Text>
+          <Text>COVID-19 Digital Health Survey</Text>
           <Paragraph>
-            Take one of the world's first Covid-19 health surveys now and help
+            Take one of the world's first COVID-19 health surveys now and help
             us flatten the curve.
           </Paragraph>
         </Content>
@@ -135,7 +162,7 @@ const HomeSection3 = () => {
       <Item bg={bg3}>
         <Overlay className="overlay" />
         <Content className="content">
-          <Text>Manila's Reponse to Covid-19</Text>
+          <Text>Manila's Reponse to COVID-19</Text>
           <Paragraph>
             The City of Manila has committed to alleviating the plight of its
             constituents by providing them with the appropriate care and

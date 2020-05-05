@@ -44,7 +44,7 @@ const contains = [
   },
   {
     desc:
-      'Launched Covid-19 Digital Health Survey among the world’s first digital Covid-19 digital id systems'
+      'Launched COVID-19 Digital Health Survey among the world’s first digital COVID-19 digital id systems'
   },
   {
     desc:
@@ -52,7 +52,7 @@ const contains = [
   },
   {
     desc:
-      'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-Covid efforts of 6 city owned hospitals'
+      'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-COVID efforts of 6 city owned hospitals'
   },
   {
     desc: 'Established external triage tents at all six city-owned hospitals'

@@ -174,7 +174,7 @@ const HelpManilaPage = ({ location }) => {
                 <img src={line} alt="blue line" className="line" />
                 <p>
                   Mayor Isko calls on everyone in true bayanihan spirit to help
-                  Manileños surivive the current Covid-19 pandemic and once we
+                  Manileños surivive the current COVID-19 pandemic and once we
                   are out of this period, build a better future for Manila.
                 </p>
               </Section>
@@ -197,7 +197,7 @@ const HelpManilaPage = ({ location }) => {
                   <p>
                     This helpful tool embedded in Mayor Isko's FB page
                     encourages respondents to think objectively about their
-                    health within the Covid-19 context.
+                    health within the COVID-19 context.
                   </p>
                   <p>
                     Data collected from the survey will help the City of Manila
