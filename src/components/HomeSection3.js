@@ -135,7 +135,7 @@ const HomeSection3 = () => {
       <Item bg={bg3}>
         <Overlay className="overlay" />
         <Content className="content">
-          <Text>Manila's Reponse to COVID-19</Text>
+          <Text>Manila's Reponse to Covid-19</Text>
           <Paragraph>
             The City of Manila has committed to alleviating the plight of its
             constituents by providing them with the appropriate care and

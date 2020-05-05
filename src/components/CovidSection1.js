@@ -108,7 +108,7 @@ const CovidSection1 = () => {
             <img loading="lazy" alt="blue-line" src={blueline}></img>
           </InfoHeader>
           <InfoContent>
-            COVID-19 is a new coronavirus that was first reported in Wuhan,
+            Covid-19 is a new coronavirus that was first reported in Wuhan,
             China in December 2019. It is known to cause pneumonia-like symptoms
             in infected patients.
           </InfoContent>
@@ -118,7 +118,7 @@ const CovidSection1 = () => {
           </InfoContent>
           <InfoContent>
             <a href="https://www.doh.gov.ph/doh-press-release/doh-confirms-local-transmission-of-covid-19-in-ph">
-                On 07 March 2020, the DOH raised COVID-19 Alert System
+                On 07 March 2020, the DOH raised Covid-19 Alert System
             </a> to Code Red Sub-level 1 to initiate efforts to prevent widespread
             community transmission.
           </InfoContent>
@@ -130,7 +130,7 @@ const CovidSection1 = () => {
             measures in a timely manner; assistance and cooperation of all
             government agencies and LGUs; and, for all the citizens, residents,
             tourists and establishments to comply with lawful directives and
-            advisories, to eliminate and curtail the COVID-19 threat and ensure
+            advisories, to eliminate and curtail the Covid-19 threat and ensure
             the safety and well-being of everyone.
           </InfoContent>
           <Footer>

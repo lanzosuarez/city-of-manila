@@ -211,7 +211,7 @@ const items = [
   },
   {
     number: '32',
-    desc: 'Provided Guide to Action against COVID19 for all Brgy. Chairmen'
+    desc: 'Provided Guide to Action against Covid19 for all Brgy. Chairmen'
   },
   {
     number: '33',

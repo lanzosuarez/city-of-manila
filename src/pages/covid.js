@@ -196,7 +196,7 @@ const CovidPage = ({ location }) => {
   return (
     <NavigationProvider>
       <Layout>
-        <SEO title="COVID-19" />
+        <SEO title="Covid-19" />
         <Notice />
         <Navigation />
         <CovidBanner>
@@ -220,7 +220,7 @@ const CovidPage = ({ location }) => {
                  <Link to="/contact">Contact</Link>
                 </Button>
                 <ButtonTracker>
-                  <a href="https://covid19stats.ph/">COVID-19 Tracker</a>
+                  <a href="https://covid19stats.ph/">Covid-19 Tracker</a>
                 </ButtonTracker>
               </ButtonContainer>
             </BannerContainer>

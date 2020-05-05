@@ -285,7 +285,7 @@ const HomeSection7 = () => {
             </Grid>
             <Grid bg={bg3}>
               <GridContent>
-                <TagCovid>COVID-19</TagCovid>
+                <TagCovid>Covid-19</TagCovid>
                 <GridInfo>
                   <p className="DateText">April 04, 2020</p>
                   <h1>Lorem ipsum dolor sitamen</h1>

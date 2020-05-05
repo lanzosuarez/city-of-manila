@@ -82,14 +82,14 @@ const CovidSection3 = () => {
   return (
     <PageContainer>
       <Header>
-        <h1>COVID-19 : What you need to know to protect you and your family</h1>
+        <h1>Covid-19 : What you need to know to protect you and your family</h1>
         <img loading="lazy" src={blueline} alt="blue line" className="line" />
       </Header>
       <DisplayFlex>
         <LeftContainer>
-          <TextHeader>How to prevent COVID-19</TextHeader>
+          <TextHeader>How to prevent Covid-19</TextHeader>
           <p>1. Avoid touching your eyes, nose and mouth with unwashed hands.</p>
-          <p>2. Wash your hands thouroughly with soap and water.</p>
+          <p>2. Wash your hands thoroughly with soap and water.</p>
           <p>3. Clean and disinfect surfaces such as doorknobs.</p>
           <p>4. Practice social distancing.</p>
           <p>5. Cover your nose and mouth when coughing and sneezing.</p>
@@ -98,7 +98,7 @@ const CovidSection3 = () => {
           <ImgContainer
             loading="lazy"
             src={Covid1}
-            alt="How to prevent COVID-19"
+            alt="How to prevent Covid-19"
           />
         </RightContainer>
       </DisplayFlex>

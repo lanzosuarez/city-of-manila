@@ -150,7 +150,7 @@ const FeaturedNews = ({}) => {
   useEffect(() => {
     addElement('featured-news1', { delay: '300ms' });
     addElement('featured-news2', { delay: '300ms' });
-    addElement('featured-news3', { delay: '500ms' });
+    addElement('featured-news3', { delay: '400ms' });
   }, []);
 
   return (

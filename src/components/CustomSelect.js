@@ -17,7 +17,7 @@ const Options = styled.div`
   width: 100%;
   top: 100%;
   left: 0;
-  z-index: 99999;
+  z-index: 2;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 `;
 

@@ -2,6 +2,7 @@ import React, { useContext, useMemo, useEffect } from 'react';
 import styled from '@emotion/styled';
 import isAfter from 'date-fns/isAfter';
 import isBefore from 'date-fns/isBefore';
+import useFadeIn from '../hooks/useFadeIn';
 import {
   pipe,
   searchLatestUpdates,
@@ -30,6 +31,8 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   z-index: auto;
+  z-index: 1;
+  position: relative;
 `;
 
 const HeaderItem = styled.div`
@@ -51,6 +54,8 @@ const iconStyle = {
 const List = styled.div`
   display: grid;
   grid-gap: 40px;
+  z-index: 1;
+  position: relative;
 `;
 
 const ListItem = styled.div`
@@ -237,6 +242,7 @@ const LatestUpdatesSection2 = ({ items, location }) => {
     scrollToSection(location);
   }, [location]);
 
+
   const pageItems = useMemo(
     () =>
       pipe(
@@ -266,11 +272,18 @@ const LatestUpdatesSection2 = ({ items, location }) => {
   const nextPage = () => setPage(p => p + 1);
   const prevPage = () => setPage(p => p - 1);
 
+  const [addElement] = useFadeIn();
+
+  useEffect(() => {
+    addElement('latest-news1', { delay: '300ms' });
+    addElement('latest-news2', { delay: '400ms' });
+  }, []);
+
   return (
     <div id="news-list">
       <ListContainer >
-        <Header>
-          <HeaderItem>
+        <Header data-usefadein="latest-news1">
+          <HeaderItem >
             <Figure>{pageItems.length}</Figure> {activePage()}
           </HeaderItem>
           <HeaderItem>
@@ -292,7 +305,7 @@ const LatestUpdatesSection2 = ({ items, location }) => {
             )}
           </HeaderItem>
         </Header>
-        <List>
+        <List data-usefadein="latest-news2">
           {paginatedItems.map(({ node: i }, idx) => (
             <ListItem key={idx}>
               <Avatar alt="item_avatar" src={i.photo.file.url}></Avatar>

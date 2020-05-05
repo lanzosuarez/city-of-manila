@@ -130,13 +130,13 @@ const items = [
     title: 'Manila Bulletin',
     sub: 'Mar 10, 2020',
     img: logo2,
-    content:'"In view of the crisis caused by COVID-19, the City Government of Manila appeals and humbly requests all lessors of commercial establishments in the City of Manila ...to waive the corresponding rental fees and charges thereof."'
+    content:'"In view of the crisis caused by Covid-19, the City Government of Manila appeals and humbly requests all lessors of commercial establishments in the City of Manila ...to waive the corresponding rental fees and charges thereof."'
   },
   {
     title: 'CNN',
     sub: 'April 13, 2020',
     img: logo3,
-    content: '"Manila is now ready to conduct localized mass targeted testing for COVID-19, with the Philippine capital capable of conducting more than 1,000 swab tests weekly."'
+    content: '"Manila is now ready to conduct localized mass targeted testing for Covid-19, with the Philippine capital capable of conducting more than 1,000 swab tests weekly."'
   }
 ];
 

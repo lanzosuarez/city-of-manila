@@ -14,6 +14,8 @@ const SearchContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 30px;
+  position: relative;
+  z-index: 2;
 
   @media (max-width: 768px) {
     margin-top: -40px;
@@ -86,6 +88,8 @@ const Filters = styled.div`
 const SearchCon = styled.div`
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 2;
   @media (max-width: 576px) {
     width: 100%;
   }

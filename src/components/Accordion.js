@@ -57,16 +57,16 @@ const items = [
     content:
       'Concerned by the rising number of Covid-19 cases in the country, President Rodrigo Duterte signed Proclamation No. 929 imposing an Enhanced Community Quarantine (ECQ) over the entire island of Luzon in an attempt to flatten the curve, or limit the spread of the virus in the communities.',
     content2:
-      'Under the ECQ, all residents in Luzon, with an estimated population of 57 million, are put under strict home quarantine. Only the movement of essential personnel such as health and emergency front liners, and those working in supermarkets, pharmacies and similar establishments, are permitted. Public transportation is suspended, and the movement of goods is regulated. The ECQ will be in effect until 30 April 2020, or unless otherwise deemed extended by the Interagency Task Force for the Management of Emerging Infectious Diseases and approved by the President of the Philippines. '
+      'Under the ECQ, all residents in Luzon, with an estimated population of 57 million, are put under strict home quarantine. Only the movement of essential personnel such as health and emergency front liners, and those working in supermarkets, pharmacies and similar establishments, are permitted. Public transportation is suspended, and the movement of goods is regulated. The ECQ will be in effect until 15 May 2020, or unless otherwise deemed extended by the Interagency Task Force for the Management of Emerging Infectious Diseases and approved by the President of the Philippines. '
   },
   {
     id: 'item2',
-    title: 'How will ECQ help get rid of COVID-19? ',
+    title: 'How will ECQ help get rid of Covid-19? ',
     content: 'Flattening the curve. ',
     content2:
-      'By staying at home and practicing social distancing (maintaining at least 1 meter distancce between yourself and another person, according to advice by the World Health Organization) you can limit the spread of the virus by avoiding contact with a potentially infected individual. ',
+      'By staying at home and practicing social distancing (maintaining at least 1 meter distance between yourself and another person, according to advice by the World Health Organization) you can limit the spread of the virus by avoiding contact with a potentially infected individual. ',
     content3:
-      'Covid-19 is spread through small droplets in the air when an infected person coughs or sneezes, which you can breathe in if you&rsquo;re standing too close. By staying home, you&rsquo;re doing your part in cotaining the spread of the virus. '
+      'Covid-19 is spread through small droplets in the air when an infected person coughs or sneezes, which you can breathe in if you&rsquo;re standing too close. By staying home, you&rsquo;re doing your part in containing the spread of the virus. '
   },
   {
     id: 'item3',
@@ -108,7 +108,7 @@ const items = [
         - Media
         <br />
         <br />
-        Establishments allowed to operate at reduced capicity include:
+        Establishments allowed to operate at reduced capacity include:
         <br />
         <br />
         - Manufacturing of electronics and exports
@@ -130,7 +130,7 @@ const items = [
         <br />
         <br />
         Restricted mall openings covering non-leisure shops would be allowed,
-        and priority and essential construction projects could resume
+        and priority and essential construction projects could resume.
       </>
     )
   }
