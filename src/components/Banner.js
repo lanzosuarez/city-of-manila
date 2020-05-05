@@ -239,7 +239,7 @@ const texts = [
   {
     banner: banner2,
     small: 'The most difficult public health challenge of our lifetime',
-    big: 'We will defeat Covid-19 together',
+    big: 'We will defeat COVID-19 together',
     btn: {
       text: 'LEARN MORE',
       path: '/covid'

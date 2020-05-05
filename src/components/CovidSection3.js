@@ -25,7 +25,7 @@ const Header = styled.div`
   }
 `;
 const LeftContainer = styled.div`
-  width: 50%;
+  width: 48%;
   a {
     text-decoration: none;
     color: #365899;
@@ -82,12 +82,12 @@ const CovidSection3 = () => {
   return (
     <PageContainer>
       <Header>
-        <h1>Covid-19 : What you need to know to protect you and your family</h1>
+        <h1>COVID-19 : What you need to know to protect you and your family</h1>
         <img loading="lazy" src={blueline} alt="blue line" className="line" />
       </Header>
       <DisplayFlex>
         <LeftContainer>
-          <TextHeader>How to prevent Covid-19</TextHeader>
+          <TextHeader>How to prevent COVID-19</TextHeader>
           <p>1. Avoid touching your eyes, nose and mouth with unwashed hands.</p>
           <p>2. Wash your hands thoroughly with soap and water.</p>
           <p>3. Clean and disinfect surfaces such as doorknobs.</p>
@@ -98,7 +98,7 @@ const CovidSection3 = () => {
           <ImgContainer
             loading="lazy"
             src={Covid1}
-            alt="How to prevent Covid-19"
+            alt="How to prevent COVID-19"
           />
         </RightContainer>
       </DisplayFlex>
@@ -106,7 +106,7 @@ const CovidSection3 = () => {
         <LeftContainer>
           <TextHeader>When to call a doctor</TextHeader>
           <p>
-            If you think you are experiencing symptoms related to Covid-19, call
+            If you think you are experiencing symptoms related to COVID-19, call
             the MEOC hotline so you can be guided by a medical professional on
             what to do next.
           </p>
@@ -201,7 +201,7 @@ const CovidSection3 = () => {
           <TextHeader>Stay informed</TextHeader>
           <p>
             In times such as these where there can be considerable information
-            in the media, online or across social media, on Covid-19, it is
+            in the media, online or across social media, on COVID-19, it is
             important to access information from official channels to avoid
             confusion and disinformation.
           </p>

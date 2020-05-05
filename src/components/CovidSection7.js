@@ -91,7 +91,7 @@ const CovidSection7 = () => {
             </p>
 
             <p>
-              <strong>Delay:</strong> Slow the spread of Covid-19 across the
+              <strong>Delay:</strong> Slow the spread of COVID-19 across the
               City of Manila and implement strict but compassionate lockdown
               measures to ensure its slow spread.
             </p>
@@ -113,7 +113,7 @@ const CovidSection7 = () => {
                 <ItemContent>
                   <p>-</p>
                   <p>
-                    Establish the City of Manila Covid-19 24x7 Emergency
+                    Establish the City of Manila COVID-19 24x7 Emergency
                     Operations Centre, the first by any Philippine <br />
                     local government unit
                   </p>
@@ -123,8 +123,8 @@ const CovidSection7 = () => {
                 <ItemContent>
                   <p>-</p>
                   <p>
-                    Deploy the Philippines’ first municipal Covid-19 digital ID
-                    system through the “Code-M Covid-19
+                    Deploy the Philippines’ first municipal COVID-19 digital ID
+                    system through the “Code-M COVID-19
                     <br /> Digital Health Survey”
                   </p>
                 </ItemContent>

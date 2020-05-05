@@ -196,31 +196,31 @@ const CovidPage = ({ location }) => {
   return (
     <NavigationProvider>
       <Layout>
-        <SEO title="Covid-19" />
+        <SEO title="COVID-19" />
         <Notice />
         <Navigation />
         <CovidBanner>
           <PageContainer>
             <BannerContainer data-usefadein="covid-section1">
               <p>The most difficult public health challenge of our lifetime</p>
-              <h1>We will defeat Covid-19 together</h1>
+              <h1>We will defeat COVID-19 together</h1>
               <p>
-                Covid-19 is the single biggest public health and livelihood
+                COVID-19 is the single biggest public health and livelihood
                 hurdle of our lifetimes.
               </p>
               <p>
                 While much of the day and night life of our city has come to a
                 temporary stop, we do not stop. The City Government of Manila
                 continues, 24x7. We will not stop, until we win the war against
-                Covid -19.
+                COVID-19.
               </p>
-              <p>Let us beat Covid-19 together. Bangon, Manila!</p>
+              <p>Let us beat COVID-19 together. Bangon, Manila!</p>
               <ButtonContainer>
                 <Button>
                  <Link to="/contact">Contact</Link>
                 </Button>
                 <ButtonTracker>
-                  <a href="https://covid19stats.ph/">Covid-19 Tracker</a>
+                  <a href="https://covid19stats.ph/">COVID-19 Tracker</a>
                 </ButtonTracker>
               </ButtonContainer>
             </BannerContainer>

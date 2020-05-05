@@ -40,7 +40,7 @@ const CovidSection5 = () => {
     <Wrapper>
       <ContentContainer>
         <Section>
-          <h1>The City of Manila: Context and Covid-19 Challenges</h1>
+          <h1>The City of Manila: Context and COVID-19 Challenges</h1>
           <img src={line} alt="blue line" className="line" />
           <Text>
             <p>
@@ -87,7 +87,7 @@ const CovidSection5 = () => {
             </p>
 
             <p>
-              Covid-19 creates challenges previously not encountered in modern
+              COVID-19 creates challenges previously not encountered in modern
               human history - for any municipal city administration - but
               particularly for the City of Manila where issues of close human
               density, proximity, economy, education, health and more are the

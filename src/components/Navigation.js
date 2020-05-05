@@ -76,7 +76,7 @@ export const listItems = [
     path: '/executive-and-legislation'
   },
   {
-    title: 'Covid-19: Overview',
+    title: 'COVID-19: Overview',
     path: '/covid',
     sections: [
       {

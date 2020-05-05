@@ -37,7 +37,7 @@ const ItemContent = styled.div`
 const mitigates = [
   {
     desc:
-      'Realigned City of Manila budget for 2020 to address the Covid-19 pandemic and enable the City with cash resources to address the challenge'
+      'Realigned City of Manila budget for 2020 to address the COVID-19 pandemic and enable the City with cash resources to address the challenge'
   },
   {
     desc:

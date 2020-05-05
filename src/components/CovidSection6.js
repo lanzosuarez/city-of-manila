@@ -50,7 +50,7 @@ const CovidSection6 = () => {
     <Wrapper>
       <ContentContainer>
         <Section>
-          <h1>City of Manila Covid-19 Response: Rapid and Comprehensive</h1>
+          <h1>City of Manila COVID-19 Response: Rapid and Comprehensive</h1>
           <img src={line} alt="blue line" className="line" />
           <Text>
             <p>

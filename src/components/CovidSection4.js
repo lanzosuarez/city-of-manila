@@ -121,7 +121,7 @@ const items = [
   {
     number: '12',
     desc:
-      'Created Digital Health Survey that monitors potential Covid-19 patients'
+      'Created Digital Health Survey that monitors potential COVID-19 patients'
   },
   {
     number: '13',
@@ -175,7 +175,7 @@ const items = [
   },
   {
     number: '24',
-    desc: 'Passage of Anti Covid-19 Discrimination Ordinance'
+    desc: 'Passage of Anti COVID-19 Discrimination Ordinance'
   },
   {
     number: '25',
@@ -221,7 +221,7 @@ const items = [
   {
     number: '34',
     desc:
-      'Readiness of the City Council to provide legislative support for the initiatives of the Executive branch in the fight against Covid-19'
+      'Readiness of the City Council to provide legislative support for the initiatives of the Executive branch in the fight against COVID-19'
   },
   {
     number: '35',
@@ -235,7 +235,7 @@ const CovidSection4 = () => {
     <PageContainer>
       <Header>
         <h1>
-          Significant Accomplishments of City of Manila during Covid-19 Crisis
+          Significant Accomplishments of City of Manila during COVID-19 Crisis
         </h1>
         <img src={blueline} alt="blue line" className="line" />
       </Header>

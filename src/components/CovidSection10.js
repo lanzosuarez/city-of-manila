@@ -40,7 +40,7 @@ const delays = [
   },
   {
     desc:
-      'Launched extensive promotional effort to prompt participation in Covid-19 Digital Health Survey'
+      'Launched extensive promotional effort to prompt participation in COVID-19 Digital Health Survey'
   },
   {
     desc: 'Accelerated vaccine programs for over-60 senior citizens'
@@ -66,10 +66,10 @@ const delays = [
   },
   {
     desc:
-      'Readiness of the City Council to provide full legislative support for the initiatives of the Executive branch in the fight against Covid-19'
+      'Readiness of the City Council to provide full legislative support for the initiatives of the Executive branch in the fight against COVID-19'
   },
   {
-    desc: 'Passage of Anti Covid-19 Discrimination Ordinance'
+    desc: 'Passage of Anti COVID-19 Discrimination Ordinance'
   },
   {
     desc: 'Passage of Anti-Spitting Ordinance'
