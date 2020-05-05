@@ -52,7 +52,7 @@ const contains = [
   },
   {
     desc:
-      'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-covid efforts of 6 city owned hospitals'
+      'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-Covid efforts of 6 city owned hospitals'
   },
   {
     desc: 'Established external triage tents at all six city-owned hospitals'
