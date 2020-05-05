@@ -16,6 +16,18 @@ const Container = styled.div`
   @media (max-width: 576px) {
     padding: 50px 15px 100px;
   }
+  @media (max-width: 322px) {
+    div:nth-child(2) {
+      .content {
+        max-height: 73px !important;
+      }
+    }
+  }
+  div:nth-child(2) {
+    .content {
+      max-height: 55px;
+    }
+  }
 `;
 
 const Item = styled.div`
@@ -136,9 +148,9 @@ const HomeSection3 = () => {
         <Content className="content">
           <Text>Manila's Reponse to COVID-19</Text>
           <Paragraph>
-            The City of Manila has committed to alleviating this hardship by
-            providing them with the appropriate care and assistance during the
-            Enhanced Community Quarantine.
+            The City of Manila has committed to alleviating the plight of its
+            constituents by providing them with the appropriate care and
+            assistance during the Enhanced Community Quarantine.
           </Paragraph>
         </Content>
         <Link to="/covid#manila's-response">

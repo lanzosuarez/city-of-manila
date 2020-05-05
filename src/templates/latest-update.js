@@ -39,7 +39,6 @@ const SinglePage = ({ location, data }) => {
         <Wrapper>
           <SinglePageBanner
             category={category}
-            tags={tags}
             by={by}
             bg={photo}
             text={heading1}
@@ -47,6 +46,7 @@ const SinglePage = ({ location, data }) => {
           />
           <SinglePageShare />
           <SinglePageContent
+            tagNames={tags}
             data={data.contentfulNewsroom}
             recentPosts={data.allContentfulNewsroom.edges}
           />
@@ -80,11 +80,12 @@ export const query = graphql`
       quote {
         quote
       }
+      quoteFrom
       youtubeLink
     }
     allContentfulNewsroom(
       filter: { id: { ne: $id } }
-      sort: { fields: [date], order: ASC }
+      sort: { fields: [date], order: DESC }
       limit: 3
     ) {
       edges {

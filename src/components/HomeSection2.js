@@ -122,7 +122,7 @@ const HomeSection2 = () => {
         <Header>Legislation</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-          Resolutions and ordinances passed by Manila City Council
+          Resolutions and ordinances passed by Manila City Council.
         </Content>
         <Footer>
           <Link
@@ -147,8 +147,8 @@ const HomeSection2 = () => {
         <Header>How To Help Manila</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-          The city is in need of medical and food supplies. Learn you can do so
-          now.
+          The city is in need of medical and food supplies. Learn how you can do
+          so now.
         </Content>
         <Footer>
           <Link to="/help-manila#how-to-help">READ MORE</Link>

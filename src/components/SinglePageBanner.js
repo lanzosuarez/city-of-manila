@@ -79,31 +79,6 @@ const Category = styled.p`
   font-size: 20px;
   margin-bottom: 0.5rem;
 `;
-const Tag = styled.div`
-  background-color: #ffa537;
-  width: inherit;
-  padding: 5px 23px;
-  text-align: center;
-  border-radius: 45px;
-  cursor: pointer;
-  p {
-    color: #fefefe;
-    font-size: 0.8rem;
-    margin-bottom: 0rem;
-  }
-`;
-
-const TagList = styled.div`
-  display: inline-grid;
-  grid-auto-flow: column;
-  grid-column-gap: 9px;
-  @media (max-width: 765px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 49%);
-    grid-gap: 5px;
-    grid-auto-flow: inherit;
-  }
-`;
 
 const SinglePageBanner = props => {
   const [addElement] = useFadeIn();
@@ -111,12 +86,7 @@ const SinglePageBanner = props => {
     addElement('banner-header-category', { dir: 'down' });
     addElement('banner-header', { dir: 'down' });
     addElement('banner-header-text', { dir: 'down' });
-    addElement('banner-header-tag', { dir: 'down' });
   }, []);
-  const tags = props.tags.split(',');
-
-  const navigateOnClick = tag => () =>
-    navigate(`/news-room?q=${tag}#news-list`);
 
   return (
     <Container bg={props.bg.file.url}>
@@ -130,13 +100,6 @@ const SinglePageBanner = props => {
           <p>|</p>
           <p>By: {props.by}</p>
         </Text>
-        <TagList data-usefadein="banner-header-tag">
-          {tags.map((t, idx) => (
-            <Tag onClick={navigateOnClick(t)} key={idx}>
-              <p>{t}</p>
-            </Tag>
-          ))}
-        </TagList>
       </PageContent>
     </Container>
   );

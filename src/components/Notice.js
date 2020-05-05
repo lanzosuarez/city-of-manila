@@ -57,7 +57,7 @@ const Notice = ({ maxWidth = '100%' }) => {
         </a>
       </IconsContainer>
       <NoticeText>
-        Open Hours Of City Government Mon - Fri 8:00 am - 5:00 pm.
+        Open Hours Of City Government Monday - Friday 8:00 am - 5:00 pm
       </NoticeText>
     </Container>
   );

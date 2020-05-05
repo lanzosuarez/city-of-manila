@@ -181,7 +181,7 @@ const HomeSection9 = () => {
     graphql`
       query {
         allContentfulNewsroom(
-          sort: { fields: [date], order: ASC }
+          sort: { fields: [date], order: DESC }
           limit: 4
         ) {
           edges {

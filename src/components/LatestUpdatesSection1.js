@@ -9,8 +9,8 @@ import useFadeIn from '../hooks/useFadeIn';
 
 const SearchContainer = styled.div`
   background: white;
-  margin-top: -40px;
-  padding: 30px 0px;
+  /* margin-top: -40px; */
+  /* padding: 30px 0px; */
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 30px;

@@ -7,6 +7,7 @@ import line from '../images/blue-line.png';
 import { formatDate } from '../helpers';
 import { Link } from 'gatsby';
 import GalleryVideo from './GalleryVideo';
+import { navigate } from 'gatsby';
 
 const Section = styled.div`
   padding: 4rem 0;
@@ -128,7 +129,64 @@ const BorderLine = styled.hr`
   background: white;
 `;
 
-const SinglePageContent = ({ data, recentPosts }) => {
+const Tag = styled.div`
+  background-color: #dfeaf1;
+  width: inherit;
+  padding: 5px 23px;
+  text-align: center;
+  cursor: pointer;
+
+  p {
+    color: #417190;
+    font-size: 0.8rem;
+    margin-bottom: 0rem;
+  }
+
+  @media (max-width: 1035px) {
+    display: inline;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: unset;
+  }
+  @media (max-width: 768px) {
+    p {
+      font-size: 0.9rem;
+    }
+  }
+`;
+
+const TagCon = styled.div`
+  margin-top: 2rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 61px;
+  p {
+    margin-bottom: 0px;
+  }
+  @media (max-width: 1035px) {
+    grid-auto-flow: row;
+    grid-template-columns: unset;
+    grid-gap: 5px;
+  }
+`;
+
+const TagList = styled.div`
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-column-gap: 9px;
+
+  p {
+    margin-bottom: 0rem;
+  }
+
+  @media (max-width: 1035px) {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+`;
+
+const SinglePageContent = ({ data, recentPosts, tagNames }) => {
   const [addElement] = useFadeIn();
 
   useEffect(() => {
@@ -136,10 +194,17 @@ const SinglePageContent = ({ data, recentPosts }) => {
     addElement('content-section2', { delay: '300ms' });
     addElement('content-section3', { delay: '300ms' });
     addElement('content-section4', { delay: '300ms' });
+    addElement('content-section5', { delay: '300ms' });
+    addElement('content-section6', { delay: '300ms' });
   }, []);
   // const videoOrPhoto = () => {
   //   if(data.)
   // }
+  const tags = tagNames.split(',');
+
+  const navigateOnClick = tag => () =>
+    navigate(`/news-room?q=${tag}#news-list`);
+
   console.log(data);
   return (
     <PageContainer>
@@ -161,7 +226,7 @@ const SinglePageContent = ({ data, recentPosts }) => {
                 <QuoteImage src={Quote} alt="Quotation" />
                 <QuoteText>
                   <QuoteHeader>{data.quote.quote}</QuoteHeader>
-                  <QuoteSign>Mayor Isko Moreno</QuoteSign>
+                  <QuoteSign>{data.quoteFrom}</QuoteSign>
                 </QuoteText>
               </QuoteContent>
             )}
@@ -171,10 +236,20 @@ const SinglePageContent = ({ data, recentPosts }) => {
               }}
               data-usefadein="content-section4"
             ></p>
+            <TagCon data-usefadein="content-section5">
+              <p>Tags: </p>
+              <TagList>
+                {tags.map((t, idx) => (
+                  <Tag onClick={navigateOnClick(t)} key={idx}>
+                    <p>{t}</p>
+                  </Tag>
+                ))}
+              </TagList>
+            </TagCon>
           </LeftContainer>
-          <RightContainer data-usefadein="content-section4">
+          <RightContainer data-usefadein="content-section6">
             <RecentPostHeader>
-              <h3>Recent News</h3>
+              <h3>Latest Stories</h3>
               <img src={line} alt="blue line" className="line" />
             </RecentPostHeader>
             {recentPosts.map(({ node }, idx) => (

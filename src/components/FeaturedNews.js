@@ -6,13 +6,40 @@ import useFadeIn from '../hooks/useFadeIn';
 
 const Container = styled.div`
   display: grid;
-  grid-gap: 40px;
+  grid-gap: 3rem;
   margin: 0 auto;
-  padding: 40px 0px;
+  padding: 4rem 0px 1rem;
 
   .divider {
     height: 3px;
     background: #ccc;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 4rem 0px 2rem;
+  }
+
+  @media (max-width: 576px) {
+    padding: 4rem 0px 1rem;
+  }
+
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-gap: 40px;
+  grid-auto-flow: column;
+  grid-template-columns: 57% auto;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 45% auto;
+  }
+
+  @media (max-width: 576px) {
+    display: grid;
+    grid-auto-flow: unset;
+    grid-template-columns: unset;
+    grid-gap: 25px;
   }
 `;
 
@@ -27,13 +54,16 @@ const Title = styled.h2`
 
 const NewsCon = styled.div`
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 25px;
+  align-items: center;
+  align-self: center;
 
   h4,
   h3,
   h5 {
     margin: 0;
     color: var(--blue);
+    line-height: 1.5;
   }
 
   p {
@@ -113,29 +143,33 @@ const FeaturedNews = ({}) => {
     addElement('featured-news1', { delay: '300ms' });
     addElement('featured-news2', { delay: '300ms' });
     addElement('featured-news3', { delay: '500ms' });
-    addElement('featured-news4', { delay: '500ms' });
   }, []);
 
   return (
     <Container>
-      <Title data-usefadein="featured-news1">Featured News</Title>
-      <PlaceholderCon data-usefadein="featured-news2">
-        <PlaceHolderImg src={photo.file.url}></PlaceHolderImg>
-      </PlaceholderCon>
-      <NewsCon data-usefadein="featured-news3">
-        <h4>{category}</h4>
-        <Link to={`/news-room/${id}`}><h3>{heading1}</h3></Link>
-        <div className="author-con">
-          <h5>{formatDate(date)}</h5>
-          <span>|</span>
-          <h5 className="author">By {by}</h5>
-        </div>
-        <p>{withReadMore(body1.body1)}</p>
-        <Link to={`/news-room/${id}`}>
-          READ MORE <ion-icon data-icon="icon" name="arrow-forward"></ion-icon>
-        </Link>
-      </NewsCon>
-      <div className="divider" data-usefadein="featured-news4"></div>
+      <Grid>
+        <PlaceholderCon data-usefadein="featured-news1">
+          <PlaceHolderImg src={photo.file.url}></PlaceHolderImg>
+        </PlaceholderCon>
+        <NewsCon data-usefadein="featured-news2">
+          {/* <Title data-usefadein="featured-news1">Top Story</Title> */}
+          <h4>Top Story</h4>
+          <Link to={`/news-room/${id}`}>
+            <h3>{heading1}</h3>
+          </Link>
+          <div className="author-con">
+            <h5>{formatDate(date)}</h5>
+            <span>|</span>
+            <h5 className="author">By {by}</h5>
+          </div>
+          <p>{withReadMore(body1.body1)}</p>
+          <Link to={`/news-room/${id}`}>
+            READ MORE{' '}
+            <ion-icon data-icon="icon" name="arrow-forward"></ion-icon>
+          </Link>
+        </NewsCon>
+      </Grid>
+      <div className="divider" data-usefadein="featured-news3"></div>
     </Container>
   );
 };

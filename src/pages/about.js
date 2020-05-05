@@ -223,13 +223,13 @@ const PhotoCredit = styled.div`
 const items = [
   {
     date: 'College',
-    school: 'Harvard Univesity',
-    course: 'Executive Education Program '
+    school: 'Oxford University',
+    course: 'Strategic Leadership Program'
   },
   {
     date: 'College',
-    school: 'Oxford University',
-    course: 'Strategic Leadership Program'
+    school: 'Harvard Univesity',
+    course: 'Executive Education Program '
   },
   {
     date: 'College',
@@ -238,13 +238,13 @@ const items = [
   },
   {
     date: 'College',
-    school: 'Pamantasan ng Lungsod ng Maynila',
-    course: 'Public Administration'
+    school: 'Arellano University',
+    course: 'Bachelor of Laws'
   },
   {
     date: 'College',
-    school: 'Arellano University',
-    course: 'Bachelor of Laws'
+    school: 'Pamantasan ng Lungsod ng Maynila',
+    course: 'Public Administration'
   },
   { date: 'High School', school: 'Tondo, Manila', course: 'Tondo High School' },
   {
@@ -259,43 +259,11 @@ const MobileTimeline = () => {
     <MobileContent data-usefadein="about-section4">
       <ul className="timeline2 timeline-split">
         <li className="timeline-item">
-          <div className="timeline-content tlTitles"></div>
-          <div className="timeline-marker"></div>
           <div className="timeline-content tlTitles">
-            <span>College | Harvard University</span>
-            <h3 className="timeline-title">Executive Education Program</h3>
-          </div>
-        </li>
-        <li className="timeline-item">
-          <div className="timeline-content tlTitles"></div>
-          <div className="timeline-marker"></div>
-          <div className="timeline-content tlTitles">
-            <span>College | Oxford University</span>
-            <h3 className="timeline-title">Strategic Leadership Program</h3>
-          </div>
-        </li>
-        <li className="timeline-item">
-          <div className="timeline-content tlTitles">
-            <span>College | University of the Philippines, Diliman</span>
+            <span>Elementary</span>
             <h3 className="timeline-title">
-              Local Legislation and Local Finance
+              Rosauro Alamario Elementary School, Tondo, Manila
             </h3>
-          </div>
-          <div className="timeline-marker"></div>
-          <div className="timeline-content tlTitles"></div>
-        </li>
-        <li className="timeline-item">
-          <div className="timeline-content tlTitles">
-            <span>College | Pamantasan ng Lungsod ng Maynila</span>
-            <h3 className="timeline-title">Public Administration</h3>
-          </div>
-          <div className="timeline-marker"></div>
-          <div className="timeline-content tlTitles"></div>
-        </li>
-        <li className="timeline-item">
-          <div className="timeline-content tlTitles">
-            <span>College | Arellano University</span>
-            <h3 className="timeline-title">Bachelor of Laws</h3>
           </div>
           <div className="timeline-marker"></div>
           <div className="timeline-content tlTitles"></div>
@@ -310,13 +278,45 @@ const MobileTimeline = () => {
         </li>
         <li className="timeline-item">
           <div className="timeline-content tlTitles">
-            <span>Elementary</span>
+            <span>Pamantasan ng Lungsod ng Maynila</span>
+            <h3 className="timeline-title">Public Administration</h3>
+          </div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles"></div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles">
+            <span>Arellano University</span>
+            <h3 className="timeline-title">Bachelor of Laws</h3>
+          </div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles"></div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles">
+            <span>University of the Philippines, Diliman</span>
             <h3 className="timeline-title">
-              Rosauro Alamario Elementary School, Tondo, Manila
+              Local Legislation and Local Finance
             </h3>
           </div>
           <div className="timeline-marker"></div>
           <div className="timeline-content tlTitles"></div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles"></div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles">
+            <span>Harvard University</span>
+            <h3 className="timeline-title">Executive Education Program</h3>
+          </div>
+        </li>
+        <li className="timeline-item">
+          <div className="timeline-content tlTitles"></div>
+          <div className="timeline-marker"></div>
+          <div className="timeline-content tlTitles">
+            <span>Oxford University</span>
+            <h3 className="timeline-title">Strategic Leadership Program</h3>
+          </div>
         </li>
       </ul>
     </MobileContent>
@@ -367,7 +367,7 @@ const AboutPage = ({ location }) => {
                     His elevation to Manila’s Mayoralty occurred via a historic
                     election: defeating an incumbent Mayor – a former Philippine
                     President – on broad hopes of generational and
-                    transformative change for the 449 year old Philippines
+                    transformative change for the 449 year old Philippine
                     capital city.
                   </p>
                   <p>
@@ -462,9 +462,9 @@ const AboutPage = ({ location }) => {
                     In 2016, Domagoso ran for the Philippines’ Senate – all 24
                     Philippine Senators are elected nationally, 12 every 3 year
                     election cycle – and narrowly missed his opportunity to sit
-                    in the legislative upper house. In 2017 Domagoso was
+                    in the legislative upper house. In 2017, Domagoso was
                     appointed Chairman of the Board of then North Luzon Railways
-                    Corporation. In 2018 he was appointed Undersecretary for
+                    Corporation. In 2018, he was appointed Undersecretary for
                     Luzon Affairs of the Department of Social Welfare.
                   </p>
 
@@ -498,7 +498,6 @@ const AboutPage = ({ location }) => {
                         </div>
                         <div class="timestamp">
                           <span className="school">{i.school}</span>
-                          <span className="date">{i.date}</span>
                         </div>
                       </div>
                     ))}

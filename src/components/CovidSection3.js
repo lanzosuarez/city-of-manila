@@ -88,11 +88,11 @@ const CovidSection3 = () => {
       <DisplayFlex>
         <LeftContainer>
           <TextHeader>How to prevent COVID-19</TextHeader>
-          <p>1. Avoid touching your eyes, nose and mouth with unwashed hands</p>
-          <p>2. Wash your hands thouroughly with soap and water</p>
-          <p>3. Clean and disinfect surfaces such as doorknobs</p>
-          <p>4. Practice social distancing</p>
-          <p>5. Cover your nose and mouth when coughing and sneezing</p>
+          <p>1. Avoid touching your eyes, nose and mouth with unwashed hands.</p>
+          <p>2. Wash your hands thouroughly with soap and water.</p>
+          <p>3. Clean and disinfect surfaces such as doorknobs.</p>
+          <p>4. Practice social distancing.</p>
+          <p>5. Cover your nose and mouth when coughing and sneezing.</p>
         </LeftContainer>
         <RightContainer>
           <ImgContainer

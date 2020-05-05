@@ -92,7 +92,7 @@ const Footer = () => {
         <Section>
           <h4 style={LineHeight}>
             {' '}
-            Welcome to my page.
+            Welcome to my website.
             <br />
             Together, we can make Manila vibrant again.
             <br />
@@ -140,7 +140,7 @@ const Footer = () => {
             </LinkItem>
             <LinkItem>
               <a href="https://manila.gov.ph/disaster-and-risk-management/ ">
-                Disaster And Risk Management
+                Disaster and Risk Management
               </a>
             </LinkItem>
             <LinkItem>
@@ -159,22 +159,22 @@ const Footer = () => {
           <h4>National Government</h4>
           <LinkList>
             <LinkItem>
-              <a href="https://doh.gov.ph">Department Of Health</a>
+              <a href="https://doh.gov.ph">Department of Health</a>
             </LinkItem>
             <LinkItem>
               <a href="https://dilg.gov.ph">
-                Department Of The Interior And Local Government
+                Department of the Interior and Local Government
               </a>
             </LinkItem>
             <LinkItem>
-              <a href="https://dotr.gov.ph">Department Of Transportation</a>
+              <a href="https://dotr.gov.ph">Department of Transportation</a>
             </LinkItem>
             <LinkItem>
-              <a href="https://da.gov.ph">Department Of Agriculture</a>
+              <a href="https://da.gov.ph">Department of Agriculture</a>
             </LinkItem>
             <LinkItem>
               <a href="https://op-proper.gov.ph">
-                Office Of The President Of The Philippines
+                Office of the President of the Philippines
               </a>
             </LinkItem>
           </LinkList>
@@ -205,7 +205,7 @@ const Footer = () => {
         </Section>
       </SectionsContainer>
       <CopyRight>
-        Copyright &#169; {new Date().getFullYear()} City Of Manila. All Rights
+        Copyright &#169; {new Date().getFullYear()} City of Manila. All Rights
         Reserved
       </CopyRight>
     </Container>
