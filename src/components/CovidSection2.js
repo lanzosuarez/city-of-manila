@@ -7,7 +7,7 @@ import PageContainer from '../components/PageContainer';
 import LearnMore from './LearnMore';
 
 const Header = styled.div`
-  max-width: 35rem;
+  max-width: 29rem;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 20px;
