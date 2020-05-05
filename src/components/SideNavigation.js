@@ -106,8 +106,7 @@ const LogoItem = styled.img`
   align-items: center;
 `;
 
-
-const NavItemComponent = ({title, path, sections = [] }) => {
+const NavItemComponent = ({ title, path, sections = [], disabled }) => {
   const [showSubPages, toggleSubPages] = useState(false);
   const { showNav } = useContext(NavigationContext);
   const rotate = showSubPages ? { transform: 'rotate(90deg)' } : {};
@@ -136,7 +135,7 @@ const NavItemComponent = ({title, path, sections = [] }) => {
       <Head>
         <PageName>
           <Link
-            className="main-page"
+            className={`main-page ${disabled ? 'disable-link' : ''}`}
             activeClassName="side-nav-active-route"
             partiallyActive
             to={path}
@@ -178,7 +177,9 @@ const SideNavigation = () => {
         <ion-icon name="close-outline" size="large"></ion-icon>
       </CloseIcon>
       <Logo>
-        <Link to="/"><LogoItem src={ManilaLogo} alt="City of Manila logo" /></Link>
+        <Link to="/">
+          <LogoItem src={ManilaLogo} alt="City of Manila logo" />
+        </Link>
       </Logo>
       <NavList>
         {listItems.map((i, idx) => (

@@ -301,7 +301,7 @@ const Banner = () => {
 
   const getLocalWeather = async () => {
     const data = await getTemp();
-    setTemp(data.main.temp);
+    setTemp(data.main.feels_like);
   };
 
   useEffect(() => {

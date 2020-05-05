@@ -1,44 +1,56 @@
 .banner-text-small-move-appear {
   opacity: 0 !important;
+  -webkit-transform: translateY(-30px) !important;
   transform: translateY(-30px) !important;
 }
 
 .banner-text-small-move-appear-active {
   opacity: 1 !important;
+  -webkit-transform: translateY(0px) !important;
   transform: translateY(0px) !important;
+  -webkit-transition: all 1s 2s !important;
   transition: all 1s 2s !important;
 }
 
 .banner-text-small-move-enter {
   opacity: 0 !important;
+  -webkit-transform: translateY(-30px) !important;
   transform: translateY(-30px) !important;
 }
 
 .banner-text-small-move-enter-active {
   opacity: 1 !important;
+  -webkit-transform: translateY(0px) !important;
   transform: translateY(0px) !important;
+  -webkit-transition: all 1s 2s !important;
   transition: all 1s 2s !important;
 }
 
 .banner-text-big-move-appear {
   opacity: 0 !important;
+  -webkit-transform: translateY(-30px) !important;
   transform: translateY(-30px) !important;
 }
 
 .banner-text-big-move-appear-active {
   opacity: 1 !important;
+  -webkit-transform: translateY(0px) !important;
   transform: translateY(0px) !important;
+  -webkit-transition: all 1s 1s !important;
   transition: all 1s 1s !important;
 }
 
 .banner-text-big-move-enter {
   opacity: 0 !important;
+  -webkit-transform: translateY(-30px) !important;
   transform: translateY(-30px) !important;
 }
 
 .banner-text-big-move-enter-active {
   opacity: 1 !important;
+  -webkit-transform: translateY(0px) !important;
   transform: translateY(0px) !important;
+  -webkit-transition: all 1s 1s !important;
   transition: all 1s 1s !important;
 }
 
@@ -48,6 +60,7 @@
 
 .banner-button-appear-active {
   opacity: 1 !important;
+  -webkit-transition: opacity 1s 3s !important;
   transition: opacity 1s 3s !important;
 }
 
@@ -57,6 +70,7 @@
 
 .banner-button-enter-active {
   opacity: 1 !important;
+  -webkit-transition: opacity 1s 3s !important;
   transition: opacity 1s 3s !important;
 }
 
@@ -66,6 +80,7 @@
 
 .banner-time-appear-active {
   opacity: 1 !important;
+  -webkit-transition: opacity 1s 4s !important;
   transition: opacity 1s 4s !important;
 }
 
@@ -75,6 +90,7 @@
 
 .banner-time-enter-active {
   opacity: 1 !important;
+  -webkit-transition: opacity 1s 4s !important;
   transition: opacity 1s 4s !important;
 }
 
@@ -83,6 +99,7 @@
   margin-bottom: 10px;
   grid-auto-flow: column;
   grid-gap: 10px;
+  -webkit-box-align: center;
   align-items: center;
   grid-template-columns: 80px 30px;
 }

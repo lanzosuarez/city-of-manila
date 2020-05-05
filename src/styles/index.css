@@ -628,6 +628,7 @@ li {
 }
 
 .showNav {
+  -webkit-transform: translateX(0px) !important;
   transform: translateX(0px) !important;
 }
 
@@ -636,6 +637,7 @@ li {
 }
 
 .side-nav-rotate {
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
@@ -645,8 +647,11 @@ li {
 
 .react-daterange-picker__clear-button.react-daterange-picker__button,
 .react-daterange-picker__calendar-button.react-daterange-picker__button {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   justify-content: center;
   padding: 0;
 }
@@ -685,21 +690,29 @@ li {
 }
 
 .homeSection5-slideIn-enter {
+  -webkit-transform: translateX(200%) !important;
   transform: translateX(200%) !important;
 }
 
 .homeSection5-slideIn-enter-active,
 .homeSection5-slideIn-enter-done {
+  -webkit-transform: translateX(0%) !important;
   transform: translateX(0%) !important;
 }
 
 .homeSection5-slideDown-enter {
+  -webkit-transform: translateY(-300px) !important;
   transform: translateY(-300px) !important;
   opacity: 0 !important;
 }
 
 .homeSection5-slideDown-enter-active,
 .homeSection5-slideDown-enter-done {
+  -webkit-transform: translateY(0px) !important;
   transform: translateY(0px) !important;
   opacity: 1 !important;
+}
+
+.disable-link {
+  pointer-events: none;
 }
