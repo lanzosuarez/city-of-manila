@@ -40,7 +40,7 @@ const IconContainer = styled.span`
   justify-content: centerl;
 `;
 
-const NavigationItem = ({ title, path, sections = [], external }) => {
+const NavigationItem = ({ title, path, sections = [], external, disabled }) => {
   const [showDropDown, setShowDropDown] = useState(false);
 
   const openDropdown = () => {
@@ -57,7 +57,7 @@ const NavigationItem = ({ title, path, sections = [], external }) => {
           onClick={closeDropdown}
           partiallyActive
           activeClassName="active-page"
-          className="page-link"
+          className={`page-link ${disabled ? 'disable-link' : ''}`}
           to={path}
         >
           {title}

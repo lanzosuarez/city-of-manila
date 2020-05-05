@@ -99,7 +99,8 @@ export const listItems = [
   },
   {
     title: 'Programs',
-    path: '',
+    path: '/programs',
+    disabled: true,
     sections: [
       {
         title: 'Economic Development',

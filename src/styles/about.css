@@ -38,35 +38,44 @@ p {
 
 .section-container {
     width: 100%;
+    display: -webkit-box;
     display: flex;
 }
 
 @media only screen and (max-width: 768px) {
     .section-container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
     }
 }
 
 .timeline {
     margin: 50px 0;
     list-style-type: none;
+    display: -webkit-box;
     display: flex;
     padding: 0;
     text-align: center;
 }
 
 .timeline li {
+    -webkit-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
 }
 
 .status span {
     width: 80%;
     /* width: 200px; */
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     font-weight: 700;
     height: 5rem;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
     padding-bottom: 20px;
     text-align: left;
     font-size: 0.9rem;
@@ -74,16 +83,24 @@ p {
 }
 
 .status {
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
 }
 
 .timestamp {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    display: -webkit-box;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     border-top: 4px solid #01bcb1;
     position: relative;
+    -webkit-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
     text-align: left;
 }
@@ -111,6 +128,7 @@ p {
     position: absolute;
     top: -8px;
     left: 0;
+    -webkit-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
 }
 
@@ -198,6 +216,7 @@ p {
     top: 3px;
     left: 0;
     width: 9px;
+    -webkit-transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
     transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
