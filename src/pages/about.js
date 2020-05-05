@@ -222,19 +222,15 @@ const PhotoCredit = styled.div`
 
 const items = [
   {
-    date: 'College',
-    school: 'Oxford University',
-    course: 'Strategic Leadership Program'
+    date: 'Elementary',
+    school: 'Tondo, Manila',
+    course: 'Rosauro Alamario Elementary School'
   },
+  { date: 'High School', school: 'Tondo, Manila', course: 'Tondo High School' },
   {
     date: 'College',
-    school: 'Harvard Univesity',
-    course: 'Executive Education Program '
-  },
-  {
-    date: 'College',
-    school: 'University of the Philippines, Diliman',
-    course: 'Local Legislation and Local Finance'
+    school: 'Pamantasan ng Lungsod ng Maynila',
+    course: 'Public Administration'
   },
   {
     date: 'College',
@@ -243,15 +239,19 @@ const items = [
   },
   {
     date: 'College',
-    school: 'Pamantasan ng Lungsod ng Maynila',
-    course: 'Public Administration'
+    school: 'University of the Philippines, Diliman',
+    course: 'Local Legislation and Local Finance'
   },
-  { date: 'High School', school: 'Tondo, Manila', course: 'Tondo High School' },
   {
-    date: 'Elementary',
-    school: 'Tondo, Manila',
-    course: 'Rosauro Alamario Elementary School'
-  }
+    date: 'College',
+    school: 'Harvard Univesity',
+    course: 'Executive Education Program '
+  },
+  {
+    date: 'College',
+    school: 'Oxford University',
+    course: 'Strategic Leadership Program'
+  },
 ];
 
 const MobileTimeline = () => {
@@ -491,7 +491,7 @@ const AboutPage = ({ location }) => {
                 <MobileTimeline />
                 <SwiperContainer className="swiper-container">
                   <div className="swiper-wrapper timeline">
-                    {items.reverse().map(i => (
+                    {items.map(i => (
                       <div className="swiper-slide">
                         <div className="status">
                           <span>{i.course}</span>
