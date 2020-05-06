@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 const Cover = styled.div`
   text-align: center;
   width: 100%;
-  height: 26rem;
+  height: 100%;
   display: flex;
   justify-content: center;
   z-index: 200;
@@ -24,12 +24,13 @@ const Cover = styled.div`
   &::before {
     content: '';
     width: 100%;
-    height: inherit;
+    height: 100%;
     background-color: #000000;
     opacity: 0.1;
     display: block;
     position: absolute;
     overflow-y: hidden;
+    overflow-x: hidden;
   }
 `;
 
@@ -37,6 +38,7 @@ const Item = styled.div`
   align-self: center;
   z-index: 200;
   padding: 0 15px;
+  max-width: 60%;
   p {
     color: white;
     margin-bottom: 0rem;
@@ -57,7 +59,7 @@ const NotSupportedPage = () => {
           <h1>Can't access this page</h1>
           <p>
             Sorry, we don't support this browser. Try opening this page in a
-            supported browser.{' '}
+            supported browser: Chrome, Firefox, Safari, Opera, Edge
           </p>
         </Item>
       </Cover>
