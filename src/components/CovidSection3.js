@@ -88,7 +88,7 @@ const CovidSection3 = () => {
       <DisplayFlex>
         <LeftContainer>
           <TextHeader>How to prevent COVID-19</TextHeader>
-          <p>1. Avoid touching your eyes, nose and mouth with unwashed hands.</p>
+          <p>1. Avoid touching your eyes, nose, and mouth with unwashed hands.</p>
           <p>2. Wash your hands thoroughly with soap and water.</p>
           <p>3. Clean and disinfect surfaces such as doorknobs.</p>
           <p>4. Practice social distancing.</p>
@@ -149,11 +149,11 @@ const CovidSection3 = () => {
             home to purchase essential items.{' '}
           </p>
           <p>
-            4. Practice social distancing at all times, by standing at least one
+            4. Practice social distancing at all times by standing at least one
             meter away from another individual when outside of the home.{' '}
           </p>
           <p>
-            5. Wear a mask when outside of the home. This could be in the form
+            5. Wear a mask when outside the home. This could be in the form
             of a surgical mask, face shield, or handkerchief. The objective is
             to ensure your nose and mouth are covered.{' '}
           </p>
@@ -170,16 +170,16 @@ const CovidSection3 = () => {
         <LeftContainer>
           <TextHeader>Don't forget about mental health</TextHeader>
           <p>
-            1. It is normal to feel sad, stressed, confused or scared during a
-            crisis. Talking to people you trust can help such as your friends or
-            family.
+            1. It is normal to feel sad, stressed, confused, or scared during a
+            crisis. Talking to people you trust, such as your friends or family, can help
+            with mental health.
           </p>
           <p>
             2. Maintain a healthy lifestyle by eating a healthy diet, getting
-            adequate hours of sleep, and exercise.
+            adequate hours of sleep, and regular exercise.
           </p>
           <p>
-            3. Don't turn to smoking, drugs or alcohol to deal with your
+            3. Don't turn to smoking, drugs, or alcohol to deal with your
             emotions. Seek the assistance of a health worker or counselor.
           </p>
           <p>4. Use this time to learn a new skill or take up a hobby.</p>
@@ -201,7 +201,7 @@ const CovidSection3 = () => {
           <TextHeader>Stay informed</TextHeader>
           <p>
             In times such as these where there can be considerable information
-            in the media, online or across social media, on COVID-19, it is
+            in the media, online and offline, on COVID-19, it is
             important to access information from official channels to avoid
             confusion and disinformation.
           </p>
