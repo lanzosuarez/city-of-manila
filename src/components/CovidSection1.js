@@ -109,7 +109,7 @@ const CovidSection1 = () => {
           </InfoHeader>
           <InfoContent>
             COVID-19 is a new coronavirus that was first reported in Wuhan,
-            China in December 2019. It is known to cause pneumonia-like symptoms
+            China, in December 2019. It is known to cause pneumonia-like symptoms
             in infected patients.
           </InfoContent>
           <InfoContent>
@@ -119,17 +119,17 @@ const CovidSection1 = () => {
           <InfoContent>
             <a href="https://www.doh.gov.ph/doh-press-release/doh-confirms-local-transmission-of-covid-19-in-ph">
                 On 07 March 2020, the DOH raised COVID-19 Alert System
-            </a> to Code Red Sub-level 1 to initiate efforts to prevent widespread
+            </a> to Code Red Sub-level 1 and initiated efforts to prevent widespread
             community transmission.
           </InfoContent>
           <InfoContent>
             On 08 March 2020, the Office of the President issued Proclamation
             No. 922 s. 2020 declaring a State of Public Health Emergency. The
             proclamation directs the mobilization of necessary resources;
-            undertaking of critical, urgent, and appropriate response and
+            undertaking of critical, urgent, and appropriate responses and
             measures in a timely manner; assistance and cooperation of all
             government agencies and LGUs; and, for all the citizens, residents,
-            tourists and establishments to comply with lawful directives and
+            tourists, and establishments to comply with lawful directives and
             advisories, to eliminate and curtail the COVID-19 threat and ensure
             the safety and well-being of everyone.
           </InfoContent>
