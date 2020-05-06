@@ -218,7 +218,7 @@ const CovidPage = ({ location }) => {
               <p>
                 While much of the day and night life of our city has come to a
                 temporary stop, we do not stop. The City Government of Manila
-                continues, 24x7. We will not stop, until we win the war against
+                continues, 24/7. We will not stop, until we win the war against
                 COVID-19.
               </p>
               <p>Let us beat COVID-19 together. Bangon, Manila!</p>
