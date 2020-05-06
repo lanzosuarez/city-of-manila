@@ -46,9 +46,10 @@ const AccordionContent = styled.div`
       margin: 15px 20px;
     }
   }
-
- 
 `;
+const Style = {
+  color: '#04326a'
+};
 
 const items = [
   {
@@ -57,29 +58,47 @@ const items = [
     content:
       'Concerned by the rising number of COVID-19 cases in the country, President Rodrigo Duterte signed Proclamation No. 929 imposing an Enhanced Community Quarantine (ECQ) over the entire island of Luzon in an attempt to flatten the curve, or limit the spread of the virus in the communities.',
     content2:
-      'Under the ECQ, all residents in Luzon, with an estimated population of 57 million, are put under strict home quarantine. Only the movement of essential personnel such as health and emergency front-liners, and those working in supermarkets, pharmacies, and similar establishments, are permitted. Public transportation is suspended and the movement of goods is regulated. The ECQ will be in effect until 15 May 2020 or unless otherwise deemed extended by the Interagency Task Force for the Management of Emerging Infectious Diseases and approved by the President of the Philippines. '
+      'Under the ECQ, all residents in Luzon, with an estimated population of 57 million, are put under strict home quarantine. Only the movement of essential personnel such as health and emergency front-liners, and those working in supermarkets, pharmacies, and similar establishments, are permitted.',
+    content3:
+      ' Public transportation is suspended and the movement of goods is regulated. The ECQ will be in effect until 15 May 2020 or unless otherwise deemed extended by the Interagency Task Force for the Management of Emerging Infectious Diseases and approved by the President of the Philippines.'
   },
   {
     id: 'item2',
     title: 'How will ECQ help get rid of COVID-19? ',
     content: 'Flattening the curve. ',
-    content2:
-      'By staying at home and practicing social distancing (maintaining at least 1 meter distance between yourself and another person, according to advice by the World Health Organization) you can limit the spread of the virus by avoiding contact with a potentially infected individual. ',
+    content2: (
+      <>
+        By staying at home and practicing social distancing (maintaining at
+        least 1 meter distance between yourself and another person, according to
+        advice by the{' '}
+        <a
+          href="https://www.mayorofmanila.ph/covid#what-you-need-to-know"
+          style={Style}
+        >
+          World Health Organization
+        </a>
+        ) you can limit the spread of the virus by avoiding contact with a
+        potentially infected individual.
+      </>
+    ),
     content3:
-      'COVID-19 is spread through small droplets in the air when an infected person coughs or sneezes which you can breathe in if you&rsquo;re standing too close. By staying home, you&rsquo;re doing your part in containing the spread of the virus. '
+      "COVID-19 is spread through small droplets in the air when an infected person coughs or sneezes which you can breathe in if you're standing too close. By staying home, you're doing your part in containing the spread of the virus. "
   },
   {
     id: 'item3',
     title: 'How long will the ECQ last?',
     content:
-      'On 24 April, President Duterte approved the recommendation of the Inter Agency Task Force for the Management of Emerging Infectious Diseases (IATF) to extend the Enhanced Community Quarantine (ECQ) in high risk areas until 15 May 2020. The National Capital Region, which includes the City of Manila, is among the list of high risk areas. Thus, the implementing rules and regulations of the ECQ are still in effect until said date. Areas not classified as high risk will move to a General Community Quarantine (GCQ) model beginning May 1st.'
+      'On 24 April, President Duterte approved the recommendation of the Inter Agency Task Force for the Management of Emerging Infectious Diseases (IATF) to extend the Enhanced Community Quarantine (ECQ) in high risk areas until 15 May 2020.',
+    content2:
+      'The National Capital Region, which includes the City of Manila, is among the list of high risk areas. Thus, the implementing rules and regulations of the ECQ are still in effect until said date. Areas not classified as high risk will move to a General Community Quarantine (GCQ) model beginning May 1st.'
   },
   {
     id: 'item4',
     title: 'What happens after ECQ?',
     content:
-      'Subject to evaluation of the IATF, the ECQ rules may be eased and areas previously under ECQ may move to the General Community Quarantine (GCQ) model. Under the GCQ, certain economic activities will be allowed to resume in a limited capacity. Industries allowed to resume include the following:',
-    content2: (
+      'Subject to evaluation of the IATF, the ECQ rules may be eased and areas previously under ECQ may move to the General Community Quarantine (GCQ) model. Under the GCQ, certain economic activities will be allowed to resume in a limited capacity.',
+    content2: 'Industries allowed to resume include the following:',
+    content3: (
       <>
         - Agriculture
         <br />
@@ -184,8 +203,11 @@ const Accordion = ({ defaultActive = 0 }) => {
                   <p>{i.content2}</p>
                 </div>
                 <div>
-                  <p dangerouslySetInnerHTML={{ __html: i.content3 }}></p>
+                  <p>{i.content3}</p>
                 </div>
+                {/* <div>
+                  <p dangerouslySetInnerHTML={{ __html: i.content3 }}></p>
+                </div> */}
               </AccordionContent>
             </AccordionItem>
           );
