@@ -127,7 +127,7 @@ const CovidSection2 = () => {
               within the COVID-19 context.
             </p>
             <p>
-              You can access the survey 24x7 by hitting the “Send Message”
+              You can access the survey 24/7 by hitting the “Send Message”
               button on his official Facebook Page.
             </p>
             <ButtonTracker>
