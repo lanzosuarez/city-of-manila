@@ -178,7 +178,7 @@ const ExecSection1 = ({ location }) => {
   return (
     <Container>
       <SearchContainer>
-        <CustomSelect onChange={onSelect} activeTab={activeTab} />
+        <CustomSelect tabs={tabs} onChange={onSelect} activeTab={activeTab} />
         <Categories>
           {tabs.map((tab, idx) => (
             <Category

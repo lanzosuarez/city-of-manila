@@ -176,7 +176,7 @@ const LatestUpdatesSection1 = ({ location }) => {
   return (
     <>
       <SearchContainer data-usefadein="news1">
-        <CustomSelect onChange={onSelect} activeTab={activeTab} />
+        <CustomSelect onChange={onSelect} activeTab={activeTab} tabs={tabs} />
         <Categories>
           {tabs.map((tab, idx) => (
             <Category

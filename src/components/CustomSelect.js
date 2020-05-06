@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { tabs } from './ExecSection1';
 
 const Container = styled.div`
   position: relative;
@@ -34,7 +33,7 @@ const iconStyle = {
   cursor: 'pointer'
 };
 
-const CustomSelect = ({ onChange = () => {}, activeTab }) => {
+const CustomSelect = ({ onChange = () => {}, activeTab, tabs }) => {
   const [open, setOpen] = useState(false);
 
   const toggle = flag => () => setOpen(flag);
