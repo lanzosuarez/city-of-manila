@@ -128,7 +128,7 @@ const CovidSection2 = () => {
             </p>
             <p>
               You can access the survey 24x7 by hitting the “Send Message”
-              button on his official FB Page.
+              button on his official Facebook Page.
             </p>
             <ButtonTracker>
               <a href="http://m.me/iskomorenodomagoso/">Take The Survey</a>

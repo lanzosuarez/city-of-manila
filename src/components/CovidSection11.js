@@ -41,10 +41,10 @@ const mitigates = [
   },
   {
     desc:
-      'Provided PhP 1,000 to all 568,000 families in the City of Manila (CACAF)'
+      'Provided Php1,000 to all 568,000 families in the City of Manila (CACAF)'
   },
   {
-    desc: 'Delivered 323,486 Food boxes delivered as of 15 April'
+    desc: '323,486 Food boxes delivered as of 15 April'
   },
   {
     desc: 'Procured 50,000 sacks of rice from NFA'
@@ -68,7 +68,7 @@ const mitigates = [
   },
   {
     desc:
-      'Passaged Resolution granting moratorium to all market stallholders within the city of manila, public and privatized, from paying their rents for the duration of ECQ'
+      'Passed Resolution granting moratorium to all market stallholders within the City of manila, public and privatized, from paying their rents for the duration of ECQ'
   },
   {
     desc:
@@ -76,7 +76,7 @@ const mitigates = [
   },
   {
     desc:
-      'Released Php 3,000 as financial assistance to all employees of the City of Manila Government (regular, contract of service, JOs)'
+      'Released Php3,000 as financial assistance to all employees of the City of Manila Government (regular, contract of service, JOs)'
   },
   {
     desc:
