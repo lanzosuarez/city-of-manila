@@ -44,6 +44,7 @@ const Content = styled.p`
   @media (max-width: 576px) {
     width: auto;
     padding: 0px 15px;
+    text-align: center;
   }
 `;
 

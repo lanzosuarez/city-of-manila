@@ -118,38 +118,38 @@ const Footer = () => {
           <h4>Services</h4>
           <LinkList>
             <LinkItem>
-              <a href="https://manila.gov.ph/district-hospitals/  ">
+              <a href="http://manila.gov.ph/district-hospitals/">
                 District Hospitals
               </a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/civil-registry/">Civil Registry</a>
+              <a href="http://manila.gov.ph/civil-registry/">Civil Registry</a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/social-welfare/">Social Welfare</a>
+              <a href="http://manila.gov.ph/social-welfare/">Social Welfare</a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/senior-citizens/">
+              <a href="http://manila.gov.ph/senior-citizens/">
                 Senior Citizens
               </a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/traffic-management/ ">
+              <a href="http://manila.gov.ph/traffic-management/ ">
                 Traffic Management
               </a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/disaster-and-risk-management/ ">
+              <a href="http://manila.gov.ph/disaster-and-risk-management/ ">
                 Disaster and Risk Management
               </a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/public-services/">
+              <a href="http://manila.gov.ph/public-services/">
                 Public Services
               </a>
             </LinkItem>
             <LinkItem>
-              <a href="https://manila.gov.ph/engineering-public-works/">
+              <a href="http://manila.gov.ph/engineering-public-works/">
                 Engineering Public Works
               </a>
             </LinkItem>

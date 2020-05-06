@@ -155,7 +155,7 @@ const CovidSection3 = () => {
           <p>
             5. Wear a mask when outside of the home. This could be in the form
             of a surgical mask, face shield, or handkerchief. The objective is
-            to ensure your nose and mouse are covered.{' '}
+            to ensure your nose and mouth are covered.{' '}
           </p>
         </LeftContainer>
         <RightContainer>
@@ -179,8 +179,8 @@ const CovidSection3 = () => {
             adequate hours of sleep, and exercise.
           </p>
           <p>
-            3. Dont' turn to smoking, drugs or alcohol to deal with your
-            emotions. Seek the assistance of a health worker or counsellor.
+            3. Don't turn to smoking, drugs or alcohol to deal with your
+            emotions. Seek the assistance of a health worker or counselor.
           </p>
           <p>4. Use this time to learn a new skill or take up a hobby.</p>
           <p>

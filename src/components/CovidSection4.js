@@ -73,7 +73,7 @@ const Check = styled.img`
 const items = [
   {
     number: '1',
-    desc: 'PhP 1,000 each family for 568,000 families (CACAF)'
+    desc: 'Php1,000 each family for 568,000 families (CACAF)'
   },
   {
     number: '2',
@@ -102,7 +102,7 @@ const items = [
   {
     number: '8',
     desc:
-      'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-Covid efforts of 6 city owned hospitals'
+      'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-Covid efforts of 6 city-owned hospitals'
   },
   {
     number: '9',
@@ -116,7 +116,7 @@ const items = [
   {
     number: '11',
     desc:
-      'Established Manilla Emergency Operations Center (MEOC) with Online Health Consultation'
+      'Established Manila Emergency Operations Center (MEOC) with Online Health Consultation'
   },
   {
     number: '12',
@@ -135,12 +135,12 @@ const items = [
   {
     number: '15',
     desc:
-      'Installation of hepa-filter machines in 6 city owned public hospitals'
+      'Installation of hepa-filter machines in 6 city-owned public hospitals'
   },
   {
     number: '16',
     desc:
-      'Provided decontamination tents to 6 city owned public hospitals and other establishments'
+      'Provided decontamination tents to 6 city-owned public hospitals and other establishments'
   },
   {
     number: '17',
@@ -153,7 +153,7 @@ const items = [
   },
   {
     number: '19',
-    desc: 'Deployed one bus each for 6 city owned hospitals'
+    desc: 'Deployed one bus each for 6 city-owned hospitals'
   },
   {
     number: '20',
@@ -188,7 +188,7 @@ const items = [
   },
   {
     number: '27',
-    desc: 'Passage of Anti Hoarding Ordinance'
+    desc: 'Passage of Anti-Hoarding Ordinance'
   },
   {
     number: '28',
@@ -203,7 +203,7 @@ const items = [
   {
     number: '30',
     desc:
-      'Released of Php 3,000 as financial assistance to all employees of the city government (regular, contract of service, JOs)'
+      'Released of Php3,000 as financial assistance to all employees of the city government (regular, contract of service, JOs)'
   },
   {
     number: '31',

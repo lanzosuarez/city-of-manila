@@ -62,7 +62,7 @@ const delays = [
   },
   {
     desc:
-      'Directed strict strict temperature screening at all 15 bus terminals for all arriving and departing passengers'
+      'Directed strict temperature screening at all 15 bus terminals for all arriving and departing passengers'
   },
   {
     desc:
@@ -75,7 +75,7 @@ const delays = [
     desc: 'Passage of Anti-Spitting Ordinance'
   },
   {
-    desc: 'Passage of Anti Hoarding Ordinance'
+    desc: 'Passage of Anti-Hoarding Ordinance'
   },
   {
     desc:

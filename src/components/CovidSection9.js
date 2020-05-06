@@ -40,11 +40,11 @@ const contains = [
   },
   {
     desc:
-      'Established Manilla Emergency Operations Center (MEOC) with Online Health Consultation'
+      'Established Manila Emergency Operations Center (MEOC) with Online Health Consultation'
   },
   {
     desc:
-      'Launched COVID-19 Digital Health Survey among the world’s first digital COVID-19 digital id systems'
+      'Launched COVID-19 Digital Health Survey among the world’s first digital COVID-19 digital ID systems'
   },
   {
     desc:
@@ -52,24 +52,24 @@ const contains = [
   },
   {
     desc:
-      'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-COVID efforts of 6 city owned hospitals'
+      'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-COVID efforts of 6 city-owned hospitals'
   },
   {
     desc: 'Established external triage tents at all six city-owned hospitals'
   },
   {
     desc:
-      'Established strict entry-exit sanitation procedures across all City owned hospitals, health clinics and offices'
+      'Established strict entry-exit sanitation procedures across all city-owned hospitals, health clinics and offices'
   },
   {
     desc: 'Installed disinfecting gates in strategic locations in the city'
   },
   {
-    desc: 'Installed HEPA-filter machines in 6 city owned  public hospitals'
+    desc: 'Installed HEPA-filter machines in 6 city-owned  public hospitals'
   },
   {
     desc:
-      'Installed decontamination tents to 6 city owned public hospitals and other establishments'
+      'Installed decontamination tents to 6 city-owned public hospitals and other establishments'
   },
   {
     desc:
@@ -80,11 +80,7 @@ const contains = [
       'Established hotel accommodation for all non-resident health workers from 13 hospitals in Manila with the support of 17 hotels, motels, apartments and dorms located in the city'
   },
   {
-    desc:
-      'Established hotel accommodation for all non-resident health workers from 13 hospitals in Manila with the support of 17 hotels, motels, apartments and dorms located in the city'
-  },
-  {
-    desc: 'Deployed one bus each for 6 city owned hospitals'
+    desc: 'Deployed one bus each for 6 city-owned hospitals'
   },
   {
     desc: 'Provided Vitamin C for DPS personnel and other frontliners'

@@ -21,6 +21,12 @@ const Container = styled.li`
   a.page-link {
     text-decoration: none !important;
     color: #000000;
+    display: grid;
+    height: 100%;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   a.page-link.active-page {

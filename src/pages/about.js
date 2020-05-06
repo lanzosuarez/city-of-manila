@@ -443,7 +443,7 @@ const AboutPage = ({ location }) => {
                   <p>
                     He ran for and won a City Council seat in 1998, representing
                     Manila’s first district. Was reelected in 2001 and 2004 and
-                    in 2007 won his firm term as Manila’s Vice Mayor.
+                    in 2007 won his first term as Manila’s Vice Mayor.
                   </p>
 
                   <p>
