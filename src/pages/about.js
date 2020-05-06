@@ -454,7 +454,7 @@ const AboutPage = ({ location }) => {
                     Maynila (University of the City of Manila) and Law at
                     Arellano University. Domagoso undertook further education
                     modules at Harvard University’s Kennedy School of Government
-                    and at the Said Busines School at Oxford.
+                    and at the said Busines School at Oxford.
                   </p>
 
                   <p>

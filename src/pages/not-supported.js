@@ -7,6 +7,7 @@ import BrowserMozilla from '../images/browser-mozilla.png';
 import BrowserSafari from '../images/browser-safari.png';
 import BrowserOpera from '../images/browser-opera.png';
 import BrowserEdge from '../images/browser-edge.png';
+import '../styles/index.css';
 
 const Wrapper = styled.div`
   background-image: ${`url(${Bg})`};
@@ -36,6 +37,7 @@ const Cover = styled.div`
     position: absolute;
     overflow-y: hidden;
     overflow-x: hidden;
+    left:0;
   }
 `;
 
@@ -88,6 +90,7 @@ const List = styled.div`
       align-self: center;
       justify-content: center;
       align-items: center;
+      padding-left: 0px;
     }
     li {
       margin-bottom: 0.5rem;

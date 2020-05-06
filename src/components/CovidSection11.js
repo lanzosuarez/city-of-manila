@@ -68,7 +68,7 @@ const mitigates = [
   },
   {
     desc:
-      'Passed Resolution granting moratorium to all market stallholders within the City of manila, public and privatized, from paying their rents for the duration of ECQ'
+      'Passed Resolution granting moratorium to all market stallholders within the City of Manila, public and privatized, from paying their rents for the duration of ECQ'
   },
   {
     desc:
