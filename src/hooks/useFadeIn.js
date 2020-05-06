@@ -28,13 +28,27 @@ const useFadeIn = () => {
   }, [elements]);
 
   const setUpElement = (id, options = {}) => {
-    const { dir = 'up', offset = '100px', delay = '' } = options;
+    const {
+      dir = 'up',
+      offset = '100px',
+      delay = '',
+      ontransitionend = () => {}
+    } = options;
     const el = document.querySelector(`[data-usefadein="${id}"]`);
     if (el) {
       const setElStyle = setStyle(el);
       const visible = checkIfElIsAlreadyVisible(el);
+      const listenOnTransitionEnd = e => {
+        if (e.type === 'transitionend') {
+          ontransitionend(el);
+          el.removeEventListener('transitionend', listenOnTransitionEnd);
+        }
+      };
+
       setElStyle('transform', `translateY(${sign(dir)}${offset})`);
       setElStyle('opacity', visible ? 0.5 : 0);
+
+      el.addEventListener('transitionend', listenOnTransitionEnd);
       window.setTimeout(() => {
         setElStyle(
           'transition',

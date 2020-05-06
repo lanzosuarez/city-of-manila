@@ -85,7 +85,7 @@ export const listItems = [
       },
       {
         title: 'Enhanced Community Quarantine',
-        path: '/covid#ecq'
+        path: '/covid/#ecq'
       },
       {
         title: 'What You Need To Know',

@@ -108,7 +108,7 @@ const LogoItem = styled.img`
 
 const NavItemComponent = ({ title, path, sections = [], disabled }) => {
   const [showSubPages, toggleSubPages] = useState(false);
-  const { showNav } = useContext(NavigationContext);
+  const { showNav, toggleNav } = useContext(NavigationContext);
   const rotate = showSubPages ? { transform: 'rotate(90deg)' } : {};
 
   useEffect(() => {
@@ -130,11 +130,18 @@ const NavItemComponent = ({ title, path, sections = [], disabled }) => {
     return {};
   };
 
+  const onClickLink = () => {
+    if (!disabled) {
+      toggleNav(false);
+    }
+  };
+
   return (
     <NavItem show={showSubPages} onClick={highlight}>
       <Head>
         <PageName>
           <Link
+            onClick={onClickLink}
             className={`main-page ${disabled ? 'disable-link' : ''}`}
             activeClassName="side-nav-active-route"
             partiallyActive
@@ -158,7 +165,11 @@ const NavItemComponent = ({ title, path, sections = [], disabled }) => {
         <SubPages show={showSubPages}>
           {sections.map((s, idx) => (
             <SubPagesItem key={idx}>
-              <Link getProps={isPartiallyActive(s.path)} to={s.path}>
+              <Link
+                onClick={() => toggleNav(false)}
+                getProps={isPartiallyActive(s.path)}
+                to={s.path}
+              >
                 {s.title}
               </Link>
             </SubPagesItem>

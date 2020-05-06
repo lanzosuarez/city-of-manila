@@ -183,14 +183,21 @@ const CovidPage = ({ location }) => {
   useEffect(() => scrollToSection(location), []);
 
   const [addElement] = useFadeIn();
+
+  const ontransitionend = el => {
+    // el.scrollIntoView();
+  };
+
   useEffect(() => {
-    addElement('covid-section1', { dir: 'down' });
-    addElement('covid-section2', { delay: '300ms' });
-    addElement('covid-section3', { delay: '300ms' });
-    addElement('covid-section4', { delay: '300ms' });
-    addElement('covid-section5', { delay: '300ms' });
-    addElement('covid-section6', { delay: '300ms' });
-    addElement('covid-section7', { delay: '300ms' });
+    addElement('covid-section1', {
+      dir: 'down'
+    });
+    addElement('covid-section2', { delay: '300ms', ontransitionend });
+    addElement('covid-section3', { delay: '300ms', ontransitionend });
+    addElement('covid-section4', { delay: '300ms', ontransitionend });
+    addElement('covid-section5', { delay: '300ms', ontransitionend });
+    addElement('covid-section6', { delay: '300ms', ontransitionend });
+    addElement('covid-section7', { delay: '300ms', ontransitionend });
   }, []);
 
   return (
@@ -217,7 +224,7 @@ const CovidPage = ({ location }) => {
               <p>Let us beat COVID-19 together. Bangon, Manila!</p>
               <ButtonContainer>
                 <Button>
-                 <Link to="/contact">Contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </Button>
                 <ButtonTracker>
                   <a href="https://covid19stats.ph/">COVID-19 Tracker</a>
@@ -237,7 +244,10 @@ const CovidPage = ({ location }) => {
           </PageContainer>
         </Section2>
         <Section>
-          <PageContainer id="what-you-need-to-know" data-usefadein="covid-section4">
+          <PageContainer
+            id="what-you-need-to-know"
+            data-usefadein="covid-section4"
+          >
             <CovidSection3 />
           </PageContainer>
         </Section>
