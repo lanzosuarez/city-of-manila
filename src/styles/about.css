@@ -57,6 +57,8 @@ p {
     display: flex;
     padding: 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .timeline li {
@@ -65,7 +67,7 @@ p {
 }
 
 .status span {
-    width: 80%;
+    max-width: 10.3vw;
     /* width: 200px; */
     display: -webkit-box;
     display: flex;
@@ -78,8 +80,20 @@ p {
             justify-content: flex-end;
     padding-bottom: 20px;
     text-align: left;
-    font-size: 0.9rem;
+    font-size: 1.3vw;
     line-height: 1.4;
+}
+
+@media (min-width: 1800px) {
+    .status span {
+        font-size: 21px!important;
+    }
+    .school{
+        font-size: 22px!important;
+    }
+    .swiper-slide {
+        max-width: 17%!important;
+    }
 }
 
 .status {
@@ -111,6 +125,7 @@ p {
     color: #04326a;
     text-align: left;
     width:80%;
+    font-size: 1.3vw;
 }
 
 .date {
@@ -143,7 +158,7 @@ p {
 }
 
 .swiper-slide {
-    width:14%;
+    max-width: 13vw;
     font-size: 0.9rem;
     line-height: 1.4;
     /* width: 200px; */

@@ -57,7 +57,7 @@ const DisplayFlex = styled.div`
   padding: 80px 15px;
   height: 100%;
   align-items: center;
-  
+
   @media (max-width: 1024px) {
     grid-template-columns: none;
   }
@@ -76,7 +76,7 @@ const ItemWrap = styled.div`
   }
   @media only screen and (min-width: 491px) and (max-width: 768px) {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 `;
 const Item = styled.div`
@@ -91,6 +91,12 @@ const Item = styled.div`
   @media only screen and (max-width: 490px) {
     width: 100%;
     margin-bottom: 2rem;
+  }
+  @media only screen and (min-width: 384px) and (max-width: 490px) {
+    img {
+      display: block;
+      margin: 2rem auto 0rem;
+    }
   }
   @media only screen and (min-width: 491px) and (max-width: 768px) {
     width: 48%;

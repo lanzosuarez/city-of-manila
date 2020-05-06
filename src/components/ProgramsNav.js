@@ -27,6 +27,7 @@ const NavWrap = styled.div`
   }
   h3 {
     margin-bottom: 0px;
+    font-size: 1rem;
   }
 `;
 

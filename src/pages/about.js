@@ -190,8 +190,8 @@ const Section5Social = styled.div`
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
     padding: 20px 20px 50px 0px;
   }
-  ion-icon:hover{
-    color:#ffa537!important;
+  ion-icon:hover {
+    color: #ffa537 !important;
   }
 `;
 
@@ -206,7 +206,8 @@ const MobileContent = styled.div`
 `;
 
 const SwiperContainer = styled.div`
-  display: block;
+  display: flex;
+  justify-content: center;
   @media (max-width: 767px) {
     display: none;
   }
@@ -251,7 +252,7 @@ const items = [
     date: 'College',
     school: 'Oxford University',
     course: 'Strategic Leadership Program'
-  },
+  }
 ];
 
 const MobileTimeline = () => {
@@ -396,7 +397,7 @@ const AboutPage = ({ location }) => {
             </div>
           </PageContainer>
           <Section3Container>
-            <ContentContainer id="background"  data-usefadein="about-section3">
+            <ContentContainer id="background" data-usefadein="about-section3">
               <Section3>
                 <h1> Background </h1>
                 <img src={line} alt="blue line" className="line" />
@@ -519,7 +520,7 @@ const AboutPage = ({ location }) => {
               </Section3>
             </ContentContainer>
           </Section33Container>
-          <Section5Container data-usefadein="about-section6"> 
+          <Section5Container data-usefadein="about-section6">
             <PageContainer id="links-to-social-media">
               <div className="section-last">
                 <div className="section-container">
@@ -532,8 +533,8 @@ const AboutPage = ({ location }) => {
                       />
                     </Section5ImgContent>
                   </LeftContainer>
-                  <RightContainer >
-                    <Section5Social >
+                  <RightContainer>
+                    <Section5Social>
                       <h1 className="white">Connect with Mayor Isko</h1>
                       <img src={whiteline} alt="blue line" className="line" />
                       <p>I'm on social media and I want to hear from you!</p>

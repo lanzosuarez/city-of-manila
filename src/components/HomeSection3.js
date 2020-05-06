@@ -16,21 +16,11 @@ const Container = styled.div`
   @media (max-width: 576px) {
     padding: 50px 15px 100px;
   }
-  @media (max-width: 401px) {
+  /*@media (max-width: 401px) {
     div:nth-child(2) .content {
       max-height: 26px;
     }
-  }
-  @media (max-width: 358px) {
-    div:nth-child(1) .content {
-      max-height: 45px;
-    }
-    div:nth-child(2) .content {
-      max-height: 35px;
-    }
-    div:nth-child(3) .content {
-      max-height: 20px;
-    }
+  }*/
   }
 
 `;
@@ -55,39 +45,58 @@ const Item = styled.div`
       max-height: 100%;
     }
   }
+
 `;
 
 const Content = styled.div`
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 1vw;
   position: relative;
-  max-height: 26px;
+  max-height: 1.8vw;
   overflow: hidden;
   transition: max-height 500ms;
   z-index: 2;
+
   @media (max-width: 1024px) {
-    max-height: 70px;
+    max-height: 3vw;
+    margin-bottom: 1vw;
   }
-  @media (max-width: 768px) {
-    max-height: 47px;
+
+  @media (max-width: 739px) {
+    margin-bottom: 5px;
+    max-height: 1rem;
   }
+
   @media (max-width: 576px) {
-    max-height: 22px;
-    font-size: 0.8rem;
-    margin-bottom: 9px;
+    max-height: 1rem;
   }
+
+  @media (max-width: 428px) {
+    max-height: 1rem;
+  }
+  
 `;
 
 const Text = styled.h3`
   color: white;
   margin: 0;
   margin-bottom: 20px;
-  font-size: 1.2rem;
-  @media only screen and (min-width: 769px) and (max-width: 1081px)
-    font-size: 1rem;
+  font-size: 1.4vw;
+
+  @media (max-width: 1024px) {
+    font-size: 1.4vw;
   }
+
+  @media (max-width: 739px) {
+    font-size: 1.6vw;
+  }
+
   @media (max-width: 576px) {
-    font-size: 1rem;
+    font-size: 2vw;
+  }
+    
+  @media (max-width: 428px) {
+    font-size: 4vw;
   }
 `;
 
