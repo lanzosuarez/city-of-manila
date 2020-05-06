@@ -60,11 +60,11 @@ const CovidSection6 = () => {
 
             <p>
               On 8 March 2020 the City of Manila created a Special Task Force
-              Against the Coronavirus.
+              against COVID-19.
             </p>
 
             <p>
-              On March 9 Mayor Isko met with Robert Deane, Head of the United
+              On March 9, Mayor Isko met with Robert Deane, Head of the United
               Kingdom’s Foreign and Commonwealth Office Coronavirus Task Force
               in London to discuss emerging challenges
               <br /> and best practices.
@@ -72,7 +72,7 @@ const CovidSection6 = () => {
 
             <p>
               All this in conjunction with key learnings have enabled the City
-              of Manila to stay ahead of coronavirus, so far.
+              of Manila to stay ahead of coronavirus so far.
             </p>
           </Text>
         </Section>
