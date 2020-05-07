@@ -205,9 +205,6 @@ const Accordion = ({ defaultActive = 0 }) => {
                 <div>
                   <p>{i.content3}</p>
                 </div>
-                {/* <div>
-                  <p dangerouslySetInnerHTML={{ __html: i.content3 }}></p>
-                </div> */}
               </AccordionContent>
             </AccordionItem>
           );
