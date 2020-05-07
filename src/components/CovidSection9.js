@@ -87,7 +87,7 @@ const contains = [
   },
   {
     desc:
-      'Mobilized Manilans, local businessmen, conglomerates and concerned citizens to donate, procure and deliver PPEs for health workers, food and medicines for the people of Manila and hospital workers'
+      'Mobilized Manileños, local businessmen, conglomerates and concerned citizens to donate, procure and deliver PPEs for health workers, food and medicines for the people of Manila and hospital workers'
   },
   {
     desc:
