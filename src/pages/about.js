@@ -365,18 +365,18 @@ const AboutPage = ({ location }) => {
                     Mayor of Manila since 1 July 2019.
                   </p>
                   <p>
-                    His elevation to Manila’s Mayoralty occurred via a historic
+                    His elevation to Manila’s mayoralty occurred via a historic
                     election: defeating an incumbent Mayor – a former Philippine
                     President – on broad hopes of generational and
                     transformative change for the 449 year old Philippine
                     capital city.
                   </p>
                   <p>
-                    Prior to becoming mayor, Mayor Domagoso was Manila’s Vice
-                    Mayor from 2007 – 2016 and served in Manila’s City Council
-                    representing the ancient, densely populated and economically
+                    Prior to becoming mayor, Mayor Domagoso was Manila’s vice
+                    mayor from 2007 – 2016 and served in Manila’s City Council
+                    representing the ancient, densely populated, and economically
                     challenged urban district of Tondo. He was first elected to
-                    Manila’s City Council in 1998.
+                    The Manila City Council in 1998.
                   </p>
                 </LeftContainer>
                 <RightContainer>
@@ -404,13 +404,13 @@ const AboutPage = ({ location }) => {
                 <Text>
                   <p>
                     Francisco Moreno Domagoso is the only child of Joaquin
-                    Domagoso, from Tondo, Manila and Rosario Moreno, from Allen,
+                    Domagoso, from Tondo, Manila, and Rosario Moreno, from Allen,
                     Northern Samar.
                   </p>
 
                   <p>
                     His father was a stevedore who worked at Manila’s North
-                    Harbour, also in Tondo; Moreno’s mother managed to keep a
+                    Harbor, also in Tondo. Moreno’s mother managed to keep a
                     loving household for the precocious Domagoso.
                   </p>
 
@@ -418,7 +418,7 @@ const AboutPage = ({ location }) => {
                     As a child, the young Domagoso learned the ways of Tondo’s
                     hardscrabble streets and contributed to the family’s tight
                     budget. He became a young entrepreneur, pushing a streetcart
-                    going house-to-house to collect newspapers, glass bottles
+                    going house-to-house to collect newspapers, glass bottles,
                     and other recyclables, which he would resell to a junk
                     dealer. He also salvaged in restaurant garbage bins for
                     leftovers which were repurposed by his practical mother into
@@ -442,8 +442,8 @@ const AboutPage = ({ location }) => {
 
                   <p>
                     He ran for and won a City Council seat in 1998, representing
-                    Manila’s first district. Was reelected in 2001 and 2004 and
-                    in 2007 won his first term as Manila’s Vice Mayor.
+                    Manila’s first district, and was reelected in 2001 and 2004.
+                    In 2007, he won his first term as Manila’s vice mayor.
                   </p>
 
                   <p>
@@ -460,13 +460,13 @@ const AboutPage = ({ location }) => {
                   <p>
                     In 2013, in a controversial election, former Philippine
                     President Joseph Estrada was elected 26th Mayor of Manila.
-                    In 2016, Domagoso ran for the Philippines’ Senate – all 24
-                    Philippine Senators are elected nationally, 12 every 3 year
+                    In 2016, Domagoso ran for The Philippine Senate – all 24
+                    Philippine senators are elected nationally, 12 every 3 year
                     election cycle – and narrowly missed his opportunity to sit
                     in the legislative upper house. In 2017, Domagoso was
                     appointed Chairman of the Board of then North Luzon Railways
-                    Corporation. In 2018, he was appointed Undersecretary for
-                    Luzon Affairs of the Department of Social Welfare.
+                    Corporation. In 2018, he was appointed Undersecretary For
+                    Luzon Affairs in the Department of Social Welfare.
                   </p>
 
                   <p>
@@ -513,8 +513,8 @@ const AboutPage = ({ location }) => {
                 <h1> Personal </h1>
                 <img src={line} alt="blue line" className="line" />
                 <p>
-                  He is married to Diana Lynn Ditan. They have five children,
-                  Vincent Patrick , Frances Diane, Joaquín André, Franco Dylan,
+                  He is married to Diana Lynn Ditan. They have five children:
+                  Vincent Patrick, Frances Diane, Joaquín André, Franco Dylan,
                   and Drake Marcus.
                 </p>
               </Section3>

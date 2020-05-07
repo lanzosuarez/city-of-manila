@@ -50,7 +50,7 @@ const CovidSection5 = () => {
 
             <p>
               In the 1980’s the administrative structure of Metropolitan Manila
-              was devolved into 16 separate individual cities and 2
+              was devolved into 16 separate individual cities and two
               municipalities.
             </p>
 
@@ -58,7 +58,7 @@ const CovidSection5 = () => {
               The City of Manila is the historic capital of the Philippines.
               Home to the Office of the President of the Philippines, key
               government departments and agencies, the Senate of the
-              Philippines, embassies and offices of international organizations.
+              Philippines, and embassies and offices of international organizations.
             </p>
 
             <p>
@@ -89,8 +89,8 @@ const CovidSection5 = () => {
             <p>
               COVID-19 creates challenges previously not encountered in modern
               human history - for any municipal city administration - but
-              particularly for the City of Manila where issues of close human
-              density, proximity, economy, education, health and more are the
+              particularly for The City of Manila where issues of close human
+              density, proximity, economy, education, health, and more are the
               most acute.
             </p>
           </Text>

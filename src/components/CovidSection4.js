@@ -77,7 +77,7 @@ const items = [
   },
   {
     number: '2',
-    desc: '235,072 Food boxes delivered as of April 5'
+    desc: '235,072 Food boxes delivered as of 5 April 2020'
   },
   {
     number: '3',
@@ -85,38 +85,38 @@ const items = [
   },
   {
     number: '4',
-    desc: 'Kadiwa Rolling Stores with DA'
+    desc: 'Deployed Kadiwa Rolling Stores with DA'
   },
   {
     number: '5',
-    desc: 'Temporary housing for Street Dwellers at Delpan Evacuation Center'
+    desc: 'Provided temporary housing for street dwellers at Delpan Evacuation Center'
   },
   {
     number: '6',
-    desc: 'Daily rescue of homeless and street dwellers'
+    desc: 'Effected daily rescue of homeless and street dwellers'
   },
   {
     number: '7',
-    desc: 'One sack of rice per Jeepney, e-trike and tricycle drivers'
+    desc: 'One sack of rice per jeepney, e-trike, and tricycle drivers'
   },
   {
     number: '8',
     desc:
-      'Procured P116 million worth of PPEs (Face Masks etc) and other medical equipment and supplies in support of anti-Covid efforts of 6 city-owned hospitals'
+      'Procured P116 million worth of PPEs (face masks, etc), other medical equipment, and supplies in support of anti-COVID-19 efforts of six city-owned hospitals'
   },
   {
     number: '9',
     desc:
-      'Established Manila Infectious Disease Control Center (MIDCC) with 33 rooms for Covid patients'
+      'Established Manila Infectious Disease Control Center (MIDCC) with 33 rooms for COVID-19 patients'
   },
   {
     number: '10',
-    desc: 'Recovered 11 Covid positive patients through MIDCC as of April 5'
+    desc: 'Recovered 11 COVID-19 positive patients through MIDCC as of April 5'
   },
   {
     number: '11',
     desc:
-      'Established Manila Emergency Operations Center (MEOC) with Online Health Consultation'
+      'Established Manila Emergency Operations Center (MEOC) with online health consultation'
   },
   {
     number: '12',
@@ -125,7 +125,7 @@ const items = [
   },
   {
     number: '13',
-    desc: 'Installation of triage tents in 6 hospitals'
+    desc: 'Installation of triage tents in six hospitals'
   },
   {
     number: '14',
@@ -135,17 +135,17 @@ const items = [
   {
     number: '15',
     desc:
-      'Installation of hepa-filter machines in 6 city-owned public hospitals'
+      'Installation of HEPA-filter machines in six city-owned public hospitals'
   },
   {
     number: '16',
     desc:
-      'Provided decontamination tents to 6 city-owned public hospitals and other establishments'
+      'Provided decontamination tents to six city-owned public hospitals and other establishments'
   },
   {
     number: '17',
     desc:
-      'Hotel accommodation for health workers from 13 hospitals in Manila with the support of 17 hotels, motels, apartments and dorms located in the city'
+      'Hotel accommodation for health workers from 13 hospitals in Manila with the support of 17 hotels, motels, apartments, and dorms located in the city'
   },
   {
     number: '18',
@@ -153,7 +153,7 @@ const items = [
   },
   {
     number: '19',
-    desc: 'Deployed one bus each for 6 city-owned hospitals'
+    desc: 'Deployed one bus each for six city-owned hospitals'
   },
   {
     number: '20',
@@ -162,12 +162,12 @@ const items = [
   {
     number: '21',
     desc:
-      'Provided acetate full face shields for health workers in the 6 owned hospitals, private and national govt hospitals, public markets'
+      'Provided acetate full face shields for health workers in the six owned hospitals, private, national government hospitals, and public markets'
   },
   {
     number: '22',
     desc:
-      'Converted Delpan Evacuation Center to Quarantine area for mild cases of PUIs and PUMs'
+      'Converted Delpan Evacuation Center to quarantine area for mild cases of PUIs and PUMs'
   },
   {
     number: '23',
@@ -184,7 +184,7 @@ const items = [
   {
     number: '26',
     desc:
-      'Passage of an Ordinance extending the 1st quarter deadline of payments for RPT, transfer tax &amp; business tax to June 30, 2020'
+      'Passage of an Ordinance extending the 1st quarter deadline of payments for RPT, transfer tax &amp; business tax to 30 June 2020'
   },
   {
     number: '27',
@@ -193,7 +193,7 @@ const items = [
   {
     number: '28',
     desc:
-      'Passage of a Resolution granting moratorium to all market stallholders within the city of manila, public and privatized, from paying their rents for the duration of ECQ'
+      'Passage of a resolution granting moratorium to all market stallholders within the city of Manila, public and privatized, from paying their rent for the duration of ECQ'
   },
   {
     number: '29',
@@ -203,30 +203,30 @@ const items = [
   {
     number: '30',
     desc:
-      'Released of Php3,000 as financial assistance to all employees of the city government (regular, contract of service, JOs)'
+      'Released of Php3,000 as financial assistance to all employees of the city government (regular, contract of service, and JOs)'
   },
   {
     number: '31',
-    desc: 'Provided Vitamin C for DPS personnel and other frontliners'
+    desc: 'Provided vitamin C for DPS personnel and other front-liners'
   },
   {
     number: '32',
-    desc: 'Provided Guide to Action against Covid19 for all Brgy. Chairmen'
+    desc: 'Provided guide to action against COVID-19 for all barangay chairmen'
   },
   {
     number: '33',
     desc:
-      'Strict enforcement of curfew hours, anti-hoarding, and ECQ guidelines and protocols in the city'
+      'Strict enforcement of curfew hours, anti-hoarding, ECQ guidelines, and protocols in the city'
   },
   {
     number: '34',
     desc:
-      'Readiness of the City Council to provide legislative support for the initiatives of the Executive branch in the fight against COVID-19'
+      'Readiness of The Manila City Council to provide legislative support for the initiatives of the executive branch in the fight against COVID-19'
   },
   {
     number: '35',
     desc:
-      'Mobilized Manilans, local businessmen, conglomerates and concerned citizens to donate, procure and deliver PPEs for health workers, food and medicines for the people of Manila and hospital workers'
+      'Mobilized Manileños, local businessmen, conglomerates, and concerned citizens to donate, procure and deliver PPEs for health workers, food and medicine for the people of Manila and hospital workers'
   }
 ];
 
