@@ -44,7 +44,7 @@ const mitigates = [
       'Provided Php1,000 to all 568,000 families in the City of Manila (CACAF)'
   },
   {
-    desc: '323,486 Food boxes delivered as of 15 April'
+    desc: '323,486 food boxes delivered as of 15 April'
   },
   {
     desc: 'Procured 50,000 sacks of rice from NFA'
@@ -54,13 +54,13 @@ const mitigates = [
   },
   {
     desc:
-      'Provided Temporary housing for Street Dwellers at Delpan Evacuation Center'
+      'Provided temporary housing for Street Dwellers at Delpan Evacuation Center'
   },
   {
-    desc: 'Effected Daily rescue of homeless and street dwellers'
+    desc: 'Effected daily rescue of homeless and street dwellers'
   },
   {
-    desc: 'Provided one sack of rice per Jeepney, e-trike and tricycle drivers'
+    desc: 'Provided one sack of rice per jeepney, e-trike and tricycle drivers'
   },
   {
     desc:
