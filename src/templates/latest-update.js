@@ -26,7 +26,7 @@ const SinglePage = ({ location, data }) => {
   return (
     <NavigationProvider>
       <Layout>
-        <SEO title="Latest Update" />
+        <SEO title={heading1} />
         <Notice />
         <Navigation />
         <Wrapper>

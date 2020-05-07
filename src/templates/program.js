@@ -55,7 +55,7 @@ const ProgramsTemplate = ({ data, location }) => {
   return (
     <NavigationProvider>
       <Layout>
-        <SEO title="Programs" />
+        <SEO title={bannerTitle} />
         <Notice />
         <Navigation />
         <ProgramBanner text={bannerTitle} bg={banner.file.url} />
