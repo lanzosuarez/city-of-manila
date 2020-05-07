@@ -36,7 +36,7 @@ const ItemContent = styled.div`
 const contains = [
   {
     desc:
-      'Established Manila Infectious Disease Control Center (MIDCC) with 33 rooms for Covid patients'
+      'Established Manila Infectious Disease Control Center (MIDCC) with 33 rooms for COVID patients'
   },
   {
     desc:
