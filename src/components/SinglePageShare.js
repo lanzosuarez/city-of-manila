@@ -39,11 +39,11 @@ const Icons = styled.div`
   }
 `;
 
-const SinglePageShare = () => {
+const SinglePageShare = ({ page }) => {
   const openGmail = () => {
     let url =
       'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Your+Subject+here&body=' +
-      WEBSITE_URL +
+      page +
       '&ui=2&tf=1&pli=1';
 
     window.open(url, 'sharer', 'toolbar=0,status=0,width=648,height=395');
@@ -55,10 +55,10 @@ const SinglePageShare = () => {
           <span>Share Overview</span>
           <Icons>
             <ion-icon onClick={openGmail} name="mail"></ion-icon>
-            <FacebookShareButton url={WEBSITE_URL}>
+            <FacebookShareButton url={page}>
               <ion-icon name="logo-facebook"></ion-icon>
             </FacebookShareButton>
-            <TwitterShareButton url={WEBSITE_URL}>
+            <TwitterShareButton url={page}>
               <ion-icon name="logo-twitter"></ion-icon>
             </TwitterShareButton>
           </Icons>

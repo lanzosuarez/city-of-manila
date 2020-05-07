@@ -22,14 +22,7 @@ const SinglePage = ({ location, data }) => {
     scrollToSection(location);
   }, [location]);
 
-  const {
-    heading1,
-    date,
-    photo,
-    by,
-    tags,
-    category
-  } = data.contentfulNewsroom;
+  const { heading1, date, photo, by, tags, category } = data.contentfulNewsroom;
   return (
     <NavigationProvider>
       <Layout>
@@ -44,7 +37,7 @@ const SinglePage = ({ location, data }) => {
             text={heading1}
             datetext={formatDate(date)}
           />
-          <SinglePageShare />
+          <SinglePageShare page={location.href} />
           <SinglePageContent
             tagNames={tags}
             data={data.contentfulNewsroom}

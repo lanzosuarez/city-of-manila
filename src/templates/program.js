@@ -32,7 +32,7 @@ export const programsPath = [
   '/programs/tourism'
 ];
 
-const ProgramsTemplate = ({ data }) => {
+const ProgramsTemplate = ({ data, location }) => {
   const [addElement] = useFadeIn();
 
   useEffect(() => {
@@ -51,6 +51,7 @@ const ProgramsTemplate = ({ data }) => {
       slug
     }
   } = data;
+
   return (
     <NavigationProvider>
       <Layout>
@@ -58,7 +59,7 @@ const ProgramsTemplate = ({ data }) => {
         <Notice />
         <Navigation />
         <ProgramBanner text={bannerTitle} bg={banner.file.url} />
-        <ProgramShare />
+        <ProgramShare page={location.href} />
         <Grid>
           <PageContainer data-usefadein="program-section1">
             <ProgramsSection1 content={section1} />
