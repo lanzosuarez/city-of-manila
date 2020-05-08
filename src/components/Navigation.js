@@ -23,7 +23,7 @@ const Container = styled.div`
 const Logo = styled.div`
   height: 100%;
   width: 200px;
-  background: #05326b;
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
