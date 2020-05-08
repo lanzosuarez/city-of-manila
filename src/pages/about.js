@@ -448,7 +448,7 @@ const AboutPage = ({ location }) => {
 
                   <p>
                     To ensure he could craft and deliver the right policies to
-                    his constituents, Domagoso undertook courses in Municipal
+                    his constituents, Domagoso undertook courses in Local
                     Legislation and Finance at University of the Philippines. He
                     studied Public Administration in Pamantasan ng Lungsod ng
                     Maynila (University of the City of Manila) and Law at
