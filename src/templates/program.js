@@ -51,7 +51,7 @@ const ProgramsTemplate = ({ data, location }) => {
       slug
     }
   } = data;
-
+  console.log(data);
   return (
     <NavigationProvider>
       <Layout>
