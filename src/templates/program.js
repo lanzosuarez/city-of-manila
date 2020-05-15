@@ -106,26 +106,12 @@ export const query = graphql`
         hasCTA
       }
       section3 {
-        title
         content {
           title
           subtitle
           content
           imageUrl
         }
-      }
-      section4 {
-        quote
-        quotee
-      }
-      section5 {
-        title
-        videoUrl
-      }
-      section6 {
-        title
-        content
-        btnLink
       }
     }
   }
