@@ -136,7 +136,7 @@ const ContactPage = () => {
             <Section2>
               <p>
               Your City Government works 24x7 for you. During this time of enhanced community quarantine, it is best to reach us through our official social media pages or, for further health assistance, please call the Manila Emergency Operation Center <b>8926-2385, 8926-2386, 8527-5174, 
-or 0961-062-7013.</b> 
+or 0961-062-7013</b>.
               </p>
               </Section2>
             </PageContainer>
