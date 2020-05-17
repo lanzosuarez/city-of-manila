@@ -8,6 +8,17 @@ module.exports = {
     description: 'Official website of City of Manila Mayor Isko Moreno Domagoso. Find information on Manila\'s COVID-19 response.'
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-156430051-1",
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay:0,
+      },
+    },
     `gatsby-plugin-emotion`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
@@ -47,17 +58,6 @@ module.exports = {
         name: `src`,
         path: `${__dirname}/src/`
       }
-    },
-    {
-      resolve: `gatsby-plugin-gtag`,
-      options: {
-        // your google analytics tracking id
-        trackingId: `UA-166766779-1`,
-        // Puts tracking script in the head instead of the body
-        head: true,
-        // enable ip anonymization
-        anonymize: true,
-      },
-    },
+    }
   ]
 };
