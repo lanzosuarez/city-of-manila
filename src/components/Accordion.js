@@ -382,10 +382,9 @@ const items = [
           - Architecture and engineering activities, technical testing and
           analysis are partially allowed
         </span>
-        <span style={{ marginLeft: 46 }}>
+        <span style={{ marginLeft: 46, display: 'block' }}>
           - Scientific and research development activities are partially allowed
         </span>
-        <br />
         <br />
         <span style={{ marginLeft: 23, display: 'block' }}>
           Companies and establishments under this category engaged in partially
