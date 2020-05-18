@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import { downloadFile } from '../helpers';
 
 const Container = styled.div``;
 
@@ -47,9 +48,14 @@ const AccordionContent = styled.div`
     }
   }
 `;
-const Style = {
-  color: '#04326a'
-};
+
+const Item = styled.span`
+  display: flex;
+
+  .coivd_item_desc {
+    flex: 1;
+  }
+`;
 
 const items = [
   {
@@ -58,7 +64,22 @@ const items = [
     content:
       'The Modified Enhanced Community Quarantine (MECQ) allows for limited public movements and resumption of economic activity previously halted during the Enhanced Community Quarantine period. This policy will in place for Metro Manila, Laguna Province, and Cebu City until 31 May 2020. Under the MECQ, everyone is still required to abide by the mandatories imposed by the IATF. These include the wearing of face masks, frequent handwashing and sanitation, social distancing, and safe work practices.',
     content2: 'To view the full list of MECQ guidelines by the IATF:',
-    content3: 'Download link to file: 0513 IAFT Transition from ECQ OPS'
+    content3: (
+      <>
+        Download link to file:{' '}
+        <a
+          onClick={() =>
+            downloadFile(
+              'https://assets.ctfassets.net/7dav9yxqrisj/bEcm4BhQ9zvqse67Y01fn/f954d2b86554a7114256a7136e0f2bb5/0513_IATF_Transition_from_ECQ_OPS_PDF1__1_.pdf',
+              '0513_IATF_Transition_from_ECQ_OPS_PDF1__1_.pdf'
+            )
+          }
+          style={{ color: 'var(--blue)' }}
+        >
+          0513 IAFT Transition from ECQ OPS
+        </a>
+      </>
+    )
   },
   {
     id: 'item2',
@@ -66,72 +87,76 @@ const items = [
     content: (
       <>
         I. Safety Protocols <br />
-        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+        <Item>
           <span style={{ marginRight: 15, marginLeft: 10 }}>(a)</span>
-          <span>
+          <span className="coivd_item_desc">
             Wearing of face masks and adopting a “No mask, no entry policy;”
           </span>
-        </span>
-        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+        </Item>
+        <Item>
           <span style={{ marginRight: 15, marginLeft: 10 }}>(b)</span>
-          <span>Frequent sanitation and handwashing;</span>
-        </span>
-        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span className="coivd_item_desc">
+            Frequent sanitation and handwashing;
+          </span>
+        </Item>
+        <Item>
           <span style={{ marginRight: 15, marginLeft: 10 }}>(c)</span>
-          <span>Avoiding touching surfaces and face; and</span>
-        </span>
-        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span className="coivd_item_desc">
+            Avoiding touching surfaces and face; and
+          </span>
+        </Item>
+        <Item>
           <span style={{ marginRight: 15, marginLeft: 10 }}>(d)</span>
-          <span>
+          <span className="coivd_item_desc">
             Stricter protocols for higher-risk occupations, industries, and
             spaces.
           </span>
-        </span>
+        </Item>
         <br />
         II. Safe Distancing <br />
-        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+        <Item>
           <span style={{ marginRight: 15, marginLeft: 10 }}>(a)</span>
-          <span>
+          <span className="coivd_item_desc">
             Maintaining at least one (1) meter apart in commercial
             establishments and public places;
           </span>
-        </span>
-        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+        </Item>
+        <Item>
           <span style={{ marginRight: 15, marginLeft: 10 }}>(b)</span>
-          <span>
+          <span className="coivd_item_desc">
             Reconfigured workspaces to observe the aforementioned distance; and
           </span>
-        </span>
-        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+        </Item>
+        <Item>
           <span style={{ marginRight: 15, marginLeft: 10 }}>(c)</span>
-          <span>
+          <span className="coivd_item_desc">
             Putting markers in commercial establishments and public spaces.
           </span>
-        </span>
+        </Item>
         <br />
         III. Work Protocols <br />
-        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+        <Item>
           <span style={{ marginRight: 15, marginLeft: 10 }}>(a)</span>
-          <span>
+          <span className="coivd_item_desc">
             Prohibiting employees to report to work if showing COVID-19
             symptoms;
           </span>
-        </span>
-        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+        </Item>
+        <Item>
           <span style={{ marginRight: 15, marginLeft: 10 }}>(b)</span>
-          <span>
+          <span className="coivd_item_desc">
             Using thermal scanners to check temperatures of employees and the
             public before entering offices and establishments; and
           </span>
-        </span>
-        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+        </Item>
+        <Item>
           <span style={{ marginRight: 15, marginLeft: 10 }}>(c)</span>
-          <span>
+          <span className="coivd_item_desc">
             Requiring clients and visitors to fill up forms detailing their
             whereabouts fourteen (14) days prior in order to aid in contact
             tracing measures and actions.
           </span>
-        </span>
+        </Item>
         <br />
       </>
     )
@@ -543,8 +568,14 @@ const Accordion = ({ defaultActive = 0 }) => {
         {items.map((i, idx) => {
           const show = activeItem === idx;
           return (
-            <AccordionItem onClick={scrollToItem(i.id)} id={i.id} key={idx}>
-              <AccordionTitle onClick={setActive(idx)} show={show}>
+            <AccordionItem id={i.id} key={idx}>
+              <AccordionTitle
+                onClick={() => {
+                  scrollToItem(i.id)();
+                  setActive(idx)();
+                }}
+                show={show}
+              >
                 <span>{i.title}</span>
                 <ion-icon
                   style={{
