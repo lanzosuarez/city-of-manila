@@ -54,102 +54,463 @@ const Style = {
 const items = [
   {
     id: 'item1',
-    title: 'What is the Enhanced Community Quarantine or ECQ?',
+    title: 'What is the Modified Enhanced Community Quarantine or MECQ?',
     content:
-      'Concerned by the rising number of COVID-19 cases in the country, President Rodrigo Duterte signed Proclamation No. 929 imposing an Enhanced Community Quarantine (ECQ) over the entire island of Luzon in an attempt to flatten the curve, or limit the spread of the virus in the communities.',
-    content2:
-      'Under the ECQ, all residents in Luzon, with an estimated population of 57 million, are put under strict home quarantine. Only the movement of essential personnel such as health and emergency front-liners, and those working in supermarkets, pharmacies, and similar establishments, are permitted.',
-    content3:
-      ' Public transportation is suspended and the movement of goods is regulated. The ECQ will be in effect until 15 May 2020 or unless otherwise deemed extended by the Interagency Task Force for the Management of Emerging Infectious Diseases and approved by the President of the Philippines.'
+      'The Modified Enhanced Community Quarantine (MECQ) allows for limited public movements and resumption of economic activity previously halted during the Enhanced Community Quarantine period. This policy will in place for Metro Manila, Laguna Province, and Cebu City until 31 May 2020. Under the MECQ, everyone is still required to abide by the mandatories imposed by the IATF. These include the wearing of face masks, frequent handwashing and sanitation, social distancing, and safe work practices.',
+    content2: 'To view the full list of MECQ guidelines by the IATF:',
+    content3: 'Download link to file: 0513 IAFT Transition from ECQ OPS'
   },
   {
     id: 'item2',
-    title: 'How will ECQ help get rid of COVID-19? ',
-    content: 'Flattening the curve. ',
-    content2: (
+    title: 'Minumum Public Health Standards of the City of Manila',
+    content: (
       <>
-        By staying at home and practicing social distancing (maintaining at
-        least 1 meter distance between yourself and another person, according to
-        advice by the{' '}
-        <a
-          href="https://www.mayorofmanila.ph/covid#what-you-need-to-know"
-          style={Style}
-        >
-          World Health Organization
-        </a>
-        ) you can limit the spread of the virus by avoiding contact with a
-        potentially infected individual.
+        I. Safety Protocols <br />
+        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span style={{ marginRight: 15, marginLeft: 10 }}>(a)</span>
+          <span>
+            Wearing of face masks and adopting a “No mask, no entry policy;”
+          </span>
+        </span>
+        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span style={{ marginRight: 15, marginLeft: 10 }}>(b)</span>
+          <span>Frequent sanitation and handwashing;</span>
+        </span>
+        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span style={{ marginRight: 15, marginLeft: 10 }}>(c)</span>
+          <span>Avoiding touching surfaces and face; and</span>
+        </span>
+        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span style={{ marginRight: 15, marginLeft: 10 }}>(d)</span>
+          <span>
+            Stricter protocols for higher-risk occupations, industries, and
+            spaces.
+          </span>
+        </span>
+        <br />
+        II. Safe Distancing <br />
+        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span style={{ marginRight: 15, marginLeft: 10 }}>(a)</span>
+          <span>
+            Maintaining at least one (1) meter apart in commercial
+            establishments and public places;
+          </span>
+        </span>
+        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span style={{ marginRight: 15, marginLeft: 10 }}>(b)</span>
+          <span>
+            Reconfigured workspaces to observe the aforementioned distance; and
+          </span>
+        </span>
+        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span style={{ marginRight: 15, marginLeft: 10 }}>(c)</span>
+          <span>
+            Putting markers in commercial establishments and public spaces.
+          </span>
+        </span>
+        <br />
+        III. Work Protocols <br />
+        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span style={{ marginRight: 15, marginLeft: 10 }}>(a)</span>
+          <span>
+            Prohibiting employees to report to work if showing COVID-19
+            symptoms;
+          </span>
+        </span>
+        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span style={{ marginRight: 15, marginLeft: 10 }}>(b)</span>
+          <span>
+            Using thermal scanners to check temperatures of employees and the
+            public before entering offices and establishments; and
+          </span>
+        </span>
+        <span style={{ display: 'grid', gridAutoFlow: 'column' }}>
+          <span style={{ marginRight: 15, marginLeft: 10 }}>(c)</span>
+          <span>
+            Requiring clients and visitors to fill up forms detailing their
+            whereabouts fourteen (14) days prior in order to aid in contact
+            tracing measures and actions.
+          </span>
+        </span>
+        <br />
       </>
-    ),
-    content3:
-      "COVID-19 is spread through small droplets in the air when an infected person coughs or sneezes which you can breathe in if you're standing too close. By staying home, you're doing your part in containing the spread of the virus. "
+    )
   },
   {
     id: 'item3',
-    title: 'How long will the ECQ last?',
+    title: 'Guidelines on Allowed Activities',
     content:
-      'On 24 April, President Duterte approved the recommendation of the Inter Agency Task Force for the Management of Emerging Infectious Diseases (IATF) to extend the Enhanced Community Quarantine (ECQ) in high risk areas until 15 May 2020.',
-    content2:
-      'The National Capital Region, which includes the City of Manila, is among the list of high risk areas. Thus, the implementing rules and regulations of the ECQ are still in effect until said date. Areas not classified as high risk will move to a General Community Quarantine (GCQ) model beginning May 1st.'
+      'The following are the guidelines for activities during the modified enhanced community quarantine:',
+    content2: (
+      <>
+        A. Population
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          One Hundred Percent (100%) of the population is required to stay at
+          home, subject to the applicable IATF guidelines of an authorized
+          person outside residence (APOR) as well as general curfew policies of
+          the City.
+        </span>
+        <br />
+        B. Exercise
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          Limited outdoor exercise is allowed (e.g. outdoor walk, jog/run, bike)
+          following safety protocols (i.e. masks and safe distancing).
+        </span>
+        <br />
+        C. Gatherings
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          Public events and gatherings in the City of Manila are highly
+          restricted to a maximum of five (5) persons.
+        </span>
+        <br />
+        D. Travel
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          Domestic flights are not allowed. International flights are limited.
+          Re-turning Filipinos or OFWs are allowed inbound travel. Inter-island
+          travel is not allowed. Biking and non-motorized transport are strongly
+          encouraged.
+        </span>
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          Public transport including rail, bus, jeepney, taxi, plane, and
+          tricycle are disallowed in MECQ.
+        </span>
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          The use of public shuttle and company shuttles is allowed with safety
+          proto-cols. Private vehicles are allowed for persons/workers in
+          permitted sec-tors/activities and shall maintain 2 persons per row
+          only. Bicycles, motorcycles, and scooters are allowed with a maximum
+          of one person/passenger.
+        </span>
+        <br />
+        E. Schools
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          All schools shall remain closed.
+        </span>
+        <br />
+        F. Government
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          A skeletal workforce shall be allowed for onsite services while other
+          em-ployees work from home.
+        </span>
+        <br />
+        G. Construction
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          Public and private construction is allowed under MECQ but must
+          strictly follow DPWH Department Order No. 35.
+        </span>
+      </>
+    )
   },
   {
     id: 'item4',
-    title: 'What happens after ECQ?',
+    title: 'Guidelines on Sectors and Relevant Value Chains',
     content:
-      'Subject to evaluation of the IATF, the ECQ rules may be eased and areas previously under ECQ may move to the General Community Quarantine (GCQ) model. Under the GCQ, certain economic activities will be allowed to resume in a limited capacity.',
-    content2: 'Industries allowed to resume include the following:',
-    content3: (
+      'The following guidelines  on sectors and relevant value chains are applicable:',
+    content2: (
       <>
-        - Agriculture
-        <br />
-        - Fisheries
-        <br />
-        - Forestry
-        <br />
-        - Food manufacturing and its entire supply chain (including ink,
-        packaging, raw materials, etc.)
-        <br />
-        - Food retail (supermarket, market, and restaurant for takeout and
-        delivery only)
-        <br />
-        - Healthcare (hospitals, clinics, drugstores)
-        <br />
-        - Logistics
-        <br />
-        - Water
-        <br />
-        - Energy
-        <br />
-        - Internet
-        <br />
-        - Telecommunications
-        <br />
-        - Media
+        A. Category I
         <br />
         <br />
-        Establishments allowed to operate at reduced capacity include:
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          The following sectors and relevant value chains are allowed with
+          safety protocols:
+        </span>
+        <br />
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Agriculture, forestry, and fisheries
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Manufacturing of essential goods
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Hospitals and Clinics
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Essential retail
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Laundry shops{' '}
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Food preparation and water refilling: take-out and delivery only
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Logistics service providers
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Delivery services
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Utilities: power, energy, water, telecom, aircon, water
+          collection/supply, waste management, sewerage (except septic tank
+          emptying, but including pest control, garbage collection, etc.)
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Repair and installation of machinery and equipment
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Telecommunications companies (e.g., ISPs, cable providers, telco,
+          3rd party contractors)
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Energy companies (incl. 3rd party contractors) across the
+          transmission, distribution, maintenance, retail, exploration,
+          operations, trading, and delivery of raw materials (incl. refineries
+          and depots)
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Gasoline stations
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Construction workers accredited by the DPWH to work on facilities
+          for healthcare and for risk reduction
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Manufacturing companies and suppliers of products necessary for
+          construction
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Media establishments and suppliers of products necessary for
+          construction
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Media establishments
+        </span>
+        <br />
+        B. Category II
         <br />
         <br />
-        - Manufacturing of electronics and exports
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          Category II sectors are either allowed with safety protocols or
+          partially allowed, to with:
+        </span>
         <br />
-        - E-commerce and delivery for essential and non-essential items
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Other manufacturing including beverages, electrical machinery, wood
+          products, furniture, non-metallic products, textiles/wearing apparels,
+          tobacco products, paper and paper products, rubber and plastic
+          products, coke and refined petroleum products, other non-metallic
+          mineral products, computer, electronics, and optical products,
+          electrical equipment, machinery and equipment, motor vehicles,
+          trailers and semi-trailers, other transport equipment, and others are
+          partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Cement and Steel are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Mining and quarrying are allowed with safety protocols
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Electronic commerce companies allowed with safety protocols{' '}
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Postal, courier and delivery services allowed with safety protocols
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Export-oriented companies: work-from-home, on-site or near-site
+          accommodation, point-to-point shuttles allowed with safety protocols
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Real estate activities are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Public and private construction projects that are essential (i.e.,
+          sewer-age, water services facilities, digital works, health
+          facilities) and priority (i.e., food production, agriculture, energy,
+          housing, communication, water utilities, manufacturing, and BPO) are
+          allowed but small-scale projects are not allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Repair of computers and personal and household goods are allowed
+          with safety protocols
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Housing service activities are allowed with safety protocol
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Office administrative and office support (e.g., photocopying,
+          billing) are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Special purpose accommodation for healthcare workers, OFWs, workers
+          in permitted sectors, and non-OFWs with mandated quarantine are
+          allowed with safety protocols
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Accommodation for guests is partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Funeral and embalming services are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Veterinary clinics are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Security and investigation activities are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Business Processing Outsourcing (BPO) allowed with safety protocols
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Banks, money transfer services, Microfinance institutions,
+          pawnshops, and credit cooperatives are allowed with safety protocols
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Capital markets are allowed with safety protocols
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Other financial services (e.g. Money exchange, insurance,
+          reinsurance, and non-compulsory pension funding) are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Legal and accounting are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Management consultancy activities are partially allowed{' '}
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Architecture and engineering activities, technical testing and
+          analysis are partially allowed
+        </span>
+        <span style={{ marginLeft: 46 }}>
+          - Scientific and research development activities are partially allowed
+        </span>
         <br />
-        - Repair and maintenance services
         <br />
-        - Housing
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          Companies and establishments under this category engaged in partially
+          allowed activities shall have a minimum of 50% of their employees work
+          from home and a maximum of 50% of its employees work on-site.
+        </span>
         <br />
-        - Office services
-        <br />
-        - Financial services
-        <br />
-        - Business process outsourcing
-        <br />
-        - Other non-leisure wholesale and retail trade and other non-leisure
-        services
+        C. Category III
         <br />
         <br />
-        Restricted mall openings covering non-leisure shops would be allowed,
-        and priority and essential construction projects could resume.
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Advertising and market research are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Computer programming (e.g., writing code, designing computer
+          systems) and information service activities (e.g., data processing)
+          are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Publishing and printing activities (e.g., newspapers, books, etc:
+          printing on textiles, glass, etc.) are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Film, Music, and TV production are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Rental and leasing, other than real estate (e.g., vehicles,
+          equipment for permitted sectors)
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Employment activities (e.g., recruitment and placement for permitted
+          sectors)
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Other activities (e.g., photography, fashion, industrial, graphic,
+          and interior design) are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Wholesale and retail trade of motor vehicles. Motorcycles and
+          bicycles, including their parts and components are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Repair of motor vehicles, motorcycles, and bicycles (including
+          vulcanizing shops, battery repair shops, auto repair shops) are
+          partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Malls and commercial centers (non-leisure only, in line with below)
+          are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Dining/ Restaurants are partially allowed but no dine-in. Delivery
+          and take-out only
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Barbershops and salons are not allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Hardware stores are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Clothing and accessories are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Mall-based government frontline services are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Bookstores and school and office supplies stores are partially
+          allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Baby care supply stores are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Pet food and pet care supplies are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - IT, communications, and electronic equipment are partially allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Flowery, jewelry, novelty, antique, perfume shops are partially
+          allowed
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Toy store (with playgrounds and amusement area closed) are partially
+          allowed
+        </span>
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          Companies and establishments under this Category engaged in partially
+          allowed activities shall have a minimum of 50% of their employees work
+          from home and a maximum of 50% of its employees work on-site.
+        </span>
+        <br />
+        D. Category IV
+        <br />
+        <br />
+        <span style={{ marginLeft: 23, display: 'block' }}>
+          The following sectors and/or activities are not allowed:
+        </span>
+        <br />
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Gyms/fitness studios and sports facilities
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Entertainment industries (e.g. cinemas, theaters, karaoke bars,
+          etc.)
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Kid amusement industries (e.g. playrooms, rides)
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Libraries, archives, museums, and cultural centers
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Tourist destinations (e.g. water parks, beaches, resorts)
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Travel agencies, tour operators, reservation service and related
+          activities
+        </span>
+        <span style={{ marginLeft: 46, display: 'block' }}>
+          - Personal care services (e.g. massage parlors, sauna, facial care,
+          waxing, etc.)
+        </span>
       </>
     )
   }

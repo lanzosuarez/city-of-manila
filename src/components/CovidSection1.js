@@ -55,8 +55,13 @@ const InfoTitle = styled.h3`
 const InfoContent = styled.p`
   margin: 0;
   padding-top: 20px;
-  a{
-    color:#04326a;
+  a {
+    color: #04326a;
+  }
+  @media (max-width: 768px) {
+   br{
+     display:none;
+   }
   }
 `;
 
@@ -101,37 +106,46 @@ const CovidSection1 = () => {
         <InfoSection>
           <InfoHeader>
             <InfoTitle>
-              Enhanced Community Quarantine:
+              Modified Enhanced Community Quarantine:
               <br />
               What You Need To Know
             </InfoTitle>
             <img loading="lazy" alt="blue-line" src={blueline}></img>
           </InfoHeader>
           <InfoContent>
-            COVID-19 is a new coronavirus that was first reported in Wuhan,
-            China, in December 2019. It is known to cause pneumonia-like symptoms
-            in infected patients.
+            The Modified Enhanced Community Quarantine:<br/>What You Need to Know
+            <br /> 15th May 2020
           </InfoContent>
           <InfoContent>
-            The Philippine Department of Health (DOH) reported the first case in
-            the Philippines on 30 January 2020.
+            The evolution of the Enhanced Community Quarantine (ECQ) to
+            “Modified Enhanced Community Quarantine (MECQ)” status represents a
+            deliberately phased approach to carefully reopening Philippine
+            economic and social life in areas where COVID-19 growth continues to
+            be worrisome.
           </InfoContent>
           <InfoContent>
-            <a href="https://www.doh.gov.ph/doh-press-release/doh-confirms-local-transmission-of-covid-19-in-ph">
-                On 07 March 2020, the DOH raised COVID-19 Alert System
-            </a> to Code Red Sub-level 1 and initiated efforts to prevent widespread
-            community transmission.
+            The seventeen cities which comprise Metro Manila – including the
+            capital City of Manila – have the highest concentration of COVID-19
+            cases in the Philippines. The National Capital Region (NCR) was
+            declared by the Office of the President of the Philippines and the
+            IATF to be under MECQ from 16 – 31 May 2020.
           </InfoContent>
           <InfoContent>
-            On 08 March 2020, the Office of the President issued Proclamation
-            No. 922 s. 2020 declaring a State of Public Health Emergency. The
-            proclamation directs the mobilization of necessary resources;
-            undertaking of critical, urgent, and appropriate responses and
-            measures in a timely manner; assistance and cooperation of all
-            government agencies and LGUs; and, for all the citizens, residents,
-            tourists, and establishments to comply with lawful directives and
-            advisories, to eliminate and curtail the COVID-19 threat and ensure
-            the safety and well-being of everyone.
+            To date, the City of Manila has been able to stay ahead of the virus
+            due to a powerful combination of robust policy, investments in and
+            deployment of latest technologies, extensive on-the-ground
+            operations, and meticulous day-to-day management and clear and
+            concise public communications by Mayor Isko and his crisis
+            management team.
+          </InfoContent>
+          <InfoContent>
+            The City of Manila shall continue prosecuting the war against
+            COVID-19 to save as many lives as possible while equally seeking to
+            save as many livelihoods as possible. This will only occur by
+            enabling industry, small and medium-size business and other
+            value-creating activities to restart within a heightened health and
+            safety Covid-19 context. The MECQ is the first, early phase towards
+            crafting our shared "New New".
           </InfoContent>
           <Footer>
             <a href="https://www.officialgazette.gov.ph/downloads/2020/02feb/20200308-PROC-922-RRD-1.pdf">
