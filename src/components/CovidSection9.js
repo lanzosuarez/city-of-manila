@@ -65,7 +65,7 @@ const contains = [
     desc: 'Installed disinfecting gates in strategic locations in the city'
   },
   {
-    desc: 'Installed HEPA-filter machines in 6 city-owned  public hospitals'
+    desc: 'Installed HEPA-filter machines in 6 city-owned public hospitals'
   },
   {
     desc:
