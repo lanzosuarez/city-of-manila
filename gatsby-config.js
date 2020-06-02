@@ -1,23 +1,23 @@
 require('dotenv').config();
 module.exports = {
   /* Your site config here */
-
   siteMetadata: {
     title: `City Of Manila`,
     author: 'Analie Moreno',
-    description: 'Official website of City of Manila Mayor Isko Moreno Domagoso. Find information on Manila\'s COVID-19 response.'
+    description:
+      "Official website of City of Manila Mayor Isko Moreno Domagoso. Find information on Manila's COVID-19 response."
   },
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-156430051-1",
+        trackingId: 'UA-156430051-1',
         head: true,
         anonymize: true,
         respectDNT: true,
-        pageTransitionDelay:0,
-      },
+        pageTransitionDelay: 0
+      }
     },
     `gatsby-plugin-emotion`,
     `gatsby-transformer-remark`,
