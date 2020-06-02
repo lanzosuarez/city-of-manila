@@ -132,12 +132,9 @@ const CovidSection3 = () => {
       </DisplayFlex>
       <DisplayFlex>
         <LeftContainer>
-          <TextHeader>Do not break ECQ rules</TextHeader>
+          <TextHeader>Please follow MECQ rules</TextHeader>
           <p>
-            1. Stay home. Only those classified as essential workers such as
-            doctors, nurses, health and emergency service providers, supermarket
-            and pharmacy staff, and the like, are allowed to leave their homes
-            to go to work.
+            1. Stay home. Only those classified as essential workers, as well as employees of businesses or industries authorized to operate during the MECQ, are allowed to leave their homes to go to work. 
           </p>
           <p>
             2. Only one person per household is allowed to leave to purchase

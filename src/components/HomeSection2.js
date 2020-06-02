@@ -147,7 +147,7 @@ const HomeSection2 = () => {
         <Header>How To Help Manila</Header>
         <LineImage src={line} alt="blue line" />
         <Content>
-          The city is in need of medical and food supplies. Learn how you can do
+          The City of Manila is in need of medical and food supplies. Learn how you can do
           so now.
         </Content>
         <Footer>

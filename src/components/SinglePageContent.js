@@ -197,15 +197,12 @@ const SinglePageContent = ({ data, recentPosts, tagNames }) => {
     addElement('content-section5', { delay: '300ms' });
     addElement('content-section6', { delay: '300ms' });
   }, []);
-  // const videoOrPhoto = () => {
-  //   if(data.)
-  // }
+
   const tags = tagNames.split(',');
 
   const navigateOnClick = tag => () =>
     navigate(`/news-room?q=${tag}#news-list`);
 
-  console.log(data);
   return (
     <PageContainer>
       <Section>

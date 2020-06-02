@@ -84,7 +84,7 @@ export const listItems = [
         path: '/covid#digital-survey'
       },
       {
-        title: 'Enhanced Community Quarantine',
+        title: 'Modified Enhanced Community Quarantine',
         path: '/covid/#ecq'
       },
       {

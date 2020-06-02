@@ -145,7 +145,7 @@ const CovidSection1 = () => {
             enabling industry, small and medium-size business and other
             value-creating activities to restart within a heightened health and
             safety Covid-19 context. The MECQ is the first, early phase towards
-            crafting our shared "New New".
+            crafting our shared "New Normal".
           </InfoContent>
           <Footer>
             <a href="https://www.officialgazette.gov.ph/downloads/2020/02feb/20200308-PROC-922-RRD-1.pdf">

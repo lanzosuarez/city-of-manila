@@ -38,6 +38,11 @@ const SinglePage = ({ location, data }) => {
             datetext={formatDate(date)}
           />
           <SinglePageShare page={location.href} />
+          <img
+            src={photo.file.url}
+            style={{ display: 'none' }}
+            alt="Header image"
+          />
           <SinglePageContent
             tagNames={tags}
             data={data.contentfulNewsroom}

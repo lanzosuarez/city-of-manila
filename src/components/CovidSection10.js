@@ -79,7 +79,7 @@ const delays = [
   },
   {
     desc:
-      'Strict enforcement of curfew hours, anti-hoarding, and ECQ guidelines and protocols in the city'
+      'Strict enforcement of curfew hours, anti-hoarding, and ECQ guidelines and protocols in the City of Manila'
   },
   {
     desc: 'Imposed liquor ban'
