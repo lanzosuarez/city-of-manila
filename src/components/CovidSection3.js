@@ -9,6 +9,7 @@ import Covid4 from '../images/covid-sec-4-img-4.jpg';
 import Covid5 from '../images/covid-sec-4-img-5.jpg';
 
 import PageContainer from '../components/PageContainer';
+import { downloadFile } from '../helpers';
 
 const Header = styled.div`
   max-width: 35rem;
@@ -79,6 +80,12 @@ const iconStyle = {
 };
 
 const CovidSection3 = () => {
+  const downloadPDF = () => {
+    downloadFile(
+      'https://assets.ctfassets.net/7dav9yxqrisj/35WkB5WocSUQFKL7B7Gmgs/bfeadb623be87f3d1210dc610bf24f5f/BEST_PRACTICES.pdf',
+      'BEST_PRACTICES.pdf'
+    );
+  };
   return (
     <PageContainer>
       <Header>
@@ -88,7 +95,9 @@ const CovidSection3 = () => {
       <DisplayFlex>
         <LeftContainer>
           <TextHeader>How to prevent COVID-19</TextHeader>
-          <p>1. Avoid touching your eyes, nose, and mouth with unwashed hands.</p>
+          <p>
+            1. Avoid touching your eyes, nose, and mouth with unwashed hands.
+          </p>
           <p>2. Wash your hands thoroughly with soap and water.</p>
           <p>3. Clean and disinfect surfaces such as doorknobs.</p>
           <p>4. Practice social distancing.</p>
@@ -134,7 +143,9 @@ const CovidSection3 = () => {
         <LeftContainer>
           <TextHeader>Please follow MECQ rules</TextHeader>
           <p>
-            1. Stay home. Only those classified as essential workers, as well as employees of businesses or industries authorized to operate during the MECQ, are allowed to leave their homes to go to work. 
+            1. Stay home. Only those classified as essential workers, as well as
+            employees of businesses or industries authorized to operate during
+            the MECQ, are allowed to leave their homes to go to work.
           </p>
           <p>
             2. Only one person per household is allowed to leave to purchase
@@ -150,9 +161,9 @@ const CovidSection3 = () => {
             meter away from another individual when outside of the home.{' '}
           </p>
           <p>
-            5. Wear a mask when outside the home. This could be in the form
-            of a surgical mask, face shield, or handkerchief. The objective is
-            to ensure your nose and mouth are covered.{' '}
+            5. Wear a mask when outside the home. This could be in the form of a
+            surgical mask, face shield, or handkerchief. The objective is to
+            ensure your nose and mouth are covered.{' '}
           </p>
         </LeftContainer>
         <RightContainer>
@@ -168,8 +179,8 @@ const CovidSection3 = () => {
           <TextHeader>Don't forget about mental health</TextHeader>
           <p>
             1. It is normal to feel sad, stressed, confused, or scared during a
-            crisis. Talking to people you trust, such as your friends or family, can help
-            with mental health.
+            crisis. Talking to people you trust, such as your friends or family,
+            can help with mental health.
           </p>
           <p>
             2. Maintain a healthy lifestyle by eating a healthy diet, getting
@@ -198,12 +209,12 @@ const CovidSection3 = () => {
           <TextHeader>Stay informed</TextHeader>
           <p>
             In times such as these where there can be considerable information
-            in the media, online and offline, on COVID-19, it is
-            important to access information from official channels to avoid
-            confusion and disinformation.
+            in the media, online and offline, on COVID-19, it is important to
+            access information from official channels to avoid confusion and
+            disinformation.
           </p>
           <LinkStyle>
-            <a href="#">
+            <a href="#" onClick={downloadPDF}>
               <ManilaContactDiv>
                 <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
                 Manila's Response to COVID-19 Pandemic
@@ -226,11 +237,7 @@ const CovidSection3 = () => {
           </LinkStyle>
         </LeftContainer>
         <RightContainer>
-          <ImgContainer
-            loading="lazy"
-            src={Covid5}
-            alt="Stay informed"
-          />
+          <ImgContainer loading="lazy" src={Covid5} alt="Stay informed" />
         </RightContainer>
       </DisplayFlex>
     </PageContainer>

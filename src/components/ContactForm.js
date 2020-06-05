@@ -91,11 +91,11 @@ const ContactForm = () => {
     })
       .then(() => {
         alert(
-          'Thank you for getting in touch! We will get back in touch with you soon! '
+          'Thank you for contacting us. We will respond to your inquiry as soon as we can.'
         );
         form.reset();
       })
-      .catch(error => alert(error));
+      .catch(() => alert('Invalid form submission'));
   };
 
   return (
@@ -118,15 +118,15 @@ const ContactForm = () => {
       </p>
       <Fieldset>
         <Label>Name:</Label>
-        <Input type="text" name="name" onChange={handleChange} />
+        <Input required type="text" name="name" onChange={handleChange} />
       </Fieldset>
       <Fieldset>
         <Label>Email:</Label>
-        <Input type="email" name="email" onChange={handleChange} />
+        <Input required type="email" name="email" onChange={handleChange} />
       </Fieldset>
       <Fieldset>
         <Label>Message:</Label>
-        <Textarea type="text" name="message" onChange={handleChange} />
+        <Textarea required type="text" name="message" onChange={handleChange} />
       </Fieldset>
 
       <Fieldset
