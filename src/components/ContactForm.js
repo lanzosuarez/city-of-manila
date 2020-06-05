@@ -53,6 +53,7 @@ const Button = styled.button`
   width: 100%;
   border-radius: 0.25em;
   margin-top: 20px;
+  cursor: pointer;
   :hover {
     background-color: #05326b;
     color: white;
@@ -75,12 +76,6 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    console.log(
-      encode({
-        'form-name': form.getAttribute('name'),
-        ...state
-      })
-    );
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -120,13 +115,14 @@ const ContactForm = () => {
         <Label>Name:</Label>
         <Input required type="text" name="name" onChange={handleChange} />
       </Fieldset>
-      <Fieldset>
-        <Label>Subject:</Label>
-        <Input required type="text" name="subject" onChange={handleChange} />
-      </Fieldset>
+
       <Fieldset>
         <Label>Email:</Label>
         <Input required type="email" name="email" onChange={handleChange} />
+      </Fieldset>
+      <Fieldset>
+        <Label>Subject:</Label>
+        <Input required type="text" name="subject" onChange={handleChange} />
       </Fieldset>
       <Fieldset>
         <Label>Message:</Label>
