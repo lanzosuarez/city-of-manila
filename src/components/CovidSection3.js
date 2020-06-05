@@ -83,7 +83,7 @@ const CovidSection3 = () => {
   const downloadPDF = () => {
     downloadFile(
       'https://assets.ctfassets.net/7dav9yxqrisj/35WkB5WocSUQFKL7B7Gmgs/bfeadb623be87f3d1210dc610bf24f5f/BEST_PRACTICES.pdf',
-      'BEST_PRACTICES.pdf'
+      `Manila's Response to COVID-19 Pandemic.pdf`
     );
   };
   return (
