@@ -53,30 +53,80 @@ const Button = styled.button`
   width: 100%;
   border-radius: 0.25em;
   margin-top: 20px;
-  pointer-events: ${props => (props.disabled ? 'none' : 'all')};
   :hover {
     background-color: #05326b;
     color: white;
   }
 `;
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
+
 const ContactForm = () => {
-  const [disableSubmit, setDisableSubmit] = useState(true);
-  const verifyCallback = () => setDisableSubmit(false);
+  const [state, setState] = React.useState({});
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    console.log(
+      encode({
+        'form-name': form.getAttribute('name'),
+        ...state
+      })
+    );
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state
+      })
+    })
+      .then(() => {
+        alert(
+          'Thank you for getting in touch! We will get back in touch with you soon! '
+        );
+        form.reset();
+      })
+      .catch(error => alert(error));
+  };
 
   return (
-    <Form method="post" action="">
+    <Form
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
+      name="contact"
+      method="POST"
+      data-netlify="true"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p hidden>
+        <label>
+          Don’t fill this out:{' '}
+          <input name="bot-field" onChange={handleChange} />
+        </label>
+      </p>
       <Fieldset>
         <Label>Name:</Label>
-        <Input type="text" name="name" />
+        <Input type="text" name="name" onChange={handleChange} />
       </Fieldset>
       <Fieldset>
         <Label>Email:</Label>
-        <Input type="email" name="email" />
+        <Input type="email" name="email" onChange={handleChange} />
       </Fieldset>
       <Fieldset>
         <Label>Message:</Label>
-        <Textarea type="text" name="message" />
+        <Textarea type="text" name="message" onChange={handleChange} />
       </Fieldset>
 
       <Fieldset
@@ -87,12 +137,7 @@ const ContactForm = () => {
           alignItems: 'center'
         }}
       >
-        <Recapatcha
-          render="explicit"
-          verifyCallback={verifyCallback}
-          sitekey="6LfwrwAVAAAAAKXoy-NWWkcRjDIzKjnFQEgjXTrO"
-        />
-        <Button disabled={disableSubmit}>Submit Message</Button>
+        <Button type="submit">Submit Message</Button>
       </Fieldset>
     </Form>
   );
