@@ -121,6 +121,10 @@ const ContactForm = () => {
         <Input required type="text" name="name" onChange={handleChange} />
       </Fieldset>
       <Fieldset>
+        <Label>Subject:</Label>
+        <Input required type="text" name="subject" onChange={handleChange} />
+      </Fieldset>
+      <Fieldset>
         <Label>Email:</Label>
         <Input required type="email" name="email" onChange={handleChange} />
       </Fieldset>
