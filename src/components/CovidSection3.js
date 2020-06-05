@@ -214,7 +214,7 @@ const CovidSection3 = () => {
             disinformation.
           </p>
           <LinkStyle>
-            <a href="#" onClick={downloadPDF}>
+            <a onClick={downloadPDF}>
               <ManilaContactDiv>
                 <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
                 Manila's Response to COVID-19 Pandemic
