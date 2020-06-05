@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import Recapatcha from 'react-recaptcha';
 
 const Form = styled.form`
   width: 500px;
@@ -15,7 +16,7 @@ const Input = styled.input`
   border-radius: 0.25em;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
   width: 100%;
-  :focus{
+  :focus {
     border: 1px solid #05326b;
   }
 `;
@@ -27,7 +28,7 @@ const Textarea = styled.textarea`
   border-radius: 0.25em;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
   width: 100%;
-  :focus{
+  :focus {
     border: 1px solid #05326b;
   }
 `;
@@ -49,15 +50,20 @@ const Button = styled.button`
   width: 179px;
   height: 54px;
   border: none;
-  width:100%;
+  width: 100%;
   border-radius: 0.25em;
-  :hover  {
+  margin-top: 20px;
+  pointer-events: ${props => (props.disabled ? 'none' : 'all')};
+  :hover {
     background-color: #05326b;
     color: white;
   }
 `;
 
 const ContactForm = () => {
+  const [disableSubmit, setDisableSubmit] = useState(true);
+  const verifyCallback = () => setDisableSubmit(false);
+
   return (
     <Form method="post" action="">
       <Fieldset>
@@ -72,8 +78,21 @@ const ContactForm = () => {
         <Label>Message:</Label>
         <Textarea type="text" name="message" />
       </Fieldset>
-      <Fieldset>
-        <Button>Submit Message</Button>
+
+      <Fieldset
+        style={{
+          flexDirection: 'column',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Recapatcha
+          render="explicit"
+          verifyCallback={verifyCallback}
+          sitekey="6LfwrwAVAAAAAKXoy-NWWkcRjDIzKjnFQEgjXTrO"
+        />
+        <Button disabled={disableSubmit}>Submit Message</Button>
       </Fieldset>
     </Form>
   );
