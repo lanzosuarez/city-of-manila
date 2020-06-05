@@ -203,6 +203,12 @@ const CovidSection3 = () => {
             confusion and disinformation.
           </p>
           <LinkStyle>
+            <a href="#">
+              <ManilaContactDiv>
+                <ion-icon name="globe-outline" style={iconStyle}></ion-icon>
+                Manila's Response to COVID-19 Pandemic
+              </ManilaContactDiv>
+            </a>
             <a href="https://www.doh.gov.ph">
               <ManilaContactDiv>
                 <ion-icon name="globe-outline" style={iconStyle}></ion-icon>

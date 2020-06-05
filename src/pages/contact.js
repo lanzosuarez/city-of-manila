@@ -6,6 +6,7 @@ import styled from '@emotion/styled';
 
 import PageHeader from '../components/PageHeader';
 import PageContainer from '../components/PageContainer';
+import ContactForm from '../components/ContactForm';
 import HeaderImg from '../images/page-banner-contact.jpg';
 import whiteline from '../images/white-line.png';
 import contactbg1 from '../images/contact-bg.png';
@@ -99,7 +100,6 @@ const Section = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 4rem;
 
   @media only screen and (max-width: 728px) {
     flex-direction: column;
@@ -120,6 +120,22 @@ const Section2 = styled.div`
   }
   @media only screen and (max-width: 1024px) {
     padding: 4rem 15px 0px;
+  }
+`;
+const Section3 = styled.div`
+  padding: 1rem 15px 0rem;
+  margin: 0 auto;
+  text-align:center;
+  h1{
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  @media only screen and (max-width: 1024px) {
+    padding: 1rem 15px 0px;
+    h1{
+      font-size: 24px;
+    }
   }
 `;
 const ContactPage = () => {
@@ -185,6 +201,12 @@ or 0961-062-7013</b>.
                 </ContactWrap>
               </ContactItem>
             </Section>
+            <Section3>
+              <h1>
+                Send Us A Message
+              </h1>
+              <ContactForm/>
+            </Section3>
           </PageContainer>
         </Wrapper>
       </Layout>
