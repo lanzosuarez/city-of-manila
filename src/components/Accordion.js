@@ -60,9 +60,9 @@ const Item = styled.span`
 const items = [
   {
     id: 'item1',
-    title: 'What is the Modified Enhanced Community Quarantine or MECQ?',
+    title: 'What is the General Community Quarantine or GCQ?',
     content:
-      'The Modified Enhanced Community Quarantine (MECQ) allows for limited public movements and resumption of economic activity previously halted during the Enhanced Community Quarantine period. This policy will in place for Metro Manila, Laguna Province, and Cebu City until 31 May 2020. Under the MECQ, everyone is still required to abide by the mandatories imposed by the IATF. These include the wearing of face masks, frequent handwashing and sanitation, social distancing, and safe work practices.',
+      'The General Community Quarantine allows for the phased resumption of economic activity and people movement. This policy will be in place for Metro Manila,until 15 June 2020. Under the GCQ, everyone is still required to abide by the mandatories imposed by the IATF. These include the wearing of face masks, frequent handwashing and sanitation, social distancing, and safe work practices.',
     content2: 'To view the full list of MECQ guidelines by the IATF:',
     content3: (
       <>
@@ -165,7 +165,7 @@ const items = [
     id: 'item3',
     title: 'Guidelines on Allowed Activities',
     content:
-      'The following are the guidelines for activities during the modified enhanced community quarantine:',
+      'The following are the guidelines for activities during the GCQ:',
     content2: (
       <>
         A. Population
@@ -201,8 +201,7 @@ const items = [
         </span>
         <br />
         <span style={{ marginLeft: 23, display: 'block' }}>
-          Public transport including rail, bus, jeepney, taxi, plane, and
-          tricycle are disallowed in MECQ.
+          Limited public transport is allowed under GCQ.
         </span>
         <br />
         <span style={{ marginLeft: 23, display: 'block' }}>
