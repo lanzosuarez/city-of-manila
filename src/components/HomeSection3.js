@@ -150,9 +150,9 @@ const HomeSection3 = () => {
       <Item bg={bg2}>
         <Overlay className="overlay" />
         <Content className="content">
-          <Text>Modified Enhanced Community Quarantine</Text>
+          <Text>General Community Quarantine</Text>
           <Paragraph>
-            Important information on the Modified Enhanced Community Quarantine.
+            Important information on the General Community Quarantine.
           </Paragraph>
         </Content>
         <Link to="/covid#ecq">
