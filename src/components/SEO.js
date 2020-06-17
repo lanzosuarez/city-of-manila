@@ -31,6 +31,11 @@ const SEO = ({ description, lang, meta, title, image = defaultSiteImg }) => {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          name: 'title',
+          content:
+            'Mayor of Manila - Official website of City of Manila Mayor Isko Moreno Domagoso.'
+        },
+        {
           name: `description`,
           content: metaDescription
         },

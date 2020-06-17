@@ -7,9 +7,15 @@ module.exports = {
     title: `Mayor of Manila`,
     author: 'Analie Moreno',
     description:
-      "Official website of City of Manila Mayor Isko Moreno Domagoso. Find information on Manila's COVID-19 response."
+      "Mayor of Manila - Official website of City of Manila Mayor Isko Moreno Domagoso. Find information on Manila's COVID-19 response."
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.mayorofmanila.ph`
+      }
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-plugin-robots-txt',
