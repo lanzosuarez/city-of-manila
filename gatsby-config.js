@@ -4,7 +4,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     siteUrl: 'https://www.mayorofmanila.ph',
-    title: `Mayor of Manila`,
+    title: `Official Website of the Mayor of Manila`,
     author: 'Analie Moreno',
     description:
       "Mayor of Manila - Official website of City of Manila Mayor Isko Moreno Domagoso. Find information on Manila's COVID-19 response."
