@@ -5,6 +5,7 @@ import MobileHeader from './MobileHeader';
 import SideNavigation from './SideNavigation';
 import { NavigationContext } from '../context/NavigationProvider';
 
+import '../styles/typography.css';
 import '../styles/index.css';
 import { detectIE } from '../helpers';
 import { navigate } from 'gatsby';

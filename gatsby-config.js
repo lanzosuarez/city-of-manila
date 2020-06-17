@@ -1,18 +1,44 @@
 require('dotenv').config();
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://www.mayorofmanila.ph',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `City Of Manila`,
+    siteUrl,
+    title: `Mayor of Manila`,
     author: 'Analie Moreno',
     description:
       "Official website of City of Manila Mayor Isko Moreno Domagoso. Find information on Manila's COVID-19 response."
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-recaptcha`,
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        async: true,
-        defer: true
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            host: siteUrl,
+            sitemap: `${siteUrl}/sitemap.xml`,
+            policy: [{ userAgent: '*', allow: '/' }]
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
       }
     },
     {
