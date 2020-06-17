@@ -106,29 +106,23 @@ const CovidSection1 = () => {
         <InfoSection>
           <InfoHeader>
             <InfoTitle>
-              Modified Enhanced Community Quarantine:
+              General Community Quarantine:
               <br />
               What You Need To Know
             </InfoTitle>
             <img loading="lazy" alt="blue-line" src={blueline}></img>
           </InfoHeader>
           <InfoContent>
-            The Modified Enhanced Community Quarantine:<br/>What You Need to Know
-            <br /> 15th May 2020
+            On 27 May 2020 the Inter-Agency Task Force for the Management 
+            of Emerging Infectious Diseases issued Resolution 40 placing 
+            Metro Manila and other places across the Philippines under 
+            "General Community Quarantine" from 1 - 15 June 2020.
           </InfoContent>
           <InfoContent>
-            The evolution of the Enhanced Community Quarantine (ECQ) to
-            “Modified Enhanced Community Quarantine (MECQ)” status represents a
-            deliberately phased approach to carefully reopening Philippine
-            economic and social life in areas where COVID-19 growth continues to
-            be worrisome.
-          </InfoContent>
-          <InfoContent>
-            The seventeen cities which comprise Metro Manila – including the
-            capital City of Manila – have the highest concentration of COVID-19
-            cases in the Philippines. The National Capital Region (NCR) was
-            declared by the Office of the President of the Philippines and the
-            IATF to be under MECQ from 16 – 31 May 2020.
+            The evolution from Modified Enhanced Community Quarantine (MECQ)
+            to “General Community Quarantine (GCQ)” status represents a carefully
+            reopening Philippine economic and social life in areas where COVID-19
+            growth nonetheless continues to be worrisome.
           </InfoContent>
           <InfoContent>
             To date, the City of Manila has been able to stay ahead of the virus
@@ -142,9 +136,9 @@ const CovidSection1 = () => {
             The City of Manila shall continue prosecuting the war against
             COVID-19 to save as many lives as possible while equally seeking to
             save as many livelihoods as possible. This will only occur by
-            enabling industry, small and medium-size business and other
+            enabling industry, small and medium-sized businesses, and other
             value-creating activities to restart within a heightened health and
-            safety Covid-19 context. The MECQ is the first, early phase towards
+            safety COVID-19 context. The MECQ is the first, early phase towards
             crafting our shared "New Normal".
           </InfoContent>
           <Footer>
