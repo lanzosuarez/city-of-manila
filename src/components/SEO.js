@@ -31,6 +31,10 @@ const SEO = ({ description, lang, meta, title, image = defaultSiteImg }) => {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          name: 'google-site-verification',
+          content: 'D3Od_nOuM3pcGi2lAEMhU4sqpU4bcuHBmA84S6lJtQc'
+        },
+        {
           name: 'keywords',
           content:
             'mayor of manila, mayor of manila website, isko moreno, isko moreno domagoso, manila news, covid response, manila, city of manila, mayorofmanila, manila programs'
