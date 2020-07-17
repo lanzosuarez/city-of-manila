@@ -75,6 +75,7 @@ export const query = graphql`
       }
       quoteFrom
       youtubeLink
+      photoLink
     }
     allContentfulNewsroom(
       filter: { id: { ne: $id } }
